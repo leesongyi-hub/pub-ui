@@ -1,0 +1,108 @@
+<div class="gd-content-wrap" id="n_info">
+  <h2>Info</h2>
+  <!-- 항목 : Plugins start -->
+  <div class="gd-content">
+    <div class="gd-example-wrap">
+      <h3 class="mb-10px">Plugins</h3>	
+      <div class="gd-desc">
+        <div class="table-area">
+          <table class="table-wrap">
+            <colgroup>
+              <col style="width:200px;">
+              <col style="width:250px;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-left font-weight-500">Jquery v3.3.1</th>
+                <td>Jquery</td>
+                <td><a href="https://releases.jquery.com/jquery" class="text-primary underline" target="_blank">https://releases.jquery.com/jquery</a></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-left font-weight-500">Jquery UI v1.12.1</th>
+                <td>Jquery UI</td>
+                <td><a href="https://jqueryui.com/download/all" class="text-primary underline" target="_blank">https://jqueryui.com/download/all</a></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-left font-weight-500">Bootstrap v4.3.1</th>
+                <td>부트스트랩</td>
+                <td><a href="https://getbootstrap.com/docs/4.3/getting-started/introduction" class="text-primary underline" target="_blank">https://getbootstrap.com/docs/4.3/getting-started/introduction</a></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-left font-weight-500">SwiperJS v4.5.1</th>
+                <td><span class="text-primary pr-5px">[권장]</span>캐로셀 (IE 대응 낮은버전)</td>
+                <td><a href="https://swiperjs.com" class="text-primary underline" target="_blank">https://swiperjs.com</a></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-left font-weight-500">
+                  vuejs-datepicker v1.6.2
+                </th>
+                <td>
+                  Vue Datepicker<br />
+                  <a href="https://github.com/charliekassel/vuejs-datepicker/tree/master?tab=readme-ov-file"  target="_blank" style="color:blue;text-decoration: underline;">참고문서 바로가기</a>
+                </td>
+                <td>
+                  <사용방법><br />
+                  0. node.js 설치<br />
+                  1. VSCODE 터미널에서 npm으로 설치<br />
+                  npm install vue@2<br />
+                  npm install vuejs-datepicker --save<br /><br />
+                  2. HTML파일에 연결<br />
+                    script src="../../node_modules/vue/dist/vue.js"<br />
+                    script src="../../node_modules/vuejs-datepicker/dist/vuejs-datepicker.js"<br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="gd-example-wrap">
+      <h3 class="mb-10px">SCSS 파일구조</h3>    
+      <p>*CSS파일, SCSS파일은 퍼블리셔만 수정 가능. SCSS 모든 파일은 최종 style.CSS로 컴파일되어 각 html에 link</p>
+      <p>*불가피하게 개발에서 바로 CSS추가/수정이 필요하다면 별도로 CSS파일(ex)dev.css) 추가하여 html에 link</p>
+      <!-- 🔴🟡 code -->
+      <div class="code-head">
+        <span class="tit">SCSS</span>
+      </div>
+      <code class="code-area h-100">
+        <pre class="brush: html;">
+          │  └─ sass
+          │     ├─ abstracts
+          │     │  └─ _variables.scss
+          │     ├─ base
+          │     │  ├─ _font.scss
+          │     │  ├─ _icon.scss
+          │     │  ├─ _reset.scss
+          │     │  ├─ _typography.scss
+          │     │  └─ _util.scss
+          │     ├─ components
+          │     │  ├─ _buttons.scss
+          │     │  ├─ _chips.scss
+          │     │  ├─ _dropdown.scss
+          │     │  ├─ _forms.scss
+          │     │  ├─ _modal.scss
+          │     │  ├─ _pagination.scss
+          │     │  ├─ _switch.scss
+          │     │  ├─ _tab.scss
+          │     │  ├─ _table.scss
+          │     │  └─ _tooltip.scss
+          │     ├─ layout
+          │     │  ├─ _header.scss
+          │     │  └─ _lnb.scss
+          │     ├─ pages
+          │     │  ├─ _layout.scss
+          │     │  ├─ _login.scss
+          │     │  └─ _uisetting.scss
+          │     └─ style.scss //style.css로 컴파일
+        </pre>
+          <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </code>
+      <!-- //🔴🟡 code -->
+    </div>
+  </div>
+  <!--// 항목 : Plugins end -->
+</div>

@@ -1,0 +1,69 @@
+<div class="gd-content-wrap" id="n_inputdatepicker">
+  <h2>Input - Datepicker</h2>
+  <div class="gd-content">
+    <!-- 항목 : Checkbox : inline start -->
+    <div class="gd-example-wrap">
+      <h3>Datepicker</h3>
+      <!-- 🧡💛 UI -->
+      <div class="gd-example">    
+        <div id="app" class="d-flex align-items-center mt-4px">
+          <!-- datepicker 다른 UI 라이브러리 사용해도 무관. -->
+          <datepicker class="datepicker w-120px" v-model="fromDate" value="state.date" format="yyyy-MM-dd" placeholder="시작일 선택"></datepicker>
+          <span>&nbsp;~&nbsp;</span>
+          <datepicker class="datepicker w-120px" v-model="toDate" value="state.date" format="yyyy-MM-dd" placeholder="종료일 선택"></datepicker>
+        </div>
+      </div>
+      <!-- //🧡💛 UI --> 
+      <!-- 🔴🟡 code -->
+      <div class="code-head">
+        <span class="tit">HTML</span>
+      </div>
+      <code class="code-area">
+        <pre class="brush: html;">
+          <datepicker class="datepicker w-120px" v-model="fromDate" value="state.date" format="yyyy-MM-dd" placeholder="시작일 선택"></datepicker>
+          <span>&nbsp;~&nbsp;</span>
+          <datepicker class="datepicker w-120px" v-model="toDate" value="state.date" format="yyyy-MM-dd" placeholder="종료일 선택"></datepicker>
+        </pre>
+          <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </code>
+      <!-- //🔴🟡 code -->
+      <!-- 🔴🟡 code -->
+      <div class="code-head">
+        <span class="tit">js</span>
+      </div>
+      <code class="code-area">
+        <pre class="brush: html;">
+          <!-- datepicker 관련 코드 -->
+          <script src="../../../node_modules/vue/dist/vue.js"></script>
+          <script src="../../../node_modules/vuejs-datepicker/dist/vuejs-datepicker.js"></script>
+          <script>
+            // Vue 인스턴스 생성
+            new Vue({
+                el: '#app',
+                data: {
+                  // 선택된 날짜를 저장할 변수
+                  fromDate: null,
+                  toDate: null
+                },
+                components: {
+                  // Datepicker 컴포넌트를 등록
+                  datepicker: vuejsDatepicker
+                }
+            });
+          </script>
+          <!-- //datepicker 관련 코드 -->
+        </pre>
+          <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </code>
+      <!-- //🔴🟡 code -->
+    </div>
+  </div>
+</div>

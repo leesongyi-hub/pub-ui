@@ -1,0 +1,798 @@
+<div class="gd-content-wrap" id="n_variables">
+  <h2>CSS Variables</h2>
+  <div class="gd-content">
+    <article class="gd-example-wrap">
+      <h3>border color</h3>
+      <!-- 🧡💛 UI -->
+      <div class="gd-example">
+        <table class="table-wrap">
+          <colgroup>
+            <col style="width:200px;">
+            <col style="width:350px;">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Example</th>
+              <th>Variables</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div style="border:1px solid var(--border-color-light);width:80px;height:40px;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--border-color-light)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>table, list, carousel 등 일반적으로 가장 많이 사용.</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="border:1px solid var(--border-color-default);width:80px;height:40px;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--border-color-default)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>header, lnb 등 레이아웃 구조를 나눌때 사용.</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="border:1px solid var(--border-color-dark);width:80px;height:40px;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--border-color-dark)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div style="border:1px solid var(--border-color-primary);width:80px;height:40px;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--border-color-primary)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- 🧡💛 UI -->
+    </article>
+    <article class="gd-example-wrap">
+      <h3>background-color</h3>
+      <!-- 🧡💛 UI -->
+      <div class="gd-example">
+        <table class="table-wrap">
+          <colgroup>
+            <col style="width:200px;">
+            <col style="width:350px;">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Example</th>
+              <th>Variables</th>                      
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div style="background-color:var(--bg-color-light);width:80px;height:40px;border:1px solid #ddd;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--bg-color-light)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div style="background-color:var(--bg-color-default);width:80px;height:40px;border:1px solid #ddd;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--bg-color-default)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div style="background-color:var(--bg-color-dark);width:80px;height:40px;border:1px solid #ddd;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--bg-color-dark)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div style="background-color:var(--bg-color-tonal-lighter);width:80px;height:40px;border:1px solid #ddd;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--bg-color-tonal-lighter)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div style="background-color:var(--bg-color-tonal-light);width:80px;height:40px;border:1px solid #ddd;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--bg-color-tonal-light)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div style="background-color:var( --bg-color-tonal-default);width:80px;height:40px;border:1px solid #ddd;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var( --bg-color-tonal-default)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div style="background-color:var(--bg-color-tonal-dark-lighter);width:80px;height:40px;border:1px solid #ddd;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--bg-color-tonal-dark-lighter)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div style="background-color:var(--bg-color-tonal-dark-light);width:80px;height:40px;border:1px solid #ddd;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--bg-color-tonal-dark-light)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div style="background-color:var(--bg-color-tonal-dark);width:80px;height:40px;border:1px solid #ddd;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--bg-color-tonal-dark)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div style="background-color:var(--bg-color-primary);width:80px;height:40px;border:1px solid #ddd;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--bg-color-primary)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- 🧡💛 UI -->
+    </article>
+
+    <article class="gd-example-wrap">
+      <h3>font color</h3>
+      <!-- 🧡💛 UI -->
+      <div class="gd-example">
+        <table class="table-wrap">
+          <colgroup>
+            <col style="width:300px;">
+            <col style="width:350px;">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Example</th>
+              <th>Variables</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div style="color:var(--text-color-dark);font-size:18px;">가나다abcABC!@#123</div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--text-color-dark)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>타이틀 혹은 강조하고 싶은 텍스트에 사용</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="color:var(--text-color-default);font-size:18px;">가나다abcABC!@#123</div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--text-color-default)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>기본 body 텍스트 색상. 따로 지정해주지않아도 됨.</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="color:var(--text-color-light);font-size:18px;">가나다abcABC!@#123</div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--text-color-light)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>inactive 상태에 사용.</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="color:var(--text-color-lighter);font-size:18px;">가나다abcABC!@#123</div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--text-color-lighter)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>보조텍스트에 사용.</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="color:var(--text-color-primary);font-size:18px;">가나다abcABC!@#123</div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--text-color-primary)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div style="color:var(--text-color-required);font-size:18px;">가나다abcABC!@#123</div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--text-color-required)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>* 필수표시에 사용</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="color:var(--text-color-error);font-size:18px;">가나다abcABC!@#123</div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--text-color-error)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>에러문구나 단어에 사용</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="color:var(--text-color-warning);font-size:18px;">가나다abcABC!@#123</div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--text-color-warning)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>주의문구나 단어에 사용</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="color:var(--text-color-success);font-size:18px;">가나다abcABC!@#123</div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--text-color-success)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>성공문구나 단어에 사용</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- 🧡💛 UI -->
+    </article>
+
+    <article class="gd-example-wrap">
+      <h3>icon color</h3>
+      <!-- 🧡💛 UI -->
+      <div class="gd-example">
+        <table class="table-wrap">
+          <colgroup>
+            <col style="width:300px;">
+            <col style="width:350px;">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Example</th>
+              <th>Variables</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div>
+                  <span class="material-icons-round" style="color:var(--icon-color-default);">add</span>
+                </div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--icon-color-default)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <span class="material-icons-round" style="color:var(--icon-color-lighter);">keyboard_arrow_right</span>
+                </div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--icon-color-lighter)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <span class="material-icons-round" style="color:var(--icon-color-primary);">add</span>
+                </div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--icon-color-primary)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <span class="material-icons-round" style="color:var(--icon-color-error);">error_outline</span>
+                </div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--icon-color-error)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <span class="material-icons-round" style="color:var(--icon-color-warning);">warning_amber</span>
+                </div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--icon-color-warning)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div>                          
+                  <span class="material-icons-round" style="color:var(--icon-color-success);">check_circle_outline</span>
+                </div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--icon-color-success)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <span class="material-icons-round" style="color:var(--base-color-white);background-color:#aaa;">add</span>
+                </div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--base-color-white)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- 🧡💛 UI -->
+    </article>
+
+    <article class="gd-example-wrap">
+      <h3>box-shadow</h3>
+      <!-- 🧡💛 UI -->
+      <div class="gd-example">
+        <table class="table-wrap">
+          <colgroup>
+            <col style="width:200px;">
+            <col style="width:250px;">
+            <col style="width:250px;">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Example</th>
+              <th>Variables</th>
+              <th>Value</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div style="box-shadow:var(--shadow-sm);width:80px;height:40px;border:1px solid #eee;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--shadow-sm)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>4px 4px 5px rgba(0,0,0,.06)</td>
+              <td>버튼 등 크기가 작은 요소에 사용.</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="box-shadow:var(--shadow-md);width:80px;height:40px;border:1px solid #eee;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--shadow-md)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>4px 4px 20px rgba(0,0,0,.1)</td>
+              <td>일반적으로 가장 많이 사용. dropdown, modal 등</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="box-shadow:var(--shadow-lg);width:80px;height:40px;border:1px solid #eee;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--shadow-lg)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>4px 4px 25px rgba(0,0,0,.15)</td>
+              <td>가장 상위에 있거나, 가장 강조하고 싶거나, 크기가 큰 레이아웃에 사용</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- 🧡💛 UI -->
+    </article>
+
+    <article class="gd-example-wrap">
+      <h3>border radius</h3>
+      <!-- 🧡💛 UI -->
+      <div class="gd-example">
+        <table class="table-wrap">
+          <colgroup>
+            <col style="width:200px;">
+            <col style="width:250px;">
+            <col style="width:250px;">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Example</th>
+              <th>Variables</th>
+              <th>Value</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div style="border-radius:var(--border-radius-sm);width:80px;height:40px;border:1px solid #ddd;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--border-radius-sm)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>4px</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div style="border-radius:var(--border-radius-md);width:80px;height:40px;border:1px solid #ddd;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--border-radius-md)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>6px</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div style="border-radius:var(--border-radius-lg);width:80px;height:40px;border:1px solid #ddd;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--border-radius-lg)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>8px</td>
+              <td>드롭다운 등 form요소보다 큰 요소에 사용</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="border-radius:var(--border-radius-max);width:80px;height:40px;border:1px solid #ddd;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--border-radius-max)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>30px</td>
+              <td>chip에 사용</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="border-radius:var(--border-radius-circle);width:40px;height:40px;border:1px solid #ddd;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--border-radius-circle)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>50%</td>
+              <td>원형 badge에 사용</td>
+            </tr>
+            <tr>
+              <td>
+                <div style="border-radius:var(--form-radius);width:80px;height:40px;border:1px solid #ddd;"></div>
+              </td>
+              <td>
+                <span class="badge-variables">
+                  <em class="txt-variables">var(--form-radius)</em>
+                  <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </span>
+              </td>
+              <td>6px</td>
+              <td>form요소(input, button, select, textarea..)에 사용</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- 🧡💛 UI -->
+    </article>
+  </div>    
+</div>

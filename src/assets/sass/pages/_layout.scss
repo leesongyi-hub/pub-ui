@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+//공통레이아웃
+.wrap{width:100%;min-width:1600px;overflow-x:auto;}
+.wrap .container{width:100%;max-width:100%;padding:0;margin:0;}
+.wrap .content{width:100%;padding-top: var(--header-height);padding-left:240px;}
+.wrap .main-cont{position:relative;width:100%;padding-top:48px;}
+.wrap .main-header{position:absolute;top:0;left:0;display:flex;align-items: center;width:100%;padding:10px 24px;min-height:48px;border-bottom:1px solid var(--border-color-default);}
+.wrap .main-header .breadcrumbs ul{display:flex;align-items: center;}
+.wrap .main-header .breadcrumbs li{display:flex;align-items: center;color:var(--text-color-lighter);}
+.wrap .main-header .breadcrumbs li.current{color:var(--text-color-dark);}
+.wrap .main-header .breadcrumbs li:last-child:after{display:none;}
+.wrap .main-header .breadcrumbs .arrow{margin:0 4px;}
+.wrap .main-body{min-height:calc(100vh - var(--header-height));padding:24px 24px 80px;}
+
+//시스템관리 > 시스템 설정
+.article .tit{margin-bottom:16px;}
+.system-page .article{margin-bottom:36px;}
+
+.system-page .keywordTable-area .res-table .tr .td{display:flex;flex-direction: column;height:100%;padding:10px;}
+.system-page .keywordTable-area .res-table textarea{height:100%;}
+.system-page .fixed-area{position:fixed;bottom:0;left:0;width:100%;text-align: right;padding:10px 24px;background-color:var(--base-color-white);box-shadow: var(--shadow-md);border-top:1px solid var(--border-color-light)}
+
+//시스템관리 > [모달]역할상세보기
+.role-list-item{display:flex;margin-bottom: 12px;}
+.role-list-item .role-tit{width:120px;color:var(--text-color-light)}
+
+//시스템관리 > 역할관리 > [모달]관리도구 메뉴권한
+.modal-role .authorization-area .table-wrap th,
+.modal-role .authorization-area .table-wrap td{color:var(--text-color-300);font-weight: 400;border-right:1px solid var(--border-color-light)}
+.modal-role .authorization-area .table-wrap tr td:first-child ,
+.modal-role .authorization-area .table-wrap tr th:first-child{position: sticky;top:0;left:0;background-color:var(--bg-color-default);z-index: 10;}
+.modal-role .authorization-area .table-wrap td .custom-control{text-align:center;justify-content: center !important;}
+.modal-role .authorization-area .table-wrap .custom-control .custom-control-label{flex-wrap:wrap;align-items: center;justify-content: center;flex-flow:column-reverse;}
+.modal-role .authorization-area .table-wrap .custom-control .custom-control-label span{display:flex;margin-bottom:6px;width: 100%;min-height:38px;align-items: end;margin-left: 0 !important;text-align: center;line-height:16px;}
+.modal-role .authorization-area .table-wrap .custom-control{justify-content: center;}
+
+//시스템관리 > 역할관리 > [모달]상담/관리 권한
+.modal-role .checked-area{margin-top:24px;padding:0px 20px 20px 20px;border:1px solid var(--border-color-light);border-radius: 4px;}
+.modal-role .checked-area.disabled{display:none;}
+.memberList-view-area{display:flex;}
+.memberList-view-area .memberList-view{width:50%;}
+.memberList-view-area .memberList-view-head{display:flex;align-items: center;margin-bottom:8px;}
+.memberList-view-area .memberList-view-head button{margin-left:12px;}
+.memberList-view-area .memberList-view-list{height:250px;padding:12px 16px;background-color:var(--bg-color-light);border:1px solid var(--border-color-light);border-radius: var(--border-radius-md);overflow-y:auto;}
+.memberList-view-area .memberList-view-list li{margin-bottom:6px;}
+.memberList-view-area .memberList-view-list .nodata{display:flex;justify-content: center;align-items: center;margin-bottom:0;height:100%;color:var(--text-color-lighter)}
+
+//시스템관리 > 역할관리 > [모달]상담사 역할목록 편집
+.modal-counselor-edit .memberList-wrap{border:1px solid var(--border-color-light);}
+.modal-counselor-edit .memberList-head{display:flex;align-items: space-between;align-items: center;padding:8px 16px;border-bottom:1px solid var(--border-color-light);justify-content:space-between;min-height:49px;}
+.modal-counselor-edit .memberList-area{padding:12px 16px;height: 500px;max-height: 500px;overflow-y: auto;}
+.modal-counselor-edit .memberList-area li{margin-bottom:6px;}
+
+.modal-counselor-edit .memberList-wrap.add{background-color:var(--bg-color-light);}
+.modal-counselor-edit .memberList-wrap.add .memberList-area{height: 549px;max-height: 549px;}
+.modal-counselor-edit .memberList-wrap.add li{display:flex;justify-content: space-between;align-items: baseline;}
+.modal-counselor-edit .memberList-wrap.add li button{position: relative;top:3px;margin-left:12px;color:var(--icon-color-lighter);opacity: .5;}
+.modal-counselor-edit .memberList-wrap.add li button:hover{opacity: 1;}
+
+.modal-counselor-edit .arrow-icon-area{display:flex;align-items:center;height: 100%;font-size:24px;}
+
+//시스템관리 > 어드바이저 설정
+.util-bar{display:flex;align-items:end;margin-bottom:16px;}
+.util-bar .right-area{margin-left:auto;font-size:0;}
+
+//시시템관리 > [모달] 계정 추가, 상세, 수정
+[class*="modal-account"] .account-area .account-item{display: flex;margin-bottom:16px;}
+[class*="modal-account"] .account-area .account-item:last-child{margin-bottom:0;}
+[class*="modal-account"] .account-area .account-item > label{width:160px;min-width:160px;color:var(--text-color-light)}
+[class*="modal-account"] .account-area .account-item .input-label{line-height:36px;}
+[class*="modal-account"] .account-area .form-area{flex: 1;width:calc(100% - 160px)}
+[class*="modal-account"] .sub-field{margin-top:24px;padding-top:24px;border-top:1px solid var(--border-color-light)}
+
+//시시템관리 > [모달] 부서 상세보기
+[class*="modal-team-"] .account-area .account-item{display: flex;margin-bottom:16px;}
+[class*="modal-team"] .account-area .account-item:last-child{margin-bottom:0;}
+[class*="modal-team-"] .account-area .account-item > label{width:160px;min-width:160px;color:var(--text-color-light)}
+[class*="modal-team-"] .account-area .account-item .input-label{line-height:36px;}
+[class*="modal-team-"] .account-area .form-area{flex: 1;width:calc(100% - 160px)}
+[class*="modal-team"] .sub-field{margin-top:24px;padding-top:24px;border-top:1px solid var(--border-color-light)}
+
+//시스템관리 > [모달]비밀번호 초기화
+.modal-resetPw .example-area{margin:16px 0;padding:12px;text-align: center;background-color: var(--bg-color-default);}
+
+// 시스템관리 > 어드바이저 설정
+.comp-area > li{border:1px solid #eee;border-radius: 8px;overflow: hidden;margin-bottom: 24px;box-shadow: var(--shadow-sm);}
+.comp-item{display:flex;padding:8px 16px;align-items: center;background-color:var(--bg-color-default);border-bottom:1px solid var(--border-color-light);}
+.comp-item .left-area{display:flex;}
+.comp-item .left-area label{margin-right:4px;}
+.comp-item .right-area{display:flex;margin-left: auto;}
+.addSubComp-btn-area{width:100%;}
+.addSubComp-btn-area:hover{background-color:var(--bg-color-default)}
+.addSubComp-btn-area .addSubComp-btn{display:flex;width:100%;justify-content: center;align-items: center;height:32px;font-size:13px;font-weight:500;}
+
+.compSub-area .comp-item{position:relative;padding-left:32px;background-color: #fff;}
+.compSub-area .comp-item::after{position:absolute;content:'';display:inline-block;width:10px;height:1px; background-color:var(--border-color-dark);top:50%;left:16px;}
+.compSub-area .comp-item::before{position:absolute;content:'';display:inline-block;width:1px;height:8px; background-color:var(--border-color-dark);top:calc(50% - 8px);left:16px;}
+
+.comp-area .form-switch{width:56px;}
+.comp-area .form-switch label::after{content:'미사용';word-break:keep-all;position:absolute;top:0;left:22px;display:block;font-size:11px;line-height:24px;font-weight:700;color:var(--text-color-lighter);opacity: .9;letter-spacing:-.2px}
+.comp-area .form-switch input:checked + label::after{content:'사용';left:8px;color:#fff;}
+
+//시스템관리 > 시스템모니터링
+.monitoring-page .table-area{max-height: 582px;}
+.monitoring-page .table-wrap th:first-child{padding-left:24px;}
+.monitoring-page .table-wrap td:first-child{padding-left:24px;}
+.monitoring-page .table-wrap{border-top:0;}
+.monitoring-page .table-wrap tfoot{bottom:-1px;background-color:var(--bg-color-light);z-index: 10;}
+.monitoring-page .table-wrap tfoot tr:hover{background-color:var(--bg-color-light);}
+.monitoring-page .table-wrap tfoot td{border-top:1px solid var(--border-color-default)}
+.mark-blue{text-decoration: underline;background-color:var(--base-color-blue-50);}
+
+//[모달]IP/Port 커스텀 등록
+.modal-ip-port-info section + section{padding-top:24px;margin-top:24px;border-top:1px solid var(--border-color-default);}
+
+//그래프영역
+.graph-area{border:1px solid var(--border-color-light);padding:16px;border-radius: var(--border-radius-md);}
+.graph-area .graph{position:relative;}
+
+//윈도우팝업
+.windowPop-wrap{padding-top:64px;}
+.windowPop-head{position:fixed;top:0;left:0;width:100%;border-bottom:1px solid var(--border-color-light);background-color: var(--bg-color-light);z-index: 100;}
+.windowPop-body{position:relative;padding:16px;height:calc(100vh - 64px)}
+
+//비활성화 dim
+.disabled-dim{display:flex;align-items: center;justify-content: center;width:100%;height:100%;position:absolute;top:0;left:0;background-color:rgba(0,0,0,.6);z-index:10;}
+.disabled-dim .txt{color:#fff;}
+
+.taskProgress-area{position:relative;}
+.taskProgress-state{display:flex;position:absolute;bottom:14px;left:20px;}
+.taskProgress-area .finished{display: flex;padding:1px;background-color:var(--base-color-primary-800);border-radius: var(--border-radius-circle);}
+.taskProgress-area .finished svg{width:13px;}
+.taskProgress-area .ing{display:flex;padding:1px;background-color:var(--base-color-primary-800);border-radius: var(--border-radius-circle);}
+.taskProgress-area .indicator{width:13px;height:13px;border:2.5px solid transparent;border-top-color:#fff;border-left-color:#fff;border-right-color:#fff;}
+
+.total_count strong{color:var(--text-color-primary);}
+
+//피드백 현황
+.feedback-wrap .util-bar{margin-bottom:40px;flex-wrap: wrap;}
+.feedback-wrap .util-bar > div,
+.feedback-wrap .util-bar > button{margin-bottom:8px;}
+.feedback-wrap .table-wrap{min-width:1600px;}
+.feedback-wrap .table-wrap td{padding:12px 8px;vertical-align: top;line-height:18px;}
+.feedback-wrap .table-wrap .category-list-item{display:flex;align-items: flex-start;font-size:13px;margin-bottom:6px;line-height:18px;}
+.feedback-wrap .table-wrap .category-list-item button{min-width:45px;max-width:50px;font-size:12px;font-weight:500;}
+.feedback-wrap .table-wrap .category-list-item button[aria-pressed="true"]{background-color:var(--base-color-primary-30);border-color:var(--base-color-primary-500);color:var(--text-color-primary);}
+.feedback-wrap .table-wrap .category-list-item button[aria-pressed="true"]:hover{background-color:var(--base-color-primary-50);}
+.feedback-wrap .table-wrap .counselorInfo_area{font-size:13px;}
+.feedback-wrap .table-wrap .except-area{font-size:13px;}
+
+//[모달] 원문보기
+.modal-stt-view{
+  .pop-chatarea{border:1px solid var(--border-color-default);}
+  .pop-chatarea .cont-tit {display:flex;flex-wrap:wrap;align-items:center;border-bottom:1px solid var(--border-color-default);;}
+  .pop-chatarea .cont-tit .classify {font-weight:bold;line-height:1.2em;width:40px;height:40px;font-size:12px;color:#fff;text-align:center;padding-top:5px;border-radius:4px 0 0 0;margin-bottom:-1px;background-color:#3346AA;}
+  
+  .pop-chatarea .cont-tit > .user-info {margin-left:10px;line-height:1em;font-weight: 600;}
+  .pop-chatarea .cont-tit > .user-info > span {border-left:1px solid var(--border-color-default);;padding-left:8px;margin-left:8px;}
+  .pop-chatarea .cont-tit > .sub-info {margin-left:auto;margin-right:15px;}
+  .pop-chatarea .cont-tit > .sub-info > span {border-left:1px solid var(--border-color-default);;padding-left:7px;margin-left:8px;line-height:1em;display:inline-block;}
+  .pop-chatarea .cont-tit > .cont-tit-sub {width:100%;border-top:1px solid var(--border-color-default);;padding:5px 15px 5px 10px;display:flex;}
+  .pop-chatarea .cont-tit > .cont-tit-sub .user-info{color:var(--text-color-light);}
+  .pop-chatarea .chat-area {padding:10px;height:450px;overflow:auto;}
+  
+  .sound-player {display:flex;height:50px;border-top:1px solid var(--border-color-default);align-items:center;background-color:var(--bg-color-default)}
+  .sound-player .sound-bar-wrap {flex:1;margin-left:20px;}
+  .sound-player .sound-bar-wrap .sound-bar {height:4px;margin-top:10px;border-radius:4px;position:relative;background-color:#CFD2E1;}
+  .sound-player .sound-bar-wrap .sound-bar > .progress-bar {position:absolute;border-radius:4px;;display:inline-block;height:4px;top:0;left:0;background-color:#6E7A8C;}
+  .sound-player .sound-bar-wrap .sound-bar > .progress-bar > .handler {display:inline-block;width:12px;height:12px;border-radius:50%;position:absolute;right:-4px;top:-4px;background-color:#6E7A8C;}
+  .sound-player .sound-bar-wrap .sound-bar .this-time {font-size:11px;position:absolute;top:-19px;left:0;}
+  .sound-player .sound-bar-wrap .sound-bar .total-time {font-size:11px;position:absolute;top:-19px;right:0;}
+  .sound-player .btn-play {width:28px;height:28px;background-repeat:no-repeat;background-position:center;background-color:#6E7A8C;border-radius:50%;margin-right:20px;margin-left:20px;opacity:.7;
+    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.6364 5.30133C11.1212 5.61185 11.1212 6.38815 10.6364 6.69867L4.09091 10.8907C3.60606 11.2012 3 10.8131 3 10.192L3 1.80796C3 1.18692 3.60606 0.798767 4.09091 1.10929L10.6364 5.30133Z' fill='%23FFFFFF'/%3E%3C/svg%3E%0A");
+  }
+  .sound-player .btn-play:hover {opacity:1;}
+  .sound-player .btn-play.pause {
+    background-repeat:no-repeat;background-position:center;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='4' height='10' rx='1' fill='%23FFFFFF'/%3E%3Crect x='7' y='1' width='4' height='10' rx='1' fill='white'/%3E%3C/svg%3E%0A");
+  }
+  
+  /* chat 발화 */
+  .chat-area{background-color: var(--bg-color-light);}
+  .chat-area .utterance-wrap {display:flex;margin-bottom:10px;flex-wrap:wrap;}
+  .chat-area .chat-counselor + .chat-customer,
+  .chat-area .chat-customer + .chat-counselor,
+  .chat-area .stt-keyword + .chat-counselor  {margin-top:18px;}
+  .chat-area .utterance-wrap.chat-counselor {flex-direction:row-reverse}
+  .chat-area .utterance-wrap > .utterance {position:relative;font-size:15px;line-height:1.3em;padding:8px 15px;border:1px solid var(--border-color-default);max-width:calc(100% - 80px);background-color:#fff;}
+  .chat-area .utterance-wrap > .utterance.on {border:1px solid var(--border-color-default);background-color:#FCE4B4 !important;}
+  .chat-area .utterance-wrap.chat-customer > .utterance {border-radius:0 10px 10px 10px}
+  .chat-area .utterance-wrap.chat-counselor > .utterance {border-radius:10px 0 10px 10px;background-color:#E3E7FE;}
+  .chat-area .utterance-wrap > .utterance .utterance-in {word-break:break-all;}
+  .chat-area .utterance-wrap > .time {align-self:flex-end;font-size:12px; margin:0 10px 2px;color:var(--text-color-lighter)}
+  
+  /* 사용자 정보 */
+  .user-info {display:flex;align-items:center;opacity:.7}
+  .user-info .user-name {font-weight:bold;}
+  .user-info .user-name > span {padding-left:3px;}
+  .user-info .user-sosok,
+  .user-info .user-tel,
+  .user-info .user-date {border-left:1px solid rgba(0,0,0,.15);line-height:1em;margin-left:8px;padding-left:7px;}
+  .user-info .user-sosok.noline,
+  .user-info .user-tel.noline,
+  .user-info .user-date.noline {margin-left:0;border:none;padding-left:0;}
+  .user-info.type-sm .user-name,
+  .user-info.type-sm .user-sosok {font-weight:normal;}
+}
