@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="all">
+  <title>공통레이아웃</title>
+  <link rel=icon href="../assets/images/favicon.ico">
+
+  <link rel="stylesheet" href="../assets/lib/bootstrap-4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.css">  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- 
+    [material-icons] npm으로 설치해주세요.
+    https://github.com/marella/material-icons?tab=readme-ov-file#readme
+  -->
+  <link rel="stylesheet" href="../../node_modules/material-icons/iconfont/material-icons.css">
+
+  <script src="../assets/lib/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+  <script src="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script src="../assets/lib/bootstrap-4.3.1/js/popper.min.js"></script>
+  <script src="../assets/lib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div id="wrap" class="wrap">
+    <header class="header">
+      <div class="logo-area">
+        <button type="button" class="lnbToggle-btn" aria-label="메뉴 토글">
+          <span class="material-icons col-white lg ico-fold">format_indent_decrease</span>
+          <span class="material-icons col-white lg ico-expended">format_indent_increase</span>
+        </button>
+        <h1>
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false" width="149" height="30" viewBox="0 0 149 30" fill="none">
+            <mask id="mask0_0_3" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="38" y="4" width="111" height="24">
+            <path d="M148.096 4.53564H38.3225V27.0852H148.096V4.53564Z" fill="white"/>
+            </mask>
+            <g mask="url(#mask0_0_3)">
+            <path d="M46.7288 6.71057H38.3225C38.3225 6.71057 38.3245 15.3646 38.3245 17.4501C38.3245 19.5356 38.4151 20.6625 40.9025 20.6625H46.7288C52.8031 20.6625 54.3322 18.1686 54.3322 13.7001C54.3322 9.23164 52.6756 6.71057 46.7288 6.71057ZM50.2132 15.2742C50.0299 17.8108 49.1733 18.8706 46.7288 18.8706H44.0502C42.7025 18.8706 42.4156 18.3621 42.4156 17.2051V8.51508H46.7288C49.3725 8.51508 50.1853 10.5792 50.2481 13.6408L50.2132 15.2742Z" fill="white"/>
+            <path d="M80.348 20.6625C78.3985 20.6625 77.0797 20.2921 76.3176 19.5298C75.8036 19.0165 75.5486 18.3126 75.5576 17.4375C75.5755 15.6826 76.987 14.6355 79.3299 14.6355C79.5062 14.6355 80.0023 14.6374 80.5801 14.6403C81.3839 14.6442 82.3462 14.6481 82.8183 14.6481H82.8681C82.8652 14.5723 82.8632 14.4974 82.8612 14.4235C82.8472 13.951 82.8353 13.5436 82.7456 13.252C82.5115 12.4887 81.9975 12.2184 80.7823 12.2184H75.9033L76.0437 12.0464C76.0606 12.0259 76.4621 11.5311 76.7021 11.2792C76.9751 10.9934 77.3158 10.8534 77.7401 10.8534H80.7942C84.6263 10.8534 86.0518 12.1825 86.0518 15.7565V19.5308L85.993 19.56C85.9701 19.5707 83.674 20.6625 80.348 20.6625ZM80.7434 15.9986C79.3887 15.9986 78.6954 16.5187 78.6844 17.5464C78.6804 18.0044 78.8229 18.3826 79.1108 18.6703C79.4704 19.0291 80.0372 19.2275 80.7066 19.2275C82.0055 19.2275 82.7098 18.7734 82.8721 18.6538V15.9986H80.7434Z" fill="white"/>
+            <path d="M120.482 20.6625V15.0467C120.482 12.1825 121.673 11.0148 124.592 11.0148H129.366L129.273 11.1713C129.261 11.1917 128.965 11.6915 128.747 11.9793C128.503 12.2991 128.206 12.3594 127.738 12.3594H125.403C124.497 12.3594 123.661 12.6287 123.661 14.58V19.5483C123.661 20.2454 123.241 20.6615 122.538 20.6615L120.482 20.6625Z" fill="white"/>
+            <path d="M69.9744 20.6625V5.64888C69.9744 4.95177 70.3947 4.53564 71.097 4.53564H73.154V19.5493C73.154 20.2464 72.7336 20.6625 72.0294 20.6625H69.9734H69.9744Z" fill="white"/>
+            <path d="M62.6399 10.9584H56.968V25.972C56.968 26.6691 57.3884 27.0852 58.0916 27.0852H60.1496V20.3329C60.6995 20.4904 61.3759 20.5896 62.2036 20.6051V20.6071H62.6399C66.3684 20.6071 67.8895 19.2391 67.8895 15.7584C67.8895 12.828 66.997 10.9584 62.6399 10.9584ZM62.6399 19.2401H62.0213C61.7106 19.2401 60.1586 19.1603 60.1586 17.5901H60.1486V12.3137H62.6409C64.2557 12.3137 64.7238 13.4435 64.7238 15.7574C64.7238 18.0714 64.2796 19.2401 62.6399 19.2401Z" fill="white"/>
+            <path d="M103.206 4.54828C100.862 4.54828 99.0949 5.71596 99.0949 8.58023V11.499H97.791V12.8446H99.0949V20.6615H101.152C101.855 20.6615 102.276 20.2454 102.276 19.5483V12.8455H104.826C105.292 12.8455 105.59 12.7852 105.834 12.4644C106.052 12.1766 106.349 11.6769 106.362 11.6565L106.454 11.4999H102.277V8.59676C102.277 6.64447 103.38 5.89388 104.833 5.89388H106.015C106.481 5.89388 106.78 5.8336 107.022 5.51276C107.241 5.22497 107.538 4.7262 107.55 4.70481L107.643 4.54828H103.206Z" fill="white"/>
+            <path d="M96.3676 20.5059C96.3546 20.4846 96.0588 19.9858 95.8406 19.698C95.5966 19.3781 95.2998 19.3169 94.8326 19.3169H94.1771C93.2726 19.3169 92.4359 18.9727 92.4359 17.4929V12.3662H94.3206C94.7867 12.3662 95.0846 12.3059 95.3286 11.9851C95.5478 11.6963 95.8426 11.1975 95.8556 11.1771L95.9482 11.0206H92.4359V8.77565C92.4359 8.07855 92.0155 7.66339 91.3123 7.66339H89.2553V11.0206H87.6934V12.3662H89.2553V17.2557C89.2553 20.12 90.4466 20.6635 93.3663 20.6635H96.4602L96.3676 20.5069V20.5059Z" fill="white"/>
+            <path d="M143.672 11.0148H142.885C141.902 11.0148 140.785 11.4513 139.868 12.2058C139.105 11.427 137.988 11.0148 136.593 11.0148H135.806C135.208 11.0148 134.559 11.1772 133.936 11.4737V10.9905H131.999C131.337 10.9905 130.941 11.4066 130.941 12.1027V20.6625H132.878C133.54 20.6625 133.935 20.2464 133.935 19.5493V17.1079V14.5801C133.935 12.9642 135.046 12.3594 136.045 12.3594C137.044 12.3594 138.019 13.0624 138.019 15.0147V17.1079V19.5493C138.019 20.2464 138.416 20.6625 139.078 20.6625H141.015V15.4755C141.015 15.4706 141.015 15.4658 141.015 15.4609V14.581C141.015 12.9651 142.127 12.3604 143.126 12.3604C144.125 12.3604 145.101 13.0633 145.101 15.0156V19.5502C145.101 20.2473 145.496 20.6635 146.158 20.6635H148.094V15.4765C148.094 12.6122 146.421 11.0158 143.671 11.0158L143.672 11.0148Z" fill="white"/>
+            <path d="M113.297 10.9584H112.356C108.648 10.9584 107.082 12.7094 107.078 15.809C107.082 18.9114 108.648 20.6615 112.356 20.6615H113.297C117.005 20.6615 118.571 18.9114 118.575 15.8099C118.572 12.7084 117.006 10.9584 113.297 10.9584ZM112.874 19.3169H112.78C111.17 19.3169 110.271 18.3689 110.271 15.8099C110.271 13.251 111.169 12.3049 112.78 12.3049H112.874C114.483 12.3049 115.382 13.2519 115.382 15.8099C115.382 18.3679 114.483 19.3169 112.874 19.3169Z" fill="white"/>
+            </g>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.64227 12.9551L2.09766 15.2953L14.9044 21.8898L27.7113 15.2953L23.1666 12.9551L14.9044 17.2095L6.64227 12.9551Z" fill="#0AA9E8"/>
+            <path d="M14.9044 4.02039L27.7112 10.615L14.9044 17.2095L2.09766 10.615L14.9044 4.02039Z" fill="#3EDDDD"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.09766 19.9756L6.64225 17.6354L14.9044 21.8898L23.1666 17.6354L27.7112 19.9756L14.9044 26.5701L2.09766 19.9756Z" fill="#007AAA"/>
+          </svg>
+          <span class="sub-tit">상담어드바이저 관리도구</span>
+        </h1>      
+      </div> 
+    
+      <div class="right-area">
+        <div class="my-area">
+          <button class="my-btn" type="button">
+            <span class="name">(주)엔에이치엔다이퀘스트</span>
+            <!-- <svg role="img" aria-hidden="true" focusable="false" class="ico-svg stroke mask-16px rotate-90deg col-white">
+              <use xlink:href="#ico_arrow"></use>
+            </svg> -->
+            <span class="material-icons-round col-white">arrow_drop_down</span>            
+          </button>  
+          <div class="my-dropdown" style="display:none;">
+            <ul class="my-list">
+              <li class="my-list-item">
+                <button type="button" class="theme-btn">
+                  <span class="material-icons-round">format_color_fill</span>
+                  <span class="label">테마색상 설정</span>
+                  <span class="material-icons-round col-lightgray">keyboard_arrow_right</span>
+                </button>
+              </li>
+              <li class="my-list-item">
+                <button type="button">
+                  <span class="material-icons-round">logout</span>
+                  <span class="label">로그아웃</span>
+                </button>
+              </li>
+            </ul>
+            <div class="sub-menu" style="display:none;">
+              <div class="theme-area">
+                <div class="sub-menu-head">
+                  <button type="button" class="back-btn mask-18px">
+                    <span class="material-icons-round">arrow_back</span>
+                  </button>
+                  <span class="tit">테마색상 설정</span>
+                </div>
+                <ul class="themeSel-area">
+                  <li>
+                    <input type="radio" name="theme" id="admin-theme-blue" value="blue" checked>
+                    <label for="admin-theme-blue">Blue Theme</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="theme" id="admin-theme-mint" value="mint">
+                    <label for="admin-theme-mint">Mint Theme</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="theme" id="admin-theme-green" value="green">
+                    <label for="admin-theme-green">Green Theme</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="theme" id="admin-theme-purple" value="purple">
+                    <label for="admin-theme-purple">Purple Theme</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="theme" id="admin-theme-black" value="black">
+                    <label for="admin-theme-black">Black Theme</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- //my-dropdown -->
+        </div>
+        <!-- //my-area -->
+      </div>
+    </header>
+    
+    <!-- <div class="content">
+      
+      <div class="left-panel">	
+        <ul class="navi">
+          <li class="navi-item">
+            <a href="javascript:;">
+              <span class="material-icons-outlined">dashboard_customize</span>
+              <span class="label">대시보드</span>
+            </a>
+          </li>
+          <li class="navi-item">
+            <a href="javascript:;">
+              <span class="material-icons-outlined">headset_mic</span>
+              <span class="label">상담 관리</span>
+            </a>
+            <div class="sub-menu">
+              <ul>
+                <li class="navi-item"><a href="javascript:;">콜 목록</a></li>
+                <li class="navi-item"><a href="javascript:;">공지사항 관리</a></li>
+                <li class="navi-item"><a href="javascript:;">코칭 메세지 관리</a></li>
+              </ul>
+            </div>			
+          </li>
+          <li class="navi-item">
+            <a href="javascript:;">
+              <span class="material-icons-outlined">people_alt</span>
+              <span class="label">상담사 및 조직 관리</span>
+            </a>
+            <div class="sub-menu">
+              <ul>
+                <li class="navi-item"><a href="javascript:;">전화상담사</a></li>
+                <li class="navi-item"><a href="javascript:;">채팅상담사</a></li>
+                <li class="navi-item"><a href="javascript:;">부서 및 조직 관리</a></li>
+              </ul>
+            </div>			
+          </li>
+          <li class="navi-item">
+            <a href="javascript:;">
+              <span class="material-icons-outlined">settings</span>           
+              <span class="label">시스템 관리</span>
+            </a>
+            <div class="sub-menu">
+              <ul>
+                <li class="navi-item"><a href="javascript:;">시스템 설정</a></li>
+                <li class="navi-item"><a href="javascript:;">어드바이저 설정</a></li>
+                <li class="navi-item"><a href="javascript:;">상담유형코드 관리</a></li>
+                <li class="navi-item"><a href="javascript:;">장애로그</a></li>
+                <li class="navi-item"><a href="javascript:;">활동이력</a></li>
+                <li class="navi-item"><a href="javascript:;">계정 관리 및 설정</a></li>
+                <li class="navi-item"><a href="javascript:;">역할 관리</a></li>
+                <li class="navi-item"><a href="javascript:;">디플랫폼 접속</a></li>
+                <li class="navi-item"><a href="javascript:;">인포채터 접속</a></li>
+                <li class="navi-item"><a href="javascript:;">시스템 모니터링</a></li>
+              </ul>
+            </div>				
+          </li>			
+        </ul>
+        <div class="navi-footer">
+          <div class="copyright">
+            2.7.0.0-SNAPSHOT (1147141a)<br />
+            Copyright© diquest.<br />
+            All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+      <main class="main-cont">
+        <div class="main-header">
+          <div class="breadcrumbs">
+            <ul>
+              <li><h2>1차메뉴</h2></li>
+              <li class="arrow">
+                <span class="material-icons-round col-lightgray">keyboard_arrow_right</span>
+              </li>
+              <li class="current"><h2>2차메뉴</h2></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-body">
+        </div>
+      </main>
+    </div> -->
+
+    <!--로딩 추가-->
+    <div class="page-loader">
+      <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!--//로딩 추가-->
+
+  </div>  
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/lib/ie11CustomProperties.js"></script>  
+</body>
+</html>

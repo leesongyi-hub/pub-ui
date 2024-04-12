@@ -303,15 +303,15 @@
   };
   
   $(function () {
-    // UI.VueTreeSelect.init();
-    // UI.bsMultiModal.init();
-    // UI.bsTooltip.init();
-    // UI.bsDropDown.init();
+    UI.VueTreeSelect.init();
+    UI.bsMultiModal.init();
+    UI.bsTooltip.init();
+    UI.bsDropDown.init();
     UI.themeChange.init();
-    // UI.expendedNavi.init();
-    // UI.myManu.init();
-    // UI.searchSelect.init();
-    // UI.fileInputValueText.init();
-    // UI.autoHeightTextArea.init();
+    UI.expendedNavi.init();
+    UI.myManu.init();
+    UI.searchSelect.init();
+    UI.fileInputValueText.init();
+    UI.autoHeightTextArea.init();
   });
 

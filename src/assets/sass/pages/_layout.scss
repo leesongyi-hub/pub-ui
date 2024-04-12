@@ -1,17 +1,17 @@
 @charset "UTF-8";
 
 //공통레이아웃
-.wrap{width:100%;min-width:1600px;overflow-x:auto;}
+.wrap{width:100%;}
 .wrap .container{width:100%;max-width:100%;padding:0;margin:0;}
 .wrap .content{width:100%;padding-top: var(--header-height);padding-left:240px;}
-.wrap .main-cont{position:relative;width:100%;padding-top:48px;}
+.wrap .main-cont{position:absolute;top:0;bottom:0;left:240px;right:0;padding-top:48px;overflow-x:auto;}
 .wrap .main-header{position:absolute;top:0;left:0;display:flex;align-items: center;width:100%;padding:10px 24px;min-height:48px;border-bottom:1px solid var(--border-color-default);}
 .wrap .main-header .breadcrumbs ul{display:flex;align-items: center;}
 .wrap .main-header .breadcrumbs li{display:flex;align-items: center;color:var(--text-color-lighter);}
 .wrap .main-header .breadcrumbs li.current{color:var(--text-color-dark);}
 .wrap .main-header .breadcrumbs li:last-child:after{display:none;}
 .wrap .main-header .breadcrumbs .arrow{margin:0 4px;}
-.wrap .main-body{min-height:calc(100vh - var(--header-height));padding:24px 24px 80px;}
+.wrap .main-body{min-width:1400px;min-height:calc(100vh - var(--header-height));padding:24px 24px 80px;}
 
 //시스템관리 > 시스템 설정
 .article .tit{margin-bottom:16px;}

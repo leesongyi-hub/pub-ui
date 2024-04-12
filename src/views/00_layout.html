@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="all">
+  <title>공통레이아웃</title>
+  <link rel=icon href="../assets/images/favicon.ico">
+
+  <link rel="stylesheet" href="../assets/lib/bootstrap-4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.css">  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- 
+    [material-icons] npm으로 설치해주세요.
+    https://github.com/marella/material-icons?tab=readme-ov-file#readme
+  -->
+  <link rel="stylesheet" href="../../node_modules/material-icons/iconfont/material-icons.css">
+
+  <script src="../assets/lib/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+  <script src="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script src="../assets/lib/bootstrap-4.3.1/js/popper.min.js"></script>
+  <script src="../assets/lib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div id="wrap" class="wrap">
+    <header class="header">
+      <div class="logo-area">
+        <button type="button" class="lnbToggle-btn" aria-label="메뉴 토글">
+          <span class="material-icons col-white lg ico-fold">format_indent_decrease</span>
+          <span class="material-icons col-white lg ico-expended">format_indent_increase</span>
+        </button>
+        <h1>
+          <svg  class="mask-30px mr-8px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 26" width="24" height="26" fill="none" role="img">
+            <path fill="#fff" d="M.231 12.655c0 2.984 1.145 5.707 3.027 7.768C1.82 21.952 0 22.15 0 22.15A17.147 17.147 0 0 0 9.506 25c2.874 0 5.581-.7 7.954-1.935 3.879-1.919 6.54-5.86 6.54-10.41C24 6.218 18.68 1 12.116 1S.23 6.218.23 12.655Z"/><path fill="#3346AA" d="M17.237 10.143h.705a1.329 1.329 0 0 1 1.328 1.326v2.651a1.325 1.325 0 0 1-1.328 1.326h-.705a5.301 5.301 0 0 1-1.757 3.314 5.317 5.317 0 0 1-3.513 1.326V18.76c1.056 0 2.07-.419 2.817-1.165a3.974 3.974 0 0 0 1.166-2.812v-3.977c0-1.055-.42-2.067-1.166-2.812a3.987 3.987 0 0 0-5.634 0 3.974 3.974 0 0 0-1.166 2.812v4.64H5.992a1.329 1.329 0 0 1-1.328-1.326V11.47a1.325 1.325 0 0 1 1.328-1.326h.705a5.301 5.301 0 0 1 1.757-3.314 5.317 5.317 0 0 1 7.026 0 5.3 5.3 0 0 1 1.757 3.314Zm-8.085 5.16.704-1.124a3.97 3.97 0 0 0 2.111.604 3.97 3.97 0 0 0 2.111-.604l.704 1.124a5.293 5.293 0 0 1-2.815.806 5.292 5.292 0 0 1-2.815-.806Z"/>
+          </svg>
+          <span class="sub-tit">상담어드바이저 관리도구</span>
+        </h1>
+
+        <!--화면전환 추가-->
+        <button type="button" class="dropdown-toggle btn-jump mask-20px" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="화면전환">
+          <span class="material-icons-round col-white xs mr-0px" data-toggle="tooltip" data-placement="right" title="" data-original-title="화면전환">keyboard_arrow_down</span>
+        </button>
+        <div class="layer-pageLink dropdown-menu">
+          <p class="h4 layer-tit">접속 화면 선택</p>
+          <ul class="dropdown-list">
+            <li class="dropdown-list-item">
+              <a href="javascript:;">
+                <span>상담사 화면</span>
+                <span class="material-icons-round col-lightgray sm mr-0px">keyboard_arrow_right</span>
+              </a>
+            </li>
+            <li class="dropdown-list-item">
+              <a href="javascript:;">
+                <span>관리자 화면</span>
+                <span class="material-icons-round col-lightgray sm mr-0px">keyboard_arrow_right</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div> 
+    
+      <div class="right-area">
+
+        <div class="taskProgress-area">
+          <button type="button" class="btn-ghost ico-only lg circle mr-20px" data-dq-tooltip=tooltip data-placement="bottom" data-original-title="작업 알림" data-toggle="modal" data-target="#modal-taskProgress">
+            <span class="blind">작업 알림</span>
+            <span class="material-icons-round xl col-white d-flex" aria-hidden="true">notifications</span>  
+            <div class="taskProgress-state">
+              <!-- 카운트 -->
+              <div class="badge-count" style="display:inline-block">
+                99+
+              </div>
+              <!-- 진행 중 -->
+              <!-- <div class="ing" style="display:flex;">
+                <span class="blind">진행 중</span>
+                <div class="indicator"></div>
+              </div> -->
+            </div>
+          </button>
+        </div>
+
+        <div class="my-area">
+          <button class="my-btn" type="button">
+            <span class="name">(주)엔에이치엔다이퀘스트</span>
+            <!-- <svg role="img" aria-hidden="true" focusable="false" class="ico-svg stroke mask-16px rotate-90deg col-white">
+              <use xlink:href="#ico_arrow"></use>
+            </svg> -->
+            <span class="material-icons-round col-white">arrow_drop_down</span>            
+          </button>  
+          <div class="my-dropdown" style="display:none;">
+            <ul class="my-list">
+              <li class="my-list-item">
+                <button type="button" class="theme-btn">
+                  <span class="material-icons-round">format_color_fill</span>
+                  <span class="label">테마색상 설정</span>
+                  <span class="material-icons-round col-lightgray">keyboard_arrow_right</span>
+                </button>
+              </li>
+              <li class="my-list-item">
+                <button type="button">
+                  <span class="material-icons-round">logout</span>
+                  <span class="label">로그아웃</span>
+                </button>
+              </li>
+            </ul>
+            <div class="sub-menu" style="display:none;">
+              <div class="theme-area">
+                <div class="sub-menu-head">
+                  <button type="button" class="back-btn mask-18px">
+                    <span class="material-icons-round">arrow_back</span>
+                  </button>
+                  <span class="tit">테마색상 설정</span>
+                </div>
+                <ul class="themeSel-area">
+                  <li>
+                    <input type="radio" name="theme" id="admin-theme-blue" value="blue" checked>
+                    <label for="admin-theme-blue">Blue Theme</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="theme" id="admin-theme-mint" value="mint">
+                    <label for="admin-theme-mint">Mint Theme</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="theme" id="admin-theme-green" value="green">
+                    <label for="admin-theme-green">Green Theme</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="theme" id="admin-theme-purple" value="purple">
+                    <label for="admin-theme-purple">Purple Theme</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="theme" id="admin-theme-black" value="black">
+                    <label for="admin-theme-black">Black Theme</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- //my-dropdown -->
+        </div>
+        <!-- //my-area -->
+      </div>
+    </header>
+    
+    <div class="content">
+      
+      <div class="left-panel">	
+        <ul class="navi">
+          <li class="navi-item">
+            <a href="javascript:;">
+              <span class="material-icons-outlined">dashboard_customize</span>
+              <span class="label">대시보드</span>
+            </a>
+          </li>
+          <li class="navi-item">
+            <a href="javascript:;">
+              <span class="material-icons-outlined">headset_mic</span>
+              <span class="label">상담 관리</span>
+            </a>
+            <div class="sub-menu">
+              <ul>
+                <li class="navi-item"><a href="javascript:;">콜 목록</a></li>
+                <li class="navi-item"><a href="javascript:;">공지사항 관리</a></li>
+                <li class="navi-item"><a href="javascript:;">코칭 메세지 관리</a></li>
+              </ul>
+            </div>			
+          </li>
+          <li class="navi-item">
+            <a href="javascript:;">
+              <span class="material-icons-outlined">people_alt</span>
+              <span class="label">상담사 및 조직 관리</span>
+            </a>
+            <div class="sub-menu">
+              <ul>
+                <li class="navi-item"><a href="javascript:;">전화상담사</a></li>
+                <li class="navi-item"><a href="javascript:;">채팅상담사</a></li>
+                <li class="navi-item"><a href="javascript:;">부서 및 조직 관리</a></li>
+              </ul>
+            </div>			
+          </li>
+          <li class="navi-item">
+            <a href="javascript:;">
+              <span class="material-icons-outlined">settings</span>           
+              <span class="label">시스템 관리</span>
+            </a>
+            <div class="sub-menu">
+              <ul>
+                <li class="navi-item"><a href="javascript:;">시스템 설정</a></li>
+                <li class="navi-item"><a href="javascript:;">어드바이저 설정</a></li>
+                <li class="navi-item"><a href="javascript:;">상담유형코드 관리</a></li>
+                <li class="navi-item"><a href="javascript:;">장애로그</a></li>
+                <li class="navi-item"><a href="javascript:;">활동이력</a></li>
+                <li class="navi-item"><a href="javascript:;">계정 관리 및 설정</a></li>
+                <li class="navi-item"><a href="javascript:;">역할 관리</a></li>
+                <li class="navi-item"><a href="javascript:;">디플랫폼 접속</a></li>
+                <li class="navi-item"><a href="javascript:;">인포채터 접속</a></li>
+                <li class="navi-item"><a href="javascript:;">시스템 모니터링</a></li>
+              </ul>
+            </div>				
+          </li>			
+        </ul>
+        <div class="navi-footer">
+          <div class="copyright">
+            2.7.0.0-SNAPSHOT (1147141a)<br />
+            Copyright© DIQUEST.<br />
+            All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+      <main class="main-cont">
+        <div class="main-header">
+          <div class="breadcrumbs">
+            <ul>
+              <li><h2>1차메뉴</h2></li>
+              <li class="arrow">
+                <span class="material-icons-round col-lightgray">keyboard_arrow_right</span>
+              </li>
+              <li class="current"><h2>2차메뉴</h2></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-body">
+        </div>
+      </main>
+    </div>
+
+    <!-- S. 모달 : 작업진행 -->
+    <div class="modal modal-taskProgress fade" id="modal-taskProgress" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
+      <div class="modal-dialog w1200">
+        <div class="modal-content"> 
+    
+          <div class="modal-header">
+            <p class="tit">작업 알림</p>            
+            <button type="button" class="close-btn mask-32px" data-dismiss="modal">
+              <span class="blind">팝업 닫기</span>
+              <span class="material-icons-round xl">close</span>
+            </button>
+          </div>  
+          <div class="modal-body">
+            <div>
+              <div class="table-area mt-20px">
+                <table class="table-wrap min-w1000px">
+                  <caption class="blind">
+                    작업 알림 표. 읽음 여부, 업무구분, 행동, 진행률, 실행시간, 상태, 내역, 등록일, 상세 정보
+                  </caption>
+                  <colgroup>
+                    <col style="width:80px">
+                    <col style="width:120px">
+                    <col style="width:120px">
+                    <col style="width:80px">
+                    <col style="width:80px">
+                    <col style="width:80px">
+                    <col style="width:">
+                    <col style="width:100px">
+                    <col style="width:100px">
+                  </colgroup>
+                  <thead>
+                    <tr> 
+                      <th scope="col" class="text-center">읽음</th>
+                      <th scope="col" class="text-center">업무구분</th>
+                      <th scope="col" class="text-center">행동</th>
+                      <th scope="col" class="text-center">진행률</th>                                               
+                      <th scope="col" class="text-center">실행시간</th>
+                      <th scope="col" class="text-center">상태</th>
+                      <th scope="col" class="text-center">내역</th>
+                      <th scope="col" class="text-center">등록일</th>
+                      <th scope="col" class="text-center">상세</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">
+                        <button type="button" class="d-inline-flex " title="안읽음">
+                          <span class="material-icons-outlined" aria-hidden="true">mark_email_unread</span>
+                        </button>
+                      </td>
+                      <td class="text-center">계정관리​</td>
+                      <td class="text-center">내보내기</td>
+                      <td class="text-center">100%</td>
+                      <td class="text-center">48초</td>
+                      <td class="text-center"><span class="col-success">성공</span></td>
+                      <td class="text-center">사용자가 계정관리에서 2건 다운로드에 성공하셨습니다.</td>
+                      <td class="text-center">2024-02-28</td>
+                      <td class="text-center">
+                        <button type="button" class="btn-outline xs">다운로드</button>
+                      </td>
+                    </tr>  
+                    <tr>
+                      <td class="text-center">
+                        <button type="button" class="d-inline-flex" title="읽음">
+                          <span class="material-icons-outlined col-lightgray" aria-hidden="true">mark_email_read</span>
+                        </button>
+                      </td>
+                      <td class="text-center">계정관리​</td>
+                      <td class="text-center">내보내기</td>
+                      <td class="text-center">100%</td>
+                      <td class="text-center">48초</td>
+                      <td class="text-center"><span class="col-error">실패</span></td>
+                      <td class="text-center">사용자가 계정관리에서 2건 다운로드에 실패하셨습니다.</td>
+                      <td class="text-center">2024-02-28</td>
+                      <td class="text-center">
+                        <button type="button" class="btn-outline xs">다운로드</button>
+                      </td>
+                    </tr>  
+                  </tbody>
+                </table>
+              </div>
+              <nav class="pagination mt-16px">
+                <ul>
+                  <li class="page_item">
+                    <button type="button" class="page_link ico btn_next" aria-label="마지막 페이지" disabled="">
+                      <div class="mask-20px">
+                        <span class="material-icons-round">keyboard_double_arrow_left</span>
+                      </div>
+                    </button>
+                  </li>
+                  <li class="page_item">        
+                    <button type="button" class="page_link ico btn_prev disabled" aria-label="이전 페이지" disabled="">
+                      <div class="mask-20px">
+                        <span class="material-icons-round">keyboard_arrow_left</span>
+                      </div>
+                    </button>
+                  </li>
+  
+                  <!--현재페이지 addClass('on')'-->
+                  <li class="page_item on"><button type="button" class="page_link">1</button></li>
+                  <li class="page_item"><button type="button" class="page_link">2</button></li>
+                  <li class="page_item"><button type="button" class="page_link">3</button></li>
+                  <li class="page_item"><button type="button" class="page_link">4</button></li>
+                  <li class="page_item"><button type="button" class="page_link">5</button></li>
+                  <li class="page_item">
+                    <button type="button" class="page_link ico btn_next" aria-label="다음 페이지">
+                      <div class="mask-20px">
+                        <span class="material-icons-round">keyboard_arrow_right</span>
+                      </div>
+                    </button>
+                  </li>
+                  <li class="page_item">
+                    <button type="button" class="page_link ico btn_next" aria-label="마지막 페이지">
+                      <div class="mask-20px">
+                        <span class="material-icons-round">keyboard_double_arrow_right</span>
+                      </div>                      
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>  
+          <div class="modal-footer">            
+            <button type="button" class="btn-primary xl" data-dismiss="modal">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- E. 모달 : 작업진행 -->
+
+  </div>  
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/lib/ie11CustomProperties.js"></script>  
+</body>
+</html>

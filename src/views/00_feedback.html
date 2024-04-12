@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="all">
+  <title>피드백 현황</title>
+  <link rel=icon href="../assets/images/favicon.ico"> 
+
+  <link rel="stylesheet" href="../assets/lib/bootstrap-4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">  
+  <!-- 
+    [material-icons] npm으로 설치해주세요.
+    https://github.com/marella/material-icons?tab=readme-ov-file#readme
+  -->
+  <link rel="stylesheet" href="../../node_modules/material-icons/iconfont/material-icons.css">
+
+  <script src="../assets/lib/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+  <script src="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script src="../assets/lib/bootstrap-4.3.1/js/popper.min.js"></script>
+  <script src="../assets/lib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div id="wrap" class="wrap account-page">
+    <header class="header">
+      <!--공통영역 layout.html에서 확인-->
+      
+    </header>
+    <div class="content">
+      <div class="left-panel">
+        <!--공통영역 layout.html에서 확인-->
+      </div>
+      <main class="main-cont">
+        <div class="main-header">
+          <div class="breadcrumbs">
+            <ul>
+              <!-- <li><h2>피드백 현황</h2></li>
+              <li class="arrow">
+                <span class="material-icons-round col-lightgray">keyboard_arrow_right</span>
+              </li> -->
+              <li class="current">
+                <h2>피드백 현황</h2>
+                <div class="btn-guide-area ml-6px">
+                  <button type="button" class="btn-guide">?</button>
+                  <div class="guide-tooltip">
+                    <div class="inner">
+                      <p>
+                        내용입력 영역<br>
+                        줄바꿈하고 싶으면 <br>
+                        br태그로 줄바꿈해서 입력해주세요.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-body feedback-wrap">
+          <div class="util-bar">
+            <div class="form-block mr-16px">
+              <p>조회기간</p>
+              <div id="app" class="d-flex align-items-center mt-4px">
+                <!-- datepicker 다른 UI 라이브러리 사용해도 무관. -->
+                <datepicker class="datepicker w-120px" v-model="fromDate" value="state.date" format="yyyy-MM-dd" placeholder="시작일 선택"></datepicker>
+                <span>&nbsp;~&nbsp;</span>
+                <datepicker class="datepicker w-120px" v-model="toDate" value="state.date" format="yyyy-MM-dd" placeholder="종료일 선택"></datepicker>
+              </div>
+            </div>
+            <div class="form-block mr-16px">
+              <label for="sampleid2">구분</label>
+              <select class="w-120px" id="sampleid2">
+                <option>전체</option>
+                <option>상담지식</option>
+                <option>법률지식</option>
+              </select>
+            </div>
+            <div class="form-block mr-16px">
+              <label for="sampleid3">학습적용여부</label>
+              <select class="w-120px" id="sampleid3">
+                <option>전체</option>
+              </select>
+            </div>
+            <div class="form-block mr-16px">
+              <label for="sampleid4">법률분류 일치여부</label>
+              <select class="w-120px" id="sampleid4">
+                <option>전체</option>
+              </select>
+            </div>
+            <div class="form-block mr-16px">
+              <label for="sampleid5">참고사례 일치여부</label>
+              <select class="w-120px" id="sampleid5">
+                <option>전체</option>
+              </select>
+            </div>
+            <div class="form-block mr-16px">
+              <label for="sampleid6">법류분류(AI)</label>
+              <input class="w-160px" id="sampleid6" type="text" placeholder="법률분류(AI) 입력">
+            </div>
+            <div class="form-block mr-16px">
+              <label for="sampleid7">법류분류(상담사)</label>
+              <input class="w-160px" id="sampleid7" type="text" placeholder="법률분류(상담사) 입력">
+            </div>
+            <div class="form-block mr-16px">
+              <label for="sampleid8">조건</label>
+              <select class="w-120px" id="sampleid8">
+                <option>전체</option>
+              </select>
+            </div>
+            <div class="form-block">
+              <label for="sampleid9">키워드</label>
+              <input class="w-180px" id="sampleid9" type="text" placeholder="검색어 입력" value="" autocomplete="off">
+            </div>
+            <button type="submit" class="btn-outline ml-6px">검색</button>
+            <button type="button" class="btn-outline mask-32px ml-6px" aria-label="검색 초기화">
+              <span class="material-icons-round">refresh</span>
+            </button>
+          </div>
+  
+          <div class="table-head-area d-flex justify-content-between align-items-end mb-16px">
+            <div class="total_count">
+              검색결과 총
+              <strong>3</strong>건
+            </div>
+            <div class="d-flex align-item-center">
+              <button type="button" class="btn-outline ml-8px" disabled>검토결과 상담원 선택 적용</button>
+              <button type="button" class="btn-outline ml-8px" disabled>검토결과 선택 제외</button>
+              <button type="button" class="btn-outline ml-8px">검토결과 상담원<span class="col-red">&nbsp;전체 적용</span></button>
+              <button type="button" class="btn-outline ml-8px">검토결과<span class="col-red">&nbsp;전체 제외</span></button>
+            </div>
+          </div>
+          <div class="table-area">
+
+            <!-- 테이블 로딩 위치 -->
+            <!-- <div class="comp-loader">
+              <div class="loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div> -->
+            <!-- // 테이블 로딩 위치 -->
+
+            <table class="table-wrap">
+              <caption class="blind">STT발화내용, 법률분류, 참고사례, 피드백, 학습제외여부 등으로 구성된 콜 목록</caption>
+              <thead>
+                <tr class="text-center">
+                  <th scope="col" style="width:40px;">
+                    <div class="custom-control custom-checkbox justify-content-center">
+                      <input type="checkbox" class="custom-control-input" id="list_check0">
+                      <label class="custom-control-label" for="list_check0"><span class="blind">목록선택</span></label>
+                    </div>
+                  </th>
+                  <th scope="col" style="width:60px;">No.</th>
+                  <th scope="col" style="width:">구분 / STT 발화내용</th>
+                  <th scope="col" style="width:280px;">법률분류</th>
+                  <th scope="col" style="width:280px;">참고사례</th>
+                  <th scope="col" style="width:60px;">평점</th>
+                  <th scope="col" style="width:80px;">피드백</th>
+                  <th scope="col" style="width:170px;">의견내용</th>
+                  <th scope="col" style="width:110px;">상담사</th>
+                  <th scope="col" style="width:150px;">학습 제외 여부</th>
+                  <th scope="col" style="width:80px;">학습적용</th>
+                  <th scope="col" style="width:80px;">상담원문</th>
+              </tr>
+
+
+              </thead>
+              <tbody class="text-center">
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox justify-content-center">
+                      <input type="checkbox" class="custom-control-input" id="list_check2">
+                      <label class="custom-control-label" for="list_check2"><span class="blind">목록선택</span></label>
+                    </div>
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td class="text-left">
+                    <div class="font-weight-bold">
+                        상담지식<span class=" pl-5px font-weight-normal">&nbsp;(면접상담)</span>
+                    </div>
+                    <div class="mt-6px text-lightgray typo-caption-lg-regular">
+                      이혼 위자료 관련해서 상담좀 받으려고 하는데요 남편한테 폭행을 당한 경우 이혼 위자료 청구는 어떻게 하나요?
+                    </div>
+                  </td>
+                  <td class="text-left">
+                    <ul class="category-list">
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="true">AI</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">상담사</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">검토</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="text-left">
+                    <ul class="category-list">
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="true">AI</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">상담사</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">검토</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                    </ul>
+                  </td>
+                  <td>
+                    <strong class="col-blue">3</strong>
+                    <!-- <strong class="col-red">3</strong> -->
+                  </td>
+                  <td>
+                    <strong class="col-blue">좋아요</strong>
+                    <!-- <strong class="col-red">나빠요</strong> -->
+                  </td>
+                  <td class="text-left">
+                    의견내용 의견내용 의견내용
+                  </td>
+                  <td class="text-center counselorInfo_area">
+                    <strong class="mb-4px">홍길동</strong>
+                    <div>서울중앙지부</div>
+                    <div class="col-caption">(A1233412312)</div>
+                  </td>
+                  <td class="except-area">
+                    <div class="d-flex align-items-center justify-content-center">
+                      <span class="col-caption mr-4px">안 함</span>
+                      <div class="form-switch">
+                        <input type="checkbox" id="switch1" checked="">
+                        <label for="switch1">
+                          <span class="blind">학습제외여부체크</span>
+                          <i class="btn-switch"></i>
+                        </label>
+                      </div>
+                      <span class="col-blue ml-4px">제외 함</span>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="col-blue">적용</span>
+                  </td>
+
+                  <td>
+                    <button type="button" class="btn-outline xs" data-toggle="modal" data-target="#modal-stt-view">원문 보기</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox justify-content-center">
+                      <input type="checkbox" class="custom-control-input" id="list_check1">
+                      <label class="custom-control-label" for="list_check1"><span class="blind">목록선택</span></label>
+                    </div>
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td class="text-left">
+                    <div class="font-weight-bold">
+                        상담지식<span class=" pl-5px font-weight-normal">&nbsp;(면접상담)</span>
+                    </div>
+                    <div class="mt-6px text-lightgray typo-caption-lg-regular">
+                      이혼 위자료 관련해서 상담좀 받으려고 하는데요 남편한테 폭행을 당한 경우 이혼 위자료 청구는 어떻게 하나요?
+                    </div>
+                  </td>
+                  <td class="text-left">
+                    <ul class="category-list">
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="true">AI</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">상담사</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">검토</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="text-left">
+                    <ul class="category-list">
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="true">AI</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">상담사</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">검토</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                    </ul>
+                  </td>
+                  <td>
+                    <!-- <strong class="col-blue">3</strong> -->
+                    <strong class="col-red">3</strong>
+                  </td>
+                  <td>
+                    <!-- <strong class="col-blue">좋아요</strong> -->
+                    <strong class="col-red">나빠요</strong>
+                  </td>
+                  <td class="text-left">
+                    의견내용 의견내용 의견내용
+                  </td>
+                  <td class="text-center counselorInfo_area">
+                    <strong class="mb-4px">홍길동</strong>
+                    <div>서울중앙지부</div>
+                    <div class="col-caption">(A1233412312)</div>
+                  </td>
+                  <td class="except-area">
+                    <div class="d-flex align-items-center justify-content-center">
+                      <span class="col-caption mr-4px">안 함</span>
+                      <div class="form-switch">
+                        <input type="checkbox" id="switch2">
+                        <label for="switch2">
+                          <span class="blind">학습제외여부체크</span>
+                          <i class="btn-switch"></i>
+                        </label>
+                      </div>
+                      <span class="col-blue ml-4px">제외 함</span>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="col-blue">-</span>
+                  </td>
+                  <td>
+                    <button type="button" class="btn-outline xs" data-toggle="modal" data-target="#modal-stt-view">원문 보기</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
+          <!--페이징-->
+          <nav class="pagination mt-16px">
+            <ul>
+              <li class="page_item">
+                <button type="button" class="page_link ico btn_next" aria-label="마지막 페이지" disabled>
+                  <div class="mask-20px">
+                    <span class="material-icons-round">keyboard_double_arrow_left</span>
+                  </div>
+                </button>
+              </li>
+              <li class="page_item">        
+                <button type="button" class="page_link ico btn_prev disabled" aria-label="이전 페이지" disabled>
+                  <div class="mask-20px">
+                    <span class="material-icons-round">keyboard_arrow_left</span>
+                  </div>
+                </button>
+              </li>
+
+              <!--현재페이지 addClass('on')'-->
+              <li class="page_item on"><button type="button" class="page_link">1</button></li>
+              <li class="page_item"><button type="button" class="page_link">2</button></li>
+              <li class="page_item"><button type="button" class="page_link">3</button></li>
+              <li class="page_item"><button type="button" class="page_link">4</button></li>
+              <li class="page_item"><button type="button" class="page_link">5</button></li>
+              <li class="page_item">
+                <button type="button" class="page_link ico btn_next" aria-label="다음 페이지">
+                  <div class="mask-20px">
+                    <span class="material-icons-round">keyboard_arrow_right</span>
+                  </div>
+                </button>
+              </li>
+              <li class="page_item">
+                <button type="button" class="page_link ico btn_next" aria-label="마지막 페이지">
+                  <div class="mask-20px">
+                    <span class="material-icons-round">keyboard_double_arrow_right</span>
+                  </div>                      
+                </button>
+              </li>
+            </ul>
+          </nav>
+          <!--//페이징-->
+        </div>
+      </main>
+    </div>
+
+    <!-- 모달 : 원문 보기 -->
+    <div class="modal modal-stt-view fade" id="modal-stt-view" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
+      <div class="modal-dialog w600">
+        <div class="modal-content"> 
+  
+          <div class="modal-header">
+            <p class="tit">상담 상세</p>            
+            <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
+              <span class="material-icons-round xl">close</span>
+            </button>
+          </div>
+  
+          <div class="modal-body">
+            <div class="inner_box">
+              <div class="pop-chatarea">
+
+                <!-- 헤더 -->
+                <div class="cont-tit">
+                    
+                  <span class="classify type-chat">채팅<br>상담</span><!-- 채팅상담 .type-chat / 전화상담 .type-tel  -->
+                  <h5 class="user-info">김상담 (123123123)</h5>
+                  <div class="sub-info">고객1팀<span>스마트고객 사업부</span></div>
+                  <div class="cont-tit-sub">
+                    <span class="user-info type-sm flex-fill">
+                      <span class="user-name font-weight-bold">고객 : 홍길동</span>
+                      <span class="user-tel">010-1234-12**</span>
+                    </span>
+                    <span class="user-info type-sm">
+                      <span class="user-date border-0">2023.12.12</span>
+                      <span class="user-date">상담시간 : 05:12</span>
+                    </span>
+                  </div>
+
+                </div>
+                <!--// 헤더 -->   
+
+                <!-- 챗 영역 -->
+                <div class="cont-body">
+
+                  <!-- 발화 영역 -->
+                  <div class="chat-area">
+                    <!-- 상담사 발화 -->
+                    <div class="utterance-wrap chat-counselor">
+                        <div class="utterance">
+                            <div class="utterance-in">어떤 상품에 대한 안내를 도와드릴까요?</div>
+                        </div>
+                        <span class="time">PM 03:26</span>
+                    </div>
+                    
+                    <!-- 고객발화 -->
+                    <div class="utterance-wrap chat-customer">
+                        <div class="utterance">
+                            <div class="utterance-in">안녕하세요.</div>
+                        </div>
+                        <span class="time">PM 03:26</span>
+                    </div>
+
+                    <!-- 고객발화 -->
+                    <div class="utterance-wrap chat-customer">
+                        <div class="utterance on"><!-- 활성화시 .on 추가 -->
+                            <div class="utterance-in">안녕하세요. 상품 관련 문의사항이 있어 문의드렸습니다. 상품 관련 문의사항이 있어 문의드렸습니다. 상품 관련 문의사항이 있어 문의드렸습니다.
+                            </div>
+                        </div>
+                        <span class="time">PM 03:26</span>
+                    </div>
+
+                    <!-- 상담사 발화 -->
+                    <div class="utterance-wrap chat-counselor">
+                        <div class="utterance">
+                            <div class="utterance-in">어떤 상품에 대한 안내를 도와드릴까요?</div>
+                        </div>
+                        <span class="time">PM 03:26</span>
+                    </div>
+
+                    <!-- 상담사 발화 -->
+                    <div class="utterance-wrap chat-counselor">
+                        <div class="utterance">
+                            <div class="utterance-in">어떤 상품에 대한 안내를 도와드릴까요? 안내를 도와드릴까요?</div>
+                        </div>
+                        <span class="time">PM 03:26</span>
+                    </div>
+
+                    <!-- 고객발화 -->
+                    <div class="utterance-wrap chat-customer">
+                        <div class="utterance">
+                            <div class="utterance-in">안녕하세요. 상품 관련 문의사항이 있어 문의드렸습니다.</div>
+                        </div>
+                        <span class="time">PM 03:26</span>
+                    </div>
+
+                    <!-- 상담사 발화 -->
+                    <div class="utterance-wrap chat-counselor">
+                        <div class="utterance">
+                            <div class="utterance-in">어떤 상품에 대한 안내를 도와드릴까요? 안내를 도와드릴까요?</div>
+                        </div>
+                        <span class="time">PM 03:26</span>
+                    </div>
+
+                    <!-- 고객발화 -->
+                    <div class="utterance-wrap chat-customer">
+                        <div class="utterance">
+                            <div class="utterance-in">문의드렸습니다.</div>
+                        </div>
+                        <span class="time">PM 03:26</span>
+                    </div>
+
+                    <!-- 상담사 발화 -->
+                    <div class="utterance-wrap chat-counselor">
+                        <div class="utterance">
+                            <div class="utterance-in">안내를 도와드릴까요?</div>
+                        </div>
+                        <span class="time">PM 03:26</span>
+                    </div>
+
+                    <!-- 고객발화 -->
+                    <div class="utterance-wrap chat-customer">
+                        <div class="utterance">
+                            <div class="utterance-in">문의드렸습니다.</div>
+                        </div>
+                        <span class="time">PM 03:26</span>
+                    </div>
+
+                    <!-- 상담사 발화 -->
+                    <div class="utterance-wrap chat-counselor">
+                        <div class="utterance">
+                            <div class="utterance-in">안내를 도와드릴까요?</div>
+                        </div>
+                        <span class="time">PM 03:26</span>
+                    </div>
+
+                  </div>
+                  <!--// 발화 영역 -->
+
+                </div>
+                <!--// 챗 영역 -->
+
+                <!-- 플레이어 영역 -->
+                <div class="sound-player">
+                    <div class="sound-bar-wrap">
+                        <div class="sound-bar">
+                            <span class="this-time">25:00</span>
+                            <span class="progress-bar" style="width:50%"><span class="handler"></span></span>
+                            <span class="total-time"> 50:00</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-play pause"><span class="blind">플레이</span></button><!-- 클릭시 .pause 토글 및 텍스트 수정(일시 정지) -->
+                </div>
+                <!--// 플레이어 영역 -->
+
+              </div>
+            </div>
+          </div> 
+          <div class="modal-footer">            
+            <button type="button" class="btn-primary xl" data-dismiss="modal">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //모달 : 원문 보기 -->
+  </div>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/lib/ie11CustomProperties.js"></script>
+
+  <!-- datepicker 관련 코드 -->
+  <script src="../../node_modules/vue/dist/vue.js"></script>
+  <script src="../../node_modules/vuejs-datepicker/dist/vuejs-datepicker.js"></script>
+  <script>
+    // Vue 인스턴스 생성
+    new Vue({
+        el: '#app',
+        data: {
+            // 선택된 날짜를 저장할 변수
+            fromDate: null,
+            toDate: null
+        },
+        components: {
+          // Datepicker 컴포넌트를 등록
+          datepicker: vuejsDatepicker
+        }
+    });
+  </script>
+  <!-- //datepicker 관련 코드 -->
+
+</body>
+</html>

@@ -5973,7 +5973,8 @@ article.cont-area .cont-foot .area-btn {
   font-weight: 700;
 }
 .wrap .left-panel .navi > .navi-item > a > [class*=ico] {
-  font-size: 22px;
+  width: 18px;
+  height: 18px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -6051,8 +6052,6 @@ article.cont-area .cont-foot .area-btn {
 
 .wrap {
   width: 100%;
-  min-width: 1600px;
-  overflow-x: auto;
 }
 
 .wrap .container {
@@ -6069,9 +6068,13 @@ article.cont-area .cont-foot .area-btn {
 }
 
 .wrap .main-cont {
-  position: relative;
-  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 240px;
+  right: 0;
   padding-top: 48px;
+  overflow-x: auto;
 }
 
 .wrap .main-header {
@@ -6122,6 +6125,7 @@ article.cont-area .cont-foot .area-btn {
 }
 
 .wrap .main-body {
+  min-width: 1400px;
   min-height: calc(100vh - var(--header-height));
   padding: 24px 24px 80px;
 }

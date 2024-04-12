@@ -23,7 +23,7 @@
   .navi > .navi-item > a:hover{background-color:var(--bg-color-tonal-dark-lighter);}
   .navi > .navi-item > a span {white-space: nowrap;}
   .navi > .navi-item > a.on .label{color:var(--text-color-primary);font-weight:700;}
-  .navi > .navi-item > a > [class*=ico]{font-size:22px;align-items: center;line-height: 24px;}
+  .navi > .navi-item > a > [class*=ico]{width:18px;height:18px;align-items: center;line-height: 24px;}
   .navi > .navi-item > a.on .ico-svg{color:var(--text-color-primary);}
   .navi > .navi-item > a.open .ico-arr{transform: rotate(180deg);}
   .navi > .navi-item > a.on {color:var(--text-color-primary);background-color:var(--bg-color-tonal-dark-light);font-weight:600;}

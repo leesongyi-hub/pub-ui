@@ -1,0 +1,1977 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="all">
+  <title>시스템관리 > 시스템설정</title>
+  <link rel=icon href="../assets/images/favicon.ico"> 
+
+  <link rel="stylesheet" href="../assets/lib/bootstrap-4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">  
+  <!-- 
+    [material-icons] npm으로 설치해주세요.
+    https://github.com/marella/material-icons?tab=readme-ov-file#readme
+  -->
+  <link rel="stylesheet" href="../../node_modules/material-icons/iconfont/material-icons.css">
+
+  <script src="../assets/lib/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+  <script src="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script src="../assets/lib/bootstrap-4.3.1/js/popper.min.js"></script>
+  <script src="../assets/lib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div id="wrap" class="wrap account-page">
+    <header class="header">
+      <div class="logo-area">
+        <button type="button" class="lnbToggle-btn" aria-label="메뉴 토글">
+          <span class="material-icons col-white lg ico-fold">format_indent_decrease</span>
+          <span class="material-icons col-white lg ico-expended">format_indent_increase</span>
+        </button>
+        <h1>
+          <svg  class="mask-30px mr-8px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 26" width="24" height="26" fill="none" role="img">
+            <path fill="#fff" d="M.231 12.655c0 2.984 1.145 5.707 3.027 7.768C1.82 21.952 0 22.15 0 22.15A17.147 17.147 0 0 0 9.506 25c2.874 0 5.581-.7 7.954-1.935 3.879-1.919 6.54-5.86 6.54-10.41C24 6.218 18.68 1 12.116 1S.23 6.218.23 12.655Z"/><path fill="#3346AA" d="M17.237 10.143h.705a1.329 1.329 0 0 1 1.328 1.326v2.651a1.325 1.325 0 0 1-1.328 1.326h-.705a5.301 5.301 0 0 1-1.757 3.314 5.317 5.317 0 0 1-3.513 1.326V18.76c1.056 0 2.07-.419 2.817-1.165a3.974 3.974 0 0 0 1.166-2.812v-3.977c0-1.055-.42-2.067-1.166-2.812a3.987 3.987 0 0 0-5.634 0 3.974 3.974 0 0 0-1.166 2.812v4.64H5.992a1.329 1.329 0 0 1-1.328-1.326V11.47a1.325 1.325 0 0 1 1.328-1.326h.705a5.301 5.301 0 0 1 1.757-3.314 5.317 5.317 0 0 1 7.026 0 5.3 5.3 0 0 1 1.757 3.314Zm-8.085 5.16.704-1.124a3.97 3.97 0 0 0 2.111.604 3.97 3.97 0 0 0 2.111-.604l.704 1.124a5.293 5.293 0 0 1-2.815.806 5.292 5.292 0 0 1-2.815-.806Z"/>
+          </svg>
+          <span class="sub-tit">상담어드바이저 관리도구</span>
+        </h1>
+
+        <!--화면전환 추가-->
+        <button type="button" class="dropdown-toggle btn-jump mask-20px" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="화면전환">
+          <span class="material-icons-round col-white xs mr-0px" data-toggle="tooltip" data-placement="right" title="" data-original-title="화면전환">keyboard_arrow_down</span>
+        </button>
+        <div class="layer-pageLink dropdown-menu">
+          <p class="h4 layer-tit">접속 화면 선택</p>
+          <ul class="dropdown-list">
+            <li class="dropdown-list-item">
+              <a href="javascript:;">
+                <span>상담사 화면</span>
+                <span class="material-icons-round col-lightgray sm mr-0px">keyboard_arrow_right</span>
+              </a>
+            </li>
+            <li class="dropdown-list-item">
+              <a href="javascript:;">
+                <span>관리자 화면</span>
+                <span class="material-icons-round col-lightgray sm mr-0px">keyboard_arrow_right</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div> 
+    
+      <div class="right-area">
+
+        <div class="taskProgress-area">
+          <button type="button" class="btn-ghost ico-only lg circle mr-20px" data-dq-tooltip=tooltip data-placement="bottom" data-original-title="작업 알림" data-toggle="modal" data-target="#modal-taskProgress">
+            <span class="blind">작업 알림</span>
+            <span class="material-icons-round xl col-white d-flex" aria-hidden="true">notifications</span>  
+            <div class="taskProgress-state">
+              <!-- 카운트 -->
+              <div class="badge-count" style="display:inline-block">
+                99+
+              </div>
+              <!-- 진행 중 -->
+              <!-- <div class="ing" style="display:flex;">
+                <span class="blind">진행 중</span>
+                <div class="indicator"></div>
+              </div> -->
+            </div>
+          </button>
+        </div>
+
+        <div class="my-area">
+          <button class="my-btn" type="button">
+            <span class="name">(주)엔에이치엔다이퀘스트</span>
+            <!-- <svg role="img" aria-hidden="true" focusable="false" class="ico-svg stroke mask-16px rotate-90deg col-white">
+              <use xlink:href="#ico_arrow"></use>
+            </svg> -->
+            <span class="material-icons-round col-white">arrow_drop_down</span>            
+          </button>  
+          <div class="my-dropdown" style="display:none;">
+            <ul class="my-list">
+              <li class="my-list-item">
+                <button type="button" class="theme-btn">
+                  <span class="material-icons-round">format_color_fill</span>
+                  <span class="label">테마색상 설정</span>
+                  <span class="material-icons-round col-lightgray">keyboard_arrow_right</span>
+                </button>
+              </li>
+              <li class="my-list-item">
+                <button type="button">
+                  <span class="material-icons-round">logout</span>
+                  <span class="label">로그아웃</span>
+                </button>
+              </li>
+            </ul>
+            <div class="sub-menu" style="display:none;">
+              <div class="theme-area">
+                <div class="sub-menu-head">
+                  <button type="button" class="back-btn mask-18px">
+                    <span class="material-icons-round">arrow_back</span>
+                  </button>
+                  <span class="tit">테마색상 설정</span>
+                </div>
+                <ul class="themeSel-area">
+                  <li>
+                    <input type="radio" name="theme" id="admin-theme-blue" value="blue" checked>
+                    <label for="admin-theme-blue">Blue Theme</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="theme" id="admin-theme-mint" value="mint">
+                    <label for="admin-theme-mint">Mint Theme</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="theme" id="admin-theme-green" value="green">
+                    <label for="admin-theme-green">Green Theme</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="theme" id="admin-theme-purple" value="purple">
+                    <label for="admin-theme-purple">Purple Theme</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="theme" id="admin-theme-black" value="black">
+                    <label for="admin-theme-black">Black Theme</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- //my-dropdown -->
+        </div>
+        <!-- //my-area -->
+      </div>
+    </header>
+    <div class="content">
+      <div class="left-panel">	
+        <ul class="navi">
+          <li class="navi-item">
+            <a href="javascript:;">
+              <!-- <span class="material-icons-outlined">dashboard_customize</span> -->
+              <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 14H14V21H21V14Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 14H3V21H10V14Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 3H14V10H21V3Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 3H3V10H10V3Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="label">대시보드</span>
+            </a>
+          </li>
+          <li class="navi-item">
+            <a href="javascript:;">
+              <!-- <span class="material-icons-outlined">headset_mic</span> -->
+              <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 18V12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12V18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H18C17.4696 21 16.9609 20.7893 16.5858 20.4142C16.2107 20.0391 16 19.5304 16 19V16C16 15.4696 16.2107 14.9609 16.5858 14.5858C16.9609 14.2107 17.4696 14 18 14H21V19ZM3 19C3 19.5304 3.21071 20.0391 3.58579 20.4142C3.96086 20.7893 4.46957 21 5 21H6C6.53043 21 7.03914 20.7893 7.41421 20.4142C7.78929 20.0391 8 19.5304 8 19V16C8 15.4696 7.78929 14.9609 7.41421 14.5858C7.03914 14.2107 6.53043 14 6 14H3V19Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+                
+              <span class="label">상담 관리</span>
+            </a>
+            <div class="sub-menu">
+              <ul>
+                <li class="navi-item"><a href="javascript:;">콜 목록</a></li>
+                <li class="navi-item"><a href="javascript:;">공지사항 관리</a></li>
+                <li class="navi-item"><a href="javascript:;">코칭 메세지 관리</a></li>
+              </ul>
+            </div>			
+          </li>
+          <li class="navi-item">
+            <a href="javascript:;">
+              <!-- <span class="material-icons-outlined">people_alt</span> -->
+              <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 3.13C16.8604 3.3503 17.623 3.8507 18.1676 4.55231C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+                
+              <span class="label">상담사 및 조직 관리</span>
+            </a>
+            <div class="sub-menu">
+              <ul>
+                <li class="navi-item"><a href="javascript:;">전화상담사</a></li>
+                <li class="navi-item"><a href="javascript:;">채팅상담사</a></li>
+                <li class="navi-item"><a href="javascript:;">부서 및 조직 관리</a></li>
+              </ul>
+            </div>			
+          </li>
+          <li class="navi-item">
+            <a href="javascript:;">
+              <!-- <span class="material-icons-outlined">settings</span>           -->
+              <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_393)">
+                <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19.4 15C19.2669 15.3016 19.2272 15.6362 19.286 15.9606C19.3448 16.285 19.4995 16.5843 19.73 16.82L19.79 16.88C19.976 17.0657 20.1235 17.2863 20.2241 17.5291C20.3248 17.7719 20.3766 18.0322 20.3766 18.295C20.3766 18.5578 20.3248 18.8181 20.2241 19.0609C20.1235 19.3037 19.976 19.5243 19.79 19.71C19.6043 19.896 19.3837 20.0435 19.1409 20.1441C18.8981 20.2448 18.6378 20.2966 18.375 20.2966C18.1122 20.2966 17.8519 20.2448 17.6091 20.1441C17.3663 20.0435 17.1457 19.896 16.96 19.71L16.9 19.65C16.6643 19.4195 16.365 19.2648 16.0406 19.206C15.7162 19.1472 15.3816 19.1869 15.08 19.32C14.7842 19.4468 14.532 19.6572 14.3543 19.9255C14.1766 20.1938 14.0813 20.5082 14.08 20.83V21C14.08 21.5304 13.8693 22.0391 13.4942 22.4142C13.1191 22.7893 12.6104 23 12.08 23C11.5496 23 11.0409 22.7893 10.6658 22.4142C10.2907 22.0391 10.08 21.5304 10.08 21V20.91C10.0723 20.579 9.96512 20.258 9.77251 19.9887C9.5799 19.7194 9.31074 19.5143 9 19.4C8.69838 19.2669 8.36381 19.2272 8.03941 19.286C7.71502 19.3448 7.41568 19.4995 7.18 19.73L7.12 19.79C6.93425 19.976 6.71368 20.1235 6.47088 20.2241C6.22808 20.3248 5.96783 20.3766 5.705 20.3766C5.44217 20.3766 5.18192 20.3248 4.93912 20.2241C4.69632 20.1235 4.47575 19.976 4.29 19.79C4.10405 19.6043 3.95653 19.3837 3.85588 19.1409C3.75523 18.8981 3.70343 18.6378 3.70343 18.375C3.70343 18.1122 3.75523 17.8519 3.85588 17.6091C3.95653 17.3663 4.10405 17.1457 4.29 16.96L4.35 16.9C4.58054 16.6643 4.73519 16.365 4.794 16.0406C4.85282 15.7162 4.81312 15.3816 4.68 15.08C4.55324 14.7842 4.34276 14.532 4.07447 14.3543C3.80618 14.1766 3.49179 14.0813 3.17 14.08H3C2.46957 14.08 1.96086 13.8693 1.58579 13.4942C1.21071 13.1191 1 12.6104 1 12.08C1 11.5496 1.21071 11.0409 1.58579 10.6658C1.96086 10.2907 2.46957 10.08 3 10.08H3.09C3.42099 10.0723 3.742 9.96512 4.0113 9.77251C4.28059 9.5799 4.48572 9.31074 4.6 9C4.73312 8.69838 4.77282 8.36381 4.714 8.03941C4.65519 7.71502 4.50054 7.41568 4.27 7.18L4.21 7.12C4.02405 6.93425 3.87653 6.71368 3.77588 6.47088C3.67523 6.22808 3.62343 5.96783 3.62343 5.705C3.62343 5.44217 3.67523 5.18192 3.77588 4.93912C3.87653 4.69632 4.02405 4.47575 4.21 4.29C4.39575 4.10405 4.61632 3.95653 4.85912 3.85588C5.10192 3.75523 5.36217 3.70343 5.625 3.70343C5.88783 3.70343 6.14808 3.75523 6.39088 3.85588C6.63368 3.95653 6.85425 4.10405 7.04 4.29L7.1 4.35C7.33568 4.58054 7.63502 4.73519 7.95941 4.794C8.28381 4.85282 8.61838 4.81312 8.92 4.68H9C9.29577 4.55324 9.54802 4.34276 9.72569 4.07447C9.90337 3.80618 9.99872 3.49179 10 3.17V3C10 2.46957 10.2107 1.96086 10.5858 1.58579C10.9609 1.21071 11.4696 1 12 1C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V3.09C14.0013 3.41179 14.0966 3.72618 14.2743 3.99447C14.452 4.26276 14.7042 4.47324 15 4.6C15.3016 4.73312 15.6362 4.77282 15.9606 4.714C16.285 4.65519 16.5843 4.50054 16.82 4.27L16.88 4.21C17.0657 4.02405 17.2863 3.87653 17.5291 3.77588C17.7719 3.67523 18.0322 3.62343 18.295 3.62343C18.5578 3.62343 18.8181 3.67523 19.0609 3.77588C19.3037 3.87653 19.5243 4.02405 19.71 4.21C19.896 4.39575 20.0435 4.61632 20.1441 4.85912C20.2448 5.10192 20.2966 5.36217 20.2966 5.625C20.2966 5.88783 20.2448 6.14808 20.1441 6.39088C20.0435 6.63368 19.896 6.85425 19.71 7.04L19.65 7.1C19.4195 7.33568 19.2648 7.63502 19.206 7.95941C19.1472 8.28381 19.1869 8.61838 19.32 8.92V9C19.4468 9.29577 19.6572 9.54802 19.9255 9.72569C20.1938 9.90337 20.5082 9.99872 20.83 10H21C21.5304 10 22.0391 10.2107 22.4142 10.5858C22.7893 10.9609 23 11.4696 23 12C23 12.5304 22.7893 13.0391 22.4142 13.4142C22.0391 13.7893 21.5304 14 21 14H20.91C20.5882 14.0013 20.2738 14.0966 20.0055 14.2743C19.7372 14.452 19.5268 14.7042 19.4 15V15Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1_393">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+              <span class="label">시스템 관리</span>
+            </a>
+            <div class="sub-menu">
+              <ul>
+                <li class="navi-item"><a href="javascript:;">시스템 설정</a></li>
+                <li class="navi-item"><a href="javascript:;">어드바이저 설정</a></li>
+                <li class="navi-item"><a href="javascript:;">상담유형코드 관리</a></li>
+                <li class="navi-item"><a href="javascript:;">장애로그</a></li>
+                <li class="navi-item"><a href="javascript:;">활동이력</a></li>
+                <li class="navi-item"><a href="javascript:;">계정 관리 및 설정</a></li>
+                <li class="navi-item"><a href="javascript:;">역할 관리</a></li>
+                <li class="navi-item"><a href="javascript:;">디플랫폼 접속</a></li>
+                <li class="navi-item"><a href="javascript:;">인포채터 접속</a></li>
+                <li class="navi-item"><a href="javascript:;">시스템 모니터링</a></li>
+              </ul>
+            </div>				
+          </li>			
+        </ul>
+        <div class="navi-footer">
+          <div class="copyright">
+            2.7.0.0-SNAPSHOT (1147141a)<br />
+            Copyright© DIQUEST.<br />
+            All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+      <main class="main-cont">
+        <div class="main-header">
+          <div class="breadcrumbs">
+            <ul>
+              <li><h2>시스템관리</h2></li>
+              <li class="arrow">
+                <span class="material-icons-round col-lightgray">keyboard_arrow_right</span>
+              </li>
+              <li class="current">
+                <h2>계정 관리 및 설정</h2>
+                <div class="btn-guide-area ml-6px">
+                  <button type="button" class="btn-guide">?</button>
+                  <div class="guide-tooltip">
+                    <div class="inner">
+                      <p>
+                        내용입력 영역<br>
+                        줄바꿈하고 싶으면 <br>
+                        br태그로 줄바꿈해서 입력해주세요.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-body">
+
+          <ul class="nav nav-tabs mb-32px" role="tablist" id="resultTabCont">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" data-toggle="tab" data-target="#tabAccountMgmt" type="button" role="tab" aria-selected="true">계정 관리(상담사관리)</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-toggle="tab" data-target="#tabAccountLogin" type="button" role="tab" aria-selected="false">계정 설정/접속 관리</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-toggle="tab" data-target="#tabAccountTeam" type="button" role="tab" aria-selected="false">부서 관리</button>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="tabAccountMgmt" class="tab-pane active" role="tabpanel" tabindex="0">
+
+              <div class="util-bar">
+  
+                <div class="form-block mr-16px">
+                  <label for="">역할</label>
+                  <select class="w-160px">
+                    <option>전체</option>
+                    <option>역할1</option>
+                    <option>역할2</option>
+                  </select>
+                </div>
+                <div class="form-block mr-16px">
+                  <label for="">계정유형</label>
+                  <select class="w-160px">
+                    <option>전체</option>
+                    <option>전화상담사</option>
+                  </select>
+                </div>
+                <div class="form-block mr-16px">
+                  <label for="">관리자 여부</label>
+                  <select class="w-140px">
+                    <option>전체</option>
+                    <option>Y</option>
+                    <option>N</option>
+                  </select>
+                </div>
+                <div class="d-flex align-items-end">
+                  <div class="form-block">
+                    <label for="">검색어</label>                    
+                    <select class="w-140px mr-2px">
+                      <option>사용자 아이디</option>
+                      <option>이름</option>
+                      <option>내선번호</option>
+                      <option>사번</option>
+                      <option>부서코드</option>
+                      <option>부서명</option>
+                    </select>
+                    <input class="w-180px" type="text" placeholder="검색어 입력" value="" autocomplete="off">
+                  </div>
+                  <button type="submit" class="btn-outline ml-6px">검색</button>
+                  <button type="button" class="btn-outline mask-32px ml-6px" aria-label="검색 초기화">
+                    <span class="material-icons-round">refresh</span>
+                  </button>
+                </div>
+              </div>
+  
+              <div class="table-head-area d-flex justify-content-between align-items-end mb-16px">
+                <div class="total_count">
+                  검색결과 총 <strong>3</strong>건
+                </div>
+                <div class="d-flex align-item-center">
+                  <button type="button" class="btn-primary" data-toggle="modal" data-target="#modal_addAccount">
+                    <span class="material-icons-round">add</span>
+                    계정 추가
+                  </button>
+                  <button type="button" class="btn-outline ml-8px">
+                    선택 삭제
+                  </button>
+                  <select class="w-100px ml-8px">
+                    <option>10개씩</option>
+                    <option>20개씩</option>
+                    <option>30개씩</option>
+                  </select>
+                  <button type="button" class="dropdown-toggle btn-outline ico-only md ml-8px" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="material-icons-round col-lightgray">more_vert</span>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right  w-120px">
+                    <ul class="dropdown-list">
+                      <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-8px">양식받기</button></li>
+                      <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-8px" data-toggle="modal" data-target="#modal-fileImport">가져오기</button></li>
+                      <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-8px">내보내기</button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="table-area">
+
+                <!-- <div class="comp-loader">
+                  <div class="loader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div> -->
+
+                <table class="table-wrap">
+                  <colgroup>
+                    <col style="width:50px">
+                    <col style="width:120px">
+                    <col style="width:60px">
+                    <col style="width:120px">
+                    <col style="width:120px">
+                    <col style="width:120px">
+                    <col style="width:63px">
+                    <col style="width:calc(100% - 85%)">
+                    <col style="width:calc(100% - 85%)">
+                    <col style="width:120px">
+                    <col style="width:118px">
+                  </colgroup>
+                  <thead>
+                    <tr class="text-center">
+                      <th>
+                        <div class="custom-control custom-checkbox justify-content-center">
+                          <input type="checkbox" class="custom-control-input" id="list_check1">
+                          <label class="custom-control-label" for="list_check1"></label>
+                        </div>
+                      </th>
+                      <th>사용자계정(ID)</th>
+                      <th>이름</th>
+                      <th>내선번호</th>
+                      <th>사번</th>
+                      <th>계정유형</th>
+                      <th>관리자 등록여부</th>
+                      <th>부서</th>
+                      <th>부서 코드</th>
+                      <th>역할정보</th>
+                      <th>계정관리</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-center">
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox justify-content-center">
+                          <input type="checkbox" class="custom-control-input" id="list_check1">
+                          <label class="custom-control-label" for="list_check1"></label>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="text-link" data-toggle="modal" data-target="#modal-viewAccount">Verstappen</button>
+                      </td>
+                      <td>홍길동</td>
+                      <td>123456789</td>
+                      <td>C1234567890</td>
+                      <td>전화상담사</td>
+                      <td><strong class="col-red">N</strong></td>
+                      <td>솔루션1팀</td>
+                      <td class="text-left">단기채권팀 > G430 > T431</td>
+                      <td>
+                        <button type="button" class="text-link" data-toggle="modal" data-target="#modal-detailRole">권한1</button>
+                      </td>
+                      <td>
+                        <button type="button" class="btn-outline xs" data-toggle="modal" data-target="#modal-editAccount">수정</button>
+                        <button type="button" class="btn-outline xs">삭제</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox justify-content-center">
+                          <input type="checkbox" class="custom-control-input" id="list_check1">
+                          <label class="custom-control-label" for="list_check1"></label>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="text-link" data-toggle="modal" data-target="#modal-viewAccount">Verstappen</button>
+                      </td>
+                      <td>홍길동</td>
+                      <td>123456789</td>
+                      <td>C1234567890</td>
+                      <td>전화상담사</td>
+                      <td><strong class="col-green">Y</strong></td>
+                      <td>솔루션1팀</td>
+                      <td class="text-left">단기채권팀 > G430 > T431</td>
+                      <td><button type="button" class="text-link" data-toggle="modal" data-target="#modal-detailRole">권한1</button></td>
+                      <td>
+                        <button type="button" class="btn-outline xs" data-toggle="modal" data-target="#modal-editAccount">수정</button>
+                        <button type="button" class="btn-outline xs">삭제</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox justify-content-center">
+                          <input type="checkbox" class="custom-control-input" id="list_check1">
+                          <label class="custom-control-label" for="list_check1"></label>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="text-link" data-toggle="modal" data-target="#modal-viewAccount">Verstappen</button>
+                      </td>
+                      <td>홍길동</td>
+                      <td>123456789</td>
+                      <td>C1234567890</td>
+                      <td>전화상담사</td>
+                      <td>-</td>
+                      <td>솔루션1팀</td>
+                      <td class="text-left">단기채권팀 > G430 > T431</td>
+                      <td><button type="button" class="text-link" data-toggle="modal" data-target="#modal-detailRole">권한1</button></td>
+                      <td>
+                        <button type="button" class="btn-outline xs" data-toggle="modal" data-target="#modal-editAccount">수정</button>
+                        <button type="button" class="btn-outline xs">삭제</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox justify-content-center">
+                          <input type="checkbox" class="custom-control-input" id="list_check1">
+                          <label class="custom-control-label" for="list_check1"></label>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="text-link" data-toggle="modal" data-target="#modal-viewAccount">Verstappen</button>
+                      </td>
+                      <td>홍길동</td>
+                      <td>123456789</td>
+                      <td>C1234567890</td>
+                      <td>전화상담사</td>
+                      <td>-</td>
+                      <td>솔루션1팀</td>
+                      <td class="text-left">단기채권팀 > G430 > T431</td>
+                      <td><button type="button" class="text-link" data-toggle="modal" data-target="#modal-detailRole">권한1</button></td>
+                      <td>
+                        <button type="button" class="btn-outline xs" data-toggle="modal" data-target="#modal-editAccount">수정</button>
+                        <button type="button" class="btn-outline xs">삭제</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox justify-content-center">
+                          <input type="checkbox" class="custom-control-input" id="list_check1">
+                          <label class="custom-control-label" for="list_check1"></label>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="text-link" data-toggle="modal" data-target="#modal-viewAccount">Verstappen</button>
+                      </td>
+                      <td>홍길동</td>
+                      <td>123456789</td>
+                      <td>C1234567890</td>
+                      <td>전화상담사</td>
+                      <td>-</td>
+                      <td>솔루션1팀</td>
+                      <td class="text-left">단기채권팀 > G430 > T431</td>
+                      <td><button type="button" class="text-link" data-toggle="modal" data-target="#modal-detailRole">권한1</button></td>
+                      <td>
+                        <button type="button" class="btn-outline xs" data-toggle="modal" data-target="#modal-editAccount">수정</button>
+                        <button type="button" class="btn-outline xs">삭제</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox justify-content-center">
+                          <input type="checkbox" class="custom-control-input" id="list_check1">
+                          <label class="custom-control-label" for="list_check1"></label>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="text-link" data-toggle="modal" data-target="#modal-viewAccount">Verstappen</button>
+                      </td>
+                      <td>홍길동</td>
+                      <td>123456789</td>
+                      <td>C1234567890</td>
+                      <td>전화상담사</td>
+                      <td>-</td>
+                      <td>솔루션1팀</td>
+                      <td class="text-left">단기채권팀 > G430 > T431</td>
+                      <td><button type="button" class="text-link" data-toggle="modal" data-target="#modal-detailRole">권한1</button></td>
+                      <td>
+                        <button type="button" class="btn-outline xs" data-toggle="modal" data-target="#modal-editAccount">수정</button>
+                        <button type="button" class="btn-outline xs">삭제</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox justify-content-center">
+                          <input type="checkbox" class="custom-control-input" id="list_check1">
+                          <label class="custom-control-label" for="list_check1"></label>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="text-link" data-toggle="modal" data-target="#modal-viewAccount">Verstappen</button>
+                      </td>
+                      <td>홍길동</td>
+                      <td>123456789</td>
+                      <td>C1234567890</td>
+                      <td>전화상담사</td>
+                      <td>-</td>
+                      <td>솔루션1팀</td>
+                      <td class="text-left">단기채권팀 > G430 > T431</td>
+                      <td><button type="button" class="text-link" data-toggle="modal" data-target="#modal-detailRole">권한1</button></td>
+                      <td>
+                        <button type="button" class="btn-outline xs" data-toggle="modal" data-target="#modal-editAccount">수정</button>
+                        <button type="button" class="btn-outline xs">삭제</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox justify-content-center">
+                          <input type="checkbox" class="custom-control-input" id="list_check1">
+                          <label class="custom-control-label" for="list_check1"></label>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="text-link" data-toggle="modal" data-target="#modal-viewAccount">Verstappen</button>
+                      </td>
+                      <td>홍길동</td>
+                      <td>123456789</td>
+                      <td>C1234567890</td>
+                      <td>전화상담사</td>
+                      <td>-</td>
+                      <td>솔루션1팀</td>
+                      <td class="text-left">단기채권팀 > G430 > T431</td>
+                      <td><button type="button" class="text-link" data-toggle="modal" data-target="#modal-detailRole">권한1</button></td>
+                      <td>
+                        <button type="button" class="btn-outline xs" data-toggle="modal" data-target="#modal-editAccount">수정</button>
+                        <button type="button" class="btn-outline xs">삭제</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox justify-content-center">
+                          <input type="checkbox" class="custom-control-input" id="list_check1">
+                          <label class="custom-control-label" for="list_check1"></label>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="text-link" data-toggle="modal" data-target="#modal-viewAccount">Verstappen</button>
+                      </td>
+                      <td>홍길동</td>
+                      <td>123456789</td>
+                      <td>C1234567890</td>
+                      <td>전화상담사</td>
+                      <td>-</td>
+                      <td>솔루션1팀</td>
+                      <td class="text-left">단기채권팀 > G430 > T431</td>
+                      <td><button type="button" class="text-link" data-toggle="modal" data-target="#modal-detailRole">권한1</button></td>
+                      <td>
+                        <button type="button" class="btn-outline xs" data-toggle="modal" data-target="#modal-editAccount">수정</button>
+                        <button type="button" class="btn-outline xs">삭제</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox justify-content-center">
+                          <input type="checkbox" class="custom-control-input" id="list_check1">
+                          <label class="custom-control-label" for="list_check1"></label>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="text-link" data-toggle="modal" data-target="#modal-viewAccount">Verstappen</button>
+                      </td>
+                      <td>홍길동</td>
+                      <td>123456789</td>
+                      <td>C1234567890</td>
+                      <td>전화상담사</td>
+                      <td>-</td>
+                      <td>솔루션1팀</td>
+                      <td class="text-left">단기채권팀 > G430 > T431</td>
+                      <td><button type="button" class="text-link" data-toggle="modal" data-target="#modal-detailRole">권한1</button></td>
+                      <td>
+                        <button type="button" class="btn-outline xs" data-toggle="modal" data-target="#modal-editAccount">수정</button>
+                        <button type="button" class="btn-outline xs">삭제</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+  
+              <!--페이징-->
+              <nav class="pagination mt-16px">
+                <ul>
+                  <li class="page_item">
+                    <button type="button" class="page_link ico btn_next" aria-label="마지막 페이지" disabled>
+                      <div class="mask-20px">
+                        <span class="material-icons-round">keyboard_double_arrow_left</span>
+                      </div>
+                    </button>
+                  </li>
+                  <li class="page_item">        
+                    <button type="button" class="page_link ico btn_prev disabled" aria-label="이전 페이지" disabled>
+                      <div class="mask-20px">
+                        <span class="material-icons-round">keyboard_arrow_left</span>
+                      </div>
+                    </button>
+                  </li>
+  
+                  <!--현재페이지 addClass('on')'-->
+                  <li class="page_item on"><button type="button" class="page_link">1</button></li>
+                  <li class="page_item"><button type="button" class="page_link">2</button></li>
+                  <li class="page_item"><button type="button" class="page_link">3</button></li>
+                  <li class="page_item"><button type="button" class="page_link">4</button></li>
+                  <li class="page_item"><button type="button" class="page_link">5</button></li>
+                  <li class="page_item">
+                    <button type="button" class="page_link ico btn_next" aria-label="다음 페이지">
+                      <div class="mask-20px">
+                        <span class="material-icons-round">keyboard_arrow_right</span>
+                      </div>
+                    </button>
+                  </li>
+                  <li class="page_item">
+                    <button type="button" class="page_link ico btn_next" aria-label="마지막 페이지">
+                      <div class="mask-20px">
+                        <span class="material-icons-round">keyboard_double_arrow_right</span>
+                      </div>                      
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+              <!--//페이징-->  
+            </div>
+  
+            <div id="tabAccountLogin" class="tab-pane" role="tabpanel" tabindex="0">
+              
+              <article class="article mb-36px">
+                <h3 class="tit">계정 설정</h3>
+                <div class="res-table">
+                  <dl class="tr w100">
+                    <dt class="th">자동 로그아웃 시간<br />(단위 분)</dt>
+                    <dd class="td">
+                      <div class="form-block">
+                        <label for="">WM.MBR_IDLE_TIMEOUT</label>
+                        <div class="form-count">                        
+                          <input type="number" placeholder="숫자만 입력" value="3600">
+                          <div class="area-btn">
+                            <button type="button" class="btn-quantity-plus" aria-label="더하기">
+                              <span class="material-icons-round xxs">add</span>
+                            </button>
+                            <button type="button" class="btn-quantity-minus" aria-label="빼기">
+                              <span class="material-icons-round xxs">remove</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+  
+                  <dl class="tr w100">
+                    <dt class="th">비밀번호 규칙 설명</dt>
+                    <dd class="td">
+                      <div class="form-block">
+                        <label for="">WM.MBR_PW_DESC</label>
+                        <input type="text" placeholder="8자 이상의 대소문자, 숫자, 특수문자[~`!@#$%^&*()-] 조합" value="" class="w-400px">
+                      </div>
+                    </dd>
+                  </dl>
+  
+                  <dl class="tr w100">
+                    <dt class="th">비밀번호 만료기간</dt>
+                    <dd class="td">
+                      <div class="form-block">
+                      <label for="">WM.MBR_PW_EXPIRE</label>
+                        <div class="form-count">                        
+                          <input type="number" placeholder="숫자만 입력" value="90">
+                          <div class="area-btn">
+                            <button type="button" class="btn-quantity-plus" aria-label="더하기">
+                              <span class="material-icons-round xxs">add</span>
+                            </button>
+                            <button type="button" class="btn-quantity-minus" aria-label="빼기">
+                              <span class="material-icons-round xxs">remove</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+  
+                  <dl class="tr w100">
+                    <dt class="th">비밀번호 검증 정규식</dt>
+                    <dd class="td">
+                      <div class="form-block">
+                        <label for="">WM.MBR_PW_REGEX</label>
+                        <input type="text" placeholder="^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[~`!@#$%^&*()-]).{8,100}$" value="" class="w-400px">
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </article>
+
+              <article class="article mb-36px">
+                <h3 class="tit">접속 관리</h3>
+                <div class="res-table">
+                  <dl class="tr w100">
+                    <dt class="th"><label>접근허용 IP</label></dt>
+                    <dd class="td">
+                      <input type="text" class="w-300px" placeholder="IP 주소 입력">
+                      <div class="chip-area mt-6px">
+                        <div class="chip">
+                          <span class="txt">211.52.70.66</span>
+                          <button type="button" class="mask-18px">
+                            <span class="material-icons-round xs col-lightgray">close</span>
+                          </button>
+                        </div>
+                        <div class="chip">
+                          <span class="txt">111.22.33.44</span>
+                          <button type="button" class="mask-18px">
+                            <span class="material-icons-round xs col-lightgray">close</span>
+                          </button>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl class="tr w100">
+                    <dt class="th">어드바이저 접속 URL 설정</dt>
+                    <dd class="td">
+                      <div class="form-block">
+                        <label for="advisorUrl">URL</label>
+                        <!-- placeholder 임시로 넣었으니 수정 해주세요. -->
+                        <input type="text" id="advisorUrl" placeholder="http://www.test.com" value="" class="w-400px">
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </article>
+
+              <article class="article">
+                <h3 class="tit">부서 관리</h3>
+                <div class="res-table">
+                  <dl class="tr w100">
+                    <dt class="th"><label>부서 구분자</label></dt>
+                    <dd class="td">
+                      <div class="d-flex">
+                        <input type="text" class="w-300px" placeholder=">">
+                        
+                        <!--
+                          정확한 기획의도를 파악못해서 버튼 여러개 추가해놨습니다.
+                          필요에 따라 문구 수정해서 사용해주심 될 것 같아요.
+                        -->
+                        <button type="button" class="btn-primary ml-6px">
+                          <div class="d-flex align-items-center">
+                            DB 적용
+                          </div>
+                        </button>
+
+                        <!--클래스 disabled 추가-->
+                        <button type="button" class="btn-primary ml-6px disabled">
+                          <div class="d-flex align-items-center">
+                            <div class="indicator mr-6px"></div>
+                            적용 중 (80%)
+                          </div>
+                        </button>
+
+                        <button type="button" class="btn-primary ml-6px">
+                          <div class="d-flex align-items-center">
+                            적용 완료
+                          </div>
+                        </button>
+
+                        <!--속성 disabled 추가-->
+                        <button type="button" class="btn-primary ml-6px" disabled>
+                          <div class="d-flex align-items-center">
+                            적용 완료
+                          </div>
+                        </button>
+
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </article>
+
+              <div class="area-btn mt-24px">
+                <button type="button" class="btn-primary xl w-100px">저장</button>
+              </div>
+            </div>
+
+            <div id="tabAccountTeam" class="tab-pane" role="tabpanel" tabindex="0">
+
+              <div class="util-bar">
+                <div class="d-flex align-items-end">
+                  <div class="form-block">
+                    <label>검색어</label>
+                    <select class="w-140px" required="">
+                      <option value="" selected="">센터이름</option>
+                      <option value="option1">센터명1</option>
+                    </select>
+                  </div>
+                  <div class="form-block ml-6px">
+                    <label>부서레벨</label>
+                    <select class="w-140px">
+                      <option value="">전체</option>
+                      <option value="option1">옵션명1</option>
+                    </select>
+                  </div>
+                  <input class="w-180px ml-6px" type="text" placeholder="검색어 입력" value="" autocomplete="off">
+                  <button type="submit" class="btn-outline ml-6px">검색</button>
+                  <button type="button" class="btn-outline mask-32px ml-6px" aria-label="검색 초기화">
+                    <span class="material-icons-round">refresh</span>
+                  </button>
+                </div>
+                
+              </div>
+
+              <div class="table-head-area d-flex justify-content-between align-items-end mb-16px">
+                <div class="total_count">
+                  검색결과 총 <strong>3</strong>건
+                </div>
+                <div class="d-flex align-item-center">
+                  <button type="button" class="btn-primary" data-toggle="modal" data-target="#modal-addTeam">
+                    <span class="material-icons-round">add</span>
+                    부서 추가
+                  </button>
+                  <button type="button" class="btn-outline ml-8px">
+                    선택 삭제
+                  </button>
+                  <select class="w-100px ml-8px">
+                    <option>10개씩</option>
+                    <option>20개씩</option>
+                    <option>30개씩</option>
+                  </select>
+                  <button type="button" class="dropdown-toggle btn-outline ico-only md ml-8px" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="material-icons-round col-lightgray">more_vert</span>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right  w-120px">
+                    <ul class="dropdown-list">
+                      <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-8px">양식받기</button></li>
+                      <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-8px">가져오기</button></li>
+                      <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-8px">내보내기</button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="table-area">
+                <div class="comp-loader">
+                  <div class="loader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div>
+                <table class="table-wrap">
+                  <colgroup>
+                    <col style="width:50px">
+                    <col style="width:150px">
+                    <col style="width:150px">
+                    <col style="width:150px">
+                    <col style="width:150px">
+                    <col style="width:150px">
+                    <col style="width:150px">
+                    <col style="width:">
+                    <col style="width:118px">
+                  </colgroup>
+                  <thead>
+                    <tr class="text-center">
+                      <th>
+                        <div class="custom-control custom-checkbox justify-content-center">
+                          <input type="checkbox" class="custom-control-input" id="list_check1">
+                          <label class="custom-control-label" for="list_check1"></label>
+                        </div>
+                      </th>
+                      <th>부서ID</th>
+                      <th>센터이름</th>
+                      <th>센터코드</th>
+                      <th>그룹이름</th>
+                      <th>그룹코드</th>
+                      <th>부서이름</th>
+                      <th>부서코드</th>
+                      <th>관리</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-center">
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox justify-content-center">
+                          <input type="checkbox" class="custom-control-input" id="list_check1">
+                          <label class="custom-control-label" for="list_check1"></label>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="text-link" data-toggle="modal" data-target="#modal-team-view">솔루션1</button>
+                      </td>
+                      <td>서울센터</td>
+                      <td>G430</td>
+                      <td>보험상담</td>
+                      <td>T431</td>
+                      <td>상담1팀</td>
+                      <td>G430 > G430 > T431</td>
+                      <td>
+                        <button type="button" class="btn-outline xs" data-toggle="modal" data-target="#modal-editTeam">수정</button>
+                        <button type="button" class="btn-outline xs">삭제</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+  
+              <!--페이징-->
+              <nav class="pagination mt-16px">
+                <ul>
+                  <li class="page_item">
+                    <button type="button" class="page_link ico btn_next" aria-label="마지막 페이지" disabled>
+                      <div class="mask-20px">
+                        <span class="material-icons-round">keyboard_double_arrow_left</span>
+                      </div>
+                    </button>
+                  </li>
+                  <li class="page_item">        
+                    <button type="button" class="page_link ico btn_prev disabled" aria-label="이전 페이지" disabled>
+                      <div class="mask-20px">
+                        <span class="material-icons-round">keyboard_arrow_left</span>
+                      </div>
+                    </button>
+                  </li>
+  
+                  <!--현재페이지 addClass('on')'-->
+                  <li class="page_item on"><button type="button" class="page_link">1</button></li>
+                  <li class="page_item"><button type="button" class="page_link">2</button></li>
+                  <li class="page_item"><button type="button" class="page_link">3</button></li>
+                  <li class="page_item"><button type="button" class="page_link">4</button></li>
+                  <li class="page_item"><button type="button" class="page_link">5</button></li>
+                  <li class="page_item">
+                    <button type="button" class="page_link ico btn_next" aria-label="다음 페이지">
+                      <div class="mask-20px">
+                        <span class="material-icons-round">keyboard_arrow_right</span>
+                      </div>
+                    </button>
+                  </li>
+                  <li class="page_item">
+                    <button type="button" class="page_link ico btn_next" aria-label="마지막 페이지">
+                      <div class="mask-20px">
+                        <span class="material-icons-round">keyboard_double_arrow_right</span>
+                      </div>                      
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+              <!--//페이징-->  
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+
+    <!-- 모달 : 계정추가 -->
+    <div class="modal modal-account fade" id="modal_addAccount" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
+      <div class="modal-dialog w600">
+        <div class="modal-content"> 
+  
+          <div class="modal-header">
+            <p class="tit">계정 추가</p>            
+            <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
+              <span class="material-icons-round xl">close</span>
+            </button>
+          </div>
+  
+          <div class="modal-body">
+
+            <div class="comp-loader">
+              <div class="loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            
+            <div class="account-area">
+
+              <!--
+                유효성검사 성공 : validate-error 클래스추가
+                유효성검사 에러 : validate-success 클래스추가
+              -->
+              <div class="form-block account-item validate-error">
+                <label class="input-label" for="">사용자 아이디<span class="col-required">*</span></label>
+                <div class="form-area">
+                  <input type="text" placeholder="아이디 입력" value="" class="lg">
+                  <p class="validate-txt">중복된 아이디입니다.</p>
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label class="input-label" for="">사용자 이름</label>
+                <div class="form-area">
+                  <input type="text" placeholder="사용자 이름 입력" value="" class="lg">
+                  <p class="validate-info">입력하지 않으면 상담원으로 입력됩니다.</p>
+                </div>
+              </div>
+              <div class="form-block account-item validate-success">
+                <label class="input-label" for="">비밀번호<span class="col-required">*</span></label>
+                <div class="form-area">
+                  <input type="password" placeholder="비밀번호 입력" value="" class="lg">
+                  <p class="validate-txt">사용 가능합니다.</p>
+                </div>
+              </div>
+              <div class="form-block account-item validate-error">
+                <label class="input-label" for="">비밀번호 확인<span class="col-required">*</span></label>
+                <div class="form-area">
+                  <input type="password" placeholder="비밀번호 입력" value="" class="lg">
+                  <p class="validate-txt">비밀번호가 서로 다릅니다.</p>
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label class="input-label" for="">역할<span class="col-required">*</span></label>
+                <div class="form-area">
+                  <select value="" class="lg">
+                    <option>역할을 선택해주세요.</option>
+                  </select>
+                  <p class="validate-info">어드바이저에서 사용될 권한을 부여합니다.</p>
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label class="input-label" for="">내선번호</label>
+                <div class="form-area">
+                  <input type="text" placeholder="내선번호 입력" value="" class="lg">
+                  <p class="validate-info">숫자만 입력가능합니다.</p>
+                </div>
+              </div>
+
+              <div class="sub-field">
+                <div class="form-block account-item">
+                  <label class="input-label" for="">부서정보</label>
+                  <div class="form-area">
+                    <div class="searchSelect">
+                      <div class="select lg">
+                        <span class="selected-option">부서정보 선택</span>
+                      </div>
+                      <div class="search-area">
+                        <div class="search-box">
+                          <span class="material-icons col-lightgray">search</span>     
+                          <input class="filter" type="text" placeholder="검색">
+                        </div>
+                        <ul class="options">
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-block account-item">
+                  <label class="input-label" for="">사번</label>
+                  <div class="form-area">
+                    <input type="text" placeholder="사번입력" value="" class="lg">
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label class="input-label" for="">부_내선번호</label>
+                  <div class="form-area">
+                    <input type="text" placeholder="숫자만 입력" value="" class="lg">
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label class="input-label" for="">담당 업무</label>
+                  <div class="form-area">
+                    <input type="text" placeholder="담당 업무 입력" value="" class="lg">
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>상담관리자 여부</label>
+                  <div class="form-area">
+                    <p class="read-txt">Y</p>
+                  </div>
+                </div>
+                <div class="form-block account-item w-100">
+                  <label class="" for="">계정 잠금여부</label>
+                  <div class="form-area">
+                    <div class="d-flex">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="sampleRadio1" name="csampleRadiogroup1" checked="">
+                        <label class="custom-control-label" for="sampleRadio1"><span>잠금</span></label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="sampleRadio1-1" name="csampleRadiogroup1">
+                        <label class="custom-control-label" for="sampleRadio1-1"><span>잠금 해제</span></label>
+                      </div>
+                    </div>
+
+                    <!--잠금 해제 선택 시 미노출-->
+                    <div class="form-block mt-8px">
+                      <label for="">계정 잠금사유<span class="col-required">*</span></label>
+                      <input type="text" placeholder="계정 잠금사유를 반드시 입력해주세요." value="">
+                    </div>
+                    <!--//잠금 해제 선택 시 미노출-->
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>  
+          <div class="modal-footer">
+            <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
+            <button type="button" class="btn-primary xl" data-dismiss="modal">저장</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //모달 : 계정추가 -->
+
+    <!-- 모달 : 계정수정 -->
+    <div class="modal modal-account-edit fade" id="modal-editAccount" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
+      <div class="modal-dialog w600">
+        <div class="modal-content">
+  
+          <div class="modal-header">
+            <p class="tit">계정 수정</p>
+            <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
+              <span class="material-icons-round xl">close</span>
+            </button>
+          </div>
+  
+          <div class="modal-body">
+
+            <div class="account-area">
+
+              <!--
+                유효성검사 성공 : validate-error 클래스추가
+                유효성검사 에러 : validate-success 클래스추가
+              -->
+              <div class="form-block account-item">
+                <label>사용자 아이디<span class="col-required">*</span></label>
+                <div class="form-area">
+                  <p class="read-txt">Verstappen</p>
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label class="input-label" for="">사용자 이름</label>
+                <div class="form-area">
+                  <input type="text" placeholder="사용자 이름 입력" value="홍길순" class="lg">
+                  <!-- <p class="validate-info">입력하지 않으면 상담원으로 입력됩니다.</p> -->
+                </div>
+              </div>
+              <div class="form-block account-item validate-success">
+                <label class="input-label" for="">비밀번호<span class="col-required">*</span></label>
+                <div class="form-area">
+                  <button type="button" class="btn-primary mr-4px" data-toggle="modal" data-target="#modal-resetPw">비밀번호 초기화</button>
+                  <button type="button" class="btn-primary" data-toggle="modal" data-target="#modal-editPw">비밀번호 수정</button>
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label class="input-label" for="">역할<span class="col-required">*</span></label>
+                <div class="form-area">
+                  <select value="" class="lg">
+                    <option>역할을 선택해주세요.</option>
+                    <option selected>상담어드바이저 관리자</option>
+                  </select>
+                  <!-- <p class="validate-info">어드바이저에서 사용될 권한을 부여합니다.</p> -->
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label class="input-label" for="">내선번호</label>
+                <div class="form-area">
+                  <input type="text" placeholder="내선번호 입력" value="23456" class="lg">
+                  <!-- <p class="validate-info">숫자만 입력가능합니다.</p> -->
+                </div>
+              </div>
+
+              <div class="sub-field">
+                <div class="form-block account-item">
+                  <label class="input-label" for="">부서정보</label>
+                  <div class="form-area">
+                    <div class="searchSelect">
+                      <div class="select lg">
+                        <span class="selected-option">솔루션</span>
+                      </div>
+                      <div class="search-area">
+                        <div class="search-box">
+                          <span class="material-icons col-lightgray">search</span>     
+                          <input class="filter" type="text" placeholder="검색">
+                        </div>
+                        <ul class="options">
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-block account-item">
+                  <label class="input-label" for="">사번</label>
+                  <div class="form-area">
+                    <input type="text" placeholder="사번입력" value="C123456789" class="lg">
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label class="input-label" for="">부_내선번호</label>
+                  <div class="form-area">
+                    <input type="text" placeholder="숫자만 입력" value="3321" class="lg">
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label class="input-label" for="">담당 업무</label>
+                  <div class="form-area">
+                    <input type="text" placeholder="담당 업무 입력" value="" class="lg">
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>상담관리자 여부</label>
+                  <div class="form-area">
+                    <p class="read-txt">Y</p>
+                  </div>
+                </div>
+                <div class="form-block account-item w-100">
+                  <label class="" for="">계정 잠금여부</label>
+                  <div class="form-area">
+                    <div class="d-flex">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="sampleRadio12" name="csampleRadiogroup2" checked="">
+                        <label class="custom-control-label" for="sampleRadio12"><span>잠금</span></label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="sampleRadio12-1" name="csampleRadiogroup2">
+                        <label class="custom-control-label" for="sampleRadio12-1"><span>잠금 해제</span></label>
+                      </div>
+                    </div>
+
+                    <!--잠금 해제 선택 시 미노출-->
+                    <div class="form-block mt-8px">
+                      <label for="">계정 잠금사유<span class="col-required">*</span></label>
+                      <input type="text" placeholder="계정 잠금사유를 반드시 입력해주세요." value="상담원 휴가">
+                    </div>
+                    <!--//잠금 해제 선택 시 미노출-->
+
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>계정 잠금일시</label>
+                  <div class="form-area">
+                    <p class="read-txt">2024.01.12. 16:43:32
+                    </p>
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>계정 생성일</label>
+                  <div class="form-area">
+                    <p class="read-txt">2024.01.12. 16:43:32
+                    </p>
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>최근 로그인 일시</label>
+                  <div class="form-area">
+                    <p class="read-txt">
+                      2024.01.12. 16:43:32
+                    </p>
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>최근  비밀번호 수정일</label>
+                  <div class="form-area">
+                    <p class="read-txt">
+                      2024.01.12. 16:43:32
+                    </p>
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>계정 수정일</label>
+                  <div class="form-area">
+                    <p class="read-txt">
+                      2024.01.12. 16:43:32
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>  
+          <div class="modal-footer">
+            <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
+            <button type="button" class="btn-primary xl" data-dismiss="modal">저장</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //모달 : 계정수정 -->
+
+    <!-- 모달 : 계정상세보기 -->
+    <div class="modal modal-account-view fade" id="modal-viewAccount" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
+      <div class="modal-dialog w600">
+        <div class="modal-content"> 
+  
+          <div class="modal-header">
+            <p class="tit">계정 상세보기</p>            
+            <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
+              <span class="material-icons-round xl">close</span>
+            </button>
+          </div>
+  
+          <div class="modal-body">
+
+            <div class="account-area">
+              <div class="form-block account-item">
+                <label>사용자 아이디</label>
+                <div class="form-area">
+                  <p class="read-txt">Verstappen</p>
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label>사용자 이름</label>
+                <div class="form-area">
+                  <p class="read-txt">홍길순</p>
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label>역할</label>
+                <div class="form-area">
+                  <p class="read-txt">상담어드바이저 관리자</p>
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label>내선번호</label>
+                <div class="form-area">
+                  <p class="read-txt">3323</p>
+                </div>
+              </div>
+
+              <div class="sub-field">
+                <div class="form-block account-item">
+                  <label>부서 정보</label>
+                  <div class="form-area">
+                    <p class="read-txt">솔루션 1팀</p>
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>사번</label>
+                  <div class="form-area">
+                    <p class="read-txt">C12345678</p>
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>부_내선번호</label>
+                  <div class="form-area">
+                    <p class="read-txt">3321</p>
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>담당 업무</label>
+                  <div class="form-area">
+                    <p class="read-txt">QA</p>
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>상담관리자 여부</label>
+                  <div class="form-area">
+                    <p class="read-txt">Y</p>
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>계정 잠금여부</label>
+                  <div class="form-area">
+                    <p class="read-txt">잠금</p>
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>계정 잠금일시</label>
+                  <div class="form-area">
+                    <p class="read-txt">2024.01.12. 16:43:32</p>
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>계정 잠금사유</label>
+                  <div class="form-area">
+                    <p class="read-txt">상담원 휴가</p>
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>계정 생성일</label>
+                  <div class="form-area">
+                    <p class="read-txt">2024.01.12. 16:43:32
+                    </p>
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>최근 로그인 일시</label>
+                  <div class="form-area">
+                    <p class="read-txt">
+                      2024.01.12. 16:43:32
+                    </p>
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>최근  비밀번호 수정일</label>
+                  <div class="form-area">
+                    <p class="read-txt">
+                      2024.01.12. 16:43:32
+                    </p>
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>계정 수정일</label>
+                  <div class="form-area">
+                    <p class="read-txt">
+                      2024.01.12. 16:43:32
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>  
+          <div class="modal-footer">
+            <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
+            <button type="button" class="btn-primary xl" data-dismiss="modal">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //모달 : 계정상세보기 -->
+
+    <!-- 모달 : 비밀번호 초기화-->
+    <div class="modal modal-resetPw fade" id="modal-resetPw" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
+      <div class="modal-dialog w500">
+        <div class="modal-content"> 
+  
+          <div class="modal-header">
+            <p class="tit">비밀번호 초기화</p>            
+            <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
+              <span class="material-icons-round xl">close</span>
+            </button>
+          </div>
+  
+          <div class="modal-body">
+            <p>
+              비밀번호가 초기화되었습니다.<br />
+              비밀번호 초기화 규칙은 초기화된 날짜 및 아이디의 조합입니다.
+            </p>
+            <div class="example-area">
+              YYYY아이디명MMDD (DD는 해당 숫자의 특수기호)
+            </div>
+            <p>
+              Ex, 2024년 1월 12일 초기화 시,<br />
+              2024abcde01!@ (12일 경우 해당 숫자의 특수기호인 !@) 입니다.
+            </p>
+          </div>  
+          <div class="modal-footer">
+            <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
+            <button type="button" class="btn-primary xl" data-dismiss="modal">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //모달 : 비밀번호 초기화-->
+    
+    <!-- 모달 : 비밀번호 수정-->
+    <div class="modal modal-editPw fade" id="modal-editPw" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
+      <div class="modal-dialog w500">
+        <div class="modal-content"> 
+  
+          <div class="modal-header">
+            <p class="tit">비밀번호 수정</p>            
+            <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
+              <span class="material-icons-round xl">close</span>
+            </button>
+          </div>
+  
+          <div class="modal-body">
+            <div class="form-block mb-16px">
+              <label class="input-label">
+                현재 비밀번호
+                <!-- <span class="col-required">*</span> -->
+              </label>
+              <input type="password" placeholder="비밀번호 입력" value="" class="lg">
+              <!-- <p class="validate-txt">중복된 아이디입니다.</p> -->
+            </div>
+
+            <div class="form-block mb-16px">
+              <label class="input-label">
+                새로운 비밀번호
+                <!-- <span class="col-required">*</span> -->
+              </label>
+              <input type="password" placeholder="비밀번호 입력" value="" class="lg">
+              <!-- <p class="validate-txt">중복된 아이디입니다.</p> -->
+            </div>
+
+            <div class="form-block mb-16px">
+              <label class="input-label">
+                새로운 비밀번호 확인
+                <!-- <span class="col-required">*</span> -->
+              </label>
+              <input type="password" placeholder="비밀번호 입력" value="" class="lg">
+              <!-- <p class="validate-txt">중복된 아이디입니다.</p> -->
+            </div>
+          </div>  
+          <div class="modal-footer">
+            <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
+            <button type="button" class="btn-primary xl" data-dismiss="modal">저장</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //모달 : 비밀번호 수정-->
+
+    <!-- 모달 : 역할상세보기 -->
+    <div class="modal modal-detailRole fade" id="modal-detailRole" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
+      <div class="modal-dialog w900">
+        <div class="modal-content"> 
+  
+          <div class="modal-header">
+            <p class="tit">역할 상세보기</p>            
+            <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
+              <span class="material-icons-round xl">close</span>
+            </button>
+          </div>
+  
+          <div class="modal-body">
+            <article class="cont-area">
+              <div class="cont-body">
+                <section class="cont-sec">
+                  <div class="role-list-area">
+                    <div class="role-list-item">
+                      <p class="role-tit">역할명</p>
+                      <div class="role-txt">
+                        시스템 관리자
+                      </div>
+                    </div>
+                    <div class="role-list-item">
+                      <p class="role-tit">상담원 권한</p>
+                      <div class="role-txt">
+                        어드바이저 상담사, 채팅상담솔루션 상담사, 어드바이저 관리자
+                      </div>
+                    </div>
+                    <div class="role-list-item">
+                      <p class="role-tit">로그인 유형</p>
+                      <div class="role-txt">
+                        관리도구 전용
+                      </div>
+                    </div>
+                    <div class="role-list-item">
+                      <p class="role-tit">로그인 방식</p>
+                      <div>
+                        관리도구로 바로 로그인
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="cont-sec">
+                  <p class="h4 tit">계정 목록</p>
+                  <div class="table-area">
+                    <table class="table-wrap">
+                      <colgroup>                        
+                        <col style="width:140px">
+                        <col style="width:80px">
+                        <col style="width:140px">
+                        <col style="width:140px">
+                        <col style="width:20%">
+                        <col style="">
+                      </colgroup>
+                      <thead>
+                        <tr class="text-center">
+                          <th>사용자계정(ID)</th>
+                          <th>이름</th>
+                          <th>내선번호</th>
+                          <th>사번</th>
+                          <th>부서</th>
+                          <th>부서 코드</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-center">
+                        <tr>
+                          <td>
+                            <button type="button" class="text-link" data-toggle="modal" data-target="#modal-viewAccount">Verstappen</button>
+                          </td>
+                          <td>홍길동</td>
+                          <td>123456789</td>
+                          <td>C1234567890</td>
+                          <td>솔루션1팀</td>
+                          <td class="text-left">단기채권팀 &gt; G430 &gt; T431</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <button type="button" class="text-link" data-toggle="modal" data-target="#modal-viewAccount">Verstappen</button>
+                          </td>
+                          <td>홍길동</td>
+                          <td>123456789</td>
+                          <td>C1234567890</td>
+                          <td>솔루션1팀</td>
+                          <td class="text-left">단기채권팀 &gt; G430 &gt; T431</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <button type="button" class="text-link" data-toggle="modal" data-target="#modal-viewAccount">Verstappen</button>
+                          </td>
+                          <td>홍길동</td>
+                          <td>123456789</td>
+                          <td>C1234567890</td>
+                          <td>솔루션1팀</td>
+                          <td class="text-left">단기채권팀 &gt; G430 &gt; T431</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <button type="button" class="text-link" data-toggle="modal" data-target="#modal-viewAccount">Verstappen</button>
+                          </td>
+                          <td>홍길동</td>
+                          <td>123456789</td>
+                          <td>C1234567890</td>
+                          <td>솔루션1팀</td>
+                          <td class="text-left">단기채권팀 &gt; G430 &gt; T431</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+              </div>
+            </article>
+          </div>  
+          <div class="modal-footer">
+            <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
+            <button type="button" class="btn-primary xl" data-dismiss="modal">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //모달 : 역할상세보기 -->
+
+    <!-- 모달 : 부서추가 -->
+    <div class="modal modal-team-add fade" id="modal-addTeam" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
+      <div class="modal-dialog w600">
+        <div class="modal-content"> 
+  
+          <div class="modal-header">
+            <p class="tit">부서 추가</p>            
+            <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
+              <span class="material-icons-round xl">close</span>
+            </button>
+          </div>
+  
+          <div class="modal-body">
+
+            <div class="account-area">
+
+              <!--
+                유효성검사 성공 : validate-error 클래스추가
+                유효성검사 에러 : validate-success 클래스추가
+              -->
+              <div class="form-block account-item">
+                <label class="input-label" for="">부서 ID<span class="col-required">*</span></label>
+                <div class="form-area">
+                  <input type="text" placeholder="부서 ID 입력" value="" class="lg">
+                  <!-- <p class="validate-txt">중복된 아이디입니다.</p> -->
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label class="input-label" for="">센터이름</label>
+                <div class="form-area">
+                  <input type="text" placeholder="센터이름 입력" value="" class="lg">
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label class="input-label" for="">센터코드</label>
+                <div class="form-area">
+                  <input type="text" placeholder="센터코드 입력" value="" class="lg">
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label class="input-label" for="">그룹이름</label>
+                <div class="form-area">
+                  <input type="text" placeholder="그룹이름 입력" value="" class="lg">
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label class="input-label" for="">그룹코드</label>
+                <div class="form-area">
+                  <input type="text" placeholder="그룹코드 입력" value="" class="lg">
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label class="input-label" for="">부서이름</label>
+                <div class="form-area">
+                  <input type="text" placeholder="부서이름 입력" value="" class="lg">
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label class="input-label" for="">부서코드</label>
+                <div class="form-area">
+                  <input type="text" placeholder="부서코드 입력" value="" class="lg">
+                </div>
+              </div>
+            </div>
+          </div>  
+          <div class="modal-footer">
+            <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
+            <button type="button" class="btn-primary xl" data-dismiss="modal">저장</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //모달 : 부서추가 -->
+
+    <!-- 모달 : 부서수정 -->
+    <div class="modal modal-team-edit fade" id="modal-editTeam" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
+      <div class="modal-dialog w600">
+        <div class="modal-content"> 
+  
+          <div class="modal-header">
+            <p class="tit">부서 수정</p>            
+            <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
+              <span class="material-icons-round xl">close</span>
+            </button>
+          </div>
+  
+          <div class="modal-body">
+
+            <div class="account-area">
+
+              <!--
+                유효성검사 성공 : validate-error 클래스추가
+                유효성검사 에러 : validate-success 클래스추가
+              -->
+              <div class="form-block account-item">
+                <label class="input-label" for="">부서 ID<span class="col-required">*</span></label>
+                <div class="form-area">
+                  <input type="text" placeholder="부서 ID 입력" value="sampleValue" class="lg">
+                  <!-- <p class="validate-txt">중복된 아이디입니다.</p> -->
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label class="input-label" for="">센터이름</label>
+                <div class="form-area">
+                  <input type="text" placeholder="센터이름 입력" value="" class="lg">
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label class="input-label" for="">센터코드</label>
+                <div class="form-area">
+                  <input type="text" placeholder="센터코드 입력" value="" class="lg">
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label class="input-label" for="">그룹이름</label>
+                <div class="form-area">
+                  <input type="text" placeholder="그룹이름 입력" value="" class="lg">
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label class="input-label" for="">그룹코드</label>
+                <div class="form-area">
+                  <input type="text" placeholder="그룹코드 입력" value="" class="lg">
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label class="input-label" for="">부서이름</label>
+                <div class="form-area">
+                  <input type="text" placeholder="부서이름 입력" value="" class="lg">
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label class="input-label" for="">부서코드</label>
+                <div class="form-area">
+                  <input type="text" placeholder="부서코드 입력" value="" class="lg">
+                </div>
+              </div>
+
+              <div class="sub-field">
+                <div class="form-block account-item">
+                  <label>수정일자</label>
+                  <div class="form-area">
+                    <p class="read-txt">
+                      2024.01.12
+                    </p>
+                  </div>
+                </div>
+                <div class="form-block account-item">
+                  <label>등록일자</label>
+                  <div class="form-area">
+                    <p class="read-txt">
+                      2024.01.12
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>  
+          <div class="modal-footer">
+            <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
+            <button type="button" class="btn-primary xl" data-dismiss="modal">저장</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //모달 : 부서수정 -->
+
+    <!-- 모달 : 부서상세보기 -->
+    <div class="modal modal-team-view fade" id="modal-team-view" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
+      <div class="modal-dialog w600">
+        <div class="modal-content"> 
+  
+          <div class="modal-header">
+            <p class="tit">부서 상세보기</p>
+            <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
+              <span class="material-icons-round xl">close</span>
+            </button>
+          </div>
+  
+          <div class="modal-body">
+
+            <div class="account-area">
+              <div class="form-block account-item">
+                <label>부서 ID</label>
+                <div class="form-area">
+                  <p class="read-txt">-</p>
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label>센터이름</label>
+                <div class="form-area">
+                  <p class="read-txt">-</p>
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label>센터코드</label>
+                <div class="form-area">
+                  <p class="read-txt">-</p>
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label>그룹이름</label>
+                <div class="form-area">
+                  <p class="read-txt">-</p>
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label>그룹코드</label>
+                <div class="form-area">
+                  <p class="read-txt">-</p>
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label>부서이름</label>
+                <div class="form-area">
+                  <p class="read-txt">-</p>
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label>부서코드</label>
+                <div class="form-area">
+                  <p class="read-txt">-</p>
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label>수정일자</label>
+                <div class="form-area">
+                  <p class="read-txt">2024-01-12</p>
+                </div>
+              </div>
+              <div class="form-block account-item">
+                <label>등록일자</label>
+                <div class="form-area">
+                  <p class="read-txt">2024-01-11</p>
+                </div>
+              </div>
+            </div>
+          </div>  
+          <div class="modal-footer">
+            <button type="button" class="btn-primary xl" data-dismiss="modal">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //모달 : 계정상세보기 -->
+
+    <!-- 모달 : 가져오기 -->
+    <div class="modal modal-fileImport fade" id="modal-fileImport" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
+      <div class="modal-dialog w500">
+        <div class="modal-content"> 
+  
+          <div class="modal-header">
+            <p class="tit">가져오기</p>
+            <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
+              <span class="material-icons-round xl">close</span>
+            </button>
+          </div>
+  
+          <div class="modal-body">
+            <section>
+              <div class="form-block account-item mb-16px d-flex align-items-center">
+                <label class="input-label w-80px" for="">파일형식</label>
+                <div class="form-area flex-fill">
+                  <select id="">
+                    <option>Excel</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-block account-item mb-16px d-flex align-items-center">
+                <label class="input-label w-80px">첨부파일</label>
+                <div class="form-area flex-fill">
+                  <div class="custom-fileInput mb-8px">
+                    <input type="text" class="upload-name" value="" placeholder="선택된 파일 없음" readonly>
+                    <label for="file" class="btn-outline">파일 선택</label> 
+                    <input type="file" id="file" class="blind">
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="sampleCheck1">
+                    <label class="custom-control-label" for="sampleCheck1"><span>기존 데이터 초기화(덮어쓰기)</span></label>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>  
+          <div class="modal-footer">
+            <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
+            <button type="button" class="btn-primary xl" data-dismiss="modal">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //모달 : 가져오기 -->
+
+  </div>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/lib/ie11CustomProperties.js"></script>
+
+</body>
+</html>

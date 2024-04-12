@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="all">
+  <title>시스템관리 > 시스템설정</title>
+  <link rel=icon href="../assets/images/favicon.ico">
+
+  <link rel="stylesheet" href="../assets/lib/bootstrap-4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- 
+    [material-icons] npm으로 설치해주세요.
+    https://github.com/marella/material-icons?tab=readme-ov-file#readme
+  -->
+  <link rel="stylesheet" href="../../node_modules/material-icons/iconfont/material-icons.css">
+
+  <script src="../assets/lib/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+  <script src="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script src="../assets/lib/bootstrap-4.3.1/js/popper.min.js"></script>
+  <script src="../assets/lib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div id="wrap" class="wrap monitoring-page">
+    <header class="header">
+      <!--공통영역 layout.html에서 확인-->
+    </header>
+    <div class="content">
+      <div class="left-panel">
+        <!--공통영역 layout.html에서 확인-->
+      </div>
+      <main class="main-cont">
+        <div class="main-header">
+          <div class="breadcrumbs">
+            <ul>
+              <li>
+                <h2>시스템관리</h2>
+              </li>
+              <li class="arrow">     
+                <span class="material-icons-round col-lightgray">keyboard_arrow_right</span>
+              </li>
+              <li class="current">
+                <h2>시스템 모니터링</h2>
+                <div class="btn-guide-area ml-6px">
+                  <button type="button" class="btn-guide">?</button>
+                  <div class="guide-tooltip">
+                    <div class="inner">
+                      <p>
+                        내용입력 영역<br>
+                        줄바꿈하고 싶으면 <br>
+                        br태그로 줄바꿈해서 입력해주세요.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-body">
+
+
+          <article class="article w-1000px">
+            <h3 class="tit mb-8px">레디스 서버 정보</h3>
+            <span class="col-caption mb-16px">2024/01/22 10:23 기준</span>
+            <table class="table-wrap">
+              <colgroup>
+                <col style="width:230px;">
+                <col style="width:230px;">
+                <col style="width:140px;">
+                <col style="width:140px;">
+                <col style="width:140px;">
+                <col style="width:120px;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>IP</th>
+                  <th>PORT</th>
+                  <th>상태</th>
+                  <th class="text-center">점유 메모리</th>
+                  <th class="text-center">사용 키 갯수</th>
+                  <th class="text-center">타입</th>
+                </tr>
+              </thead>
+            </table>
+            <div class="table-area">
+              <table class="table-wrap">
+                <colgroup>
+                  <col style="width:230px;">
+                  <col style="width:230px;">
+                  <col style="width:140px;">
+                  <col style="width:140px;">
+                  <col style="width:140px;">
+                  <col style="width:120px;">
+                </colgroup>
+                <tbody>
+
+                  <!--테이블 공통 : 노데이터 UI. 필요하면 문구 수정하여 사용해주세요.-->
+                  <!-- <tr class="nodata">
+                    <td colspan="6">데이터가 없습니다.</td>
+                  </tr> -->
+                  <!--테이블 공통 : 노데이터 UI. 필요하면 문구 수정하여 사용해주세요.-->
+
+                  <tr>
+                    <td>DESKTOP-9NBIMMO</td>
+                    <td>127.10.200.129 / 6788</td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span class="col-success state-mark-green">running</span>
+                      </div>
+                    </td>
+                    <td class="text-center">9</td>
+                    <td class="text-center">1</td>
+                    <td class="text-center">
+                      <a class="btn-outline xs" href="javascript:openWindowPop('./popup_log.html', 'popup');">로그보기</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <table class="table-wrap">
+              <colgroup>
+                <col style="width:230px;">
+                <col>
+                <col style="width:140px;">
+                <col style="width:140px;">
+                <col style="width:140px;">
+                <col style="width:120px;">
+              </colgroup>
+              <tfoot>
+                <tr>
+                  <td>총</td>
+                  <td></td>
+                  <td></td>
+                  <td class="text-center">9</td>
+                  <td class="text-center">1</td>
+                  <td class="text-center"></td>
+                </tr>
+              </tfoot>
+            </table>
+          </article>
+
+          <article class="article w-1000px mt-40px">
+            <h3 class="tit mb-8px">AP 서버 정보</h3>
+            <span class="col-caption mb-16px">2024/01/22 10:23 기준</span>
+            <table class="table-wrap">
+              <colgroup>
+                <col style="width:230px;">
+                <col>
+                <col style="width:140px;">
+                <col style="width:140px;">
+                <col style="width:140px;">
+                <col style="width:120px;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>서버명</th>
+                  <th>IP/Port</th>
+                  <th>
+                    <div class="d-flex align-items-center">
+                      상태
+                      <button type="button" class="btn-outline mask-24px ml-6px" aria-label="새로고침">
+                        <span class="material-icons-round sm">refresh</span>
+                      </button>
+                    </div>
+                  </th>
+                  <th class="text-center">금일 STT 처리건수</th>
+                  <th class="text-center">금일 STT 분석건수</th>
+                  <th class="text-center">관리</th>
+                </tr>
+              </thead>
+            </table>
+            <div class="table-area">
+              <!-- <div class="comp-loader">
+                <div class="loader">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div> -->
+              <table class="table-wrap">
+                <colgroup>
+                  <col style="width:230px;">
+                  <col>
+                  <col style="width:140px;">
+                  <col style="width:140px;">
+                  <col style="width:140px;">
+                  <col style="width:120px;">
+                </colgroup>
+                <tbody>
+
+                  <!--테이블 공통 : 노데이터 UI. 필요하면 문구 수정하여 사용해주세요.-->
+                  <!-- <tr class="nodata">
+                    <td colspan="6">데이터가 없습니다.</td>
+                  </tr> -->
+                  <!--테이블 공통 : 노데이터 UI. 필요하면 문구 수정하여 사용해주세요.-->
+
+                  <tr>
+                    <td>서버명서버명서버명서버명</td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        127.0.0.1 / 6788
+                        <button type="button" class="mask-20px ml-4px hover" data-toggle="modal" data-target="#modal-ipPortInfo" title="편집">
+                          <span class="material-icons-round xs col-lightgray">edit</span>
+                        </button>
+                        <button type="button" class="mask-20px ml-2px hover">
+                          <span class="material-icons-round xs col-lightgray" title="리셋">refresh</span>
+                        </button>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span class="col-success state-mark-green">running</span>
+                      </div>
+                    </td>
+                    <td class="text-center">1,280</td>
+                    <td class="text-center">673</td>
+                    <td class="text-center">
+                      <a class="btn-outline xs" href="javascript:openWindowPop('./popup_log.html', 'popup');">로그보기</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>AP #1</td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        127.0.0.1 / 6788
+                        <button type="button" class="mask-20px ml-4px hover" data-toggle="modal" data-target="#modal-ipPortInfo" title="편집">
+                          <span class="material-icons-round xs col-lightgray">edit</span>
+                        </button>
+                        <!-- <button type="button" class="mask-20px ml-2px hover">
+                          <span class="material-icons-round xs col-lightgray" title="리셋">refresh</span>
+                        </button> -->
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span class="col-error state-mark-red">stop</span>
+                    </div>
+                    </td>
+                    <td class="text-center">1,280</td>
+                    <td class="text-center">673</td>
+                    <td class="text-center">
+                      <a class="btn-outline xs" href="javascript:openWindowPop('./popup_log.html', 'popup');">로그보기</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>AP #1</td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        127.0.0.1 / 6788
+                        <button type="button" class="mask-20px ml-4px hover" data-toggle="modal" data-target="#modal-ipPortInfo" title="편집">
+                          <span class="material-icons-round xs col-lightgray">edit</span>
+                        </button>
+                        <button type="button" class="mask-20px ml-2px hover">
+                          <span class="material-icons-round xs col-lightgray" title="리셋">refresh</span>
+                        </button>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span class="col-warning state-mark-yellow">abnormal</span>
+                      </div>
+                    </td>
+                    <td class="text-center">1,280</td>
+                    <td class="text-center">673</td>
+                    <td class="text-center">
+                      <a class="btn-outline xs" href="javascript:openWindowPop('./popup_log.html', 'popup');">로그보기</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <table class="table-wrap">
+              <colgroup>
+                <col style="width:230px;">
+                <col>
+                <col style="width:140px;">
+                <col style="width:140px;">
+                <col style="width:140px;">
+                <col style="width:120px;">
+              </colgroup>
+              <tfoot>
+                <tr>
+                  <td>총</td>
+                  <td></td>
+                  <td></td>
+                  <td class="text-center">1,223,802</td>
+                  <td class="text-center">673124</td>
+                  <td class="text-center"></td>
+                </tr>
+              </tfoot>
+            </table>
+          </article>
+
+          <article class="article w-1000px mt-40px">
+            <h3 class="tit">금일 AP 사용현황
+            </h3>
+
+            <div class="d-flex align-items-center mb-24px">
+              <p class=" mr-12px">조회 조건</p>
+              <div class="radio-tab mr-24px">
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="radio1" name="sample2" checked>
+                  <label class="custom-control-label" for="radio1"><span>최근 1시간</span></label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="radio2" name="sample2">
+                  <label class="custom-control-label" for="radio2"><span>금일</span></label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="radio3" name="sample2">
+                  <label class="custom-control-label" for="radio3"><span>최근 24시간</span></label>
+                </div>
+              </div>
+  
+              <div class="radio-tab">
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="radio4" name="sample3" checked>
+                  <label class="custom-control-label" for="radio4"><span>1분</span></label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="radio5" name="sample3">
+                  <label class="custom-control-label" for="radio5"><span>5분</span></label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="radio6" name="sample3">
+                  <label class="custom-control-label" for="radio6"><span>10분</span></label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="radio7" name="sample3">
+                  <label class="custom-control-label" for="radio7"><span>30분</span></label>
+                </div>
+              </div>
+            </div>
+
+            <ul class="">
+              <li class="graph-area mb-24px">
+                <div class="d-flex align-items-center">
+                  <h4>금일 STT 처리건수</h4>
+                </div>
+                <div class="graph mt-20px">
+                  <div class="comp-loader">
+                    <div class="loader">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <!--차트영역. 샘플 그래프는 개발 시 삭제해주세요.-->
+                  <canvas id="line-chart2" height="auto" style="height:100%"></canvas>
+                  <!--차트영역. 샘플 그래프는 개발 시 삭제해주세요.-->
+
+                </div>
+              </li>
+              <li class="graph-area">
+                <div class="d-flex align-items-center">
+                  <h4>금일 STT 분석건수</h4>
+
+                </div>
+                <div class="graph mt-20px">
+
+                  <!--차트영역. 샘플 그래프는 개발 시 삭제해주세요.-->
+                  <canvas id="line-chart" height="auto" style="height:100%"></canvas>
+                  <!--차트영역. 샘플 그래프는 개발 시 삭제해주세요.-->
+
+                </div>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </main>
+
+    </div>
+
+    <!-- 모달 : IP/Port 커스텀 등록 -->
+    <div class="modal modal-ip-port-info fade" id="modal-ipPortInfo" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
+      <div class="modal-dialog w500">
+        <div class="modal-content"> 
+  
+          <div class="modal-header">
+            <p class="tit">IP/Port 커스텀 등록</p>            
+            <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
+              <span class="material-icons-round xl">close</span>
+            </button>
+          </div>
+  
+          <div class="modal-body">
+            <article>
+              <section>
+                <p class="h5 fw-medium mb-8px">기존 정보</p>
+                <div class="form-block account-item mb-16px d-flex align-items-center">
+                  <label class="input-label w-80px" for="">IP</label>
+                  <div class="form-area flex-fill">
+                    <input type="text" placeholder="" value="133.186.171.42" class="" readonly />
+                  </div>
+                </div>
+                <div class="form-block account-item mb-16px d-flex align-items-center">
+                  <label class="input-label w-80px" for="">PORT</label>
+                  <div class="form-area flex-fill">
+                    <input type="text" placeholder="" value="35236" class="" readonly />
+                  </div>
+                </div>
+              </section>
+              <section>
+                <p class="h5 fw-medium mb-8px">커스텀 정보</p>
+                <div class="form-block account-item mb-16px d-flex align-items-center">
+                  <label class="input-label w-80px" for="">IP</label>
+                  <div class="form-area flex-fill">
+                    <input type="text" id="" placeholder="IP 입력" value="" />
+                  </div>
+                </div>
+                <div class="form-block account-item mb-16px d-flex align-items-center">
+                  <label class="input-label w-80px" for="">PORT</label>
+                  <div class="form-area flex-fill">
+                    <input type="number" id="" placeholder="숫자만 입력 가능" value="" />
+                  </div>
+                </div>
+              </section>
+            </article>
+          </div>  
+          <div class="modal-footer">
+            <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
+            <button type="button" class="btn-primary xl" data-dismiss="modal">적용</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //모달 : 부서추가 -->
+
+  </div>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/lib/ie11CustomProperties.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script><!--샘플차트확인용-->
+  
+  <script>
+    //윈도우새창
+    function openWindowPop(url, name){
+      var options = 'width=1200, height=850, status=no, menubar=no, toolbar=no';
+      window.open(url, name, options);
+    }
+
+    //샘플차트1
+    new Chart(document.getElementById("line-chart"), {
+      type: 'line',
+      data: {
+        labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
+        datasets: [{ 
+            data: [86,114,106,106,107,111,133,221,783,2478],
+            label: "Africa",
+            borderColor: "#3e95cd",
+            fill: false
+          }, { 
+            data: [282,350,411,502,635,809,947,1402,3700,5267],
+            label: "Asia",
+            borderColor: "#8e5ea2",
+            fill: false
+          }, { 
+            data: [168,170,178,190,203,276,408,547,675,734],
+            label: "Europe",
+            borderColor: "#3cba9f",
+            fill: false
+          }, { 
+            data: [40,20,10,16,24,38,74,167,508,784],
+            label: "Latin America",
+            borderColor: "#e8c3b9",
+            fill: false
+          }, { 
+            data: [6,3,2,2,7,26,82,172,312,433],
+            label: "North America",
+            borderColor: "#c45850",
+            fill: false
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'World population per region (in millions)'
+        }
+      }
+    });
+
+    //샘플차트2
+    new Chart(document.getElementById("line-chart2"), {
+      type: 'line',
+      data: {
+        labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
+        datasets: [{ 
+            data: [86,114,106,106,107,111,133,221,783,2478],
+            label: "Africa",
+            borderColor: "#3e95cd",
+            fill: false
+          }, { 
+            data: [282,350,411,502,635,809,947,1402,3700,5267],
+            label: "Asia",
+            borderColor: "#8e5ea2",
+            fill: false
+          }, { 
+            data: [168,170,178,190,203,276,408,547,675,734],
+            label: "Europe",
+            borderColor: "#3cba9f",
+            fill: false
+          }, { 
+            data: [40,20,10,16,24,38,74,167,508,784],
+            label: "Latin America",
+            borderColor: "#e8c3b9",
+            fill: false
+          }, { 
+            data: [6,3,2,2,7,26,82,172,312,433],
+            label: "North America",
+            borderColor: "#c45850",
+            fill: false
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'World population per region (in millions)'
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

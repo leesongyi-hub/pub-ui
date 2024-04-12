@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="all">
+  <title>공통레이아웃</title>
+  <link rel=icon href="../assets/images/favicon.ico">
+
+  <link rel="stylesheet" href="../assets/lib/bootstrap-4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <script src="../assets/lib/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+  <script src="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script src="../assets/lib/bootstrap-4.3.1/js/popper.min.js"></script>
+  <script src="../assets/lib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+  
+  .pub_list header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:48px;
+    background-color:#15C5CE;
+    padding:0 20px;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index:100;
+  }
+  .pub_list .tit{
+    color:#fff;
+  }
+  #wrap {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 80px 20px 20px 20px;
+    min-width: 1280px;      
+    margin: 0 auto;
+  }
+  caption {
+    display: none;
+  }
+  table {
+    width: 100%;      
+    margin: 0 auto 60px;
+    font-size: 1.5rem;
+    border-collapse: collapse;
+    background-color: #fff;      
+    color: #555;
+  }
+  th {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
+    border: 0;
+    background-color: #f5f6f7;
+    border-top:1px solid rgba(0,0,0,0.08);
+    border-right:1px solid rgba(0,0,0,0.05);
+    text-align: center;
+    color:#666;
+  }
+  td {
+    padding: 2px 16px;
+    font-size: 14px;
+    font-weight: 400;
+    border-top: 1px solid #ededed;
+    background-color: #fff;
+    border: 1px solid #ededed;      
+  }
+  td[rowspan] {      
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+
+  .link {
+    letter-spacing: 0.03em;
+    font-weight: 500;
+    color:#0068c3 !important;
+    text-decoration: underline;
+  }
+  .link:hover {
+    color:#0068c3 !important;
+    text-decoration: underline;
+  }
+  .update {
+    display: inline-block;
+    margin: 18px 0 30px 0;
+    padding: 18px 26px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.95rem;
+    border: 1px solid #888;
+    background: #fff;
+  }
+
+  .update .version1 {
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    background-color: rgba(255, 180, 182, 0.4);
+  }
+
+  .rmks {
+    font-size: 14px;
+    font-weight: 400;
+    color:#777;
+  }
+
+  .badge_modal{display:inline-block;padding:0 3px;border-radius: 4px;background-color:#15C5CE;color:#fff;margin-right: 4px;font-size: 11px;line-height:150%;height: 17px;line-height: 17px;position: relative;top: -1px;}
+  .badge_windowPop{display:inline-block;padding:0 4px;border-radius: 4px;background-color:#f3955e;color:#fff;margin-right:6px;font-size:13px;line-height:150%;}
+
+  @media screen and (max-width: 800px) {
+    html {
+      font-size: 55%;
+    }
+
+    #wrap {
+      min-width: 320px;
+    }
+
+    thead>tr>th:first-child,
+    thead>tr>th:nth-child(4),
+    thead>tr>th:nth-child(5) {
+      display: none;
+    }
+
+    td[rowspan] {
+      display: none;
+    }
+
+    .desc,
+    .rmks {
+      display: none;
+    }
+
+  }
+  .depth2 td{background-color: #f5f5f5;}
+
+  .dapth1 td{font-size:14px;font-weight: 600;}
+  .dapth1{text-align:center;background-color:#f5f5f5;}
+  .dapth1 > *{background-color:#ecf1f3;}
+</style>
+
+  <body id="wrap" class="pub_list">
+    <header>
+      <div class="tit">어드바이저 관리도구 퍼블리싱 리스트</div>
+      <span class="date">
+        마지막 업데이트: 24-01-22
+      </span>			
+    </header>  
+
+    <table>
+      <colgroup>
+        <col width="500px">
+        <col width="250px">
+        <col width="*">
+      </colgroup>
+      <thead>
+    
+      <tr>
+        <th>페이지명</th>
+        <th>URL</th>
+        <th>전달사항</th>				
+      </tr>
+    
+      </thead>
+      <tbody>
+        <!-- 공통 UI -->
+        <tr class="dapth1">
+          <td colspan="3">공통 UI</td>
+        </tr>
+        <!-- //공통 UI -->
+
+        <tr>
+          <td>
+            <a class="link" href="../guide/guide.html" target="_blank">UI 스타일 가이드</a>
+          </td>
+          <td>00_layout.html</td><!--설명-->
+          <td class="rmks">header, footer, lnb</td>
+        </tr>
+
+        <tr>
+          <td>
+            <a class="link" href="../views/00_layout.html" target="_blank">공통레이아웃</a>
+          </td>
+          <td>00_layout.html</td><!--설명-->
+          <td class="rmks">header, footer, lnb</td>
+        </tr>
+
+        <tr>
+          <td>
+            <a class="link" href="../views/00_loader_page.html" target="_blank">페이지 로딩</a>
+          </td>
+          <td>00_loader_page.html</td><!--설명-->
+          <td class="rmks">전체화면 로딩</td>
+        </tr>
+
+        <!-- 공통 UI -->
+        <tr class="dapth1">
+          <td colspan="3">로그인</td>
+        </tr>
+        <!-- //공통 UI -->
+
+        <tr>
+          <td>
+            <a class="link" href="../views/00_login.html" target="_blank">로그인</a>
+          </td>
+          <td>00_login.html</td><!--설명-->
+          <td class="rmks"></td>
+        </tr>
+        <tr>
+          <td>
+            <a class="link" href="../views/00_login_sso.html" target="_blank">로그인 - SSO</a>
+          </td>
+          <td>00_login_sso.html</td><!--설명-->
+          <td class="rmks"></td>
+        </tr>
+
+        <tr class="dapth1">
+          <td colspan="3">대시보드</td>
+        </tr>  
+
+        <tr>
+          <td>
+            <a class="link" href="../views/01_dashboard.html" target="_blank">대시보드</a>
+          </td>
+          <td>01_dashboard.html</td><!--설명-->
+          <td class="rmks">
+          </td>
+        </tr>
+       
+
+        <tr class="dapth1">
+          <td colspan="3">임시</td>
+        </tr> 
+        <tr>
+          <td>
+            <a class="link" href="../views/00_feedback.html" target="_blank">피드백 현황</a>
+          </td>
+          <td>00_feedback.html</td><!--설명-->
+          <td class="rmks">
+          </td>
+        </tr>
+        
+        <!-- 계정 -->
+        <tr class="dapth1">
+          <td colspan="3">시스템 관리</td>
+        </tr>
+        <!-- //계정 -->
+
+        <tr>
+          <td>
+            시스템 관리 > <a class="link" href="../views/04_management_account.html" target="_blank">계정관리</a>
+          </td>
+          <td>04_management_account.html</td><!--설명-->
+          <td class="rmks">
+            <span class="badge_modal">모달</span>계정추가
+            <span class="badge_modal ml-8px">모달</span>계정수정
+            <span class="badge_modal ml-8px">모달</span>계정 상세보기
+          </td>
+        </tr>
+        <tr>
+          <td>
+            시스템 관리 > <a class="link" href="../views/04_management_system.html" target="_blank">시스템 설정</a>
+          </td>
+          <td>04_management_system.html</td><!--설명-->
+          <td class="rmks">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            시스템 관리 > <a class="link" href="../views/04_management_memberSet.html" target="_blank">역할 관리</a>
+          </td>
+          <td>04_management_memberSet.html</td><!--설명-->
+          <td class="rmks">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            시스템 관리 > <a class="link" href="../views/04_management_advisorSet.html" target="_blank">어드바이저 설정</a>
+          </td>
+          <td>04_management_advisorSet.html</td><!--설명-->
+          <td class="rmks">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            시스템 관리 > <a class="link" href="../views/04_management_systemMonitoring.html" target="_blank">시스템 모니터링</a>
+          </td>
+          <td>04_management_systemMonitoring.html</td><!--설명-->
+          <td class="rmks">
+            <span class="badge_modal">윈도우팝업</span>로그보기
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </body>
+</html>

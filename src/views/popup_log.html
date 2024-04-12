@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="all">
+  <title>로그</title>
+  <link rel=icon href="../assets/images/favicon.ico">
+
+  <link rel="stylesheet" href="../assets/lib/bootstrap-4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- 
+    [material-icons] npm으로 설치해주세요.
+    https://github.com/marella/material-icons?tab=readme-ov-file#readme
+  -->
+  <link rel="stylesheet" href="../../node_modules/material-icons/iconfont/material-icons.css">
+
+  <script src="../assets/lib/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+  <script src="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script src="../assets/lib/bootstrap-4.3.1/js/popper.min.js"></script>
+  <script src="../assets/lib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="windowPop-wrap">
+    <div class="windowPop-head">
+      <div class="d-flex align-items-center justify-content-between p-16px">
+        <p class="h1">로그</p>
+
+        <div class="d-flex">
+
+          <div class="d-flex align-items-center">
+            <label for="" class="mr-6px">서버 선택</label>
+            <select id="" class="w-240px" required="">
+              <option value="" selected="">서버명(IP/Port)</option>
+              <option value="option1">AP #1(127.0.0.1 / 6788)</option>
+            </select>
+            <button type="button" class="btn-outline ico-only md ml-6px" aria-label="새로고침">
+              <span class="material-icons-round">refresh</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="windowPop-body position-relative">
+      <div class="comp-loader">
+        <div class="loader">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="log-area">
+        1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001 1 : >>> SUBSCRIBE id:sub-1675156296794-582 destination:/sub/redis/coaching/admin001​
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/lib/ie11CustomProperties.js"></script>
+
+</body>
+</html>
