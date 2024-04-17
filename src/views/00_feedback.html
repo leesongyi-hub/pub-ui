@@ -25,14 +25,9 @@
 
 <body>
   <div id="wrap" class="wrap account-page">
-    <header class="header">
-      <!--공통영역 layout.html에서 확인-->
-      
-    </header>
+    @@include('./include/header.html')
     <div class="content">
-      <div class="left-panel">
-        <!--공통영역 layout.html에서 확인-->
-      </div>
+      @@include('./include/lnb.html')
       <main class="main-cont">
         <div class="main-header">
           <div class="breadcrumbs">
@@ -116,7 +111,7 @@
             </div>
             <button type="submit" class="btn-outline ml-6px">검색</button>
             <button type="button" class="btn-outline mask-32px ml-6px" aria-label="검색 초기화">
-              <span class="material-icons-round">refresh</span>
+              <svg class="ico" role="presentation" aria-hidden="true" focusable="false"><use xlink:href="#ico-refresh"></use></svg>
             </button>
           </div>
   
@@ -126,9 +121,9 @@
               <strong>3</strong>건
             </div>
             <div class="d-flex align-item-center">
-              <button type="button" class="btn-outline ml-8px" disabled>검토결과 상담원 선택 적용</button>
-              <button type="button" class="btn-outline ml-8px" disabled>검토결과 선택 제외</button>
-              <button type="button" class="btn-outline ml-8px">검토결과 상담원<span class="col-red">&nbsp;전체 적용</span></button>
+              <button type="button" class="btn-outline ml-8px">검토결과 상담원 선택 적용</button>
+              <button type="button" class="btn-outline ml-8px">검토결과 선택 제외</button>
+              <button type="button" class="btn-outline ml-8px">검토결과 상담원<span class="col-blue">&nbsp;전체 적용</span></button>
               <button type="button" class="btn-outline ml-8px">검토결과<span class="col-red">&nbsp;전체 제외</span></button>
             </div>
           </div>
@@ -163,9 +158,8 @@
                   <th scope="col" style="width:80px;">피드백</th>
                   <th scope="col" style="width:170px;">의견내용</th>
                   <th scope="col" style="width:110px;">상담사</th>
-                  <th scope="col" style="width:150px;">학습 제외 여부</th>
+                  <th scope="col" style="width:120px;">학습 제외 여부</th>
                   <th scope="col" style="width:80px;">학습적용</th>
-                  <th scope="col" style="width:80px;">상담원문</th>
               </tr>
 
 
@@ -197,11 +191,11 @@
                       </li>
                       <li class="category-list-item">
                         <button type="button" class="btn-outline xxs" aria-pressed="false">상담사</button>
-                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료</div>
                       </li>
                       <li class="category-list-item">
                         <button type="button" class="btn-outline xxs" aria-pressed="false">검토</button>
-                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
                       </li>
                     </ul>
                   </td>
@@ -226,7 +220,10 @@
                     <!-- <strong class="col-red">3</strong> -->
                   </td>
                   <td>
-                    <strong class="col-blue">좋아요</strong>
+                    <strong class="d-flex col-blue">
+                      <svg class="ico ico-sm col-blue mr-4px" role="presentation" aria-hidden="true" focusable="false"><use xlink:href="#ico-like"></use></svg>
+                      좋아요
+                    </strong>
                     <!-- <strong class="col-red">나빠요</strong> -->
                   </td>
                   <td class="text-left">
@@ -239,7 +236,6 @@
                   </td>
                   <td class="except-area">
                     <div class="d-flex align-items-center justify-content-center">
-                      <span class="col-caption mr-4px">안 함</span>
                       <div class="form-switch">
                         <input type="checkbox" id="switch1" checked="">
                         <label for="switch1">
@@ -247,22 +243,17 @@
                           <i class="btn-switch"></i>
                         </label>
                       </div>
-                      <span class="col-blue ml-4px">제외 함</span>
                     </div>
                   </td>
                   <td>
                     <span class="col-blue">적용</span>
                   </td>
-
-                  <td>
-                    <button type="button" class="btn-outline xs" data-toggle="modal" data-target="#modal-stt-view">원문 보기</button>
-                  </td>
                 </tr>
                 <tr>
                   <td>
                     <div class="custom-control custom-checkbox justify-content-center">
-                      <input type="checkbox" class="custom-control-input" id="list_check1">
-                      <label class="custom-control-label" for="list_check1"><span class="blind">목록선택</span></label>
+                      <input type="checkbox" class="custom-control-input" id="list_check2">
+                      <label class="custom-control-label" for="list_check2"><span class="blind">목록선택</span></label>
                     </div>
                   </td>
                   <td>
@@ -284,11 +275,11 @@
                       </li>
                       <li class="category-list-item">
                         <button type="button" class="btn-outline xxs" aria-pressed="false">상담사</button>
-                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료</div>
                       </li>
                       <li class="category-list-item">
                         <button type="button" class="btn-outline xxs" aria-pressed="false">검토</button>
-                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
                       </li>
                     </ul>
                   </td>
@@ -309,12 +300,15 @@
                     </ul>
                   </td>
                   <td>
-                    <!-- <strong class="col-blue">3</strong> -->
-                    <strong class="col-red">3</strong>
+                    <strong class="col-red">2</strong>
+                    <!-- <strong class="col-red">3</strong> -->
                   </td>
                   <td>
-                    <!-- <strong class="col-blue">좋아요</strong> -->
-                    <strong class="col-red">나빠요</strong>
+                    <div class="d-flex">
+                      <svg class="ico ico-sm col-red mr-4px" role="presentation" aria-hidden="true" focusable="false"><use xlink:href="#ico-unlike"></use></svg>
+                      <strong class="col-red">나빠요</strong>
+                    </div>
+                    <!-- <strong class="col-red">나빠요</strong> -->
                   </td>
                   <td class="text-left">
                     의견내용 의견내용 의견내용
@@ -326,22 +320,422 @@
                   </td>
                   <td class="except-area">
                     <div class="d-flex align-items-center justify-content-center">
-                      <span class="col-caption mr-4px">안 함</span>
                       <div class="form-switch">
-                        <input type="checkbox" id="switch2">
-                        <label for="switch2">
+                        <input type="checkbox" id="switch1" checked="">
+                        <label for="switch1">
                           <span class="blind">학습제외여부체크</span>
                           <i class="btn-switch"></i>
                         </label>
                       </div>
-                      <span class="col-blue ml-4px">제외 함</span>
                     </div>
                   </td>
                   <td>
-                    <span class="col-blue">-</span>
+                    <span class="col-blue">적용</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox justify-content-center">
+                      <input type="checkbox" class="custom-control-input" id="list_check2">
+                      <label class="custom-control-label" for="list_check2"><span class="blind">목록선택</span></label>
+                    </div>
                   </td>
                   <td>
-                    <button type="button" class="btn-outline xs" data-toggle="modal" data-target="#modal-stt-view">원문 보기</button>
+                    1
+                  </td>
+                  <td class="text-left">
+                    <div class="font-weight-bold">
+                        상담지식<span class=" pl-5px font-weight-normal">&nbsp;(면접상담)</span>
+                    </div>
+                    <div class="mt-6px text-lightgray typo-caption-lg-regular">
+                      이혼 위자료 관련해서 상담좀 받으려고 하는데요 남편한테 폭행을 당한 경우 이혼 위자료 청구는 어떻게 하나요?
+                    </div>
+                  </td>
+                  <td class="text-left">
+                    <ul class="category-list">
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="true">AI</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">상담사</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">검토</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="text-left">
+                    <ul class="category-list">
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="true">AI</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">상담사</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">검토</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                    </ul>
+                  </td>
+                  <td>
+                    <strong class="col-red">2</strong>
+                    <!-- <strong class="col-red">3</strong> -->
+                  </td>
+                  <td>
+                    <strong class="col-red">나빠요</strong>
+                    <!-- <strong class="col-red">나빠요</strong> -->
+                  </td>
+                  <td class="text-left">
+                    의견내용 의견내용 의견내용
+                  </td>
+                  <td class="text-center counselorInfo_area">
+                    <strong class="mb-4px">홍길동</strong>
+                    <div>서울중앙지부</div>
+                    <div class="col-caption">(A1233412312)</div>
+                  </td>
+                  <td class="except-area">
+                    <div class="d-flex align-items-center justify-content-center">
+                      <div class="form-switch">
+                        <input type="checkbox" id="switch1" checked="">
+                        <label for="switch1">
+                          <span class="blind">학습제외여부체크</span>
+                          <i class="btn-switch"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="col-blue">적용</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox justify-content-center">
+                      <input type="checkbox" class="custom-control-input" id="list_check2">
+                      <label class="custom-control-label" for="list_check2"><span class="blind">목록선택</span></label>
+                    </div>
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td class="text-left">
+                    <div class="font-weight-bold">
+                        상담지식<span class=" pl-5px font-weight-normal">&nbsp;(면접상담)</span>
+                    </div>
+                    <div class="mt-6px text-lightgray typo-caption-lg-regular">
+                      이혼 위자료 관련해서 상담좀 받으려고 하는데요 남편한테 폭행을 당한 경우 이혼 위자료 청구는 어떻게 하나요?
+                    </div>
+                  </td>
+                  <td class="text-left">
+                    <ul class="category-list">
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="true">AI</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">상담사</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">검토</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="text-left">
+                    <ul class="category-list">
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="true">AI</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">상담사</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">검토</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                    </ul>
+                  </td>
+                  <td>
+                    <strong class="col-red">2</strong>
+                    <!-- <strong class="col-red">3</strong> -->
+                  </td>
+                  <td>
+                    <strong class="col-red">나빠요</strong>
+                    <!-- <strong class="col-red">나빠요</strong> -->
+                  </td>
+                  <td class="text-left">
+                    의견내용 의견내용 의견내용
+                  </td>
+                  <td class="text-center counselorInfo_area">
+                    <strong class="mb-4px">홍길동</strong>
+                    <div>서울중앙지부</div>
+                    <div class="col-caption">(A1233412312)</div>
+                  </td>
+                  <td class="except-area">
+                    <div class="d-flex align-items-center justify-content-center">
+                      <div class="form-switch">
+                        <input type="checkbox" id="switch1" checked="">
+                        <label for="switch1">
+                          <span class="blind">학습제외여부체크</span>
+                          <i class="btn-switch"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="col-blue">적용</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox justify-content-center">
+                      <input type="checkbox" class="custom-control-input" id="list_check2">
+                      <label class="custom-control-label" for="list_check2"><span class="blind">목록선택</span></label>
+                    </div>
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td class="text-left">
+                    <div class="font-weight-bold">
+                        상담지식<span class=" pl-5px font-weight-normal">&nbsp;(면접상담)</span>
+                    </div>
+                    <div class="mt-6px text-lightgray typo-caption-lg-regular">
+                      이혼 위자료 관련해서 상담좀 받으려고 하는데요 남편한테 폭행을 당한 경우 이혼 위자료 청구는 어떻게 하나요?
+                    </div>
+                  </td>
+                  <td class="text-left">
+                    <ul class="category-list">
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="true">AI</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">상담사</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">검토</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="text-left">
+                    <ul class="category-list">
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="true">AI</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">상담사</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">검토</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                    </ul>
+                  </td>
+                  <td>
+                    <strong class="col-red">2</strong>
+                    <!-- <strong class="col-red">3</strong> -->
+                  </td>
+                  <td>
+                    <strong class="col-red">나빠요</strong>
+                    <!-- <strong class="col-red">나빠요</strong> -->
+                  </td>
+                  <td class="text-left">
+                    의견내용 의견내용 의견내용
+                  </td>
+                  <td class="text-center counselorInfo_area">
+                    <strong class="mb-4px">홍길동</strong>
+                    <div>서울중앙지부</div>
+                    <div class="col-caption">(A1233412312)</div>
+                  </td>
+                  <td class="except-area">
+                    <div class="d-flex align-items-center justify-content-center">
+                      <div class="form-switch">
+                        <input type="checkbox" id="switch1" checked="">
+                        <label for="switch1">
+                          <span class="blind">학습제외여부체크</span>
+                          <i class="btn-switch"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="col-blue">적용</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox justify-content-center">
+                      <input type="checkbox" class="custom-control-input" id="list_check2">
+                      <label class="custom-control-label" for="list_check2"><span class="blind">목록선택</span></label>
+                    </div>
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td class="text-left">
+                    <div class="font-weight-bold">
+                        상담지식<span class=" pl-5px font-weight-normal">&nbsp;(면접상담)</span>
+                    </div>
+                    <div class="mt-6px text-lightgray typo-caption-lg-regular">
+                      이혼 위자료 관련해서 상담좀 받으려고 하는데요 남편한테 폭행을 당한 경우 이혼 위자료 청구는 어떻게 하나요?
+                    </div>
+                  </td>
+                  <td class="text-left">
+                    <ul class="category-list">
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="true">AI</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">상담사</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">검토</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="text-left">
+                    <ul class="category-list">
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="true">AI</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">상담사</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">검토</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                    </ul>
+                  </td>
+                  <td>
+                    <strong class="col-red">2</strong>
+                    <!-- <strong class="col-red">3</strong> -->
+                  </td>
+                  <td>
+                    <strong class="col-red">나빠요</strong>
+                    <!-- <strong class="col-red">나빠요</strong> -->
+                  </td>
+                  <td class="text-left">
+                    의견내용 의견내용 의견내용
+                  </td>
+                  <td class="text-center counselorInfo_area">
+                    <strong class="mb-4px">홍길동</strong>
+                    <div>서울중앙지부</div>
+                    <div class="col-caption">(A1233412312)</div>
+                  </td>
+                  <td class="except-area">
+                    <div class="d-flex align-items-center justify-content-center">
+                      <div class="form-switch">
+                        <input type="checkbox" id="switch1" checked="">
+                        <label for="switch1">
+                          <span class="blind">학습제외여부체크</span>
+                          <i class="btn-switch"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="col-blue">적용</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox justify-content-center">
+                      <input type="checkbox" class="custom-control-input" id="list_check2">
+                      <label class="custom-control-label" for="list_check2"><span class="blind">목록선택</span></label>
+                    </div>
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td class="text-left">
+                    <div class="font-weight-bold">
+                        상담지식<span class=" pl-5px font-weight-normal">&nbsp;(면접상담)</span>
+                    </div>
+                    <div class="mt-6px text-lightgray typo-caption-lg-regular">
+                      이혼 위자료 관련해서 상담좀 받으려고 하는데요 남편한테 폭행을 당한 경우 이혼 위자료 청구는 어떻게 하나요?
+                    </div>
+                  </td>
+                  <td class="text-left">
+                    <ul class="category-list">
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="true">AI</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">상담사</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">검토</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="text-left">
+                    <ul class="category-list">
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="true">AI</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">상담사</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                      <li class="category-list-item">
+                        <button type="button" class="btn-outline xxs" aria-pressed="false">검토</button>
+                        <div class="pl-4px pt-2px">친족&gt;이혼&gt;위자료&gt;I. 위자료 청구친족&gt;이혼&gt;위자료&gt;I. 위자료 청구</div>
+                      </li>
+                    </ul>
+                  </td>
+                  <td>
+                    <strong class="col-red">2</strong>
+                    <!-- <strong class="col-red">3</strong> -->
+                  </td>
+                  <td>
+                    <strong class="col-red">나빠요</strong>
+                    <!-- <strong class="col-red">나빠요</strong> -->
+                  </td>
+                  <td class="text-left">
+                    의견내용 의견내용 의견내용
+                  </td>
+                  <td class="text-center counselorInfo_area">
+                    <strong class="mb-4px">홍길동</strong>
+                    <div>서울중앙지부</div>
+                    <div class="col-caption">(A1233412312)</div>
+                  </td>
+                  <td class="except-area">
+                    <div class="d-flex align-items-center justify-content-center">
+                      <div class="form-switch">
+                        <input type="checkbox" id="switch1" checked="">
+                        <label for="switch1">
+                          <span class="blind">학습제외여부체크</span>
+                          <i class="btn-switch"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="col-blue">적용</span>
                   </td>
                 </tr>
               </tbody>
@@ -554,6 +948,7 @@
     <!-- //모달 : 원문 보기 -->
   </div>
 
+  <div id="ico_svg" data-include="./svg.html" style="display:none"></div>
   <script src="../assets/js/common.js"></script>
   <script src="../assets/lib/ie11CustomProperties.js"></script>
 

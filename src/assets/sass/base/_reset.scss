@@ -1,5 +1,40 @@
 :root {overflow-wrap:break-word;}
-body, button, input, select, table, textarea,dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, select, table, td, textarea, th, ul{font-size:var(--font-size-body-md);line-height:var(--line-height-body-md);color:var(--text-color-default);margin:0;padding:0;font-weight:400;font-family:"pretendard",-apple-system,system-ui,BlinkMacSystemFont,'Segoe UI','Malgun Gothic','맑은 고딕',Dotum,'돋움',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji';}
+body,
+button,
+input,
+select,
+table,
+textarea,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+ul,
+li,
+ol,
+p,
+select,
+table,
+th,
+td,
+textarea{
+  font-size:var(--font-size-body-md);
+  line-height:var(--line-height-body-md);
+  color:var(--text-color-default);
+  margin:0;
+  padding:0;
+  font-weight:400;
+  font-family:"pretendard",-apple-system,system-ui,BlinkMacSystemFont,'Segoe UI','Malgun Gothic','맑은 고딕',Dotum,'돋움',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji';
+}
 h1, h2, h3, h4, h5, h6 {font-size:inherit;line-height:inherit;color:inherit}
 textarea {-webkit-backface-visibility:hidden;backface-visibility:hidden;background-color:transparent;border:0;word-break:keep-all;word-wrap:break-word}
 button, input {-webkit-border-radius:0;border-radius:0;border:0}
@@ -19,16 +54,16 @@ span, a, strong{display:inline-block;}
 table{border-spacing:0px;border-collapse:collapse;table-layout: fixed;}
 
 /* scrollBar */
-::-webkit-scrollbar{width:6px;height: 6px;background-color: rgba(202, 202, 202, .3);}
-::-webkit-scrollbar-thumb {background-color: rgba(202, 202, 202, .6);}
-::-webkit-scrollbar-thumb:hover {background: rgba(75, 75, 75, .5);}
-::-webkit-scrollbar-button:start:decrement, 
-::-webkit-scrollbar-button:end:increment {display:none;}
-::-webkit-scrollbar-corner {
-  /*  상하+좌우 스크롤이 만나는 공간   */
-background-color:rgba(202, 202, 202, .6);
-} 
-body::-webkit-scrollbar {width: 12px;height: 12px;}
+.main-body ::-webkit-scrollbar{width:12px;height: 12px;background-color: rgba(202, 202, 202, .3);}
+.main-body ::-webkit-scrollbar-thumb {background-color: rgba(202, 202, 202, .6);}
+.main-body ::-webkit-scrollbar-thumb:hover {background: rgba(75, 75, 75, .5);}
+// ::-webkit-scrollbar-button:start:decrement, 
+// ::-webkit-scrollbar-button:end:increment {display:none;}
+// ::-webkit-scrollbar-corner {
+//   /*  상하+좌우 스크롤이 만나는 공간   */
+// background-color:rgba(202, 202, 202, .6);
+// } 
+
 
 /* input */
 [type=checkbox], [type=radio] {box-sizing:border-box;padding:0}

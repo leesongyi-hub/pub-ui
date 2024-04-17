@@ -156,6 +156,9 @@
   --icon-color-warning: var(--base-color-yellow-500);
   --icon-color-success: var(--base-color-green-500);
 
+  --icon-stroke-default:1.6px;
+  --icon-stroke-bold:2px;
+
   --border-color-light: var(--base-color-gray-40);
   --border-color-default: var(--base-color-gray-50);
   --border-color-dark: var(--base-color-gray-60);
@@ -251,6 +254,7 @@
   --shadow-lg:4px 4px 25px rgba(0,0,0,.15);
 
   --dropdown-shadow: var(--shadow-md);
+  
 
     //button style
     --btn-primary-bg-color: var(--base-color-primary-500);

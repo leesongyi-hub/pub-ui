@@ -98,7 +98,7 @@
     expendedNavi: {
       init: function(){
 
-        $('.navi > li').has('.sub-menu').children('a').append('<span class="material-icons-round col-lightgray sm ico-arr">keyboard_arrow_down</span>');
+        $('.navi > li').has('.sub-menu').children('a').append('<svg class="ico ico-arr col-lightgray" role="presentation" aria-hidden="true" focusable="false"><use xlink:href="#ico-arr_bot"></use></svg>');
 
         $('.navi .navi-item > a').click(function() {
           
@@ -315,3 +315,36 @@
     UI.autoHeightTextArea.init();
   });
 
+//퍼블리싱본만 필요
+function includeHTML(){
+  let z, elmnt, file, xhttp;
+
+  z = document.getElementsByTagName("*");
+  
+  for (let i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      file = elmnt.getAttribute("data-include");
+      
+      if (file) {
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+              if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /* Remove the attribute, and call this function once more: */
+                  elmnt.removeAttribute("data-include");
+                  includeHTML();
+              }//if
+          }//onreadystatechange
+
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          return;
+      }//if - file
+  }//for
+}//includeHTML
+
+/* ✨ 실행 */
+window.addEventListener('DOMContentLoaded', function() {
+  includeHTML();
+});

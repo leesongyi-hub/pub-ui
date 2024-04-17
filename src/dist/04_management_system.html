@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="all">
+    <title>시스템관리 > 시스템설정</title>
+    <link rel=icon href="../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../assets/lib/bootstrap-4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- 
+    [material-icons] npm으로 설치해주세요.
+    https://github.com/marella/material-icons?tab=readme-ov-file#readme
+  -->
+    <link rel="stylesheet" href="../../node_modules/material-icons/iconfont/material-icons.css">
+    <script src="../assets/lib/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <script src="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="../assets/lib/bootstrap-4.3.1/js/popper.min.js"></script>
+    <script src="../assets/lib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div id="wrap" class="wrap system-page">
+      <header class="header">
+        <!--공통영역 layout.html에서 확인-->
+      </header>
+      <div class="content">
+        <div class="left-panel">
+          <!--공통영역 layout.html에서 확인-->
+        </div>
+        <main class="main-cont">
+          <div class="main-header">
+            <div class="breadcrumbs">
+              <ul>
+                <li>
+                  <h2>시스템관리</h2>
+                </li>
+                <li class="arrow">
+                  <span class="material-icons-round col-lightgray">keyboard_arrow_right</span>
+                </li>
+                <li class="current">
+                  <h2>시스템 설정</h2>
+                  <div class="btn-guide-area ml-6px">
+                    <button type="button" class="btn-guide">?</button>
+                    <div class="guide-tooltip">
+                      <div class="inner">
+                        <p> 내용입력 영역<br> 줄바꿈하고 싶으면 <br> br태그로 줄바꿈해서 입력해주세요. </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-body">
+            <ul class="nav nav-tabs mb-32px" role="tablist" id="resultTabCont">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" data-toggle="tab" data-target="#tabApSet" type="button" role="tab" aria-selected="true">AP 설정</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" data-toggle="tab" data-target="#tabKnowledgeSet" type="button" role="tab" aria-selected="false">지식 관리 설정</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" data-toggle="tab" data-target="#tabDataSet" type="button" role="tab" aria-selected="false">데이터 관리</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="resultTabCont">
+              <div id="tabApSet" class="tab-pane active" role="tabpanel" tabindex="0">
+                <article class="article w-1000px">
+                  <h3 class="tit d-flex align-items-center">의도분석 및 NLP 분석 연계 설정 <div class="btn-guide-area ml-6px">
+                      <button type="button" class="btn-guide">?</button>
+                      <div class="guide-tooltip top">
+                        <div class="inner">
+                          <p> 내용입력 영역<br /> 줄바꿈하고 싶으면 <br /> br태그로 줄바꿈해서 입력해주세요. </p>
+                        </div>
+                      </div>
+                    </div>
+                  </h3>
+                  <div class="res-table">
+                    <dl class="tr">
+                      <dt class="th">
+                        <label for="InfochatterId">인포채터 IP</label>
+                        <div class="btn-guide-area ml-6px">
+                          <button type="button" class="btn-guide">?</button>
+                          <div class="guide-tooltip top">
+                            <div class="inner">
+                              <p> 내용입력 영역<br /> 줄바꿈하고 싶으면 <br /> br태그로 줄바꿈해서 입력해주세요. </p>
+                            </div>
+                          </div>
+                        </div>
+                      </dt>
+                      <dd class="td">
+                        <input id="InfochatterId" type="text" placeholder="" class="w-240px">
+                      </dd>
+                    </dl>
+                    <dl class="tr">
+                      <dt class="th">
+                        <label for="InfochatterPort">인포채터 PORT</label>
+                      </dt>
+                      <dd class="td">
+                        <input id="InfochatterPort" type="text" placeholder="" class="w-240px">
+                      </dd>
+                    </dl>
+                    <dl class="tr">
+                      <dt class="th">
+                        <label for="InfochatterIdRepoId">인포채터 저장소 아이디</label>
+                      </dt>
+                      <dd class="td">
+                        <input id="InfochatterIdRepoId" type="text" placeholder="" class="w-240px">
+                      </dd>
+                    </dl>
+                    <dl class="tr">
+                      <dt class="th">
+                        <label for="InfoAgent">인포채터 에이전트 이름</label>
+                      </dt>
+                      <dd class="td">
+                        <input type="text" id="InfoAgent" placeholder="" class="w-240px">
+                      </dd>
+                    </dl>
+                    <dl class="tr w100">
+                      <dt class="th">인포채터 클라이언트</dt>
+                      <dd class="td">
+                        <div class="d-flex">
+                          <div class="form-block mr-20px">
+                            <label for="infoConnectionPool">Connection Pool Size (Min=Max)</label>
+                            <div class="form-count">
+                              <input type="number" id="infoConnectionPool" placeholder="숫자만 입력">
+                              <div class="area-btn">
+                                <button type="button" class="btn-quantity-plus" aria-label="더하기">
+                                  <span class="material-icons-round xxs">add</span>
+                                </button>
+                                <button type="button" class="btn-quantity-minus" aria-label="빼기">
+                                  <span class="material-icons-round xxs">remove</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-block">
+                            <label for="infoConnectionTimeout">Connection Timeout (ms)</label>
+                            <div class="form-count">
+                              <input type="number" id="infoConnectionTimeout" placeholder="숫자만 입력">
+                              <div class="area-btn">
+                                <button type="button" class="btn-quantity-plus" aria-label="더하기">
+                                  <span class="material-icons-round xxs">add</span>
+                                </button>
+                                <button type="button" class="btn-quantity-minus" aria-label="빼기">
+                                  <span class="material-icons-round xxs">remove</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                  <!-- //res-table -->
+                </article>
+                <!-- //의도분석 및 NLP 분석 연계 설정 -->
+                <article class="article w-1000px">
+                  <h3 class="tit">콜 유형 분류 설정</h3>
+                  <div>
+                    <div class="mb-16px">
+                      <label for="" class="h5 mb-8px">DQCAT 사용유무</label>
+                      <div class="d-flex">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input" id="radio1" name="sample">
+                          <label class="custom-control-label" for="radio1"><span>사용</span></label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" class="custom-control-input" id="radio2" name="sample" checked>
+                          <label class="custom-control-label" for="radio2"><span>사용안함</span></label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="res-table">
+                      <dl class="tr">
+                        <dt class="th">
+                          <label for="dqcatIp">DQCAT IP</label>
+                        </dt>
+                        <dd class="td">
+                          <input type="text" id="dqcatIp" placeholder="" value="" class="w-240px" disabled>
+                        </dd>
+                      </dl>
+                      <dl class="tr">
+                        <dt class="th">
+                          <label for="dqcatPort">DQCAT PORT</label>
+                        </dt>
+                        <dd class="td">
+                          <input type="text" id="dqcatPort" placeholder="" value="" class="w-240px" disabled>
+                        </dd>
+                      </dl>
+                      <dl class="tr">
+                        <dt class="th">
+                          <label for="dqcatName">DQCAT collection name</label>
+                          <div class="btn-guide-area ml-6px">
+                            <button type="button" class="btn-guide">?</button>
+                            <div class="guide-tooltip top">
+                              <div class="inner">
+                                <p> br태그 없이 입력하면 한 줄로 쭉 입력됩니다. </p>
+                              </div>
+                            </div>
+                          </div>
+                        </dt>
+                        <dd class="td">
+                          <input type="text" id="dqcatName" placeholder="" value="" class="w-240px" disabled>
+                        </dd>
+                      </dl>
+                      <dl class="tr">
+                        <dt class="th">
+                          <label for="dqcatReliability">DQCAT 신뢰도</label>
+                        </dt>
+                        <dd class="td">
+                          <div class="form-block col-item">
+                            <div class="form-count">
+                              <input type="number" id="dqcatReliability" placeholder="숫자만 입력" value="" disabled>
+                              <div class="area-btn">
+                                <button type="button" class="btn-quantity-plus" aria-label="더하기" disabled>
+                                  <span class="material-icons-round xxs">add</span>
+                                </button>
+                                <button type="button" class="btn-quantity-minus" aria-label="빼기" disabled>
+                                  <span class="material-icons-round xxs">remove</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl class="tr w100">
+                        <dt class="th">인포채터 클라이언트</dt>
+                        <dd class="td">
+                          <div class="d-flex">
+                            <div class="form-block mr-20px">
+                              <label for="dqcatConnectionPool">Connection Pool Size (Min=Max)</label>
+                              <div class="form-count">
+                                <input type="number" id="dqcatConnectionPool" placeholder="숫자만 입력" disabled>
+                                <div class="area-btn">
+                                  <button type="button" class="btn-quantity-plus" aria-label="더하기" disabled>
+                                    <span class="material-icons-round xxs">add</span>
+                                  </button>
+                                  <button type="button" class="btn-quantity-minus" aria-label="빼기" disabled>
+                                    <span class="material-icons-round xxs">remove</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-block">
+                              <label for="dqcatconnectionTimeout">Connection Timeout (ms)</label>
+                              <div class="form-count">
+                                <input type="number" id="dqcatconnectionTimeout" placeholder="숫자만 입력" disabled>
+                                <div class="area-btn">
+                                  <button type="button" class="btn-quantity-plus" aria-label="더하기" disabled>
+                                    <span class="material-icons-round xxs">add</span>
+                                  </button>
+                                  <button type="button" class="btn-quantity-minus" aria-label="빼기" disabled>
+                                    <span class="material-icons-round xxs">remove</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                </article>
+                <!-- //콜 유형 분류 설정 -->
+                <article class="article w-1000px">
+                  <h3 class="tit">OKMS 연계 설정</h3>
+                  <div class="res-table">
+                    <dl class="tr w100">
+                      <dt class="th">
+                        <label for="okmsiuml"> OKMS 문서조회 API <span class="typo-caption-lg-regular-">(OKMS iuml 검색 대응)</span>
+                        </label>
+                        <div class="btn-guide-area">
+                          <button type="button" class="btn-guide">?</button>
+                          <div class="guide-tooltip top">
+                            <div class="inner">
+                              <p> 내용입력 영역<br /> 줄바꿈하고 싶으면 <br /> br태그로 줄바꿈해서 입력해주세요. </p>
+                            </div>
+                          </div>
+                        </div>
+                      </dt>
+                      <dd class="td">
+                        <!-- 
+                        높이가 너무 커보이면 h-200px 클래스 수정해서 사용해주세요.
+                        .h-100px ~ h-200px까지 20px 단위로 css 추가 해놨음.
+                        ex) h-100px, h-120px ... h-180px, h-200px
+                      -->
+                        <textarea placeholder="http(s)를 포함한 전체 API URL" class="w-500px h-200px" rows="1"></textarea>
+                      </dd>
+                    </dl>
+                  </div>
+                </article>
+                <!-- //OKMS 연계 설정 -->
+                <article class="article w-1000px">
+                  <h3 class="tit">채팅상담솔루션 연계 설정</h3>
+                  <div class="res-table">
+                    <dl class="tr w100">
+                      <dt class="th">
+                        <label for="chatUrl">채팅상담솔루션 URL</label>
+                      </dt>
+                      <dd class="td">
+                        <input type="text" id="chatUrl" placeholder="https://pickbot.ai/chatassist/" class="w-500px">
+                      </dd>
+                    </dl>
+                    <dl class="tr w100">
+                      <dt class="th">
+                        <label for="chatRepoId">채팅상담시스템 저장소 ID</label>
+                      </dt>
+                      <dd class="td">
+                        <input type="text" id="chatRepoId" placeholder="co43243118in" class="w-240px">
+                      </dd>
+                    </dl>
+                  </div>
+                </article>
+                <!-- //채팅상담솔루션 연계 설정 -->
+                <article class="article w-1000px">
+                  <h3 class="tit">평가모듈 연계</h3>
+                  <div class="res-table">
+                    <dl class="tr w100">
+                      <dt class="th">
+                        <label for="apiUrl">평가모듈 API URL</label>
+                      </dt>
+                      <dd class="td">
+                        <input type="text" id="apiUrl" placeholder="http://133.186.171.52:6020/csqa/execute" value="" class="w-500px">
+                      </dd>
+                    </dl>
+                    <dl class="tr w100">
+                      <dt class="th">
+                        <label for="connectionTimeout">Connection Timeout (ms)</label>
+                      </dt>
+                      <dd class="td">
+                        <div class="form-count">
+                          <input type="number" id="connectionTimeout" placeholder="숫자만 입력">
+                          <div class="area-btn">
+                            <button type="button" class="btn-quantity-plus" aria-label="더하기">
+                              <span class="material-icons-round xxs">add</span>
+                            </button>
+                            <button type="button" class="btn-quantity-minus" aria-label="빼기">
+                              <span class="material-icons-round xxs">remove</span>
+                            </button>
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                </article>
+                <!-- //평가모듈 연계 -->
+                <article class="article w-1000px">
+                  <h3 class="tit">딥러닝 연계 설정</h3>
+                  <div class="res-table">
+                    <dl class="tr w100">
+                      <dt class="th">
+                        <label for="DLapiUrl">딥러닝 요약 모듈 API URL</label>
+                      </dt>
+                      <dd class="td">
+                        <input type="text" id="DLapiUrl" placeholder="http://133.186.171.52:6020/csqa/execute" value="" class="w-500px">
+                      </dd>
+                    </dl>
+                    <dl class="tr w100">
+                      <dt class="th">
+                        <label for="DLConnectionTimeout">Connection Timeout (ms)</label>
+                      </dt>
+                      <dd class="td">
+                        <div class="form-count">
+                          <input type="number" id="DLConnectionTimeout" placeholder="숫자만 입력">
+                          <div class="area-btn">
+                            <button type="button" class="btn-quantity-plus" aria-label="더하기">
+                              <span class="material-icons-round xxs">add</span>
+                            </button>
+                            <button type="button" class="btn-quantity-minus" aria-label="빼기">
+                              <span class="material-icons-round xxs">remove</span>
+                            </button>
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                </article>
+                <!-- //딥러닝 연계 설정 -->
+                <article class="article w-1000px">
+                  <h3 class="tit">AP 서버 상태 설정</h3>
+                  <div class="res-table">
+                    <dl class="tr w100">
+                      <dt class="th">
+                        <label for="DLapiUrl">상태 설정 URL</label>
+                      </dt>
+                      <dd class="td">
+                        <input type="text" id="DLapiUrl" placeholder="http://133.186.171.52:6020/csqa/execute" value="" class="w-500px">
+                      </dd>
+                    </dl>
+                    <dl class="tr w100">
+                      <dt class="th">
+                        <label for="DLConnectionTimeout">Connection Timeout (ms)</label>
+                      </dt>
+                      <dd class="td">
+                        <div class="form-count">
+                          <input type="number" id="DLConnectionTimeout" placeholder="숫자만 입력">
+                          <div class="area-btn">
+                            <button type="button" class="btn-quantity-plus" aria-label="더하기">
+                              <span class="material-icons-round xxs">add</span>
+                            </button>
+                            <button type="button" class="btn-quantity-minus" aria-label="빼기">
+                              <span class="material-icons-round xxs">remove</span>
+                            </button>
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                </article>
+                <!-- //AP 서버 상태 설정 -->
+                <div class="d-flex mt-20px">
+                  <button type="button" class="btn-primary xl w-100px">적용</button>
+                </div>
+              </div>
+              <div id="tabKnowledgeSet" class="tab-pane" role="tabpanel" tabindex="0">
+                <article class="article w-1000px">
+                  <h3 class="tit">제외콜 설정</h3>
+                  <div class="mb-16px">
+                    <label for="" class="h5 mb-8px">제외콜 사용여부</label>
+                    <div class="d-flex">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="radio1" name="sample2">
+                        <label class="custom-control-label" for="radio1"><span>사용</span></label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="radio2" name="sample2" checked="">
+                        <label class="custom-control-label" for="radio2"><span>사용안함</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="res-table">
+                    <div class="disabled-dim">
+                      <p class="txt">제외콜 사용여부를 사용으로 변경해주세요.</p>
+                    </div>
+                    <dl class="tr w100">
+                      <dt class="th">
+                        <label for="number">내선번호 (Prefix Match)</label>
+                      </dt>
+                      <dd class="td py-16px">
+                        <div class="d-flex">
+                          <input type="text" id="number" placeholder="" class="w-240px mr-6px">
+                          <button type="button" class="btn-outline">추가</button>
+                        </div>
+                        <div class="chip-area mt-6px">
+                          <div class="chip">
+                            <span class="txt">1588</span>
+                            <button type="button" class="mask-18px">
+                              <span class="material-icons-round xs col-lightgray">close</span>
+                            </button>
+                          </div>
+                          <div class="chip">
+                            <span class="txt">1588</span>
+                            <button type="button" class="mask-18px">
+                              <span class="material-icons-round xs col-lightgray">close</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="d-flex mt-16px">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" id="" class="custom-control-input">
+                            <label class="custom-control-label" for=""><span>콜을 쌓지 않기</span></label>
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" id="" class="custom-control-input">
+                            <label class="custom-control-label" for=""><span>의도분석 하지 않기</span></label>
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" id="" class="custom-control-input">
+                            <label class="custom-control-label" for=""><span>분석결과 쌓지 않기</span></label>
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="tr w100">
+                      <dt class="th">
+                        <label for="">다음 시간 이하의 콜에 대해서</label>
+                      </dt>
+                      <dd class="td py-16px">
+                        <div class="form-count">
+                          <input type="number" id="" placeholder="숫자만 입력">
+                          <div class="area-btn mr-8px">
+                            <button type="button" class="btn-quantity-plus" aria-label="더하기">
+                              <span class="material-icons-round xxs">add</span>
+                            </button>
+                            <button type="button" class="btn-quantity-minus" aria-label="빼기">
+                              <span class="material-icons-round xxs">remove</span>
+                            </button>
+                          </div>
+                          <span class="d-flex align-items-center">초</span>
+                        </div>
+                        <div class="d-flex mt-16px">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="">
+                            <label class="custom-control-label" for=""><span>콜을 쌓지 않기</span></label>
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="">
+                            <label class="custom-control-label" for=""><span>의도분석 하지 않기</span></label>
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="">
+                            <label class="custom-control-label" for=""><span>분석결과 쌓지 않기</span></label>
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                </article>
+                <!-- //제외콜 설정 -->
+                <article class="article w-1000px">
+                  <h3 class="tit">AP 지식 설정</h3>
+                  <div class="res-table">
+                    <dl class="tr">
+                      <dt class="th">
+                        <label>stt - 의도분석 동기화 여부</label>
+                      </dt>
+                      <dd class="td">
+                        <div class="form-switch">
+                          <input type="checkbox" id="switch1" checked>
+                          <label for="switch1">
+                            <i class="btn-switch"></i>
+                          </label>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="tr">
+                      <dt class="th">
+                        <label>개체명 태그 정보 저장 유무</label>
+                      </dt>
+                      <dd class="td">
+                        <div class="form-switch">
+                          <input type="checkbox" id="switch2" checked>
+                          <label for="switch2">
+                            <i class="btn-switch"></i>
+                          </label>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="tr">
+                      <dt class="th"><label>고객정보 전체 마스킹 여부</label></dt>
+                      <dd class="td">
+                        <div class="form-switch">
+                          <input type="checkbox" id="switch3">
+                          <label for="switch3">
+                            <i class="btn-switch"></i>
+                          </label>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="tr">
+                      <dt class="th"><label> 키워드 추출 대상</label></dt>
+                      <dd class="td">
+                        <div class="d-flex">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="" checked>
+                            <label class="custom-control-label" for=""><span>고객 발화</span></label>
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="">
+                            <label class="custom-control-label" for=""><span>상담사 발화</span></label>
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="tr w100">
+                      <dt class="th"><label>콜 종료후 API 호출</label></dt>
+                      <dd class="td py-16px">
+                        <div class="form-block">
+                          <label for="keywordApi">키워드 추출에 따른 알림 API URL</label>
+                          <input type="text" id="keywordApi" placeholder="http://133.186.171.52:60301/predictions/test_-_summarization_-_pt_-_operating" value="" class="w-600px">
+                        </div>
+                        <div class="d-flex mt-16px">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="" checked>
+                            <label class="custom-control-label" for=""><span>민원</span></label>
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="" checked>
+                            <label class="custom-control-label" for=""><span>관심</span></label>
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="" checked>
+                            <label class="custom-control-label" for=""><span>이슈</span></label>
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="" checked>
+                            <label class="custom-control-label" for=""><span>금칙</span></label>
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                  <div class="keywordTable-area mt-24px">
+                    <div class="d-flex mb-12px">
+                      <p class="h4">어드바이저용 추출 품사 설정</p>
+                      <div class="btn-guide-area ml-6px">
+                        <button type="button" class="btn-guide">?</button>
+                        <div class="guide-tooltip top">
+                          <div class="inner">
+                            <p> 내용입력 영역<br /> 줄바꿈하고 싶으면 <br /> br태그로 줄바꿈해서 입력해주세요. </p>
+                          </div>
+                        </div>
+                      </div>
+                      <span class="typo-caption-lg-regular ml-12px mt-2px">*키워드 입력 후 엔터로 등록</span>
+                    </div>
+                    <div class="res-table">
+                      <dl class="tr w100">
+                        <dt class="th"><label>금지어</label></dt>
+                        <dd class="td">
+                          <input type="text" class="w-300px" placeholder="$어드바이저>금지어">
+                          <div class="chip-area mt-6px">
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD2</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD2</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD2</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD2</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD2</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD2</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD2</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD2</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD2</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD2</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD2</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD2</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD2</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD2</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD2</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD2</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD2</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                            <div class="chip">
+                              <span class="txt">$ADVISOR>STOPWORD2</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl class="tr w100">
+                        <dt class="th"><label>비속어</label></dt>
+                        <dd class="td">
+                          <input type="text" class="w-300px" placeholder="$어드바이저>비속어">
+                        </dd>
+                      </dl>
+                      <dl class="tr w100">
+                        <dt class="th"><label>관심 키워드 </label></dt>
+                        <dd class="td">
+                          <input type="text" class="w-300px">
+                        </dd>
+                      </dl>
+                      <dl class="tr w100">
+                        <dt class="th"><label>민원 </label></dt>
+                        <dd class="td">
+                          <input type="text" class="w-300px" placeholder="$어드바이저>민원">
+                        </dd>
+                      </dl>
+                      <dl class="tr w100">
+                        <dt class="th"><label>이슈어 </label></dt>
+                        <dd class="td">
+                          <input type="text" class="w-300px" placeholder="$어드바이저>이슈어">
+                        </dd>
+                      </dl>
+                      <dl class="tr w100">
+                        <dt class="th"><label>고빈도(인사이트 겸용)</label></dt>
+                        <dd class="td">
+                          <input type="text" class="w-300px" placeholder="*">
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="keywordTable-area mt-24px">
+                    <div class="d-flex mb-12px">
+                      <p class="h4">어드바이저용 추출 개체명 설정</p>
+                      <!-- <div class="btn-guide-area ml-6px">
+                      <button type="button" class="btn-guide">?</button>
+                      <div class="guide-tooltip top">
+                        <div class="inner">
+                          <p>
+                            내용입력 영역
+                          </p>
+                        </div>
+                      </div>
+                    </div> -->
+                      <span class="typo-caption-lg-regular ml-12px mt-2px">*키워드 입력 후 엔터로 등록</span>
+                    </div>
+                    <div class="res-table">
+                      <dl class="tr w100">
+                        <dt class="th"><label>금지어</label></dt>
+                        <dd class="td">
+                          <input type="text" class="w-300px" placeholder="np, ncp">
+                          <div class="chip-area mt-6px">
+                            <div class="chip">
+                              <span class="txt">키워드</span>
+                              <button type="button" class="mask-18px">
+                                <span class="material-icons-round xs col-lightgray">close</span>
+                              </button>
+                            </div>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl class="tr w100">
+                        <dt class="th"><label>비속어</label></dt>
+                        <dd class="td">
+                          <input type="text" class="w-300px">
+                        </dd>
+                      </dl>
+                      <dl class="tr w100">
+                        <dt class="th"><label>관심 키워드 </label></dt>
+                        <dd class="td">
+                          <input type="text" class="w-300px" placeholder="ncn;ncp;comp">
+                        </dd>
+                      </dl>
+                      <dl class="tr w100">
+                        <dt class="th"><label>민원 </label></dt>
+                        <dd class="td">
+                          <input type="text" class="w-300px">
+                        </dd>
+                      </dl>
+                      <dl class="tr w100">
+                        <dt class="th"><label>이슈어 </label></dt>
+                        <dd class="td">
+                          <input type="text" class="w-300px">
+                        </dd>
+                      </dl>
+                      <dl class="tr w100">
+                        <dt class="th"><label>고빈도(인사이트 겸용)</label></dt>
+                        <dd class="td">
+                          <input type="text" class="w-300px">
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                </article>
+                <div class="d-flex mt-20px">
+                  <button type="button" class="btn-primary xl w-100px">적용</button>
+                </div>
+              </div>
+              <div id="tabDataSet" class="tab-pane" role="tabpanel" tabindex="0">
+                <article class="article w-1000px">
+                  <h3 class="tit d-flex align-items-center">데이터 보관 관리 <div class="btn-guide-area ml-6px">
+                      <button type="button" class="btn-guide">?</button>
+                      <div class="guide-tooltip top">
+                        <div class="inner">
+                          <p> 내용입력 영역<br> 줄바꿈하고 싶으면 <br> br태그로 줄바꿈해서 입력해주세요. </p>
+                        </div>
+                      </div>
+                    </div>
+                  </h3>
+                  <div class="res-table">
+                    <dl class="tr w100">
+                      <dt class="th">
+                        <label for="">상담사 대화 로그 보관 기간</label>
+                        <div class="btn-guide-area ml-6px">
+                          <button type="button" class="btn-guide">?</button>
+                          <div class="guide-tooltip top">
+                            <div class="inner">
+                              <p> br태그 없이 입력하면 한 줄로 쭉 입력됩니다. </p>
+                            </div>
+                          </div>
+                        </div>
+                      </dt>
+                      <dd class="td py-16px">
+                        <div class="form-count">
+                          <input type="number" id="" placeholder="숫자만 입력">
+                          <div class="area-btn mr-8px">
+                            <button type="button" class="btn-quantity-plus" aria-label="더하기">
+                              <span class="material-icons-round xxs">add</span>
+                            </button>
+                            <button type="button" class="btn-quantity-minus" aria-label="빼기">
+                              <span class="material-icons-round xxs">remove</span>
+                            </button>
+                          </div>
+                          <span class="d-flex align-items-center">일</span>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="tr w100">
+                      <dt class="th">
+                        <label for="">콜 데이터 보관 기간</label>
+                        <div class="btn-guide-area ml-6px">
+                          <button type="button" class="btn-guide">?</button>
+                          <div class="guide-tooltip top">
+                            <div class="inner">
+                              <p> br태그 없이 입력하면 한 줄로 쭉 입력됩니다. </p>
+                            </div>
+                          </div>
+                        </div>
+                      </dt>
+                      <dd class="td py-16px">
+                        <div class="form-count">
+                          <input type="number" id="" placeholder="숫자만 입력">
+                          <div class="area-btn mr-8px">
+                            <button type="button" class="btn-quantity-plus" aria-label="더하기">
+                              <span class="material-icons-round xxs">add</span>
+                            </button>
+                            <button type="button" class="btn-quantity-minus" aria-label="빼기">
+                              <span class="material-icons-round xxs">remove</span>
+                            </button>
+                          </div>
+                          <span class="d-flex align-items-center">일</span>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="tr w100">
+                      <dt class="th">
+                        <label for="">AP 로그 테이블 보관</label>
+                        <div class="btn-guide-area ml-6px">
+                          <button type="button" class="btn-guide">?</button>
+                          <div class="guide-tooltip top">
+                            <div class="inner">
+                              <p> br태그 없이 입력하면 한 줄로 쭉 입력됩니다. </p>
+                            </div>
+                          </div>
+                        </div>
+                      </dt>
+                      <dd class="td py-16px">
+                        <div class="form-count">
+                          <input type="number" id="" placeholder="숫자만 입력">
+                          <div class="area-btn mr-8px">
+                            <button type="button" class="btn-quantity-plus" aria-label="더하기">
+                              <span class="material-icons-round xxs">add</span>
+                            </button>
+                            <button type="button" class="btn-quantity-minus" aria-label="빼기">
+                              <span class="material-icons-round xxs">remove</span>
+                            </button>
+                          </div>
+                          <span class="d-flex align-items-center">일</span>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                </article>
+                <!-- //제외콜 설정 -->
+                <div class="d-flex mt-20px">
+                  <button type="button" class="btn-primary xl w-100px">적용</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/lib/ie11CustomProperties.js"></script>
+  </body>
+</html>

@@ -3,15 +3,19 @@
 //공통레이아웃
 .wrap{width:100%;}
 .wrap .container{width:100%;max-width:100%;padding:0;margin:0;}
-.wrap .content{width:100%;padding-top: var(--header-height);padding-left:240px;}
-.wrap .main-cont{position:absolute;top:0;bottom:0;left:240px;right:0;padding-top:48px;overflow-x:auto;}
-.wrap .main-header{position:absolute;top:0;left:0;display:flex;align-items: center;width:100%;padding:10px 24px;min-height:48px;border-bottom:1px solid var(--border-color-default);}
+.wrap .content{width:100%;padding-left:240px;}
+.wrap .main-cont{position:absolute;top:0;bottom:0;left:240px;right:0;padding-top: var(--header-height);overflow-x:auto;}
+.wrap .main-header{
+  background-color: rgba(255, 255, 255, 0.8);
+	-webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  position:sticky;top:0;display:flex;align-items: center;width:100%;padding:10px 40px;min-height:48px;border-bottom:1px solid var(--border-color-default);z-index: 10;}
 .wrap .main-header .breadcrumbs ul{display:flex;align-items: center;}
 .wrap .main-header .breadcrumbs li{display:flex;align-items: center;color:var(--text-color-lighter);}
 .wrap .main-header .breadcrumbs li.current{color:var(--text-color-dark);}
 .wrap .main-header .breadcrumbs li:last-child:after{display:none;}
 .wrap .main-header .breadcrumbs .arrow{margin:0 4px;}
-.wrap .main-body{min-width:1400px;min-height:calc(100vh - var(--header-height));padding:24px 24px 80px;}
+.wrap .main-body{min-width:1400px;min-height:calc(100vh - var(--header-height));padding:24px 40px 80px;}
 
 //시스템관리 > 시스템 설정
 .article .tit{margin-bottom:16px;}
@@ -134,6 +138,7 @@
 .taskProgress-area .ing{display:flex;padding:1px;background-color:var(--base-color-primary-800);border-radius: var(--border-radius-circle);}
 .taskProgress-area .indicator{width:13px;height:13px;border:2.5px solid transparent;border-top-color:#fff;border-left-color:#fff;border-right-color:#fff;}
 
+.total_count{font-size:15px;}
 .total_count strong{color:var(--text-color-primary);}
 
 //피드백 현황
@@ -141,7 +146,7 @@
 .feedback-wrap .util-bar > div,
 .feedback-wrap .util-bar > button{margin-bottom:8px;}
 .feedback-wrap .table-wrap{min-width:1600px;}
-.feedback-wrap .table-wrap td{padding:12px 8px;vertical-align: top;line-height:18px;}
+.feedback-wrap .table-wrap td{padding:12px 8px;line-height:18px;}
 .feedback-wrap .table-wrap .category-list-item{display:flex;align-items: flex-start;font-size:13px;margin-bottom:6px;line-height:18px;}
 .feedback-wrap .table-wrap .category-list-item button{min-width:45px;max-width:50px;font-size:12px;font-weight:500;}
 .feedback-wrap .table-wrap .category-list-item button[aria-pressed="true"]{background-color:var(--base-color-primary-30);border-color:var(--base-color-primary-500);color:var(--text-color-primary);}

@@ -6,39 +6,39 @@ const tap = require('gulp-tap');
 
 gulp.task('fileinclude', function() {
   return gulp.src([
-    "src/views/**/*.html",
-    "!" + "src/views/include/**/*.html" // 이 부분을 제외하고 있습니다.
+    "src/guide/views/**/*.html",
+    "!" + "src/guide/views/include/**/*.html" // 이 부분을 제외하고 있습니다.
   ])
   .pipe(fileinclude({
     prefix: '@@',
-    basepath: 'src/views'
+    basepath: 'src/guide/views'
   }))
-  .pipe(gulp.dest('src/dist'));
+  .pipe(gulp.dest('src/guide/dist'));
 });
 
 gulp.task('compileIncludeFiles', function() {
-  return gulp.src("src/views/include/**/*.html")
+  return gulp.src("src/guide/views/include/**/*.html")
 });
 
 gulp.task('injectString', function() {
-  return gulp.src('src/dist/**/*.html')
+  return gulp.src('src/guide/dist/**/*.html')
     .pipe(tap((file) => {
       const indentation = file.contents.toString().match(/^\s*/)[0];
       file.contents = Buffer.from(indentation + file.contents.toString());
     }))
-    .pipe(gulp.dest('src/dist'));
+    .pipe(gulp.dest('src/guide/dist'));
 });
 
 gulp.task('prettify', function() {
-  return gulp.src('src/dist/**/*.html')
+  return gulp.src('src/guide/dist/**/*.html')
     .pipe(prettify({
         indent_size: 2
     }))
-    .pipe(gulp.dest('src/dist'));
+    .pipe(gulp.dest('src/guide/dist'));
 });
 
 gulp.task('watch', () => {
-  gulp.watch('src/views/**/*.html',
+  gulp.watch('src/guide/views/**/*.html',
   gulp.series('fileinclude', 'compileIncludeFiles', 'prettify',));
 });
 

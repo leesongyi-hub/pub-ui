@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="all">
+    <title>시스템관리 > 시스템설정</title>
+    <link rel=icon href="../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../assets/lib/bootstrap-4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- 
+    [material-icons] npm으로 설치해주세요.
+    https://github.com/marella/material-icons?tab=readme-ov-file#readme
+  -->
+    <link rel="stylesheet" href="../../node_modules/material-icons/iconfont/material-icons.css">
+    <script src="../assets/lib/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <script src="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="../assets/lib/bootstrap-4.3.1/js/popper.min.js"></script>
+    <script src="../assets/lib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+    <script src="../assets/js/uisetting.js"></script><!--어드바이저 설정 페이지에서만 사용-->
+  </head>
+  <body>
+    <div id="wrap" class="wrap advisorSet-page">
+      <header class="header">
+        <!--공통영역 layout.html에서 확인-->
+      </header>
+      <div class="content">
+        <div class="left-panel">
+          <!--공통영역 layout.html에서 확인-->
+        </div>
+        <main class="main-cont">
+          <div class="main-header">
+            <div class="breadcrumbs">
+              <ul>
+                <li>
+                  <h2>시스템관리</h2>
+                </li>
+                <li class="arrow">
+                  <span class="material-icons-round col-lightgray">keyboard_arrow_right</span>
+                </li>
+                <li class="current">
+                  <h2>어드바이저 설정</h2>
+                  <div class="btn-guide-area ml-6px">
+                    <button type="button" class="btn-guide">?</button>
+                    <div class="guide-tooltip">
+                      <div class="inner">
+                        <p> 내용입력 영역<br> 줄바꿈하고 싶으면 <br> br태그로 줄바꿈해서 입력해주세요. </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-body">
+            <div class="w-700px">
+              <div class="d-flex align-items-end mb-20px">
+                <div>
+                  <h2 class="mb-12px">컴포넌트 화면 정보</h2>
+                  <p class="typo-caption-lg-regular col-required">*컴포넌트 ID 중복 금지</p>
+                </div>
+                <button type="button" class="btn-outlineTonal ml-auto fw-medium" data-toggle="modal" data-target="#uisetting">어드바이저 상담사 화면 설정</button>
+              </div>
+              <div>
+                <ul class="comp-area">
+                  <li>
+                    <div class="comp-item">
+                      <div class="left-area">
+                        <div>
+                          <label for="">컴포넌트 ID </label>
+                          <input type="text" id="dqcatConnectionPool" placeholder="숫자만 입력" value="1" class="w-100px">
+                        </div>
+                        <div class="ml-20px">
+                          <label for="">컴포넌트 이름</label>
+                          <input type="text" placeholder="컴포넌트 이름을 입력해주세요." value="채팅영역" class="w-200px">
+                        </div>
+                      </div>
+                      <div class="right-area">
+                        <div class="form-switch">
+                          <input type="checkbox" id="callToggle" checked="">
+                          <label for="callToggle">
+                            <i class="btn-switch"></i>
+                          </label>
+                        </div>
+                        <button type="button" class="mask-20px ml-12px" data-toggle="tooltip" data-placement="top" title="컴포넌트 삭제">
+                          <span class="material-icons-round col-lightgray">delete_outline</span>
+                        </button>
+                      </div>
+                    </div>
+                    <ul class="compSub-area">
+                      <div class="comp-item">
+                        <div class="left-area">
+                          <div>
+                            <label for="">컴포넌트 ID </label>
+                            <input type="text" id="dqcatConnectionPool" placeholder="숫자만 입력" value="1" class="w-100px">
+                          </div>
+                          <div class="ml-20px">
+                            <label for="">컴포넌트 이름</label>
+                            <input type="text" placeholder="컴포넌트 이름을 입력해주세요." value="채팅영역" class="w-200px">
+                          </div>
+                        </div>
+                        <div class="right-area">
+                          <div class="form-switch">
+                            <input type="checkbox" id="switch1">
+                            <label for="switch1">
+                              <span class="label-txt"></span>
+                              <i class="btn-switch"></i>
+                            </label>
+                          </div>
+                          <button type="button" class="mask-20px ml-12px" data-toggle="tooltip" data-placement="top" title="하위 컴포넌트 삭제">
+                            <span class="material-icons-round col-lightgray">delete_outline</span>
+                          </button>
+                        </div>
+                      </div>
+                    </ul>
+                    <div class="addSubComp-btn-area">
+                      <button type="button" class="addSubComp-btn">
+                        <span class="material-icons-round sm mr-2px">add</span> 하위 컴포넌트 추가 </button>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="comp-item">
+                      <div class="left-area">
+                        <div>
+                          <label for="">컴포넌트 ID </label>
+                          <input type="text" id="dqcatConnectionPool" placeholder="숫자만 입력" value="1" class="w-100px">
+                        </div>
+                        <div class="ml-20px">
+                          <label for="">컴포넌트 이름</label>
+                          <input type="text" placeholder="컴포넌트 이름을 입력해주세요." value="채팅영역" class="w-200px">
+                        </div>
+                      </div>
+                      <div class="right-area">
+                        <div class="form-switch">
+                          <input type="checkbox" id="switch1">
+                          <label for="switch1">
+                            <span class="label-txt"></span>
+                            <i class="btn-switch"></i>
+                          </label>
+                        </div>
+                        <button type="button" class="mask-20px ml-12px" data-toggle="tooltip" data-placement="top" title="컴포넌트 삭제">
+                          <span class="material-icons-round col-lightgray">delete_outline</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="addSubComp-btn-area">
+                      <button type="button" class="addSubComp-btn">
+                        <span class="material-icons-round sm mr-2px">add</span> 하위 컴포넌트 추가 </button>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="comp-item">
+                      <div class="left-area">
+                        <div>
+                          <label for="">컴포넌트 ID </label>
+                          <input type="text" id="dqcatConnectionPool" placeholder="숫자만 입력" value="1" class="w-100px">
+                        </div>
+                        <div class="ml-20px">
+                          <label for="">컴포넌트 이름</label>
+                          <input type="text" placeholder="컴포넌트 이름을 입력해주세요." value="채팅영역" class="w-200px">
+                        </div>
+                      </div>
+                      <div class="right-area">
+                        <div class="form-switch">
+                          <input type="checkbox" id="switch1">
+                          <label for="switch1">
+                            <span class="label-txt"></span>
+                            <i class="btn-switch"></i>
+                          </label>
+                        </div>
+                        <button type="button" class="mask-20px ml-12px" data-toggle="tooltip" data-placement="top" title="컴포넌트 삭제">
+                          <span class="material-icons-round col-lightgray">delete_outline</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="addSubComp-btn-area">
+                      <button type="button" class="addSubComp-btn">
+                        <span class="material-icons-round sm mr-2px">add</span> 하위 컴포넌트 추가 </button>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="comp-item">
+                      <div class="left-area">
+                        <div>
+                          <label for="">컴포넌트 ID </label>
+                          <input type="text" id="dqcatConnectionPool" placeholder="숫자만 입력" value="1" class="w-100px">
+                        </div>
+                        <div class="ml-20px">
+                          <label for="">컴포넌트 이름</label>
+                          <input type="text" placeholder="컴포넌트 이름을 입력해주세요." value="채팅영역" class="w-200px">
+                        </div>
+                      </div>
+                      <div class="right-area">
+                        <div class="form-switch">
+                          <input type="checkbox" id="switch1">
+                          <label for="switch1">
+                            <span class="label-txt"></span>
+                            <i class="btn-switch"></i>
+                          </label>
+                        </div>
+                        <button type="button" class="mask-20px ml-12px" data-toggle="tooltip" data-placement="top" title="컴포넌트 삭제">
+                          <span class="material-icons-round col-lightgray">delete_outline</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="addSubComp-btn-area">
+                      <button type="button" class="addSubComp-btn">
+                        <span class="material-icons-round sm mr-2px">add</span> 하위 컴포넌트 추가 </button>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="comp-item">
+                      <div class="left-area">
+                        <div>
+                          <label for="">컴포넌트 ID </label>
+                          <input type="text" id="dqcatConnectionPool" placeholder="숫자만 입력" value="1" class="w-100px">
+                        </div>
+                        <div class="ml-20px">
+                          <label for="">컴포넌트 이름</label>
+                          <input type="text" placeholder="컴포넌트 이름을 입력해주세요." value="채팅영역" class="w-200px">
+                        </div>
+                      </div>
+                      <div class="right-area">
+                        <div class="form-switch">
+                          <input type="checkbox" id="switch1">
+                          <label for="switch1">
+                            <span class="label-txt"></span>
+                            <i class="btn-switch"></i>
+                          </label>
+                        </div>
+                        <button type="button" class="mask-20px ml-12px" data-toggle="tooltip" data-placement="top" title="컴포넌트 삭제">
+                          <span class="material-icons-round col-lightgray">delete_outline</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="addSubComp-btn-area">
+                      <button type="button" class="addSubComp-btn">
+                        <span class="material-icons-round sm mr-2px">add</span> 하위 컴포넌트 추가 </button>
+                    </div>
+                  </li>
+                </ul>
+                <button class="btn-outline w-100 lg">
+                  <span class="material-icons-round mr-2px">add</span> 컴포넌트 추가 </button>
+              </div>
+              <div class="d-flex mt-20px">
+                <button type="button" class="btn-primary xl w-100px">저장</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <!-- modal : 화면설정 start -->
+      <div class="modal modal-uisetting fade" id="uisetting" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
+        <div class="modal-dialog w-700px">
+          <div class="modal-content">
+            <div class="modal-header">
+              <p class="tit">어드바이저 상담사 화면 설정</p>
+              <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
+                <span class="material-icons-round xl">close</span>
+              </button>
+            </div>
+            <!-- modal body start -->
+            <div class="modal-body theme-gray">
+              <div class="d-flex mt-24px">
+                <div class="custom-control custom-radio">
+                  <input type="radio" name="sampleRadio" id="sampleRadio1" class="custom-control-input" value="" checked="">
+                  <label class="custom-control-label" for="sampleRadio1"><span>전화상담</span></label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" name="sampleRadio" id="sampleRadio2" class="custom-control-input" value="">
+                  <label class="custom-control-label" for="sampleRadio2"><span>채팅상담</span></label>
+                </div>
+              </div>
+              <div class="top-area">
+                <div class="head-area mb-4px">
+                  <label for="comSelect" class="h3 mb-4px">화면 구성 선택</label>
+                </div>
+                <div class="d-flex">
+                  <select class="w-200px" id="comSelect">
+                    <option>채팅화면</option>
+                    <option>사용자 지정</option>
+                    <option>화상채팅 화면</option>
+                  </select>
+                  <button class="btn-outline ml-6px" data-toggle="modal" data-target="#uisetting-compName">추가</button>
+                  <button class="btn-outline ml-6px" data-toggle="modal" data-target="#uisetting-compDel">삭제</button>
+                </div>
+              </div>
+              <div class="inner_box">
+                <form name="ui-setting" id="ui-setting">
+                  <!-- 화면 구성 -->
+                  <div>
+                    <div class="cont-sub-tit">
+                      <h4 class="d-flex align-items-center"> 컴포넌트 구성 </h4>
+                      <span class="sub-tit">서비스 영역을 드래그하여 노출 순서를 변경할 수 있습니다.</span>
+                    </div>
+                    <div class="mt-10px ui-preview row">
+                      <!-- col-1 -->
+                      <div id="ui-col-1" class="ui-preview-col" style="width:33.333%">
+                        <div class="ui-preview-cont">
+                          <div class="ui-preview-back up">
+                            <div class="ui-preview-cont-in">
+                              <!-- 컴포넌트 선택 -->
+                              <div class="custom-compo-select">
+                                <div class="select-compo">** 선택 안함 **</div>
+                                <div class="compo-select-wrap">
+                                  <ul>
+                                    <li class="noselect"><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio1" value="noselect">** 선택 안함 **</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio1" value="compo-1" checked>채팅영역</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio1" value="compo-2">보조기능</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio1" value="compo-3">상담송무지식</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio1" value="compo-4">법률지식</label></li>
+                                    <li class="selectall2_wrap"><label class="compoLabel"><input type="radio" class="compo-checkbox selectall2" name="compoRadio1" value="compo-5">상담요약</label>
+                                      <ul>
+                                        <li><label class="compoLabel"><input type="checkbox" class="compo-checkbox depth2" value="compo-5-1">서브컴포넌트1</label></li>
+                                        <li><label class="compoLabel"><input type="checkbox" class="compo-checkbox depth2" value="compo-5-2">서브컴포넌트2</label></li>
+                                        <li><label class="compoLabel"><input type="checkbox" class="compo-checkbox depth2" value="compo-5-3">서브컴포넌트3</label></li>
+                                      </ul>
+                                    </li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio1" value="compo-6">컴포넌트6</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio1" value="compo-7">컴포넌트7</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio1" value="compo-8">컴포넌트8</label></li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <!--// 컴포넌트 선택 -->
+                            </div>
+                          </div>
+                          <div class="ui-preview-back down">
+                            <div class="ui-preview-cont-in">
+                              <!-- 컴포넌트 선택 -->
+                              <div class="custom-compo-select">
+                                <div class="select-compo">** 선택 안함 **</div>
+                                <div class="compo-select-wrap">
+                                  <ul>
+                                    <li class="noselect"><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio2" value="noselect">** 선택 안함 **</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio2" value="compo-1">채팅영역</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio2" value="compo-2" checked>보조기능</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio2" value="compo-3">상담송무지식</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio2" value="compo-4">법률지식</label></li>
+                                    <li class="selectall2_wrap"><label class="compoLabel"><input type="radio" class="compo-checkbox selectall2" name="compoRadio2" value="compo-5">상담요약</label>
+                                      <ul>
+                                        <li><label class="compoLabel"><input type="checkbox" class="compo-checkbox depth2" value="compo-5-1">서브컴포넌트1</label></li>
+                                        <li><label class="compoLabel"><input type="checkbox" class="compo-checkbox depth2" value="compo-5-2">서브컴포넌트2</label></li>
+                                        <li><label class="compoLabel"><input type="checkbox" class="compo-checkbox depth2" value="compo-5-3">서브컴포넌트3</label></li>
+                                      </ul>
+                                    </li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio2" value="compo-6">컴포넌트6</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio2" value="compo-7">컴포넌트7</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio2" value="compo-8">컴포넌트8</label></li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <!--// 컴포넌트 선택 -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--// col-1 -->
+                      <!-- col-2 -->
+                      <div id="ui-col-2" class="ui-preview-col" style="width:33.333%">
+                        <div class="ui-preview-cont">
+                          <div class="ui-preview-back up">
+                            <div class="ui-preview-cont-in">
+                              <!-- 컴포넌트 선택 -->
+                              <div class="custom-compo-select">
+                                <div class="select-compo">** 선택 안함 **</div>
+                                <div class="compo-select-wrap">
+                                  <ul>
+                                    <li class="noselect"><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio3" value="noselect">** 선택 안함 **</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio3" value="compo-1">채팅영역</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio3" value="compo-2">보조기능</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio3" value="compo-3" checked>상담송무지식</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio3" value="compo-4">법률지식</label></li>
+                                    <li class="selectall2_wrap"><label class="compoLabel"><input type="radio" class="compo-checkbox selectall2" name="compoRadio3" value="compo-5">상담요약</label>
+                                      <ul>
+                                        <li><label class="compoLabel"><input type="checkbox" class="compo-checkbox depth2" value="compo-5-1">서브컴포넌트1</label></li>
+                                        <li><label class="compoLabel"><input type="checkbox" class="compo-checkbox depth2" value="compo-5-2">서브컴포넌트2</label></li>
+                                        <li><label class="compoLabel"><input type="checkbox" class="compo-checkbox depth2" value="compo-5-3">서브컴포넌트3</label></li>
+                                      </ul>
+                                    </li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio3" value="compo-6">컴포넌트6</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio3" value="compo-7">컴포넌트7</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio3" value="compo-8">컴포넌트8</label></li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <!--// 컴포넌트 선택 -->
+                            </div>
+                          </div>
+                          <div class="ui-preview-back down">
+                            <div class="ui-preview-cont-in">
+                              <!-- 컴포넌트 선택 -->
+                              <div class="custom-compo-select">
+                                <div class="select-compo">** 선택 안함 **</div>
+                                <div class="compo-select-wrap">
+                                  <ul>
+                                    <li class="noselect"><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio4" value="noselect">** 선택 안함 **</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio4" value="compo-1">채팅영역</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio4" value="compo-2">보조기능</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio4" value="compo-3">상담송무지식</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio4" value="compo-4" checked>법률지식</label></li>
+                                    <li class="selectall2_wrap"><label class="compoLabel"><input type="radio" class="compo-checkbox selectall2" name="compoRadio4" value="compo-5">상담요약</label>
+                                      <ul>
+                                        <li><label class="compoLabel"><input type="checkbox" class="compo-checkbox depth2" value="compo-5-1">서브컴포넌트1</label></li>
+                                        <li><label class="compoLabel"><input type="checkbox" class="compo-checkbox depth2" value="compo-5-2">서브컴포넌트2</label></li>
+                                        <li><label class="compoLabel"><input type="checkbox" class="compo-checkbox depth2" value="compo-5-3">서브컴포넌트3</label></li>
+                                      </ul>
+                                    </li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio4" value="compo-6">컴포넌트6</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio4" value="compo-7">컴포넌트7</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio4" value="compo-8">컴포넌트8</label></li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <!--// 컴포넌트 선택 -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--// col-2 -->
+                      <!-- col-2 -->
+                      <div id="ui-col-3" class="ui-preview-col" style="width:33.333%">
+                        <div class="ui-preview-cont">
+                          <div class="ui-preview-back up">
+                            <div class="ui-preview-cont-in">
+                              <!-- 컴포넌트 선택 -->
+                              <div class="custom-compo-select">
+                                <div class="select-compo">** 선택 안함 **</div>
+                                <div class="compo-select-wrap">
+                                  <ul>
+                                    <li class="noselect"><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio5" value="noselect">** 선택 안함 **</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio5" value="compo-1">채팅영역</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio5" value="compo-2">보조기능</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio5" value="compo-3">상담송무지식</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio5" value="compo-4">법률지식</label></li>
+                                    <li class="selectall2_wrap"><label class="compoLabel"><input type="radio" class="compo-checkbox selectall2" name="compoRadio5" value="compo-5" checked>상담요약</label>
+                                      <ul>
+                                        <li><label class="compoLabel"><input type="checkbox" class="compo-checkbox depth2" value="compo-5-1" checked>서브컴포넌트1</label></li>
+                                        <li><label class="compoLabel"><input type="checkbox" class="compo-checkbox depth2" value="compo-5-2" checked>서브컴포넌트2</label></li>
+                                        <li><label class="compoLabel"><input type="checkbox" class="compo-checkbox depth2" value="compo-5-3">서브컴포넌트3</label></li>
+                                      </ul>
+                                    </li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio5" value="compo-6">컴포넌트6</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio5" value="compo-7">컴포넌트7</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio5" value="compo-8">컴포넌트8</label></li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <!--// 컴포넌트 선택 -->
+                            </div>
+                          </div>
+                          <div class="ui-preview-back down">
+                            <div class="ui-preview-cont-in">
+                              <!-- 컴포넌트 선택 -->
+                              <div class="custom-compo-select">
+                                <div class="select-compo">** 선택 안함 **</div>
+                                <div class="compo-select-wrap">
+                                  <ul>
+                                    <li class="noselect"><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio6" value="noselect" checked>** 선택 안함 **</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio6" value="compo-1">채팅영역</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio6" value="compo-2">보조기능</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio6" value="compo-3">상담송무지식</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio6" value="compo-4">법률지식</label></li>
+                                    <li class="selectall2_wrap"><label class="compoLabel"><input type="radio" class="compo-checkbox selectall2" name="compoRadio6" value="compo-5">상담요약</label>
+                                      <ul>
+                                        <li><label class="compoLabel"><input type="checkbox" class="compo-checkbox depth2" value="compo-5-1">서브컴포넌트1</label></li>
+                                        <li><label class="compoLabel"><input type="checkbox" class="compo-checkbox depth2" value="compo-5-2">서브컴포넌트2</label></li>
+                                        <li><label class="compoLabel"><input type="checkbox" class="compo-checkbox depth2" value="compo-5-3">서브컴포넌트3</label></li>
+                                      </ul>
+                                    </li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio6" value="compo-6">컴포넌트6</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio6" value="compo-7">컴포넌트7</label></li>
+                                    <li><label class="compoLabel"><input type="radio" class="compo-checkbox" name="compoRadio6" value="compo-8">컴포넌트8</label></li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <!--// 컴포넌트 선택 -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--// col-2 -->
+                    </div>
+                  </div>
+                  <!--// 화면 구성  -->
+                  <!-- 화면 비율 -->
+                  <div class="mt-16px">
+                    <div class="cont-sub-tit">
+                      <h4>화면 비율</h4>
+                      <div class="row mt-2px ml-20px">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="uiColSet1" name="uiColSet" class="custom-control-input" value="free" checked>
+                          <label class="custom-control-label" for="uiColSet1"><span>자율 조정</span></label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="uiColSet2" name="uiColSet" class="custom-control-input" value="fixed">
+                          <label class="custom-control-label" for="uiColSet2"><span>비율 고정</span></label>
+                        </div>
+                      </div>
+                      <button type="button" class="ml-auto btn-outline sm">
+                        <span class="material-icons-round">refresh</span> 기본비율 </button>
+                    </div>
+                    <div class="ui-rate mt-20px">
+                      <div id="ui-rate-range">
+                        <div class="slide-ruler" data-value></div>
+                      </div>
+                      <div class="ui-rate-preview mt-16px">
+                        <div data-name="rate-preview"></div>
+                        <div data-name="rate-preview"></div>
+                        <div data-name="rate-preview"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// 화면 비율 -->
+                  <!-- 글자 크기 -->
+                  <div class="mt-16px">
+                    <div class="cont-sub-tit">
+                      <h4>글자 크기</h4>
+                    </div>
+                    <div class="row mt-4px justify-content-center">
+                      <div class="custom-control custom-radio mr-30px">
+                        <input type="radio" id="uiFontSize1" name="uiFontSize" class="custom-control-input" value="font-basic" checked>
+                        <label class="custom-control-label" for="uiFontSize1"><span>기본</span></label>
+                      </div>
+                      <div class="custom-control custom-radio mr-30px">
+                        <input type="radio" id="uiFontSize2" name="uiFontSize" class="custom-control-input" value="font-large">
+                        <label class="custom-control-label" for="uiFontSize2"><span>크게</span></label>
+                      </div>
+                      <div class="custom-control custom-radio mr-30px">
+                        <input type="radio" id="uiFontSize3" name="uiFontSize" class="custom-control-input" value="font-verylarge">
+                        <label class="custom-control-label" for="uiFontSize3"><span>아주 크게</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// 글자 크기 -->
+                  <!-- 테마 -->
+                  <div class="mt-20px">
+                    <div class="cont-sub-tit">
+                      <h4>테마 색상</h4>
+                    </div>
+                    <div class="row mt-4px justify-content-center">
+                      <div class="custom-control custom-radio mr-30px">
+                        <input type="radio" id="theme-grayblue" name="uiTheme" class="custom-control-input" value="grayblue" checked>
+                        <label class="custom-control-label" for="theme-grayblue">
+                          <span class="theme-label type-grayblue"></span>
+                        </label>
+                      </div>
+                      <div class="custom-control custom-radio mr-30px">
+                        <input type="radio" id="theme-brown" name="uiTheme" class="custom-control-input" value="brown">
+                        <label class="custom-control-label" for="theme-brown">
+                          <span class="theme-label type-brown"></span>
+                        </label>
+                      </div>
+                      <div class="custom-control custom-radio mr-30px">
+                        <input type="radio" id="theme-green" name="uiTheme" class="custom-control-input" value="green">
+                        <label class="custom-control-label" for="theme-green">
+                          <span class="theme-label type-green"></span>
+                        </label>
+                      </div>
+                      <div class="custom-control custom-radio mr-30px">
+                        <input type="radio" id="theme-purple" name="uiTheme" class="custom-control-input" value="purple">
+                        <label class="custom-control-label" for="theme-purple">
+                          <span class="theme-label type-purple"></span>
+                        </label>
+                      </div>
+                      <div class="custom-control custom-radio mr-30px">
+                        <input type="radio" id="theme-gray" name="uiTheme" class="custom-control-input" value="gray">
+                        <label class="custom-control-label" for="theme-gray">
+                          <span class="theme-label type-gray"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// 테마 -->
+                </form>
+                <div class="saveBtn-area">
+                  <!--변경사항 있으면 .disabled 삭제-->
+                  <button class="btn-primary lg w-100 disabled">변경사항 저장</button>
+                </div>
+              </div>
+            </div>
+            <!--// modal body end -->
+            <div class="modal-footer">
+              <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
+              <button type="button" class="btn-primary xl" data-dismiss="modal">화면 적용</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// modal : 화면설정 end -->
+      <!-- modal : 화면 구성 추가 start -->
+      <div class="modal fade fade" id="uisetting-compName" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
+        <div class="modal-dialog w-400px">
+          <div class="modal-content">
+            <div class="modal-header">
+              <p class="tit">화면 구성 추가</p>
+              <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
+                <span class="material-icons-round xl">close</span>
+              </button>
+            </div>
+            <!-- modal body start -->
+            <div class="modal-body">
+              <div class="form-block validate-error">
+                <label for="compName">화면명</label>
+                <input id="compName" type="text" placeholder="화면명 입력" value="" class="lg">
+                <p class="validate-txt">이미 등록된 화면명입니다.</p>
+              </div>
+            </div>
+            <!--// modal body end -->
+            <div class="modal-footer">
+              <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
+              <button type="button" class="btn-primary xl" data-dismiss="modal">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// modal : 화면 구성 추가 end -->
+      <!-- modal : 화면 구성 삭제 start -->
+      <div class="modal modal-system fade" id="uisetting-compDel" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
+        <div class="modal-dialog w-400px">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
+                <span class="material-icons-round xl">close</span>
+              </button>
+            </div>
+            <!-- modal body start -->
+            <div class="modal-body">
+              <p class="tit">화면 구성 삭제</p>
+              <p class="txt"> 선택한 <span class="col-blue">채팅화면</span>을 삭제하시겠습니까? </p>
+            </div>
+            <!--// modal body end -->
+            <div class="modal-footer">
+              <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
+              <button type="button" class="btn-primary xl" data-dismiss="modal">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// modal : 화면 구성 삭제 end -->
+    </div>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/lib/ie11CustomProperties.js"></script>
+  </body>
+</html>

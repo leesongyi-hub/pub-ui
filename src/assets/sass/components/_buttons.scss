@@ -110,7 +110,7 @@ button[type="submit"]:not(:disabled):not(.disabled):focus-visible{outline:3px so
 [class*="btn-"].lg [class*="ico"]{width:20px;min-width:20px;height:20px;margin-right:4px;}
 [class*="btn-"].md [class*="ico"]{width:20px;min-width:20px;height:20px;margin-right:4px;}
 [class*="btn-"].sm [class*="ico"]{width:18px;min-width:18px;height:18px;margin-right:4px;font-size:18px;}
-[class*="btn-"].xs [class*="ico"]{width:18px;min-width:18px;height:18px;margin-right:2px;font-size:18px;}
+[class*="btn-"].xs [class*="ico"]{width:16px;min-width:16px;height:16px;margin-right:2px;font-size:18px;}
 
 .btn-primary [class*="ico"]{color:var(--base-color-white);}
 .btn-outline [class*="ico"]{color:var(--icon-color-default);}
