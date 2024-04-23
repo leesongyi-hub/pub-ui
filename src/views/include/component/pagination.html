@@ -1,0 +1,51 @@
+<div class="d-flex justify-center mt-20px">
+  
+  <!--페이징-->
+  <nav class="pagination mr-40px">
+    <ul>
+      <li class="page_item">
+        <button type="button" class="page_link ico btn_next" aria-label="마지막 페이지" disabled>
+          <svg class="ico col-lightgray" role="presentation" aria-hidden="true" focusable="false">
+            <use xlink:href="#ico-doublearr_left"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="page_item">        
+        <button type="button" class="page_link ico btn_prev disabled" aria-label="이전 페이지" disabled>
+          <svg class="ico col-lightgray" role="presentation" aria-hidden="true" focusable="false">
+            <use xlink:href="#ico-arr_left"></use>
+          </svg>
+        </button>
+      </li>
+  
+      <!--현재페이지 addClass('on')'-->
+      <li class="page_item on"><button type="button" class="page_link">1</button></li>
+      <li class="page_item"><button type="button" class="page_link">2</button></li>
+      <li class="page_item"><button type="button" class="page_link">3</button></li>
+      <li class="page_item"><button type="button" class="page_link">4</button></li>
+      <li class="page_item"><button type="button" class="page_link">5</button></li>
+      <li class="page_item">
+        <button type="button" class="page_link ico btn_next" aria-label="다음 페이지">
+          <svg class="ico col-lightgray" role="presentation" aria-hidden="true" focusable="false">
+            <use xlink:href="#ico-arr_right"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="page_item">
+        <button type="button" class="page_link ico btn_next" aria-label="마지막 페이지">
+          <svg class="ico col-lightgray" role="presentation" aria-hidden="true" focusable="false">
+            <use xlink:href="#ico-doublearr_right"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
+  <!--//페이징-->
+
+  <div class="d-flex align-items-center">
+    <span class="typo-caption-lg-regular">Page</span>
+    <input class="w-60px sm ml-4px mr-4px" type="text" />
+    <span class="typo-caption-lg-regular">of 20</span>
+  </div>
+
+</div>

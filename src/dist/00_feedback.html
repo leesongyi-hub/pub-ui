@@ -25,18 +25,15 @@
       <header class="header">
         <div class="logo-area">
           <button type="button" class="lnbToggle-btn" aria-label="메뉴 토글">
-            <svg class="ico ico-fold" role="presentation" aria-hidden="true" focusable="false">
+            <svg class="ico ico-fold ico-bold" role="presentation" aria-hidden="true" focusable="false">
               <use xlink:href="#ico-side_close"></use>
             </svg>
-            <svg class="ico ico-expended" role="presentation" aria-hidden="true" focusable="false">
+            <svg class="ico ico-expended ico-bold" role="presentation" aria-hidden="true" focusable="false">
               <use xlink:href="#ico-side_open"></use>
             </svg>
           </button>
           <h1>
-            <svg class="mask-30px mr-8px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 26" width="24" height="26" fill="none" role="img">
-              <path fill="#fff" d="M.231 12.655c0 2.984 1.145 5.707 3.027 7.768C1.82 21.952 0 22.15 0 22.15A17.147 17.147 0 0 0 9.506 25c2.874 0 5.581-.7 7.954-1.935 3.879-1.919 6.54-5.86 6.54-10.41C24 6.218 18.68 1 12.116 1S.23 6.218.23 12.655Z" />
-              <path fill="#3346AA" d="M17.237 10.143h.705a1.329 1.329 0 0 1 1.328 1.326v2.651a1.325 1.325 0 0 1-1.328 1.326h-.705a5.301 5.301 0 0 1-1.757 3.314 5.317 5.317 0 0 1-3.513 1.326V18.76c1.056 0 2.07-.419 2.817-1.165a3.974 3.974 0 0 0 1.166-2.812v-3.977c0-1.055-.42-2.067-1.166-2.812a3.987 3.987 0 0 0-5.634 0 3.974 3.974 0 0 0-1.166 2.812v4.64H5.992a1.329 1.329 0 0 1-1.328-1.326V11.47a1.325 1.325 0 0 1 1.328-1.326h.705a5.301 5.301 0 0 1 1.757-3.314 5.317 5.317 0 0 1 7.026 0 5.3 5.3 0 0 1 1.757 3.314Zm-8.085 5.16.704-1.124a3.97 3.97 0 0 0 2.111.604 3.97 3.97 0 0 0 2.111-.604l.704 1.124a5.293 5.293 0 0 1-2.815.806 5.292 5.292 0 0 1-2.815-.806Z" />
-            </svg>
+            <img src="../assets/images/logo.png" style="width:140px;" />
             <span class="sub-tit">상담어드바이저 관리도구</span>
           </h1>
           <!--화면전환 추가-->
@@ -81,7 +78,7 @@
           </div>
           <div class="my-area">
             <button class="my-btn" type="button">
-              <span class="name">(주)엔에이치엔다이퀘스트</span>
+              <span class="name">홍길동 (agent001)</span>
               <!-- <svg role="img" aria-hidden="true" focusable="false" class="ico-svg stroke mask-16px rotate-90deg col-white">
           <use xlink:href="#ico_arrow"></use>
         </svg> -->
@@ -185,16 +182,16 @@
                 <span class="label">대시보드</span>
               </a>
             </li>
-            <li class="navi-item" class="open">
-              <a href="javascript:;">
+            <li class="navi-item">
+              <a href="javascript:;" class="open on-view">
                 <svg class="ico" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M2.5 15v-5a7.5 7.5 0 0 1 15 0v5m0 .833a1.666 1.666 0 0 1-1.667 1.667H15a1.666 1.666 0 0 1-1.667-1.667v-2.5A1.667 1.667 0 0 1 15 11.667h2.5v4.166Zm-15 0A1.666 1.666 0 0 0 4.167 17.5H5a1.667 1.667 0 0 0 1.667-1.667v-2.5A1.667 1.667 0 0 0 5 11.667H2.5v4.166Z" />
                 </svg>
                 <span class="label">상담 관리</span>
               </a>
-              <div class="sub-menu">
+              <div class="sub-menu" style="display:block">
                 <ul>
-                  <li class="navi-item"><a href="javascript:;">콜 목록</a></li>
+                  <li class="navi-item"><a href="javascript:;" class="on">콜 목록</a></li>
                   <li class="navi-item"><a href="javascript:;">공지사항 관리</a></li>
                   <li class="navi-item"><a href="javascript:;">코칭 메세지 관리</a></li>
                 </ul>
@@ -898,46 +895,53 @@
                 </tbody>
               </table>
             </div>
-            <!--페이징-->
-            <nav class="pagination mt-16px">
-              <ul>
-                <li class="page_item">
-                  <button type="button" class="page_link ico btn_next" aria-label="마지막 페이지" disabled>
-                    <div class="mask-20px">
-                      <span class="material-icons-round">keyboard_double_arrow_left</span>
-                    </div>
-                  </button>
-                </li>
-                <li class="page_item">
-                  <button type="button" class="page_link ico btn_prev disabled" aria-label="이전 페이지" disabled>
-                    <div class="mask-20px">
-                      <span class="material-icons-round">keyboard_arrow_left</span>
-                    </div>
-                  </button>
-                </li>
-                <!--현재페이지 addClass('on')'-->
-                <li class="page_item on"><button type="button" class="page_link">1</button></li>
-                <li class="page_item"><button type="button" class="page_link">2</button></li>
-                <li class="page_item"><button type="button" class="page_link">3</button></li>
-                <li class="page_item"><button type="button" class="page_link">4</button></li>
-                <li class="page_item"><button type="button" class="page_link">5</button></li>
-                <li class="page_item">
-                  <button type="button" class="page_link ico btn_next" aria-label="다음 페이지">
-                    <div class="mask-20px">
-                      <span class="material-icons-round">keyboard_arrow_right</span>
-                    </div>
-                  </button>
-                </li>
-                <li class="page_item">
-                  <button type="button" class="page_link ico btn_next" aria-label="마지막 페이지">
-                    <div class="mask-20px">
-                      <span class="material-icons-round">keyboard_double_arrow_right</span>
-                    </div>
-                  </button>
-                </li>
-              </ul>
-            </nav>
-            <!--//페이징-->
+            <div class="d-flex justify-center mt-20px">
+              <!--페이징-->
+              <nav class="pagination mr-40px">
+                <ul>
+                  <li class="page_item">
+                    <button type="button" class="page_link ico btn_next" aria-label="마지막 페이지" disabled>
+                      <svg class="ico col-lightgray" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-doublearr_left"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="page_item">
+                    <button type="button" class="page_link ico btn_prev disabled" aria-label="이전 페이지" disabled>
+                      <svg class="ico col-lightgray" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-arr_left"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <!--현재페이지 addClass('on')'-->
+                  <li class="page_item on"><button type="button" class="page_link">1</button></li>
+                  <li class="page_item"><button type="button" class="page_link">2</button></li>
+                  <li class="page_item"><button type="button" class="page_link">3</button></li>
+                  <li class="page_item"><button type="button" class="page_link">4</button></li>
+                  <li class="page_item"><button type="button" class="page_link">5</button></li>
+                  <li class="page_item">
+                    <button type="button" class="page_link ico btn_next" aria-label="다음 페이지">
+                      <svg class="ico col-lightgray" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-arr_right"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="page_item">
+                    <button type="button" class="page_link ico btn_next" aria-label="마지막 페이지">
+                      <svg class="ico col-lightgray" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-doublearr_right"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+              <!--//페이징-->
+              <div class="d-flex align-items-center">
+                <span class="typo-caption-lg-regular">Page</span>
+                <input class="w-60px sm ml-4px mr-4px" type="text" />
+                <span class="typo-caption-lg-regular">of 20</span>
+              </div>
+            </div>
           </div>
         </main>
       </div>

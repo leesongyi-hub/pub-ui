@@ -257,34 +257,24 @@
   
 
     //button style
-    --btn-primary-bg-color: var(--base-color-primary-500);
-    --btn-primary-border-color: var(--base-color-primary-500);
-    --btn-primary-text-color: var(--base-color-white);
-    --btn-primary-bg-color: var(--base-color-primary-500);
-    --btn-primary-hover-color: var(--base-color-primary-400);
-  
     --btn-outline-bg-color: var(--base-color-white);
     --btn-outline-border-color: var(--form-border-color);
-    --btn-outline-text-color: var(--text-color-300);
-    --btn-outline-bg-color: var(--base-color-white);
+    --btn-outline-text-color: var(--text-color-300); 
     --btn-outline-hover-bg-color: var(--bg-color-default);
   
     --btn-fill-bg-color: var(--base-color-gray-30);
     --btn-fill-border-color: var(--base-color-gray-30);
-    --btn-fill-text-color: var(--text-color-300);
-    --btn-fill-bg-color: var(--base-color-gray-30);
+    --btn-fill-text-color: var(--text-color-300);    
     --btn-fill-hover-color: var(--base-color-gray-20); 
   
     --btn-fillTonal-bg-color: var(--base-color-primary-30);
     --btn-fillTonal-border-color: var(--base-color-primary-30);
-    --btn-fillTonal-text-color: var(--text-color-primary);
-    --btn-fillTonal-bg-color: var(--base-color-primary-30);
+    --btn-fillTonal-text-color: var(--text-color-primary);    
     --btn-fillTonal-hover-color: var(--base-color-primary-20); 
   
     --btn-outlineTonal-bg-color: var(--base-color-white);
     --btn-outlineTonal-border-color: var(--border-color-primary);
-    --btn-outlineTonal-text-color: var(--text-color-primary);
-    --btn-outlineTonal-bg-color: var(--base-color-white);
+    --btn-outlineTonal-text-color: var(--text-color-primary);    
     --btn-outlineTonal-hover-bg-color: var(--bg-color-tonal-default);
   
     --btn-disabled-bg-color: var(--base-color-gray-30);
@@ -293,11 +283,15 @@
     --btn-disabled-icon-color: var(--text-color-1100);
 
     //
-    --btn-secondary-bg-color: var(--btn-outline-bg-color);
-    --btn-secondary-border-color: var(--btn-outline-border-color);
-    --btn-secondary-text-color: var(--btn-outline-text-color);
-    --btn-secondary-bg-color: var(--btn-outline-bg-color);
-    --btn-secondary-hover-bg-color: var(--btn-outline-hover-bg-color);
+    --btn-primary-bg-color: var(--base-color-primary-500);
+    --btn-primary-border-color: var(--base-color-primary-500);
+    --btn-primary-text-color: var(--base-color-white);    
+    --btn-primary-hover-color: var(--base-color-primary-400);
+
+    --btn-secondary-bg-color: var(--btn-fillTonal-bg-color);
+    --btn-secondary-border-color: var(--btn-fillTonal-border-color);
+    --btn-secondary-text-color: var(--btn-fillTonal-text-color);    
+    --btn-secondary-hover-bg-color: var(--btn-fillTonal-hover-bg-color);
 }
 
 :root[data-theme=red]{
@@ -487,5 +481,89 @@
   --btn-secondary-bg-color: #60584C;
   --btn-secondary-border-color: #60584C;
   --btn-secondary-text-color: #fff;
-  --btn-secondary-hover-color: #60584C; 
+  --btn-secondary-hover-color: #60584C;
+}
+
+:root[data-theme=red]{
+
+  --base-color-primary-5: var(--base-color-red-5);
+  --base-color-primary-10: var(--base-color-red-10);
+  --base-color-primary-20: var(--base-color-red-20);
+  --base-color-primary-30: var(--base-color-red-30);
+  --base-color-primary-40: var(--base-color-red-40);
+  --base-color-primary-50: var(--base-color-red-50);
+  --base-color-primary-300: var(--base-color-red-300);
+  --base-color-primary-400: var(--base-color-red-400);
+  --base-color-primary-500: var(--base-color-red-500);
+  --base-color-primary-600: var(--base-color-red-600);
+  --base-color-primary-700: var(--base-color-red-700);
+  --base-color-primary-800: var(--base-color-red-800);
+  --base-color-primary-900: var(--base-color-red-900);
+
+  --base-color-gray-10:#FAFAFA;
+  --base-color-gray-20:#F5F5F5;
+  --base-color-gray-30:#F2F2F2;
+  --base-color-gray-40:#EDEDED;
+  --base-color-gray-50:#eeeeee;
+  --base-color-gray-60:#dddddd;
+  --base-color-gray-70:#cccccc;
+  --base-color-gray-80:#bbbbbb;
+  --base-color-gray-90:#aaaaaa;
+  --base-color-gray-100:#999999;
+  --base-color-gray-200:#888888;
+  --base-color-gray-300:#777777;
+  --base-color-gray-400:#666666;
+  --base-color-gray-500:#555555;
+  --base-color-gray-600:#444444;
+  --base-color-gray-700:#333333;
+  --base-color-gray-800:#222222;
+  --base-color-gray-900:#111111;
+
+  --btn-primary-bg-color: var(--base-color-primary-500);
+  --btn-primary-border-color: var(--base-color-primary-500);
+  --btn-primary-text-color: var(--base-color-primary-900);
+  --btn-primary-bg-color: var(--base-color-primary-500);
+  --btn-primary-hover-color: var(--base-color-primary-400);
+
+  --btn-outline-bg-color: var(--base-color-white);
+  --btn-outline-border-color: var(--form-border-color);
+  --btn-outline-text-color: var(--text-color-300);
+  --btn-outline-bg-color: var(--base-color-white);
+  --btn-outline-hover-bg-color: var(--bg-color-default);
+
+  --btn-fill-bg-color: var(--base-color-gray-30);
+  --btn-fill-border-color: var(--base-color-gray-30);
+  --btn-fill-text-color: var(--text-color-300);
+  --btn-fill-bg-color: var(--base-color-gray-30);
+  --btn-fill-hover-color: var(--base-color-gray-20); 
+
+  --btn-fillTonal-bg-color: var(--base-color-primary-30);
+  --btn-fillTonal-border-color: var(--base-color-primary-30);
+  --btn-fillTonal-text-color: var(--text-color-primary-900);
+  --btn-fillTonal-bg-color: var(--base-color-primary-30);
+  --btn-fillTonal-hover-color: var(--base-color-primary-20); 
+
+  --btn-outlineTonal-bg-color: var(--base-color-white);
+  --btn-outlineTonal-border-color: var(--border-color-primary);
+  --btn-outlineTonal-text-color: var(--base-color-primary-900);
+  --btn-outlineTonal-bg-color: var(--base-color-white);
+  --btn-outlineTonal-hover-bg-color: var(--bg-color-tonal-default);
+
+  --btn-disabled-bg-color: var(--base-color-gray-30);
+  --btn-disabled-border-color: var(--base-color-gray-20);
+  --btn-disabled-text-color: var(--text-color-1100);
+  --btn-disabled-icon-color: var(--text-color-1100);
+
+  // --btn-secondary-bg-color: var(--btn-outline-bg-color);
+  // --btn-secondary-border-color: var(--btn-outline-border-color);
+  // --btn-secondary-text-color: var(--btn-outline-text-color);
+  // --btn-secondary-bg-color: var(--btn-outline-bg-color);
+  // --btn-secondary-hover-bg-color: var(--btn-outline-hover-bg-color);
+
+  --btn-primary-text-color: #fff;
+
+  --btn-secondary-bg-color: #000;
+  --btn-secondary-border-color: #000;
+  --btn-secondary-text-color: #fff;
+  --btn-secondary-hover-color: #333;
 }

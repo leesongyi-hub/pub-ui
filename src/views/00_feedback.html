@@ -741,48 +741,7 @@
               </tbody>
             </table>
           </div>
-  
-          <!--페이징-->
-          <nav class="pagination mt-16px">
-            <ul>
-              <li class="page_item">
-                <button type="button" class="page_link ico btn_next" aria-label="마지막 페이지" disabled>
-                  <div class="mask-20px">
-                    <span class="material-icons-round">keyboard_double_arrow_left</span>
-                  </div>
-                </button>
-              </li>
-              <li class="page_item">        
-                <button type="button" class="page_link ico btn_prev disabled" aria-label="이전 페이지" disabled>
-                  <div class="mask-20px">
-                    <span class="material-icons-round">keyboard_arrow_left</span>
-                  </div>
-                </button>
-              </li>
-
-              <!--현재페이지 addClass('on')'-->
-              <li class="page_item on"><button type="button" class="page_link">1</button></li>
-              <li class="page_item"><button type="button" class="page_link">2</button></li>
-              <li class="page_item"><button type="button" class="page_link">3</button></li>
-              <li class="page_item"><button type="button" class="page_link">4</button></li>
-              <li class="page_item"><button type="button" class="page_link">5</button></li>
-              <li class="page_item">
-                <button type="button" class="page_link ico btn_next" aria-label="다음 페이지">
-                  <div class="mask-20px">
-                    <span class="material-icons-round">keyboard_arrow_right</span>
-                  </div>
-                </button>
-              </li>
-              <li class="page_item">
-                <button type="button" class="page_link ico btn_next" aria-label="마지막 페이지">
-                  <div class="mask-20px">
-                    <span class="material-icons-round">keyboard_double_arrow_right</span>
-                  </div>                      
-                </button>
-              </li>
-            </ul>
-          </nav>
-          <!--//페이징-->
+          @@include('./include/component/pagination.html')
         </div>
       </main>
     </div>

@@ -25,13 +25,9 @@
 
 <body>
   <div id="wrap" class="wrap system-page">
-    <header class="header">
-      <!--공통영역 layout.html에서 확인-->
-    </header>
+    @@include('./include/header.html')
     <div class="content">
-      <div class="left-panel">
-        <!--공통영역 layout.html에서 확인-->
-      </div>
+      @@include('./include/lnb.html')
       <main class="main-cont">
         <div class="main-header">
           <div class="breadcrumbs">
@@ -148,26 +144,18 @@
                           <div class="form-count">
                             <input type="number" id="infoConnectionPool" placeholder="숫자만 입력">
                             <div class="area-btn">
-                              <button type="button" class="btn-quantity-plus" aria-label="더하기">
-                                <span class="material-icons-round xxs">add</span>
-                              </button>
-                              <button type="button" class="btn-quantity-minus" aria-label="빼기">
-                                <span class="material-icons-round xxs">remove</span>
-                              </button>
+                              <button type="button" class="btn-quantity-plus" aria-label="더하기"></button>
+                              <button type="button" class="btn-quantity-minus" aria-label="빼기"></button>
                             </div>
                           </div>
                         </div>
                         <div class="form-block">
                           <label for="infoConnectionTimeout">Connection Timeout (ms)</label>
                           <div class="form-count">
-                            <input type="number" id="infoConnectionTimeout" placeholder="숫자만 입력">
+                            <input type="number" id="infoConnectionPool" placeholder="숫자만 입력">
                             <div class="area-btn">
-                              <button type="button" class="btn-quantity-plus" aria-label="더하기">
-                                <span class="material-icons-round xxs">add</span>
-                              </button>
-                              <button type="button" class="btn-quantity-minus" aria-label="빼기">
-                                <span class="material-icons-round xxs">remove</span>
-                              </button>
+                              <button type="button" class="btn-quantity-plus" aria-label="더하기"></button>
+                              <button type="button" class="btn-quantity-minus" aria-label="빼기"></button>
                             </div>
                           </div>
                         </div>
@@ -236,15 +224,11 @@
                       </dt>
                       <dd class="td">
                         <div class="form-block col-item">
-                          <div class="form-count">                            
-                            <input type="number" id="dqcatReliability" placeholder="숫자만 입력" value="" disabled>
+                          <div class="form-count">
+                            <input type="number" id="infoConnectionPool" placeholder="숫자만 입력">
                             <div class="area-btn">
-                              <button type="button" class="btn-quantity-plus" aria-label="더하기" disabled>
-                                <span class="material-icons-round xxs">add</span>
-                              </button>
-                              <button type="button" class="btn-quantity-minus" aria-label="빼기" disabled>
-                                <span class="material-icons-round xxs">remove</span>
-                              </button>
+                              <button type="button" class="btn-quantity-plus" aria-label="더하기"></button>
+                              <button type="button" class="btn-quantity-minus" aria-label="빼기"></button>
                             </div>
                           </div>
                         </div>
@@ -257,28 +241,20 @@
                           <div class="form-block mr-20px">
                             <label for="dqcatConnectionPool">Connection Pool Size (Min=Max)</label>
                             <div class="form-count">
-                              <input type="number" id="dqcatConnectionPool" placeholder="숫자만 입력" disabled>
+                              <input type="number" id="infoConnectionPool" placeholder="숫자만 입력">
                               <div class="area-btn">
-                                <button type="button" class="btn-quantity-plus" aria-label="더하기" disabled>
-                                  <span class="material-icons-round xxs">add</span>
-                                </button>
-                                <button type="button" class="btn-quantity-minus" aria-label="빼기" disabled>
-                                  <span class="material-icons-round xxs">remove</span>
-                                </button>
+                                <button type="button" class="btn-quantity-plus" aria-label="더하기"></button>
+                                <button type="button" class="btn-quantity-minus" aria-label="빼기"></button>
                               </div>
                             </div>
                           </div>
                           <div class="form-block">
                             <label for="dqcatconnectionTimeout">Connection Timeout (ms)</label>
-                            <div class="form-count">                              
-                              <input type="number" id="dqcatconnectionTimeout" placeholder="숫자만 입력" disabled>
+                            <div class="form-count">
+                              <input type="number" id="infoConnectionPool" placeholder="숫자만 입력">
                               <div class="area-btn">
-                                <button type="button" class="btn-quantity-plus" aria-label="더하기" disabled>
-                                  <span class="material-icons-round xxs">add</span>
-                                </button>
-                                <button type="button" class="btn-quantity-minus" aria-label="빼기" disabled>
-                                  <span class="material-icons-round xxs">remove</span>
-                                </button>
+                                <button type="button" class="btn-quantity-plus" aria-label="더하기"></button>
+                                <button type="button" class="btn-quantity-minus" aria-label="빼기"></button>
                               </div>
                             </div>
                           </div>
@@ -364,15 +340,11 @@
                       <label for="connectionTimeout">Connection Timeout (ms)</label>
                     </dt>
                     <dd class="td">
-                      <div class="form-count">                        
-                        <input type="number" id="connectionTimeout" placeholder="숫자만 입력">
+                      <div class="form-count">
+                        <input type="number" id="infoConnectionPool" placeholder="숫자만 입력">
                         <div class="area-btn">
-                          <button type="button" class="btn-quantity-plus" aria-label="더하기">
-                            <span class="material-icons-round xxs">add</span>
-                          </button>
-                          <button type="button" class="btn-quantity-minus" aria-label="빼기">
-                            <span class="material-icons-round xxs">remove</span>
-                          </button>
+                          <button type="button" class="btn-quantity-plus" aria-label="더하기"></button>
+                          <button type="button" class="btn-quantity-minus" aria-label="빼기"></button>
                         </div>
                       </div>
                     </dd>
@@ -398,14 +370,10 @@
                     </dt>
                     <dd class="td">
                       <div class="form-count">
-                        <input type="number" id="DLConnectionTimeout" placeholder="숫자만 입력">
+                        <input type="number" id="infoConnectionPool" placeholder="숫자만 입력">
                         <div class="area-btn">
-                          <button type="button" class="btn-quantity-plus" aria-label="더하기">
-                            <span class="material-icons-round xxs">add</span>
-                          </button>
-                          <button type="button" class="btn-quantity-minus" aria-label="빼기">
-                            <span class="material-icons-round xxs">remove</span>
-                          </button>
+                          <button type="button" class="btn-quantity-plus" aria-label="더하기"></button>
+                          <button type="button" class="btn-quantity-minus" aria-label="빼기"></button>
                         </div>
                       </div>
                     </dd>
@@ -431,14 +399,10 @@
                     </dt>
                     <dd class="td">
                       <div class="form-count">
-                        <input type="number" id="DLConnectionTimeout" placeholder="숫자만 입력">
+                        <input type="number" id="infoConnectionPool" placeholder="숫자만 입력">
                         <div class="area-btn">
-                          <button type="button" class="btn-quantity-plus" aria-label="더하기">
-                            <span class="material-icons-round xxs">add</span>
-                          </button>
-                          <button type="button" class="btn-quantity-minus" aria-label="빼기">
-                            <span class="material-icons-round xxs">remove</span>
-                          </button>
+                          <button type="button" class="btn-quantity-plus" aria-label="더하기"></button>
+                          <button type="button" class="btn-quantity-minus" aria-label="빼기"></button>
                         </div>
                       </div>
                     </dd>
@@ -524,16 +488,11 @@
                     </dt>
                     <dd class="td py-16px">
                       <div class="form-count">
-                        <input type="number" id="" placeholder="숫자만 입력">
-                        <div class="area-btn mr-8px">
-                          <button type="button" class="btn-quantity-plus" aria-label="더하기">
-                            <span class="material-icons-round xxs">add</span>
-                          </button>
-                          <button type="button" class="btn-quantity-minus" aria-label="빼기">
-                            <span class="material-icons-round xxs">remove</span>
-                          </button>
+                        <input type="number" id="infoConnectionPool" placeholder="숫자만 입력">
+                        <div class="area-btn">
+                          <button type="button" class="btn-quantity-plus" aria-label="더하기"></button>
+                          <button type="button" class="btn-quantity-minus" aria-label="빼기"></button>
                         </div>
-                        <span class="d-flex align-items-center">초</span>
                       </div>
 
                       <div class="d-flex mt-16px">
@@ -1106,7 +1065,7 @@
 
     </div>
   </div>
-
+  <div id="ico_svg" data-include="./svg.html" style="display:none"></div>
   <script src="../assets/js/common.js"></script>
   <script src="../assets/lib/ie11CustomProperties.js"></script>
 

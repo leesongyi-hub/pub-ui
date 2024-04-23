@@ -60,7 +60,7 @@
           template: '<div class="tooltip tooltip_label" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
         });
 
-        $("[data-dq-tooltip=tooltip]").tooltip({
+        $("[data-tooltip=tooltip]").tooltip({
           trigger: 'hover',
           template: '<div class="tooltip tooltip_label" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
         });
