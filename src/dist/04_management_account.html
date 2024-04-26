@@ -33,7 +33,6 @@
             </svg>
           </button>
           <h1>
-            <img src="../assets/images/logo.png" style="width:140px;" />
             <span class="sub-tit">상담어드바이저 관리도구</span>
           </h1>
           <!--화면전환 추가-->
@@ -141,14 +140,14 @@
                     </button>
                     <span class="tit">테마색상 설정</span>
                   </div>
-                  <ul class="themeSel-area">
+                  <ul>
                     <li>
-                      <input type="radio" name="theme" id="admin-theme-blue" value="blue" checked>
+                      <input type="radio" name="theme" id="admin-theme-blue" value="blue" checked="">
                       <label for="admin-theme-blue">Blue Theme</label>
                     </li>
                     <li>
-                      <input type="radio" name="theme" id="admin-theme-mint" value="mint">
-                      <label for="admin-theme-mint">Mint Theme</label>
+                      <input type="radio" name="theme" id="admin-theme-yellow" value="yellow">
+                      <label for="admin-theme-yellow">yellow Theme</label>
                     </li>
                     <li>
                       <input type="radio" name="theme" id="admin-theme-green" value="green">
@@ -159,8 +158,8 @@
                       <label for="admin-theme-purple">Purple Theme</label>
                     </li>
                     <li>
-                      <input type="radio" name="theme" id="admin-theme-black" value="black">
-                      <label for="admin-theme-black">Black Theme</label>
+                      <input type="radio" name="theme" id="admin-theme-red" value="red">
+                      <label for="admin-theme-red">red Theme</label>
                     </li>
                   </ul>
                 </div>
@@ -316,8 +315,8 @@
                       </select>
                       <input class="w-180px" type="text" placeholder="검색어 입력" value="" autocomplete="off">
                     </div>
-                    <button type="submit" class="btn-outline ml-6px">검색</button>
-                    <button type="button" class="btn-outline mask-32px ml-6px" aria-label="검색 초기화">
+                    <button type="submit" class="button-outline ml-6px">검색</button>
+                    <button type="button" class="button-outline mask-32px ml-6px" aria-label="검색 초기화">
                       <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
                         <use xlink:href="#ico-refresh"></use>
                       </svg>
@@ -327,17 +326,17 @@
                 <div class="table-head-area d-flex justify-content-between align-items-end mb-16px">
                   <div class="total_count"> 검색결과 총 <strong>3</strong>건 </div>
                   <div class="d-flex align-item-center">
-                    <button type="button" class="btn-primary" data-toggle="modal" data-target="#modal_addAccount">
+                    <button type="button" class="button-primary" data-toggle="modal" data-target="#modal_addAccount">
                       <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
                         <use xlink:href="#ico-plus"></use>
                       </svg> 계정 추가 </button>
-                    <button type="button" class="btn-outline ml-8px"> 선택 삭제 </button>
+                    <button type="button" class="button-outline ml-8px"> 선택 삭제 </button>
                     <select class="w-100px ml-8px">
                       <option>10개씩</option>
                       <option>20개씩</option>
                       <option>30개씩</option>
                     </select>
-                    <button type="button" class="dropdown-toggle btn-outline ico-only md ml-8px" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="dropdown-toggle button-outline ico-only md ml-8px" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
                         <use xlink:href="#ico-more"></use>
                       </svg>
@@ -417,82 +416,12 @@
                         </td>
                         <td>
                           <div class="d-flex justify-content-center">
-                            <button type="button" class="btn-outline ico-only xs mr-6px" data-toggle="modal" data-target="#modal-editAccount" data-tooltip="tooltip" data-placement="top" data-original-title="수정">
+                            <button type="button" class="button button-outline button-xs ico-only mr-6px" data-toggle="modal" data-target="#modal-editAccount" data-tooltip="tooltip" data-placement="top" data-original-title="수정">
                               <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
                                 <use xlink:href="#ico-edit"></use>
                               </svg>
                             </button>
-                            <button type="button" class="btn-outline ico-only xs" data-tooltip="tooltip" data-placement="top" data-original-title="삭제">
-                              <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
-                                <use xlink:href="#ico-deleted"></use>
-                              </svg>
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox justify-content-center">
-                            <input type="checkbox" class="custom-control-input" id="list_check1">
-                            <label class="custom-control-label" for="list_check1"></label>
-                          </div>
-                        </td>
-                        <td>
-                          <button type="button" class="text-link" data-toggle="modal" data-target="#modal-viewAccount">Verstappen</button>
-                        </td>
-                        <td>홍길동</td>
-                        <td>123456789</td>
-                        <td>C1234567890</td>
-                        <td>전화상담사</td>
-                        <td><strong class="col-red">N</strong></td>
-                        <td>솔루션1팀</td>
-                        <td class="text-left">단기채권팀 > G430 > T431</td>
-                        <td>
-                          <button type="button" class="text-link" data-toggle="modal" data-target="#modal-detailRole">권한1</button>
-                        </td>
-                        <td>
-                          <div class="d-flex justify-content-center">
-                            <button type="button" class="btn-outline ico-only xs mr-6px" data-toggle="modal" data-target="#modal-editAccount" data-tooltip="tooltip" data-placement="top" data-original-title="수정">
-                              <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
-                                <use xlink:href="#ico-edit"></use>
-                              </svg>
-                            </button>
-                            <button type="button" class="btn-outline ico-only xs" data-tooltip="tooltip" data-placement="top" data-original-title="삭제">
-                              <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
-                                <use xlink:href="#ico-deleted"></use>
-                              </svg>
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox justify-content-center">
-                            <input type="checkbox" class="custom-control-input" id="list_check1">
-                            <label class="custom-control-label" for="list_check1"></label>
-                          </div>
-                        </td>
-                        <td>
-                          <button type="button" class="text-link" data-toggle="modal" data-target="#modal-viewAccount">Verstappen</button>
-                        </td>
-                        <td>홍길동</td>
-                        <td>123456789</td>
-                        <td>C1234567890</td>
-                        <td>전화상담사</td>
-                        <td><strong class="col-red">N</strong></td>
-                        <td>솔루션1팀</td>
-                        <td class="text-left">단기채권팀 > G430 > T431</td>
-                        <td>
-                          <button type="button" class="text-link" data-toggle="modal" data-target="#modal-detailRole">권한1</button>
-                        </td>
-                        <td>
-                          <div class="d-flex justify-content-center">
-                            <button type="button" class="btn-outline ico-only xs mr-6px" data-toggle="modal" data-target="#modal-editAccount" data-tooltip="tooltip" data-placement="top" data-original-title="수정">
-                              <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
-                                <use xlink:href="#ico-edit"></use>
-                              </svg>
-                            </button>
-                            <button type="button" class="btn-outline ico-only xs" data-tooltip="tooltip" data-placement="top" data-original-title="삭제">
+                            <button type="button" class="button button-outline button-xs ico-only" data-tooltip="tooltip" data-placement="top" data-original-title="삭제">
                               <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
                                 <use xlink:href="#ico-deleted"></use>
                               </svg>
@@ -563,10 +492,10 @@
                           <div class="form-count">
                             <input type="number" placeholder="숫자만 입력" value="3600">
                             <div class="area-btn">
-                              <button type="button" class="btn-quantity-plus" aria-label="더하기">
+                              <button type="button" class="button-quantity-plus" aria-label="더하기">
                                 <span class="material-icons-round xxs">add</span>
                               </button>
-                              <button type="button" class="btn-quantity-minus" aria-label="빼기">
+                              <button type="button" class="button-quantity-minus" aria-label="빼기">
                                 <span class="material-icons-round xxs">remove</span>
                               </button>
                             </div>
@@ -591,10 +520,10 @@
                           <div class="form-count">
                             <input type="number" placeholder="숫자만 입력" value="90">
                             <div class="area-btn">
-                              <button type="button" class="btn-quantity-plus" aria-label="더하기">
+                              <button type="button" class="button-quantity-plus" aria-label="더하기">
                                 <span class="material-icons-round xxs">add</span>
                               </button>
-                              <button type="button" class="btn-quantity-minus" aria-label="빼기">
+                              <button type="button" class="button-quantity-minus" aria-label="빼기">
                                 <span class="material-icons-round xxs">remove</span>
                               </button>
                             </div>
@@ -660,20 +589,20 @@
                           정확한 기획의도를 파악못해서 버튼 여러개 추가해놨습니다.
                           필요에 따라 문구 수정해서 사용해주심 될 것 같아요.
                         -->
-                          <button type="button" class="btn-primary ml-6px">
+                          <button type="button" class="button-primary ml-6px">
                             <div class="d-flex align-items-center"> DB 적용 </div>
                           </button>
                           <!--클래스 disabled 추가-->
-                          <button type="button" class="btn-primary ml-6px disabled">
+                          <button type="button" class="button-primary ml-6px disabled">
                             <div class="d-flex align-items-center">
                               <div class="indicator mr-6px"></div> 적용 중 (80%)
                             </div>
                           </button>
-                          <button type="button" class="btn-primary ml-6px">
+                          <button type="button" class="button-primary ml-6px">
                             <div class="d-flex align-items-center"> 적용 완료 </div>
                           </button>
                           <!--속성 disabled 추가-->
-                          <button type="button" class="btn-primary ml-6px" disabled>
+                          <button type="button" class="button-primary ml-6px" disabled>
                             <div class="d-flex align-items-center"> 적용 완료 </div>
                           </button>
                         </div>
@@ -682,7 +611,7 @@
                   </div>
                 </article>
                 <div class="area-btn mt-24px">
-                  <button type="button" class="btn-primary xl w-100px">저장</button>
+                  <button type="button" class="button-primary xl w-100px">저장</button>
                 </div>
               </div>
               <div id="tabAccountTeam" class="tab-pane" role="tabpanel" tabindex="0">
@@ -703,8 +632,8 @@
                       </select>
                     </div>
                     <input class="w-180px ml-6px" type="text" placeholder="검색어 입력" value="" autocomplete="off">
-                    <button type="submit" class="btn-outline ml-6px">검색</button>
-                    <button type="button" class="btn-outline mask-32px ml-6px" aria-label="검색 초기화">
+                    <button type="submit" class="button-outline ml-6px">검색</button>
+                    <button type="button" class="button-outline mask-32px ml-6px" aria-label="검색 초기화">
                       <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
                         <use xlink:href="#ico-refresh"></use>
                       </svg>
@@ -714,15 +643,15 @@
                 <div class="table-head-area d-flex justify-content-between align-items-end mb-16px">
                   <div class="total_count"> 검색결과 총 <strong>3</strong>건 </div>
                   <div class="d-flex align-item-center">
-                    <button type="button" class="btn-primary" data-toggle="modal" data-target="#modal-addTeam">
+                    <button type="button" class="button-primary" data-toggle="modal" data-target="#modal-addTeam">
                       <span class="material-icons-round">add</span> 부서 추가 </button>
-                    <button type="button" class="btn-outline ml-8px"> 선택 삭제 </button>
+                    <button type="button" class="button-outline ml-8px"> 선택 삭제 </button>
                     <select class="w-100px ml-8px">
                       <option>10개씩</option>
                       <option>20개씩</option>
                       <option>30개씩</option>
                     </select>
-                    <button type="button" class="dropdown-toggle btn-outline ico-only md ml-8px" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="dropdown-toggle button-outline ico-only md ml-8px" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <span class="material-icons-round col-lightgray">more_vert</span>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right  w-120px">
@@ -791,8 +720,8 @@
                         <td>상담1팀</td>
                         <td>G430 > G430 > T431</td>
                         <td>
-                          <button type="button" class="btn-outline xs" data-toggle="modal" data-target="#modal-editTeam">수정</button>
-                          <button type="button" class="btn-outline xs">삭제</button>
+                          <button type="button" class="button-outline xs" data-toggle="modal" data-target="#modal-editTeam">수정</button>
+                          <button type="button" class="button-outline xs">삭제</button>
                         </td>
                       </tr>
                     </tbody>
@@ -979,8 +908,8 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
-              <button type="button" class="btn-primary xl" data-dismiss="modal">저장</button>
+              <button type="button" class="button-outline xl" data-dismiss="modal">취소</button>
+              <button type="button" class="button-primary xl" data-dismiss="modal">저장</button>
             </div>
           </div>
         </div>
@@ -1018,8 +947,8 @@
                 <div class="form-block account-item validate-success">
                   <label class="input-label" for="">비밀번호<span class="col-required">*</span></label>
                   <div class="form-area">
-                    <button type="button" class="btn-fill mr-4px" data-toggle="modal" data-target="#modal-resetPw">비밀번호 초기화</button>
-                    <button type="button" class="btn-fill" data-toggle="modal" data-target="#modal-editPw">비밀번호 수정</button>
+                    <button type="button" class="button button-secondary mr-4px" data-toggle="modal" data-target="#modal-resetPw">비밀번호 초기화</button>
+                    <button type="button" class="button button-secondary" data-toggle="modal" data-target="#modal-editPw">비밀번호 수정</button>
                   </div>
                 </div>
                 <div class="form-block account-item">
@@ -1137,8 +1066,8 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
-              <button type="button" class="btn-primary xl" data-dismiss="modal">저장</button>
+              <button type="button" class="button-outline xl" data-dismiss="modal">취소</button>
+              <button type="button" class="button-primary xl" data-dismiss="modal">저장</button>
             </div>
           </div>
         </div>
@@ -1257,8 +1186,8 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
-              <button type="button" class="btn-primary xl" data-dismiss="modal">확인</button>
+              <button type="button" class="button-outline xl" data-dismiss="modal">취소</button>
+              <button type="button" class="button-primary xl" data-dismiss="modal">확인</button>
             </div>
           </div>
         </div>
@@ -1280,8 +1209,8 @@
               <p> Ex, 2024년 1월 12일 초기화 시,<br /> 2024abcde01!@ (12일 경우 해당 숫자의 특수기호인 !@) 입니다. </p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
-              <button type="button" class="btn-primary xl" data-dismiss="modal">확인</button>
+              <button type="button" class="button-outline xl" data-dismiss="modal">취소</button>
+              <button type="button" class="button-primary xl" data-dismiss="modal">확인</button>
             </div>
           </div>
         </div>
@@ -1318,8 +1247,8 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
-              <button type="button" class="btn-primary xl" data-dismiss="modal">저장</button>
+              <button type="button" class="button-outline xl" data-dismiss="modal">취소</button>
+              <button type="button" class="button-primary xl" data-dismiss="modal">저장</button>
             </div>
           </div>
         </div>
@@ -1429,8 +1358,8 @@
               </article>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
-              <button type="button" class="btn-primary xl" data-dismiss="modal">확인</button>
+              <button type="button" class="button-outline xl" data-dismiss="modal">취소</button>
+              <button type="button" class="button-primary xl" data-dismiss="modal">확인</button>
             </div>
           </div>
         </div>
@@ -1498,8 +1427,8 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
-              <button type="button" class="btn-primary xl" data-dismiss="modal">저장</button>
+              <button type="button" class="button-outline xl" data-dismiss="modal">취소</button>
+              <button type="button" class="button-primary xl" data-dismiss="modal">저장</button>
             </div>
           </div>
         </div>
@@ -1581,8 +1510,8 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
-              <button type="button" class="btn-primary xl" data-dismiss="modal">저장</button>
+              <button type="button" class="button-outline xl" data-dismiss="modal">취소</button>
+              <button type="button" class="button-primary xl" data-dismiss="modal">저장</button>
             </div>
           </div>
         </div>
@@ -1657,7 +1586,7 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn-primary xl" data-dismiss="modal">확인</button>
+              <button type="button" class="button-primary xl" data-dismiss="modal">확인</button>
             </div>
           </div>
         </div>
@@ -1688,7 +1617,7 @@
                   <div class="form-area flex-fill">
                     <div class="custom-fileInput mb-8px">
                       <input type="text" class="upload-name" value="" placeholder="선택된 파일 없음" readonly>
-                      <label for="file" class="btn-outline">파일 선택</label>
+                      <label for="file" class="button-outline">파일 선택</label>
                       <input type="file" id="file" class="blind">
                     </div>
                     <div class="custom-control custom-checkbox">
@@ -1700,8 +1629,8 @@
               </section>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn-outline xl" data-dismiss="modal">취소</button>
-              <button type="button" class="btn-primary xl" data-dismiss="modal">확인</button>
+              <button type="button" class="button-outline xl" data-dismiss="modal">취소</button>
+              <button type="button" class="button-primary xl" data-dismiss="modal">확인</button>
             </div>
           </div>
         </div>

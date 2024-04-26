@@ -1,8 +1,4 @@
-.ico{fill:transparent;width:20px;min-width:20px;height:20px;stroke-width: var(--icon-stroke-default);color:var(--icon-color-default)}
-
-/* weight */
-.ico-default{stroke-width: var(--icon-stroke-default);}
-.ico-bold{stroke-width: var(--icon-stroke-bold);}
+.ico{fill:transparent;width:20px;min-width:20px;height:20px;stroke-width: var(--icon-stroke-regular);color:var(--icon-color-default)}
 
 /* size */
 .ico-xs{width:16px;min-width:16px;height:16px;}
@@ -18,3 +14,7 @@
 .ico-error{color:var(--icon-color-error)}
 .ico-warning{color:var(--icon-color-warning)}
 .ico-success{color:var(--icon-color-success)}
+
+/* weight */
+.ico-regular{stroke-width: var(--icon-stroke-regular);}
+.ico-bold{stroke-width: var(--icon-stroke-bold);}

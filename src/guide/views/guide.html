@@ -27,55 +27,53 @@
 </head>
 
 <body>
-	<div class="wrap guide-page">
-    <navi class="left_area">      
-      <!-- left head start -->
-      <div class="left_head">
-        <h1>상담어드바이저 관리도구</h1>
+	<div class="wrap guide-page gd-wrap">
+    <header>
+      <h1>Pub System Guide</h1>
+      <div class="button-theme-area">
+        <button type="button" aria-label="테마선택" class="button button-fill button-lg ico-only">
+          <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+            <use xlink:href="#ico-droplet"></use>
+          </svg>
+        </button>
+        <div class="theme-area">
+          <ul>
+            <li>
+              <input type="radio" name="theme" id="admin-theme-blue" value="blue" checked="">
+              <label for="admin-theme-blue">Blue Theme</label>
+            </li>
+            <li>
+              <input type="radio" name="theme" id="admin-theme-yellow" value="yellow">
+              <label for="admin-theme-yellow">yellow Theme</label>
+            </li>
+            <li>
+              <input type="radio" name="theme" id="admin-theme-green" value="green">
+              <label for="admin-theme-green">Green Theme</label>
+            </li>
+            <li>
+              <input type="radio" name="theme" id="admin-theme-purple" value="purple">
+              <label for="admin-theme-purple">Purple Theme</label>
+            </li>
+            <li>
+              <input type="radio" name="theme" id="admin-theme-red" value="red">
+              <label for="admin-theme-red">red Theme</label>
+            </li>
+          </ul>
+        </div>
       </div>
-      <!--// left head end -->
-  
+    </header>
+    <navi class="left_area">
       @@include('./include/navi.html')
   
     </navi>	
     <div class="container">
-      <div class="right_head">
-        <h2 class="float-left"><strong class="ft18">UI 스타일 가이드</strong></h2>    
-        <div class="top_util float-right">
-          <div class="mt-5px ft12 text-lightgray2">Last Updated : 2024.04.11.</div>
-        </div>
-      </div>   
-
       <main class="content">
-        <ul class="themeSel-area">
-          <li>
-            <input type="radio" name="theme" id="admin-theme-blue" value="blue" checked="">
-            <label for="admin-theme-blue">Blue Theme</label>
-          </li>
-          <li>
-            <input type="radio" name="theme" id="admin-theme-yellow" value="yellow">
-            <label for="admin-theme-yellow">yellow Theme</label>
-          </li>
-          <li>
-            <input type="radio" name="theme" id="admin-theme-green" value="green">
-            <label for="admin-theme-green">Green Theme</label>
-          </li>
-          <li>
-            <input type="radio" name="theme" id="admin-theme-purple" value="purple">
-            <label for="admin-theme-purple">Purple Theme</label>
-          </li>
-          <li>
-            <input type="radio" name="theme" id="admin-theme-black" value="black">
-            <label for="admin-theme-black">Black Theme</label>
-          </li>
-        </ul>
-
-        @@include('./include/info.html')
+        <!-- @@include('./include/info.html') -->
         @@include('./include/variables.html')
         @@include('./include/typography.html')
         @@include('./include/icon.html')
         @@include('./include/buttons.html')
-        @@include('./include/select.html')
+        <!-- @@include('./include/select.html')
         @@include('./include/inputText.html')
         @@include('./include/inputNumber.html')
         @@include('./include/checkbox.html')
@@ -87,7 +85,7 @@
         @@include('./include/chips.html')
         @@include('./include/table.html')
         @@include('./include/tooltip.html')
-        @@include('./include/modal.html')
+        @@include('./include/modal.html') -->
       </main>
 
       <footer class="dq_footer">Copyright© <strong>NHN diquest</strong>. All Rights Reserved.</footer>

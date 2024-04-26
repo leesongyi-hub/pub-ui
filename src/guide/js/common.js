@@ -94,7 +94,7 @@
     clipboard: {
       init: function(){
         $('.btn-copy').on('click', function(){  
-          var textToCopy = $(this).siblings('.txt-variables').text(); 
+          var textToCopy = $(this).siblings('.copyTxt').text(); 
           
           var $tempInput = $('<textarea>');
           $('body').append($tempInput);

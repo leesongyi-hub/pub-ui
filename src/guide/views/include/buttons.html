@@ -1,45 +1,26 @@
 <div class="gd-content-wrap" id="n_buttons">
-  <h2>Buttons</h2>    
-  <div class="gd-content">
-    <article class="gd-example-wrap">
-      <h3>primary</h3>
-      <!-- 🧡💛 UI -->
-      <div class="gd-example">
-        <button class="btn-primary xxl">primary xxl</button>
-        <button class="btn-primary xl">primary xl</button>
-        <button class="btn-primary lg">primary lg</button>
-        <button class="btn-primary md">primary md</button>
-        <button class="btn-primary sm">primary sm</button>
-        <button class="btn-primary xs">primary xs</button>
-        <button class="btn-primary xxl" disabled>primary xxl</button>
-        <button class="btn-primary xl" disabled>primary xl</button>
-        <button class="btn-primary lg" disabled>primary lg</button>
-        <button class="btn-primary md" disabled>primary md</button>
-        <button class="btn-primary sm" disabled>primary sm</button>
-        <button class="btn-primary xs" disabled>primary xs</button>
+  <h2 class="gd-tit">Button</h2>
+  <div class="gd-infoArea">
+    <a class="button-textLink" href="https://www.figma.com/file/8Aum3Py2NiZ2BDQJDtBJcG/Icon-Library-(Community)?type=design&node-id=1%3A1055&mode=design&t=bI7KG2e0DHffSslC-1" target="_blank">Figma</a>에서 flatten처리 후 
+    <a class="button-textLink" href="https://jakearchibald.github.io/svgomg/" target="_blank">SVGOMG</a>
+    사이트에서 svg파일을 최적화하여 추가합니다.
+  </div>
+  
+  <article>
+    <section>
+      <h3 class="gd-subTit">Code</h3>
+      <div class="code-head">
+        <span class="tit">HTML</span>
+      </div>
+      <code class="code-area">
+        <pre class="brush: html;">
 
+          <button type="button" class="button button-primary">버튼명</button>
+          <button type="button" class="button button-outline">버튼명</button>
+          <button type="button" class="button button-button-outlineTonal">버튼명</button>
+          <button type="button" class="button button-button-fill">버튼명</button>
+          <button type="button" class="button button-button-fillTonal">버튼명</button>
 
-        <button class="btn--secondary xxl">secondary xxl</button>
-      </div>
-      <!-- 🧡💛 UI -->
-      <!-- 🔴🟡 code -->
-      <div class="code-head">
-        <span class="tit">HTML</span>
-      </div>
-      <code class="code-area">
-        <pre class="brush: html;">
-          <button class="btn-primary xxl">primary xxl</button>
-          <button class="btn-primary xl">primary xl</button>
-          <button class="btn-primary lg">primary lg</button>
-          <button class="btn-primary md">primary md</button>
-          <button class="btn-primary sm">primary sm</button>
-          <button class="btn-primary xs">primary xs</button>
-          <button class="btn-primary xxl" disabled>primary xxl</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-primary xl" disabled>primary xl</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-primary lg" disabled>primary lg</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-primary md" disabled>primary md</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-primary sm" disabled>primary sm</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-primary xs" disabled>primary xs</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
         </pre>
         <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,1181 +28,715 @@
           </svg>
         </button>
       </code>
-      <!-- //🔴🟡 code -->
-    </article>
-    <article class="gd-example-wrap">
-      <h3>outline</h3>
-      <!-- 🧡💛 UI -->
-      <div class="gd-example">
-        <button class="btn-outline xxl">outline xxl</button>
-        <button class="btn-outline xl">outline xl</button>
-        <button class="btn-outline lg">outline lg</button>
-        <button class="btn-outline md">outline md</button>
-        <button class="btn-outline sm">outline sm</button>
-        <button class="btn-outline xs">outline xs</button>
-        <button class="btn-outline xxl" disabled>outline xxl</button>
-        <button class="btn-outline xl" disabled>outline xl</button>
-        <button class="btn-outline lg" disabled>outline lg</button>
-        <button class="btn-outline md" disabled>outline md</button>
-        <button class="btn-outline sm" disabled>outline sm</button>
-        <button class="btn-outline xs" disabled>outline xs</button>
+    </section>
+    <section>
+      <h3 class="gd-subTit">Utility Class & Variables</h3>
+      <div class="mb-40px">
+        <h4 class="gd-subTit-sm">Style</h4>
+        <div class="gdTable-wrap">
+          <table class="gdTable">
+            <colgroup>
+              <col style="width:">
+              <col style="width:">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Preview</th>
+                <th>Class</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="d-flex gap-8px">
+                    <button type="button" class="button button-primary">primary</button>
+                    <button type="button" class="button button-primary button-md" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">primary</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+
+                    <button type="button" class="button button-primary button-md ico-only" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge-class">
+                    <em class="copyTxt">.button-primary</em>
+                    <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                  </span> 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex gap-8px">
+                    <button type="button" class="button button-outline">outline</button>
+                    <button type="button" class="button button-outline button-md" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">outline</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button button-outline button-md ico-only" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge-class">
+                    <em class="copyTxt">.button-outline</em>
+                    <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                  </span> 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex gap-8px">
+                    <button type="button" class="button-outlineTonal">outlineTonal</button>
+                    <button type="button" class="button button-outlineTonal button-md" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">outlineTonal</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button-outlineTonal button-md ico-only" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge-class">
+                    <em class="copyTxt">.button-outlineTonal</em>
+                    <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                  </span> 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex gap-8px">
+                    <button type="button" class="button-fill">fill</button>
+                    <button type="button" class="button button-fill button-md" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">fill</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button-fill button-md ico-only" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge-class">
+                    <em class="copyTxt">.button-fill</em>
+                    <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                  </span> 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex gap-8px">
+                    <button type="button" class="button-fillTonal">fillTonal</button>
+                    <button type="button" class="button button-fillTonal button-md" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">fillTonal</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button-fillTonal button-md ico-only" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge-class">
+                    <em class="copyTxt">.button-fillTonal</em>
+                    <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                  </span> 
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <!-- 🧡💛 UI -->
-      <!-- 🔴🟡 code -->
-      <div class="code-head">
-        <span class="tit">HTML</span>
+
+      <div class="mb-40px">
+        <h4 class="gd-subTit-sm">Size</h4>
+        <div class="gdTable-wrap">
+          <table class="gdTable">
+            <colgroup>
+              <col style="width:">
+              <col style="width:">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Preview</th>
+                <th>Class</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="d-flex gap-8px">
+                    <button class="button-primary button-xxl">primary</button>
+                    <button type="button" class="button button-primary button-xxl">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">primary</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button button-primary button-xxl ico-only" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge-class">
+                    <em class="copyTxt">.button-xxl</em>
+                    <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                  </span> 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex gap-8px">
+                    <button class="button-primary button-xl">primary</button>
+                    <button type="button" class="button button-primary button-xl">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">primary</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button button-primary button-xl ico-only" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge-class">
+                    <em class="copyTxt">.button-xl</em>
+                    <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                  </span> 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex gap-8px">
+                    <button class="button-primary button-lg">primary</button>
+                    <button type="button" class="button button-primary button-lg">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">primary</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button button-primary button-lg ico-only" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge-class">
+                    <em class="copyTxt">.button-lg</em>
+                    <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                  </span> 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex gap-8px">
+                    <button class="button-primary button-md">primary</button>
+                    <button type="button" class="button button-primary button-md">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">primary</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button button-primary button-md ico-only" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge-class">
+                    <em class="copyTxt">.button-md</em>
+                    <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                  </span> 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex gap-8px">
+                    <button class="button-primary button-sm">primary</button>
+                    <button type="button" class="button button-primary button-sm">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">primary</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button button-primary button-sm ico-only" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge-class">
+                    <em class="copyTxt">.button-sm</em>
+                    <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                  </span> 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex gap-8px">
+                    <button class="button-primary button-xs">primary</button>
+                    <button type="button" class="button button-primary button-xs">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">primary</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button button-primary button-xs ico-only" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge-class">
+                    <em class="copyTxt">.button-xs</em>
+                    <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                  </span> 
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <code class="code-area">
-        <pre class="brush: html;">
-          <button class="btn-outline xxl">outline xxl</button>
-          <button class="btn-outline xl">outline xl</button>
-          <button class="btn-outline lg">outline lg</button>
-          <button class="btn-outline md">outline md</button>
-          <button class="btn-outline sm">outline sm</button>
-          <button class="btn-outline xs">outline xs</button>
-          <button class="btn-outline xxl" disabled>outline xxl</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-outline xl" disabled>outline xl</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-outline lg" disabled>outline lg</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-outline md" disabled>outline md</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-outline sm" disabled>outline sm</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-outline xs" disabled>outline xs</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-        </pre>
-        <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </code>
-      <!-- //🔴🟡 code -->
-    </article>
-    <article class="gd-example-wrap">
-      <h3>outlineTonal</h3>
-      <!-- 🧡💛 UI -->
-      <div class="gd-example">
-        <button class="btn-outlineTonal xxl">outlineTonal xxl</button>
-        <button class="btn-outlineTonal xl">outlineTonal xl</button>
-        <button class="btn-outlineTonal lg">outlineTonal lg</button>
-        <button class="btn-outlineTonal md">outlineTonal md</button>
-        <button class="btn-outlineTonal sm">outlineTonal sm</button>
-        <button class="btn-outlineTonal xs">outlineTonal xs</button>
-        <button class="btn-outlineTonal xxl" disabled>outlineTonal xxl</button>
-        <button class="btn-outlineTonal xl" disabled>outlineTonal xl</button>
-        <button class="btn-outlineTonal lg" disabled>outlineTonal lg</button>
-        <button class="btn-outlineTonal md" disabled>outlineTonal md</button>
-        <button class="btn-outlineTonal sm" disabled>outlineTonal sm</button>
-        <button class="btn-outlineTonal xs" disabled>outlineTonal xs</button>
+      <div class="mb-40px">
+        <h4 class="gd-subTit-sm">State</h4>
+        <div class="info-area mb-20px">
+          <ul>
+            <li class="depth1">
+              <strong>disabeld UI는 2가지로 표시할 수 있습니다.</strong>
+              <ul>
+                <li>1. 액션에 따라 변화가 있을 경우 </li>
+                <li>2. 추가 액션에 따라 변화가 없는 경우</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="gdTable-wrap">
+          <table class="gdTable">
+            <colgroup>
+              <col style="width:">
+              <col style="width:">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Preview</th>
+                <th>Class</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="d-flex gap-8px mb-8px">
+                    <button type="button" class="button button-primary" disabled>primary</button>
+                    <button type="button" class="button button-primary button-md" disabled>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">primary</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button button-primary button-md ico-only" aria-label="추가" disabled>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="d-flex gap-8px">
+                    <button type="button" class="button button-primary disabled">primary</button>
+                    <button type="button" class="button button-primary button-md disabled">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">primary</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button button-primary button-md ico-only disabled" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+                </td>
+                <td>
+                  <span class="badge-class">
+                    <em class="copyTxt">.button-primary</em>
+                    <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                  </span> 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex gap-8px mb-8px">
+                    <button type="button" class="button button-outline" disabled>outline</button>
+                    <button type="button" class="button button-outline button-md" disabled>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">outline</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button button-outline button-md ico-only" aria-label="추가" disabled>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="d-flex gap-8px">
+                    <button type="button" class="button button-outline disabled">outline</button>
+                    <button type="button" class="button button-outline button-md disabled">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">outline</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button button-outline button-md ico-only disabled" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge-class">
+                    <em class="copyTxt">.button-outline</em>
+                    <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                  </span> 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex gap-8px mb-8px">
+                    <button type="button" class="button button-outlineTonal" disabled>outlineTonal</button>
+                    <button type="button" class="button button-outlineTonal button-md" disabled>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">outlineTonal</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button button-outlineTonal button-md ico-only" aria-label="추가" disabled>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="d-flex gap-8px">
+                    <button type="button" class="button button-outlineTonal disabled">outlineTonal</button>
+                    <button type="button" class="button button-outlineTonal button-md disabled">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">outlineTonal</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button button-outlineTonal button-md ico-only disabled" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge-class">
+                    <em class="copyTxt">.button-outlineTonal</em>
+                    <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                  </span> 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex gap-8px mb-8px">
+                    <button type="button" class="button button-fill" disabled>fill</button>
+                    <button type="button" class="button button-fill button-md" disabled>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">fill</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button button-fill button-md ico-only" aria-label="추가" disabled>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="d-flex gap-8px">
+                    <button type="button" class="button button-fill disabled">fill</button>
+                    <button type="button" class="button button-fill button-md disabled">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">fill</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button button-fill button-md ico-only disabled" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge-class">
+                    <em class="copyTxt">.button-fill</em>
+                    <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                  </span> 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex gap-8px mb-8px">
+                    <button type="button" class="button button-fillTonal" disabled>fillTonal</button>
+                    <button type="button" class="button button-fillTonal button-md" disabled>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">fillTonal</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button button-fillTonal button-md ico-only" aria-label="추가" disabled>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="d-flex gap-8px">
+                    <button type="button" class="button button-fillTonal disabled">fillTonal</button>
+                    <button type="button" class="button button-fillTonal button-md disabled">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">fillTonal</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button button-fillTonal button-md ico-only disabled" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge-class">
+                    <em class="copyTxt">.button-fillTonal</em>
+                    <button class="btn-copy" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                  </span> 
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <!-- 🧡💛 UI -->
-      <!-- 🔴🟡 code -->
-      <div class="code-head">
-        <span class="tit">HTML</span>
+
+      <div class="mb-40px">
+        <h4 class="gd-subTit-sm">State</h4>
+        <div class="gdTable-wrap">
+          <table class="gdTable">
+            <colgroup>
+              <col style="width:">
+              <col style="width:">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Preview</th>
+                <th>Class</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="d-flex gap-8px mb-8px">
+                    <button type="button" class="button button-secondary">primary</button>
+                    <button type="button" class="button button-secondary button-md">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                      <span class="label">primary</span>
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="button button-secondary button-md ico-only" aria-label="추가">
+                      <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                        <use xlink:href="#ico-plus_circle"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <code class="code-area">
-        <pre class="brush: html;">
-          <button class="btn-outlineTonal xl">outlineTonal xl</button>
-          <button class="btn-outlineTonal xl">outlineTonal xl</button>
-          <button class="btn-outlineTonal lg">outlineTonal lg</button>
-          <button class="btn-outlineTonal md">outlineTonal md</button>
-          <button class="btn-outlineTonal sm">outlineTonal sm</button>
-          <button class="btn-outlineTonal xs">outlineTonal xs</button>
-          <button class="btn-outlineTonal xl" disabled>outlineTonal xl</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-outlineTonal lg" disabled>outlineTonal lg</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-outlineTonal md" disabled>outlineTonal md</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-outlineTonal sm" disabled>outlineTonal sm</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-outlineTonal xs" disabled>outlineTonal xs</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-        </pre>
-        <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </code>
-      <!-- //🔴🟡 code -->
-    </article>
-    <article class="gd-example-wrap">
-      <h3>fill</h3>
-      <!-- 🧡💛 UI -->
-      <div class="gd-example">
-        <button class="btn-fill xxl">fill xxl</button>
-        <button class="btn-fill xl">fill xl</button>
-        <button class="btn-fill lg">fill lg</button>
-        <button class="btn-fill md">fill md</button>
-        <button class="btn-fill sm">fill sm</button>
-        <button class="btn-fill xs">fill xs</button>
-        <button class="btn-fill xxl" disabled>fill xxl</button>
-        <button class="btn-fill xl" disabled>fill xl</button>
-        <button class="btn-fill lg" disabled>fill lg</button>
-        <button class="btn-fill md" disabled>fill md</button>
-        <button class="btn-fill sm" disabled>fill sm</button>
-        <button class="btn-fill xs" disabled>fill xs</button>
-      </div>
-      <!-- 🧡💛 UI -->
-      <!-- 🔴🟡 code -->
-      <div class="code-head">
-        <span class="tit">HTML</span>
-      </div>
-      <code class="code-area">
-        <pre class="brush: html;">
-          <button class="btn-fill xxl">fill xxl</button>
-          <button class="btn-fill xl">fill xl</button>
-          <button class="btn-fill lg">fill lg</button>
-          <button class="btn-fill md">fill md</button>
-          <button class="btn-fill sm">fill sm</button>
-          <button class="btn-fill xs">fill xs</button>
-          <button class="btn-fill xxl" disabled>fill xxl</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-fill xl" disabled>fill xl</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-fill lg" disabled>fill lg</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-fill md" disabled>fill md</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-fill sm" disabled>fill sm</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-fill xs" disabled>fill xs</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-        </pre>
-        <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </code>
-      <!-- //🔴🟡 code -->
-    </article>
-    <article class="gd-example-wrap">
-      <h3>fillTonal</h3>
-      <!-- 🧡💛 UI -->
-      <div class="gd-example">
-        <button class="btn-fillTonal xxl">fillTonal xxl</button>
-        <button class="btn-fillTonal xl">fillTonal xl</button>
-        <button class="btn-fillTonal lg">fillTonal lg</button>
-        <button class="btn-fillTonal md">fillTonal md</button>
-        <button class="btn-fillTonal sm">fillTonal sm</button>
-        <button class="btn-fillTonal xs">fillTonal xs</button>
-        <button class="btn-fillTonal xxl" disabled>fillTonal xxl</button>
-        <button class="btn-fillTonal xl" disabled>fillTonal xl</button>
-        <button class="btn-fillTonal lg" disabled>fillTonal lg</button>
-        <button class="btn-fillTonal md" disabled>fillTonal md</button>
-        <button class="btn-fillTonal sm" disabled>fillTonal sm</button>
-        <button class="btn-fillTonal xs" disabled>fillTonal xs</button>
-      </div>
-      <!-- 🧡💛 UI -->
-      <!-- 🔴🟡 code -->
-      <div class="code-head">
-        <span class="tit">HTML</span>
-      </div>
-      <code class="code-area">
-        <pre class="brush: html;">
-          <button class="btn-fillTonal xxl">fillTonal xxl</button>
-          <button class="btn-fillTonal xl">fillTonal xl</button>
-          <button class="btn-fillTonal lg">fillTonal lg</button>
-          <button class="btn-fillTonal md">fillTonal md</button>
-          <button class="btn-fillTonal sm">fillTonal sm</button>
-          <button class="btn-fillTonal xs">fillTonal xs</button>
-          <button class="btn-fillTonal xxl" disabled>fillTonal xxl</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-fillTonal xl" disabled>fillTonal xl</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-fillTonal lg" disabled>fillTonal lg</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-fillTonal md" disabled>fillTonal md</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-fillTonal sm" disabled>fillTonal sm</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <button class="btn-fillTonal xs" disabled>fillTonal xs</button><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-        </pre>
-        <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </code>
-      <!-- //🔴🟡 code -->
-    </article>
-    <article class="gd-example-wrap">
-      <h3>primary - with icon</h3>
-      <!-- 🧡💛 UI -->
-      <div class="gd-example">
-        <button class="btn-primary xxl">
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-          primary xxl
-        </button>
-        <button class="btn-primary xl">
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-          primary xl
-        </button>
-        <button class="btn-primary lg">
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-          primary lg
-        </button>
-        <button class="btn-primary md">
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-          primary md
-        </button>
-        <button class="btn-primary sm">
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-          primary sm
-        </button>
-        <button class="btn-primary xs">
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-          primary xs
-        </button>
-        <button class="btn-primary xxl" disabled>
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-          primary xxl
-        </button>
-        <button class="btn-primary xl" disabled>
-          <span class="material-icons-round">add</span>
-          primary xl
-        </button>
-        <button class="btn-primary lg" disabled>
-          <span class="material-icons-round">add</span>
-          primary lg
-        </button>
-        <button class="btn-primary md" disabled>
-          <span class="material-icons-round">add</span>
-          primary md
-        </button>
-        <button class="btn-primary sm" disabled>
-          <span class="material-icons-round">add</span>
-          primary sm
-        </button>
-        <button class="btn-primary xs" disabled>
-          <span class="material-icons-round">add</span>
-          primary xs
-        </button>
-      </div>
-      <!-- 🧡💛 UI -->
-      <!-- 🔴🟡 code -->
-      <div class="code-head">
-        <span class="tit">HTML</span>
-      </div>
-      <code class="code-area">
-        <pre class="brush: html;">
-          <button class="btn-primary xxl">
-            <span class="material-icons-round">add</span>
-            primary xxl
-          </button>
-          <button class="btn-primary xl">
-            <span class="material-icons-round">add</span>
-            primary xl
-          </button>
-          <button class="btn-primary lg">
-            <span class="material-icons-round">add</span>
-            primary lg
-          </button>
-          <button class="btn-primary md">
-            <span class="material-icons-round">add</span>
-            primary md
-          </button>
-          <button class="btn-primary sm">
-            <span class="material-icons-round">add</span>
-            primary sm
-          </button>
-          <button class="btn-primary xs">
-            <span class="material-icons-round">add</span>
-            primary xs
-          </button>
-          <button class="btn-primary xxl" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            primary xxl
-          </button>
-          <button class="btn-primary xl" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            primary xl
-          </button>
-          <button class="btn-primary lg" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            primary lg
-          </button>
-          <button class="btn-primary md" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            primary md
-          </button>
-          <button class="btn-primary sm" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            primary sm
-          </button>
-          <button class="btn-primary xs" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            primary xs
-          </button>
-        </pre>
-        <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </code>
-      <!-- //🔴🟡 code -->
-    </article>
-    <article class="gd-example-wrap">
-      <h3>outline - with icon</h3>
-      <!-- 🧡💛 UI -->
-      <div class="gd-example">
-        <button class="btn-outline xxl">
-          <span class="material-icons-round">add</span>
-          outline xxl
-        </button>
-        <button class="btn-outline xl">
-          <span class="material-icons-round">add</span>
-          outline xl
-        </button>
-        <button class="btn-outline lg">
-          <span class="material-icons-round">add</span>
-          outline lg
-        </button>
-        <button class="btn-outline md">
-          <span class="material-icons-round">add</span>
-          outline md
-        </button>
-        <button class="btn-outline sm">
-          <span class="material-icons-round">add</span>
-          outline sm
-        </button>
-        <button class="btn-outline xs">
-          <span class="material-icons-round">add</span>
-          outline xs
-        </button>
-        <button class="btn-outline xxl" disabled>
-          <span class="material-icons-round">add</span>
-          outline xxl
-        </button>
-        <button class="btn-outline xl" disabled>
-          <span class="material-icons-round">add</span>
-          outline xl
-        </button>
-        <button class="btn-outline lg" disabled>
-          <span class="material-icons-round">add</span>
-          outline lg
-        </button>
-        <button class="btn-outline md" disabled>
-          <span class="material-icons-round">add</span>
-          outline md
-        </button>
-        <button class="btn-outline sm" disabled>
-          <span class="material-icons-round">add</span>
-          outline sm
-        </button>
-        <button class="btn-outline xs" disabled>
-          <span class="material-icons-round">add</span>
-          outline xs
-        </button>
-      </div>
-      <!-- 🧡💛 UI -->
-      <!-- 🔴🟡 code -->
-      <div class="code-head">
-        <span class="tit">HTML</span>
-      </div>
-      <code class="code-area">
-        <pre class="brush: html;">
-          <button class="btn-outline xxl">
-            <span class="material-icons-round">add</span>
-            outline xxl
-          </button>
-          <button class="btn-outline xl">
-            <span class="material-icons-round">add</span>
-            outline xl
-          </button>
-          <button class="btn-outline lg">
-            <span class="material-icons-round">add</span>
-            outline lg
-          </button>
-          <button class="btn-outline md">
-            <span class="material-icons-round">add</span>
-            outline md
-          </button>
-          <button class="btn-outline sm">
-            <span class="material-icons-round">add</span>
-            outline sm
-          </button>
-          <button class="btn-outline xs">
-            <span class="material-icons-round">add</span>
-            outline xs
-          </button>
-          <button class="btn-outline xxl" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            outline xxl
-          </button>
-          <button class="btn-outline xl" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            outline xl
-          </button>
-          <button class="btn-outline lg" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            outline lg
-          </button>
-          <button class="btn-outline md" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            outline md
-          </button>
-          <button class="btn-outline sm" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            outline sm
-          </button>
-          <button class="btn-outline xs" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            outline xs
-          </button>
-        </pre>
-        <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </code>
-      <!-- //🔴🟡 code -->
-    </article>
-    <article class="gd-example-wrap">
-      <h3>outlineTonal - with icon</h3>
-      <!-- 🧡💛 UI -->
-      <div class="gd-example">
-        <button class="btn-outlineTonal xxl">
-          <span class="material-icons-round">add</span>
-          outlineTonal xxl
-        </button>
-        <button class="btn-outlineTonal xl">
-          <span class="material-icons-round">add</span>
-          outlineTonal xl
-        </button>
-        <button class="btn-outlineTonal lg">
-          <span class="material-icons-round">add</span>
-          outlineTonal lg
-        </button>
-        <button class="btn-outlineTonal md">
-          <span class="material-icons-round">add</span>
-          outlineTonal md
-        </button>
-        <button class="btn-outlineTonal sm">
-          <span class="material-icons-round">add</span>
-          outlineTonal sm
-        </button>
-        <button class="btn-outlineTonal xs">
-          <span class="material-icons-round">add</span>
-          outlineTonal xs
-        </button>
-        <button class="btn-outlineTonal xxl" disabled>
-          <span class="material-icons-round">add</span>
-          outlineTonal xxl
-        </button>
-        <button class="btn-outlineTonal xl" disabled>
-          <span class="material-icons-round">add</span>
-          outlineTonal xl
-        </button>
-        <button class="btn-outlineTonal lg" disabled>
-          <span class="material-icons-round">add</span>
-          outlineTonal lg
-        </button>
-        <button class="btn-outlineTonal md" disabled>
-          <span class="material-icons-round">add</span>
-          outlineTonal md
-        </button>
-        <button class="btn-outlineTonal sm" disabled>
-          <span class="material-icons-round">add</span>
-          outlineTonal sm
-        </button>
-        <button class="btn-outlineTonal xs" disabled>
-          <span class="material-icons-round">add</span>
-          outlineTonal xs
-        </button>
-      </div>
-      <!-- 🧡💛 UI -->
-      <!-- 🔴🟡 code -->
-      <div class="code-head">
-        <span class="tit">HTML</span>
-      </div>
-      <code class="code-area">
-        <pre class="brush: html;">
-          <button class="btn-outlineTonal xxl">
-            <span class="material-icons-round">add</span>
-            outlineTonal xxl
-          </button>
-          <button class="btn-outlineTonal xl">
-            <span class="material-icons-round">add</span>
-            outlineTonal xl
-          </button>
-          <button class="btn-outlineTonal lg">
-            <span class="material-icons-round">add</span>
-            outlineTonal lg
-          </button>
-          <button class="btn-outlineTonal md">
-            <span class="material-icons-round">add</span>
-            outlineTonal md
-          </button>
-          <button class="btn-outlineTonal sm">
-            <span class="material-icons-round">add</span>
-            outlineTonal sm
-          </button>
-          <button class="btn-outlineTonal xs">
-            <span class="material-icons-round">add</span>
-            outlineTonal xs
-          </button>
-          <button class="btn-outlineTonal xxl" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            outlineTonal xxl
-          </button>
-          <button class="btn-outlineTonal xl" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            outlineTonal xl
-          </button>
-          <button class="btn-outlineTonal lg" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            outlineTonal lg
-          </button>
-          <button class="btn-outlineTonal md" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            outlineTonal md
-          </button>
-          <button class="btn-outlineTonal sm" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            outlineTonal sm
-          </button>
-          <button class="btn-outlineTonal xs" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            outlineTonal xs
-          </button>
-        </pre>
-        <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </code>
-      <!-- //🔴🟡 code -->
-    </article>
-    <article class="gd-example-wrap">
-      <h3>fill - with icon</h3>
-      <!-- 🧡💛 UI -->
-      <div class="gd-example">
-        <button class="btn-fill xxl">
-          <span class="material-icons-round">add</span>
-          fill xxl
-        </button>
-        <button class="btn-fill xl">
-          <span class="material-icons-round">add</span>
-          fill xl
-        </button>
-        <button class="btn-fill lg">
-          <span class="material-icons-round">add</span>
-          fill lg
-        </button>
-        <button class="btn-fill md">
-          <span class="material-icons-round">add</span>
-          fill md
-        </button>
-        <button class="btn-fill sm">
-          <span class="material-icons-round">add</span>
-          fill sm
-        </button>
-        <button class="btn-fill xs">
-          <span class="material-icons-round">add</span>
-          fill xs
-        </button>
-        <button class="btn-fill xxl" disabled>
-          <span class="material-icons-round">add</span>
-          fill xxl
-        </button>
-        <button class="btn-fill xl" disabled>
-          <span class="material-icons-round">add</span>
-          fill xl
-        </button>
-        <button class="btn-fill lg" disabled>
-          <span class="material-icons-round">add</span>
-          fill lg
-        </button>
-        <button class="btn-fill md" disabled>
-          <span class="material-icons-round">add</span>
-          fill md
-        </button>
-        <button class="btn-fill sm" disabled>
-          <span class="material-icons-round">add</span>
-          fill sm
-        </button>
-        <button class="btn-fill xs" disabled>
-          <span class="material-icons-round">add</span>
-          fill xs
-        </button>
-      </div>
-      <!-- 🧡💛 UI -->
-      <!-- 🔴🟡 code -->
-      <div class="code-head">
-        <span class="tit">HTML</span>
-      </div>
-      <code class="code-area">
-        <pre class="brush: html;">
-          <button class="btn-fill xxl">
-            <span class="material-icons-round">add</span>
-            fill xxl
-          </button>
-          <button class="btn-fill xl">
-            <span class="material-icons-round">add</span>
-            fill xl
-          </button>
-          <button class="btn-fill lg">
-            <span class="material-icons-round">add</span>
-            fill lg
-          </button>
-          <button class="btn-fill md">
-            <span class="material-icons-round">add</span>
-            fill md
-          </button>
-          <button class="btn-fill sm">
-            <span class="material-icons-round">add</span>
-            fill sm
-          </button>
-          <button class="btn-fill xs">
-            <span class="material-icons-round">add</span>
-            fill xs
-          </button>
-          <button class="btn-fill xxl" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            fill xxl
-          </button>
-          <button class="btn-fill xl" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            fill xl
-          </button>
-          <button class="btn-fill lg" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            fill lg
-          </button>
-          <button class="btn-fill md" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            fill md
-          </button>
-          <button class="btn-fill sm" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            fill sm
-          </button>
-          <button class="btn-fill xs" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            fill xs
-          </button>
-        </pre>
-        <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </code>
-      <!-- //🔴🟡 code -->
-    </article>
-    <article class="gd-example-wrap">
-      <h3>fillTonal - with icon</h3>
-      <!-- 🧡💛 UI -->
-      <div class="gd-example">
-        <button class="btn-fillTonal xxl">
-          <span class="material-icons-round">add</span>
-          fillTonal xxl
-        </button>
-        <button class="btn-fillTonal xl">
-          <span class="material-icons-round">add</span>
-          fillTonal xl
-        </button>
-        <button class="btn-fillTonal lg">
-          <span class="material-icons-round">add</span>
-          fillTonal lg
-        </button>
-        <button class="btn-fillTonal md">
-          <span class="material-icons-round">add</span>
-          fillTonal md
-        </button>
-        <button class="btn-fillTonal sm">
-          <span class="material-icons-round">add</span>
-          fillTonal sm
-        </button>
-        <button class="btn-fillTonal xs">
-          <span class="material-icons-round">add</span>
-          fillTonal xs
-        </button>
-        <button class="btn-fillTonal xxl" disabled>
-          <span class="material-icons-round">add</span>
-          fillTonal xxl
-        </button>
-        <button class="btn-fillTonal xl" disabled>
-          <span class="material-icons-round">add</span>
-          fillTonal xl
-        </button>
-        <button class="btn-fillTonal lg" disabled>
-          <span class="material-icons-round">add</span>
-          fillTonal lg
-        </button>
-        <button class="btn-fillTonal md" disabled>
-          <span class="material-icons-round">add</span>
-          fillTonal md
-        </button>
-        <button class="btn-fillTonal sm" disabled>
-          <span class="material-icons-round">add</span>
-          fillTonal sm
-        </button>
-        <button class="btn-fillTonal xs" disabled>
-          <span class="material-icons-round">add</span>
-          fillTonal xs
-        </button>
-      </div>
-      <!-- 🧡💛 UI -->
-      <!-- 🔴🟡 code -->
-      <div class="code-head">
-        <span class="tit">HTML</span>
-      </div>
-      <code class="code-area">
-        <pre class="brush: html;">
-          <button class="btn-fillTonal xxl">
-            <span class="material-icons-round">add</span>
-            fillTonal xxl
-          </button>
-          <button class="btn-fillTonal xl">
-            <span class="material-icons-round">add</span>
-            fillTonal xl
-          </button>
-          <button class="btn-fillTonal lg">
-            <span class="material-icons-round">add</span>
-            fillTonal lg
-          </button>
-          <button class="btn-fillTonal md">
-            <span class="material-icons-round">add</span>
-            fillTonal md
-          </button>
-          <button class="btn-fillTonal sm">
-            <span class="material-icons-round">add</span>
-            fillTonal sm
-          </button>
-          <button class="btn-fillTonal xs">
-            <span class="material-icons-round">add</span>
-            fillTonal xs
-          </button>
-          <button class="btn-fillTonal xxl" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            fillTonal xxl
-          </button>
-          <button class="btn-fillTonal xl" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            fillTonal xl
-          </button>
-          <button class="btn-fillTonal lg" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            fillTonal lg
-          </button>
-          <button class="btn-fillTonal md" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            fillTonal md
-          </button>
-          <button class="btn-fillTonal sm" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            fillTonal sm
-          </button>
-          <button class="btn-fillTonal xs" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-            <span class="material-icons-round">add</span>
-            fillTonal xs
-          </button>
-        </pre>
-        <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </code>
-      <!-- //🔴🟡 code -->
-    </article>
-    <article class="gd-example-wrap">
-      <h3>primary - icon only</h3>
-      <!-- 🧡💛 UI -->
-      <div class="gd-example">
-        <button class="btn-primary ico-only xxl">
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-        </button>
-        <button class="btn-primary ico-only xl">
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-        </button>
-        <button class="btn-primary ico-only lg">
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-        </button>
-        <button class="btn-primary ico-only md">
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-        </button>
-        <button class="btn-primary ico-only sm">
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-        </button>
-        <button class="btn-primary ico-only xs">
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-        </button>
-        <button class="btn-primary ico-only xxl" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-        </button>
-        <button class="btn-primary ico-only xl" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-        </button>
-        <button class="btn-primary ico-only lg" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-        </button>
-        <button class="btn-primary ico-only md" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-        </button>
-        <button class="btn-primary ico-only sm" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-        </button>
-        <button class="btn-primary ico-only xs" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20ZM16 11H13V8C13 7.73478 12.8946 7.48043 12.7071 7.29289C12.5196 7.10536 12.2652 7 12 7C11.7348 7 11.4804 7.10536 11.2929 7.29289C11.1054 7.48043 11 7.73478 11 8V11H8C7.73479 11 7.48043 11.1054 7.2929 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.2929 12.7071C7.48043 12.8946 7.73479 13 8 13H11V16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16V13H16C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11Z" fill="currentColor"/>
-          </svg>
-        </button>
-      </div>
-      <!-- 🧡💛 UI -->
-      <!-- 🔴🟡 code -->
-      <div class="code-head">
-        <span class="tit">HTML</span>
-      </div>
-      <code class="code-area">
-        <pre class="brush: html;">
-          <button class="btn-primary ico-only xxl">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-primary ico-only xl">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-primary ico-only lg">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-primary ico-only md">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-primary ico-only sm">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-primary ico-only xs">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-primary ico-only xxl" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-primary ico-only xl" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-primary ico-only lg" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-primary ico-only md" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-primary ico-only sm" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-primary ico-only xs" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-        </pre>
-        <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </code>
-      <!-- //🔴🟡 code -->
-    </article>
-    <article class="gd-example-wrap">
-      <h3>outline - icon only</h3>
-      <!-- 🧡💛 UI -->
-      <div class="gd-example">
-        <button class="btn-outline ico-only xxl">
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outline ico-only xl">
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outline ico-only lg">
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outline ico-only md">
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outline ico-only sm">
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outline ico-only xs">
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outline ico-only xxl" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outline ico-only xl" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outline ico-only lg" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outline ico-only md" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outline ico-only sm" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outline ico-only xs" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <span class="material-icons-round">add</span>
-        </button>
-      </div>
-      <!-- 🧡💛 UI -->
-      <!-- 🔴🟡 code -->
-      <div class="code-head">
-        <span class="tit">HTML</span>
-      </div>
-      <code class="code-area">
-        <pre class="brush: html;">
-          <button class="btn-outline ico-only xxl">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outline ico-only xl">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outline ico-only lg">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outline ico-only md">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outline ico-only sm">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outline ico-only xs">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outline ico-only xxl" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outline ico-only xl" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outline ico-only lg" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outline ico-only md" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outline ico-only sm" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outline ico-only xs" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-        </pre>
-        <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </code>
-      <!-- //🔴🟡 code -->
-    </article>
-    <article class="gd-example-wrap">
-      <h3>outlineTonal - icon only</h3>
-      <!-- 🧡💛 UI -->
-      <div class="gd-example">
-        <button class="btn-outlineTonal ico-only xxl">
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outlineTonal ico-only xl">
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outlineTonal ico-only lg">
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outlineTonal ico-only md">
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outlineTonal ico-only sm">
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outlineTonal ico-only xs">
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outlineTonal ico-only xxl" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outlineTonal ico-only xl" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outlineTonal ico-only lg" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outlineTonal ico-only md" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outlineTonal ico-only sm" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-outlineTonal ico-only xs" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <span class="material-icons-round">add</span>
-        </button>
-      </div>
-      <!-- 🧡💛 UI -->
-      <!-- 🔴🟡 code -->
-      <div class="code-head">
-        <span class="tit">HTML</span>
-      </div>
-      <code class="code-area">
-        <pre class="brush: html;">
-          <button class="btn-outlineTonal ico-only xxl">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outlineTonal ico-only xl">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outlineTonal ico-only lg">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outlineTonal ico-only md">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outlineTonal ico-only sm">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outlineTonal ico-only xs">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outlineTonal ico-only xxl" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outlineTonal ico-only xl" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outlineTonal ico-only lg" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outlineTonal ico-only md" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outlineTonal ico-only sm" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-outlineTonal ico-only xs" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-        </pre>
-        <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </code>
-      <!-- //🔴🟡 code -->
-    </article>
-    <article class="gd-example-wrap">
-      <h3>fill - icon only</h3>
-      <!-- 🧡💛 UI -->
-      <div class="gd-example">
-        <button class="btn-fill ico-only xxl">
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-fill ico-only xl">
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-fill ico-only lg">
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-fill ico-only md">
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-fill ico-only sm">
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-fill ico-only xs">
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-fill ico-only xxl" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-fill ico-only xl" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-fill ico-only lg" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-fill ico-only md" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-fill ico-only sm" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <span class="material-icons-round">add</span>
-        </button>
-        <button class="btn-fill ico-only xs" disabled><!-- 비활성화 클래스 .disabled 또는 button태그 disabled속성 추가 -->
-          <span class="material-icons-round">add</span>
-        </button>
-      </div>
-      <!-- 🧡💛 UI -->
-      <!-- 🔴🟡 code -->
-      <div class="code-head">
-        <span class="tit">HTML</span>
-      </div>
-      <code class="code-area">
-        <pre class="brush: html;">
-          <button class="btn-fill ico-only xxl">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-fill ico-only xl">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-fill ico-only lg">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-fill ico-only md">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-fill ico-only sm">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-fill ico-only xs">
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-fill ico-only xxl" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-fill ico-only xl" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-fill ico-only lg" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-fill ico-only md" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-fill ico-only sm" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-          <button class="btn-fill ico-only xs" disabled>
-            <span class="material-icons-round">add</span>
-          </button>
-        </pre>
-        <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </code>
-      <!-- //🔴🟡 code -->
-    </article>
-  </div>    
+
+    </section>
+
+  </article>
+
 </div>
+
+
+
+
+
+
+
+
+
+

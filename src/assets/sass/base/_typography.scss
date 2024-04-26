@@ -1,12 +1,12 @@
 $font-size-root:  14px;
 
-$font-size-display-lg: round($font-size-root * 1.8);
-$font-size-display-md: round($font-size-root * 1.6);
-$font-size-display-sm: round($font-size-root * 1.4);
+$font-size-display-lg: round($font-size-root * 2);
+$font-size-display-md: round($font-size-root * 1.8);
+$font-size-display-sm: round($font-size-root * 1.6);
 
-$font-size-heading-lg: round($font-size-root * 1.3);
-$font-size-heading-md: round($font-size-root * 1.2);
-$font-size-heading-sm: round($font-size-root * 1.15);
+$font-size-heading-lg: round($font-size-root * 1.4);
+$font-size-heading-md: round($font-size-root * 1.3);
+$font-size-heading-sm: round($font-size-root * 1.2);
 
 $font-size-body-lg: $font-size-root + 1;
 $font-size-body-md: $font-size-root;
@@ -92,7 +92,7 @@ $usage-map: (
 $weight-map: (
   bold,
   semibold,
-  medium,
+  // medium,
   regular,
 );
 
@@ -134,7 +134,7 @@ $weight-map: (
 
 .fw-bold{font-weight:var(--font-weight-bold) !important;}
 .fw-semibold{font-weight:var(--font-weight-semibold) !important;}
-.fw-medium{font-weight:var(--font-weight-medium) !important;}
+// .fw-medium{font-weight:var(--font-weight-medium) !important;}
 .fw-regular{font-weight:var(--font-weight-regular) !important;}
 
 .fc-100{color:var(--text-color-100);}
@@ -447,3 +447,15 @@ h4,
 .h4{@include typo-heading-sm-semibold;margin:0;}
 h5,
 .h5{@include typo-body-lg-medium;margin:0;}
+
+.title-lg{@include typo-heading-lg-bold;}
+.title-md{@include typo-heading-md-bold;}
+.title-sm{@include typo-heading-sm-bold;}
+
+.body-lg{@include typo-body-lg-regular;}
+.body-md{@include typo-body-md-regular;}
+
+.caption-lg{@include typo-caption-lg-regular;}
+.caption-md{@include typo-caption-md-regular;}
+
+
