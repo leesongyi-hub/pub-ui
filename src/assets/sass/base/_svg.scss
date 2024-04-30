@@ -9,7 +9,7 @@
 /* color */
 .ico-white{color:var(--base-color-white)}
 .ico-gray{color:var(--icon-color-default)}
-.ico-lightgray{color:var(--icon-color-lighter)}
+.ico-lightgray{color:var(--icon-color-lighter) !important;}
 .ico-primary{color:var(--icon-color-primary)}
 .ico-error{color:var(--icon-color-error)}
 .ico-warning{color:var(--icon-color-warning)}

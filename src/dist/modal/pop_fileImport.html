@@ -1,0 +1,49 @@
+<div class="modal modal-fileImport fade" id="modal-fileImport" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
+  <div class="modal-dialog w500">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="tit">가져오기</p>
+        <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
+          <svg class="ico ico-lg" role="presentation" aria-hidden="true" focusable="false">
+            <use xlink:href="#ico-close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <section>
+          <div class="form-block account-item mb-16px d-flex align-items-center">
+            <label class="input-label w-80px" for="">파일형식</label>
+            <div class="form-area flex-fill">
+              <select id="">
+                <option>Excel</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-block account-item mb-16px d-flex align-items-center">
+            <label class="input-label w-80px">첨부파일</label>
+            <div class="form-area flex-fill">
+              <div class="custom-fileInput mb-8px">
+                <input type="text" class="upload-name" value="" placeholder="선택된 파일 없음" readonly>
+                <label for="file" class="button button-outline button-md">
+                  <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
+                    <use xlink:href="#ico-clip"></use>
+                  </svg>
+                  <span class="label">파일 선택</span>
+                </label>
+                <input type="file" id="file" class="blind">
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="sampleCheck1">
+                <label class="custom-control-label" for="sampleCheck1"><span>기존 데이터 초기화 (덮어쓰기)</span></label>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="button button-outline button-lg xl w-60px" data-dismiss="modal">취소</button>
+        <button type="button" class="button button-primary button-lg xl w-60px" data-dismiss="modal">저장</button>
+      </div>
+    </div>
+  </div>
+</div>

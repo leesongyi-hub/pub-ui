@@ -98,9 +98,9 @@ button[type="submit"]:not(:disabled):not(.disabled):focus-visible{outline:3px so
 }
 
 .button-ghost{
-  color: var(--btn-outlineTonal-text-color);background-color: transparent;border:0;
+  color: var(--btn-outline-text-color);background-color: transparent;border:0;
   &:hover{
-    background-color: rgba(0,0,0,.2);
+    background-color: var(--btn-fill-hover-color);
   }
 }
 
@@ -159,6 +159,6 @@ button[type="submit"]:not(:disabled):not(.disabled):focus-visible{outline:3px so
   }
 }
 
-// .text-link{text-decoration: underline;}
+.text-link{text-decoration: underline;}
 // .btn-underline{text-decoration: underline;border:0;}
 

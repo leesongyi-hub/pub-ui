@@ -5,7 +5,7 @@
 .wrap .container{width:100%;max-width:100%;padding:0;margin:0;}
 .wrap .content{width:100%;padding-left:240px;}
 .wrap .main-cont{position:absolute;top:52px;bottom:0;left:240px;right:0;overflow-x:auto;}
-.wrap.off .main-cont{left:52px;}
+.wrap.fold .main-cont{left:52px;}
 .wrap .main-header{
   background-color: rgba(255, 255, 255, 0.8);
 	-webkit-backdrop-filter: blur(2px);
@@ -74,7 +74,7 @@
 [class*="modal-account"] .account-area .account-item{display: flex;margin-bottom:16px;}
 [class*="modal-account"] .account-area .account-item:last-child{margin-bottom:0;}
 [class*="modal-account"] .account-area .account-item > label{width:160px;min-width:160px;color:var(--text-color-light)}
-[class*="modal-account"] .account-area .account-item .input-label{line-height:36px;}
+[class*="modal-account"] .account-area .account-item .input-label{line-height:32px;}
 [class*="modal-account"] .account-area .form-area{flex: 1;width:calc(100% - 160px)}
 [class*="modal-account"] .sub-field{margin-top:24px;padding-top:24px;border-top:1px solid var(--border-color-light)}
 
@@ -82,7 +82,7 @@
 [class*="modal-team-"] .account-area .account-item{display: flex;margin-bottom:16px;}
 [class*="modal-team"] .account-area .account-item:last-child{margin-bottom:0;}
 [class*="modal-team-"] .account-area .account-item > label{width:160px;min-width:160px;color:var(--text-color-light)}
-[class*="modal-team-"] .account-area .account-item .input-label{line-height:36px;}
+[class*="modal-team-"] .account-area .account-item .input-label{line-height:32px;}
 [class*="modal-team-"] .account-area .form-area{flex: 1;width:calc(100% - 160px)}
 [class*="modal-team"] .sub-field{margin-top:24px;padding-top:24px;border-top:1px solid var(--border-color-light)}
 
@@ -134,7 +134,7 @@
 .disabled-dim .txt{color:#fff;}
 
 .taskProgress-area{position:relative;}
-.taskProgress-state{display:flex;position:absolute;bottom:14px;left:20px;}
+.taskProgress-state{display:flex;position:absolute;bottom:12px;left:10px;}
 .taskProgress-area .finished{display: flex;padding:1px;background-color:var(--base-color-primary-800);border-radius: var(--border-radius-circle);}
 .taskProgress-area .finished svg{width:13px;}
 .taskProgress-area .ing{display:flex;padding:1px;background-color:var(--base-color-primary-800);border-radius: var(--border-radius-circle);}

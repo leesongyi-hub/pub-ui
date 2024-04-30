@@ -18,6 +18,7 @@
 .custom-control{
   display:flex;
   padding-left:0;
+  min-height:auto;
 
   .custom-control-input{
     width:20px;
@@ -41,6 +42,7 @@
   }
   .custom-control-input + .custom-control-label span{
     margin-left:8px;
+    line-height:20px;
   }
 }
 
@@ -49,12 +51,14 @@
 
 /*checkbox*/
 .custom-checkbox{
+  min-height:auto;
+}
+.custom-checkbox{
   .custom-control-label::before{
     position: static;
     min-width:20px;
     width:20px;
     height:20px;
-    margin-top:2px;
     border-color:var(--checkbox-border-color); 
     border-radius: var(-checkbox-border-radius);
   }
@@ -110,7 +114,6 @@
     min-width:20px;
     width:20px;
     height:20px;
-    margin-top:2px;
     border-color:var(--checkbox-border-color); 
     border-radius: var(--border-radius-circle); 
   }
@@ -125,7 +128,7 @@
     background-color:var(--radio-checked-bg-color);
     border-radius: var(--border-radius-circle);
     left:5px;
-    top:7px;
+    top:5px;
   }
   .custom-control-input:checked ~ .custom-control-label::before{
     background-color:#fff;
@@ -153,6 +156,11 @@
     background-color:var(--radio-disabled-border-color);
   }
 }
+
+/*size*/
+.custom-checkbox.sm .custom-control-label::before{width:18px;min-width:18px;height:18px;}
+.custom-checkbox.sm .custom-control-input + .custom-control-label span{line-height:18px;}
+.custom-checkbox.sm .custom-control-input:checked ~ .custom-control-label::before{background-size:12px;}
 
 /*align*/
 .custom-control + .custom-control{margin-left:16px;}
@@ -223,6 +231,7 @@ select, .select{
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M19 9L12 16L5 9' stroke='%23999999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 8px center;
+  background-size:18px;
   -webkit-appearance:none;
   -moz-appearance:none;
   appearance:none;
@@ -324,7 +333,7 @@ label .col-required{margin-left:4px;}
 /* input file custom */
 .custom-fileInput{display:flex;}
 .custom-fileInput .upload-name {background-color:#fff;}
-.custom-fileInput label {display: inline-block;width:auto;margin-left:8px;cursor: pointer;}
+.custom-fileInput label {display:flex;width:auto;margin-left:8px;cursor: pointer;}
 
 /* 입력한 값에 따라 높이조절되는 textarea */
 .textarea-autoHeight.md{height:32px;min-height:32px;padding:4px 10px;}

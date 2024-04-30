@@ -3,7 +3,7 @@
 #wrapper h4,
 #wrapper h5 {margin-bottom:10px;}
 
-.gd-wrap > *{font-size:16px;}
+
 
 
 /* left area */
@@ -154,7 +154,7 @@ section{margin-bottom:40px;}
   top:48px;
   padding:12px 0;
   margin-bottom:24px;
-  font-size:56px;
+  font-size:50px;
   font-weight:bold;
   line-height:1.2;
   background-color: rgba(255, 255, 255, 0.6);
@@ -201,3 +201,5 @@ section{margin-bottom:40px;}
 #admin-theme-blue + label{background-color:var(--base-color-blue-500);border:2px solid var(--base-color-blue-600)}
 #admin-theme-purple + label{background-color:var(--base-color-purple-500);border:2px solid var(--base-color-purple-600)}
 #admin-theme-black + label{background-color:var(--base-color-black-500);border:2px solid var(--base-color-black-600)}
+
+.preview-area{padding:20px;border:1px solid #eee;border-bottom:0;}
