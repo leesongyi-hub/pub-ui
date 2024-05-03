@@ -15,7 +15,6 @@ UI.includeSVG = {
             if (this.status == 200) {elmnt.innerHTML = this.responseText;}
             if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
             elmnt.removeAttribute("data-include");
-            includeHTML();
           }
         }
         xhttp.open("GET", file, true);
@@ -33,6 +32,20 @@ UI.bsDropDown = {
 }
 
 UI.bsTooltip = {
+  init: function(){
+    $("[data-tooltip=tooltip]").tooltip({
+      trigger: 'hover',
+      template: '<div class="tooltip tooltip-label" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+    });
+
+    $("[data-tooltip=tooltip]").tooltip({
+      trigger: 'click',
+      template: '<div class="tooltip tooltip-guide" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+    });
+  }
+}
+
+UI.bsMultiModal = {
   init: function(){
     $(document).on('show.bs.modal', '.modal', function() {
       const zIndex = 1040 + 10 * $('.modal:visible').length;
@@ -85,7 +98,12 @@ UI.expendedNavi= {
     $('.navi-btn').click(function() {
       var $subWrap = $(this).next('.sub-menu');
       if ($subWrap.length) {
-        self.toggleDisplay($subWrap);
+        if ($subWrap.css('display') === 'block') {
+          $subWrap.slideUp('fast');
+        } else {
+          $('.sub-menu').slideUp('fast');
+          $subWrap.slideDown('fast');
+        }
       } else {
         self.resetMenuState($(this));
       }
@@ -96,15 +114,7 @@ UI.expendedNavi= {
       $(this).addClass('on');
       $(this).parents('.sub-menu').prev('.navi-btn').addClass('active');
     });
-  },    
-  toggleDisplay: function($subWrap) {
-    if ($subWrap.css('display') === 'block') {
-      $subWrap.slideUp('fast');
-    } else {
-      $('.sub-menu').slideUp('fast');
-      $subWrap.slideDown('fast');
-    }
-  },    
+  },
   resetMenuState: function($currentBtn = $()) {
     $('.navi .active').removeClass('active');
     $('.sub-menu a').removeClass('on');
@@ -170,11 +180,10 @@ UI.fileInputValueText = {
   }
 }
 
-
-  
 $(function () {
   UI.includeSVG.init();
   UI.bsTooltip.init();
+  UI.bsMultiModal.init();
   UI.bsDropDown.init();
   UI.themeChange.init();
   UI.expendedNavi.init();

@@ -7,6 +7,10 @@
 .table-wrap .nodata{text-align: center;}
 .table-wrap .nodata td{padding:40px 0;}
 
+.border-none.table-wrap th, .table-wrap td{border-right:0;}
+.border-none.table-wrap{border-left:0;}
+.border-none.table-wrap{min-width:auto;}
+
 /*custom-table*/
 .res-table{position:relative;display:flex;flex-wrap: wrap;border-top:1px solid var(--border-color-light);}
 .res-table .tr{display:flex;flex:0 50%;padding:0;align-items:center;border-bottom:1px solid var(--border-color-light);}

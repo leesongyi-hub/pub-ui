@@ -10,105 +10,84 @@
         </button>
       </div>
       <div class="modal-body">
-        <div class="account-area">
-          <div class="form-block account-item validate-error">
-            <label class="input-label" for="">사용자 아이디<span class="col-required">*</span></label>
-            <div class="form-area">
-              <input type="text" placeholder="아이디 입력" value="" class="md">
-              <p class="validate-txt">중복된 아이디입니다.</p>
+        <div class="colList-area">
+          <label class="colList-item">
+            <span class="colList-label">사용자 아이디<span class="col-required">*</span></span>
+            <div class="colList-cont">
+              <input type="text" placeholder="아이디 입력">
             </div>
-          </div>
-          <div class="form-block account-item">
-            <label class="input-label" for="">사용자 이름</label>
-            <div class="form-area">
-              <input type="text" placeholder="사용자 이름 입력" value="" class="md">
+          </label>
+          <label class="colList-item">
+            <span class="colList-label">사용자 이름</span>
+            <div class="colList-cont">
+              <input type="text" placeholder="사용자 이름 입력">
               <p class="validate-info">입력하지 않으면 상담원으로 입력됩니다.</p>
             </div>
-          </div>
-          <div class="form-block account-item validate-success">
-            <label class="input-label" for="">비밀번호<span class="col-required">*</span></label>
-            <div class="form-area">
-              <input type="password" placeholder="비밀번호 입력" value="" class="md">
+          </label>
+          <label class="colList-item validate-error">
+            <span class="colList-label">비밀번호</span>
+            <div class="colList-cont">
+              <input type="password" placeholder="비밀번호 입력">
               <p class="validate-txt">사용 가능합니다.</p>
             </div>
-          </div>
-          <div class="form-block account-item validate-error">
-            <label class="input-label" for="">비밀번호 확인<span class="col-required">*</span></label>
-            <div class="form-area">
-              <input type="password" placeholder="비밀번호 입력" value="" class="md">
-              <p class="validate-txt">비밀번호가 서로 다릅니다.</p>
+          </label>
+          <label class="colList-item validate-success">
+            <span class="colList-label">비밀번호 확인</span>
+            <div class="colList-cont">
+              <input type="password" placeholder="비밀번호 입력">
+              <p class="validate-txt">사용 가능합니다.</p>
             </div>
-          </div>
-          <div class="form-block account-item">
-            <label class="input-label" for="">역할<span class="col-required">*</span></label>
-            <div class="form-area">
-              <select value="" class="md">
+          </label>
+          <label class="colList-item">
+            <span class="colList-label">역할<span class="col-required">*</span></span>
+            <div class="colList-cont">
+              <select>
                 <option>역할을 선택해주세요.</option>
+                <option>역할1</option>
+                <option>역할2</option>
               </select>
               <p class="validate-info">어드바이저에서 사용될 권한을 부여합니다.</p>
             </div>
-          </div>
-          <div class="form-block account-item">
-            <label class="input-label" for="">내선번호</label>
-            <div class="form-area">
-              <input type="text" placeholder="내선번호 입력" value="" class="md">
+          </label>
+          <label class="colList-item">
+            <span class="colList-label">내선번호</span>
+            <div class="colList-cont">
+              <input type="text" placeholder="내선번호 입력">
               <p class="validate-info">숫자만 입력가능합니다.</p>
             </div>
-          </div>
+          </label>
           <div class="sub-field">
-            <div class="form-block account-item">
-              <label class="input-label" for="">부서정보</label>
-              <div class="form-area">
-                <div class="searchSelect">
-                  <div class="select md">
-                    <span class="selected-option">부서정보 선택</span>
-                  </div>
-                  <div class="search-area">
-                    <div class="search-box">
-                      <span class="material-icons col-lightgray">search</span>
-                      <input class="filter" type="text" placeholder="검색">
-                    </div>
-                    <ul class="options">
-                    </ul>
-                  </div>
-                </div>
+            <label class="colList-item">
+              <span class="colList-label">사번</span>
+              <div class="colList-cont">
+                <input type="text" placeholder="사번 입력">
               </div>
-            </div>
-            <div class="form-block account-item">
-              <label class="input-label" for="">사번</label>
-              <div class="form-area">
-                <input type="text" placeholder="사번입력" value="" class="md">
+            </label>
+            <label class="colList-item">
+              <span class="colList-label">담당 업무</span>
+              <div class="colList-cont">
+                <input type="text" placeholder="담당 업무 입력">
               </div>
+            </label>
+            <div class="colList-item">
+              <span class="colList-label">상담관리자 여부</span>
+              <div class="colList-cont">Y</div>
             </div>
-            <div class="form-block account-item">
-              <label class="input-label" for="">부_내선번호</label>
-              <div class="form-area">
-                <input type="text" placeholder="숫자만 입력" value="" class="md">
-              </div>
-            </div>
-            <div class="form-block account-item">
-              <label class="input-label" for="">담당 업무</label>
-              <div class="form-area">
-                <input type="text" placeholder="담당 업무 입력" value="" class="md">
-              </div>
-            </div>
-            <div class="form-block account-item">
-              <label>상담관리자 여부</label>
-              <div class="form-area">
-                <p class="read-txt">Y</p>
-              </div>
-            </div>
-            <div class="form-block account-item w-100">
-              <label class="" for="">계정 잠금여부</label>
-              <div class="form-area">
+            <div class="colList-item">
+              <span class="colList-label">계정 잠금여부</span>
+              <div class="colList-cont">
                 <div class="d-flex">
                   <div class="custom-control custom-radio">
                     <input type="radio" class="custom-control-input" id="sampleRadio1" name="csampleRadiogroup1" checked="">
-                    <label class="custom-control-label" for="sampleRadio1"><span>잠금</span></label>
+                    <label class="custom-control-label" for="sampleRadio1">
+                      <span>잠금</span>
+                    </label>
                   </div>
                   <div class="custom-control custom-radio">
                     <input type="radio" class="custom-control-input" id="sampleRadio1-1" name="csampleRadiogroup1">
-                    <label class="custom-control-label" for="sampleRadio1-1"><span>잠금 해제</span></label>
+                    <label class="custom-control-label" for="sampleRadio1-1">
+                      <span>잠금 해제</span>
+                    </label>
                   </div>
                 </div>
               </div>

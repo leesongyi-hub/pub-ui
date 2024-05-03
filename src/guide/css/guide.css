@@ -7,7 +7,7 @@
 
 
 /* left area */
-.left_area {display:flex;flex-direction:column;border-right:1px solid #ddd;height:100vh;min-width:240px;}
+.left_area {display:flex;flex-direction:column;border-right:1px solid #ddd;height:calc(100vh - 48px);min-width:240px;}
 .left_head {display:flex;align-items:center;height:50px;border-bottom:1px solid rgba(255,255,255,.2);overflow:hidden;}
 .left_head .btn_navi {position:absolute;display:inline-block;width:23px;height:19px;left:15px;top:15px;background:url(../img/layout/icon_menu.png) no-repeat left top;}
 .left_head h1 {display:inline-block;padding:0 16px;font-size:18px;font-weight:600;}
@@ -184,7 +184,11 @@ section{margin-bottom:40px;}
 .theme-area svg{color:var(--bg-color-primary);}
 
 .theme-area label{display:inline-flex;align-items: center;justify-content: center;width:28px;height:28px;border-radius: 50%;font-size:0;cursor: pointer;}
-.theme-area input{position: absolute;top:-9999px;left:-9999px;}
+.theme-area input{ position:absolute;
+  width:1px;height:1px;
+  clip: rect(0 0 0 0);
+  margin:-1px;
+  overflow: hidden;}
 .theme-area input:checked + label::after{
   content:'';
   display:block;

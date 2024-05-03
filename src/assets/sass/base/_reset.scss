@@ -84,7 +84,8 @@ input::-webkit-inner-spin-button {
 
 .blind{
   position:absolute;
-  width:1px;height:1px;
+  width:1px !important;
+  height:1px !important;
   clip: rect(0 0 0 0);
   margin:-1px;
   overflow: hidden;

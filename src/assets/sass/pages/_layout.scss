@@ -94,18 +94,18 @@
 .comp-item{display:flex;padding:8px 16px;align-items: center;background-color:var(--bg-color-default);border-bottom:1px solid var(--border-color-light);}
 .comp-item .left-area{display:flex;}
 .comp-item .left-area label{margin-right:4px;}
-.comp-item .right-area{display:flex;margin-left: auto;}
+.comp-item .right-area{display:flex;margin-left: auto;align-items: center;}
 .addSubComp-btn-area{width:100%;}
 .addSubComp-btn-area:hover{background-color:var(--bg-color-default)}
-.addSubComp-btn-area .addSubComp-btn{display:flex;width:100%;justify-content: center;align-items: center;height:32px;font-size:13px;font-weight:500;}
+.addSubComp-btn-area .addSubComp-btn{display:flex;width:100%;justify-content: center;align-items: center;padding:7px 0;}
 
 .compSub-area .comp-item{position:relative;padding-left:32px;background-color: #fff;}
 .compSub-area .comp-item::after{position:absolute;content:'';display:inline-block;width:10px;height:1px; background-color:var(--border-color-dark);top:50%;left:16px;}
 .compSub-area .comp-item::before{position:absolute;content:'';display:inline-block;width:1px;height:8px; background-color:var(--border-color-dark);top:calc(50% - 8px);left:16px;}
 
-.comp-area .form-switch{width:56px;}
-.comp-area .form-switch label::after{content:'미사용';word-break:keep-all;position:absolute;top:0;left:22px;display:block;font-size:11px;line-height:24px;font-weight:700;color:var(--text-color-lighter);opacity: .9;letter-spacing:-.2px}
-.comp-area .form-switch input:checked + label::after{content:'사용';left:8px;color:#fff;}
+// .comp-area .form-switch{width:56px;}
+// .comp-area .form-switch label::after{word-break:keep-all;position:absolute;top:0;left:22px;display:block;font-size:11px;line-height:24px;font-weight:700;color:var(--text-color-lighter);opacity: .9;letter-spacing:-.2px}
+// .comp-area .form-switch input:checked + label::after{left:8px;color:#fff;}
 
 //시스템관리 > 시스템모니터링
 .monitoring-page .table-area{max-height: 582px;}
@@ -212,3 +212,10 @@
   .user-info.type-sm .user-name,
   .user-info.type-sm .user-sosok {font-weight:normal;}
 }
+
+/* */
+.colList-area .colList-item{display: flex;margin-bottom:16px;}
+.colList-area .colList-item:last-child{margin-bottom:0;}
+.colList-area .colList-item .colList-label{width:160px;color:var(--text-color-light)}
+.colList-area label.colList-item .colList-label{line-height:32px;}
+.colList-area .colList-cont{flex: 1;width:calc(100% - 160px)}

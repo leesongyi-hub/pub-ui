@@ -140,8 +140,6 @@
 
               <div class="table-area">
 
-
-
                 <table class="table-wrap">
                   <caption class="blind">사용자계정(ID), 이름, 내선번호, 사번, 계정유형, 관리자등록여부, 부서, 부서코드, 역할 정보에 대한 정보 제공 및 수정 및 삭제 기능 제공</caption>
                   <colgroup>
@@ -153,8 +151,7 @@
                     <col style="width:100px">
                     <col style="width:120px">
                     <col style="width:calc(100% - 80%)">
-                    <col style="width:40px">
-                    <col style="width:40px">
+                    <col style="width:60px">
                   </colgroup>
                   <thead>
                     <tr class="text-center">
@@ -171,8 +168,7 @@
                       <th scope="col">관리자 등록여부</th>
                       <th scope="col">부서</th>
                       <th scope="col">부서 코드</th>
-                      <th scope="col">수정</th>
-                      <th scope="col">삭제</th>
+                      <th scope="col">편집</th>
                     </tr>
                   </thead>
                   <tbody class="text-center">
@@ -196,16 +192,21 @@
                       <td>단기채권팀 > G430 > T431</td>
                       <td class="text-center">
                         <div class="d-flex justify-content-center">
-                          <button type="button" class="button button-ghost button-xs ico-only" data-toggle="modal" data-target="#modal-editAccount">
+                          <button
+                            type="button"
+                            class="button button-ghost button-xs ico-only"
+                            data-toggle="modal" data-target="#modal-editAccount"
+                            data-tooltip="tooltip" data-placement="top" data-boundary="window" data-original-title="수정"
+                          >
                             <svg class="ico ico-lightgray ico-bold" role="presentation" aria-hidden="true" focusable="false">
                               <use xlink:href="#ico-edit"></use>
                             </svg>
                           </button>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="d-flex justify-content-center">
-                          <button type="button" class="button button-ghost button-xs ico-only">
+                          <button
+                            type="button"
+                            class="button button-ghost button-xs ico-only"
+                            data-tooltip="tooltip" data-placement="top" data-boundary="window" data-original-title="삭제"
+                          >
                             <svg class="ico ico-lightgray ico-bold" role="presentation" aria-hidden="true" focusable="false">
                               <use xlink:href="#ico-deleted"></use>
                             </svg>

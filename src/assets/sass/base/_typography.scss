@@ -6,7 +6,7 @@ $font-size-display-sm: round($font-size-root * 1.6);
 
 $font-size-heading-lg: round($font-size-root * 1.4);
 $font-size-heading-md: round($font-size-root * 1.3);
-$font-size-heading-sm: round($font-size-root * 1.2);
+$font-size-heading-sm: round($font-size-root + 2);
 
 $font-size-body-lg: $font-size-root + 1;
 $font-size-body-md: $font-size-root;
@@ -448,9 +448,13 @@ h4,
 h5,
 .h5{@include typo-body-lg-medium;margin:0;}
 
-.title-lg{@include typo-heading-lg-bold;}
-.title-md{@include typo-heading-md-bold;}
-.title-sm{@include typo-heading-sm-bold;}
+.modal-tit{@include typo-heading-lg-bold;}
+
+.tit-lg{@include typo-display-sm-semibold;}
+.tit-md{@include typo-heading-lg-semibold;}
+
+.subTit-lg{@include typo-heading-md-semibold;}
+.subTit-md{@include typo-heading-sm-semibold;}
 
 .body-lg{@include typo-body-lg-regular;}
 .body-md{@include typo-body-md-regular;}
