@@ -6,7 +6,7 @@
 .form-switch label .btn-switch {position:absolute;top: 0;width: 100%;width:42px;height: 22px;border-radius: 16px;background:var(--base-color-gray-60);}
 .form-switch label .btn-switch:after {content:'';position:absolute;left: 3px;top:50%;transform:translateY(-50%);width:16px;height:16px;border-radius: 50%;background: #FFF;transition: all 0.3s;}
 .form-switch label input:checked + .btn-switch {background:var(--btn-primary-bg-color);}
-.form-switch label input:checked + .btn-switch:after {left:calc(100% - 16px - 3px);box-shadow:0 0 10px rgba(0,0,0,.2);}
+.form-switch label input:checked + .btn-switch:after {left:calc(100% - 16px - 3px);}
 
 .form-switch.sm{padding-right:32px;line-height:18px;}
 .form-switch.sm .label{font-size:13px;line-height:18px;}

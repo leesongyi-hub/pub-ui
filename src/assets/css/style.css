@@ -353,7 +353,7 @@
   --base-color-primary-700: var(--base-color-yellow-700);
   --base-color-primary-800: var(--base-color-yellow-800);
   --base-color-primary-900: var(--base-color-yellow-900);
-  --btn-primary-text-color: var(--base-color-primary-900);
+  --btn-primary-text-color: var(--text-color-default);
   --btn-fillTonal-bg-color: var(--base-color-primary-30);
   --btn-fillTonal-border-color: var(--base-color-primary-30);
   --btn-fillTonal-text-color: var(--text-color-primary-900);
@@ -954,6 +954,22 @@ input::-webkit-inner-spin-button {
 
 .fc-900 {
   color: var(--text-color-900);
+}
+
+.fc-dark {
+  color: var(--text-color-dark);
+}
+
+.fc-default {
+  color: var(--text-color-default);
+}
+
+.fc-light {
+  color: var(--text-color-light);
+}
+
+.fc-lighter {
+  color: var(--text-color-lighter);
 }
 
 .h1 {
@@ -4802,8 +4818,6 @@ label .col-required {
 
 .form-switch label input:checked + .btn-switch:after {
   left: calc(100% - 16px - 3px);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .form-switch.sm {

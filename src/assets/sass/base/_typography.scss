@@ -147,6 +147,11 @@ $weight-map: (
 .fc-800{color:var(--text-color-800);}
 .fc-900{color:var(--text-color-900);}
 
+.fc-dark{color:var(--text-color-dark);}
+.fc-default{ color:var(--text-color-default);}
+.fc-light{ color:var(--text-color-light);}
+.fc-lighter{ color:var(--text-color-lighter);}
+
 @mixin typo-display-lg-bold {
   font-size: var(--font-size-display-lg);
   font-weight: var(--font-weight-bold);
@@ -436,7 +441,6 @@ $weight-map: (
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-caption-sm);
 }
-
 
 .h1{@include typo-display-sm-bold;margin:0;}
 h2,
