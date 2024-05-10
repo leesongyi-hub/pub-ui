@@ -142,15 +142,15 @@
 [class*='mask-']{display:inline-flex;align-items: center;justify-content: center;}
 
 //color
-.col-dark{color:var(--text-color-dark)}
-.col-gray{color:var(--text-color-default)}
-.col-lightgray{color:var(--text-color-light)}
-.col-caption{color:var(--text-color-lighter)}
+.col-dark{color:var(--font-color-dark)}
+.col-gray{color:var(--font-color-default)}
+.col-lightgray{color:var(--font-color-light)}
+.col-caption{color:var(--font-color-lighter)}
 
-.col-required{color:var(--text-color-required)}
-.col-error{color:var(--text-color-error)}
-.col-warning{color:var(--text-color-warning)}
-.col-success{color:var(--text-color-success)}
+.col-required{color:var(--font-color-required)}
+.col-error{color:var(--font-color-error)}
+.col-warning{color:var(--font-color-warning)}
+.col-success{color:var(--font-color-success)}
 
 .col-blue{color:var(--base-color-blue-600)}
 .col-red{color:var(--base-color-red-600)}

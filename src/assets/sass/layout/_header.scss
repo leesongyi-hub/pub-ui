@@ -10,7 +10,7 @@
 
 /* 마이메뉴 */
 .my-dropdown{position:fixed;top:48px;right:16px;width:240px;background-color: var(--base-color-white);border:1px solid var(--border-color-default);border-radius: var(--border-radius-lg);box-shadow: var(--shadow-md)}
-.my-dropdown .my-info{@include typo-body-md-regular;padding:12px 14px;border-bottom:1px solid var(--border-color-light);color:var(--text-color-400)}
+.my-dropdown .my-info{@include typo-body-md-regular;padding:12px 14px;border-bottom:1px solid var(--border-color-light);color:var(--font-color-400)}
 .my-dropdown .my-list{padding:6px 6px;}
 .my-dropdown .my-list-item button{display:flex;width:100%;padding:0 8px;height:44px;align-items: center;border-radius: var(--border-radius-md);}
 .my-dropdown .my-list-item:hover{background-color: var(--bg-color-default);}

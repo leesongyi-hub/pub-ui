@@ -62,7 +62,10 @@
           </div>
         </div>
         <div class="main-body">
-          <div class="util-bar">
+          <!-- <div class="util-bar">
+
+          </div> -->
+          <div class="table-head-area d-flex justify-content-between align-items-end mb-16px">
             <div class="d-flex align-items-end">
               <div class="form-block">
                 <label for="accountKeyword">검색어</label>
@@ -75,9 +78,6 @@
                 </svg>
               </button>
             </div>
-          </div>
-          <div class="table-head-area d-flex justify-content-between align-items-end mb-16px">
-            <div class="total_count"></div>
             <div class="d-flex align-item-center">
               <button type="button" class="button button-primary button-md" data-toggle="modal" data-target="#modal-addRole">
                 <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
@@ -129,14 +129,25 @@
                     </div>
                   </td>
                   <td class="text-left">
-                    <button type="button" class="text-link text-left" data-toggle="modal" data-target="#modal-detailRole">기본 일반 상담원</button>
+                    기본 일반 상담원
                   </td>
                   <td class="text-left">관리도구전용</td>
                   <td class="text-left">관리도구전용</td>
                   <td class="txt-right">
                     <div class="d-flex justify-content-end">
-                      <div class="w-100px text-center">
-                        디폴트 변경 불가
+                      <button type="button" class="dropdown-toggle button button-ghost button-sm ico-only ml-8px" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="메뉴 더보기">
+                        <svg class="ico ico-sm ico-lightgray" role="presentation" aria-hidden="true" focusable="false">
+                          <use xlink:href="#ico-more"></use>
+                        </svg>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right  w-140px">
+                        <ul class="dropdown-list">
+                          <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-12px" data-toggle="modal" data-target="#modal-role">역할 수정</button></li>
+                          <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-12px">권한 설정</button></li>
+                          <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-12px">상담/관리 권한</button></li>
+                          <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-12px">역할별 지식관리</button></li>
+                          <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-12px col-red" style="padding-top:4px;margin-top:4px;border-top:1px solid #eee;">삭제</button></li>
+                        </ul>
                       </div>
                     </div>
                   </td>
@@ -149,14 +160,76 @@
                     </div>
                   </td>
                   <td class="text-left">
-                    <button type="button" class="text-link text-left" data-toggle="modal" data-target="#modal-detailRole">시스템 관리자</button>
+                    시스템 관리자
                   </td>
                   <td class="text-left">관리도구전용</td>
                   <td class="text-left">관리도구전용</td>
                   <td class="txt-right">
                     <div class="d-flex justify-content-end">
                       <button type="button" class="dropdown-toggle button button-ghost button-sm ico-only ml-8px" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="메뉴 더보기">
-                        <svg class="ico ico-md" role="presentation" aria-hidden="true" focusable="false">
+                        <svg class="ico ico-sm ico-lightgray" role="presentation" aria-hidden="true" focusable="false">
+                          <use xlink:href="#ico-more"></use>
+                        </svg>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right  w-140px">
+                        <ul class="dropdown-list">
+                          <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-12px"  data-toggle="modal" data-target="#modal-role">역할 수정</button></li>
+                          <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-12px">권한 설정</button></li>
+                          <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-12px">상담/관리 권한</button></li>
+                          <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-12px">역할별 지식관리</button></li>
+                          <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-12px col-red" style="padding-top:4px;margin-top:4px;border-top:1px solid #eee;">삭제</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox justify-content-center sm">
+                      <input type="checkbox" class="custom-control-input" id="list_check1">
+                      <label class="custom-control-label" for="list_check1"></label>
+                    </div>
+                  </td>
+                  <td class="text-left">
+                    시스템 관리자
+                  </td>
+                  <td class="text-left">관리도구전용</td>
+                  <td class="text-left">관리도구전용</td>
+                  <td class="txt-right">
+                    <div class="d-flex justify-content-end">
+                      <button type="button" class="dropdown-toggle button button-ghost button-sm ico-only ml-8px" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="메뉴 더보기">
+                        <svg class="ico ico-sm ico-lightgray" role="presentation" aria-hidden="true" focusable="false">
+                          <use xlink:href="#ico-more"></use>
+                        </svg>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right  w-140px">
+                        <ul class="dropdown-list">
+                          <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-12px"  data-toggle="modal" data-target="#modal-role">역할 수정</button></li>
+                          <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-12px">권한 설정</button></li>
+                          <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-12px">상담/관리 권한</button></li>
+                          <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-12px">역할별 지식관리</button></li>
+                          <li class="dropdown-list-item"><button class="d-flex w-100 py-6px px-12px col-red" style="padding-top:4px;margin-top:4px;border-top:1px solid #eee;">삭제</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox justify-content-center sm">
+                      <input type="checkbox" class="custom-control-input" id="list_check1">
+                      <label class="custom-control-label" for="list_check1"></label>
+                    </div>
+                  </td>
+                  <td class="text-left">
+                    시스템 관리자
+                  </td>
+                  <td class="text-left">관리도구전용</td>
+                  <td class="text-left">관리도구전용</td>
+                  <td class="txt-right">
+                    <div class="d-flex justify-content-end">
+                      <button type="button" class="dropdown-toggle button button-ghost button-sm ico-only ml-8px" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="메뉴 더보기">
+                        <svg class="ico ico-sm ico-lightgray" role="presentation" aria-hidden="true" focusable="false">
                           <use xlink:href="#ico-more"></use>
                         </svg>
                       </button>
@@ -182,780 +255,7 @@
     </div>
 
     <!-- 모달 : 관리 -->
-    <div class="modal modal-flexTab modal-role fade" id="modal-role" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
-      <div class="modal-dialog w-1000px">
-        <div class="modal-content"> 
-          <div class="modal-body p-0px">
-            <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
-              <span class="material-icons-round xl">close</span>
-            </button>
-            <div class="flex-tabs">
-              <nav class="nav-area">
-                <h2 class="tit-">역할 관리</h2>
-                <ul class="form-block nav nav-tabs" role="tablist" id="tabCont1">
-                  <li class="nav-item" role="presentation"><button type="button" class="nav-link active" data-toggle="tab" data-target="#tab1" type="button" role="tab" aria-selected="true">역할 수정</button></li>
-                  <li class="nav-item" role="presentation"><button type="button" class="nav-link" data-toggle="tab" data-target="#tab2" type="button" role="tab" aria-selected="true">권한설정</button></li>
-                  <li class="nav-item" role="presentation"><button type="button" class="nav-link" data-toggle="tab" data-target="#tab3" type="button" role="tab" aria-selected="true">상담/관리 권한</button></li>
-                  <li class="nav-item" role="presentation"><button type="button" class="nav-link" data-toggle="tab" data-target="#tab5" type="button" role="tab" aria-selected="true">역할별 지식관리</button></li>
-                </ul>
-              </nav>                
-              <div class="right-area">
-                <div class="tab-content" id="tabCont1">
-                  <div id="tab1" class="tab-pane active" role="tabpanel" tabindex="0">
-                    <article class="cont-area">
-                      <div class="cont-head">
-                        <p class="tit">역할 수정</p>
-                        <span class="mt-4px">현재 역할명: <strong>시스템관리자</strong></span>
-                      </div>
-                      <div class="cont-body">
-
-                        <!-- <div class="comp-loader">
-                          <div class="loader">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                          </div>
-                        </div> -->
-
-                        <section class="cont-sec">
-                          <div class="form-block validate-error">
-                            <label for="">역할명</label>
-                            <input type="text" placeholder="아이디 입력" value="기본 일반 상담원" class="lg w-240px">
-                            <p class="validate-txt">중복된 역할명이 존재합니다.</p>
-                          </div>
-                        </section>
-                        <section class="cont-sec">
-                          <p class="h4 tit">로그인 유형</p>
-                          <ul class="form-block">
-                            <li class="form-block-item">
-                              <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" id="radio1" name="tabSample1Radio1" checked>
-                                <label class="custom-control-label" for="radio1"><span>관리도구 전용</span></label>
-                              </div>
-                            </li>
-                            <li class="form-block-item">
-                              <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" id="radio2" name="tabSample1Radio1">
-                                <label class="custom-control-label" for="radio2"><span>어드바이저 + 관리도구</span></label>
-                              </div>
-                            </li>
-                          </ul>
-                        </section>
-                        <section class="cont-sec">
-                          <p class="h4 tit">상담원 권한</p>
-                          <ul class="form-block">
-                            <li class="form-block-item">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check1" checked>
-                                <label class="custom-control-label" for="check1"><span>어드바이저 관리자</span></label>
-                              </div>
-                            </li>
-                            <li class="form-block-item">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check2">
-                                <label class="custom-control-label" for="check2"><span>어드바이저 상담사</span></label>
-                              </div>
-                            </li>
-                            <li class="form-block-item">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check3">
-                                <label class="custom-control-label" for="check3"><span>채팅상담솔루션 상담사</span></label>
-                              </div>
-                            </li>
-                          </ul>
-                        </section>
-                        <section class="cont-sec">
-                          <p class="h4 tit">로그인 방식</p>
-                          <ul class="form-block">
-                            <li class="form-block-item">
-                              <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" id="radio11" name="tabSample1Radio2" checked>
-                                <label class="custom-control-label" for="radio11"><span>관리도구로 바로 로그인</span></label>
-                              </div>
-                            </li>
-                            <li class="form-block-item">
-                              <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" id="radio12" name="tabSample1Radio2">
-                                <label class="custom-control-label" for="radio12"><span>어드바이저 관리화면으로 바로 로그인</span></label>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" id="radio13" name="tabSample1Radio2">
-                                <label class="custom-control-label" for="radio13"><span>어드바이저 상담화면으로 바로 로그인</span></label>
-                              </div>
-                            </li>
-                          </ul>
-                        </section>
-
-                      </div>
-                      <div class="cont-foot">
-                        <div class="area-btn">
-                          <button type="button" class="btn-outline xl w-80px">취소</button>
-                          <button type="button" class="btn-primary xl w-80px">저장</button>
-                        </div>
-                      </div>                
-                    </article>
-                  </div>
-                  <!-- //역할 수정 -->
-
-                  <div id="tab2" class="tab-pane" role="tabpanel" tabindex="0">
-                    <article class="cont-area authorization-area">
-                      <div class="cont-head">
-                        <p class="tit">권한설정</p>
-                        <span class="mt-4px">현재 역할명: <strong>시스템관리자</strong></span>
-                      </div>
-                      <div class="cont-body">
-                        <div class="mb-28px">
-                          <p class="h4 tit mb-10px">공통</p>
-                          <div class="mb-12px">
-                            <p class="mb-4px">STT 청취 권한</p>
-                            <div class="d-flex">
-                              <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" id="sampleRadio1" name="csampleRadiogroup1">
-                                <label class="custom-control-label" for="sampleRadio1"><span>허용</span></label>
-                              </div>
-                              <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" id="sampleRadio1-1" name="csampleRadiogroup1" checked="">
-                                <label class="custom-control-label" for="sampleRadio1-1"><span>허용 안 함</span></label>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <p class="mb-4px">실시간 STT 청취 권한</p>
-                            <div class="d-flex">
-                              <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" id="sampleRadio2" name="csampleRadiogroup2">
-                                <label class="custom-control-label" for="sampleRadio2"><span>허용</span></label>
-                              </div>
-                              <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" id="sampleRadio2-1" name="csampleRadiogroup2" checked="">
-                                <label class="custom-control-label" for="sampleRadio2-1"><span>허용 안 함</span></label>
-                              </div>
-                            </div>
-                          </div>  
-                        </div>
-
-                        <div class="table-area mt-16px" style="overflow-x:unset">
-                          <p class="h4 tit mb-10px">관리도구</p>
-                          <table class="table-wrap">
-                            <colgroup>
-                              <col style="width:180px">
-                              <col style="width:calc(100% - 200px) / 6">
-                              <col style="width:calc(100% - 200px) / 6">
-                              <col style="width:calc(100% - 200px) / 6">
-                              <col style="width:calc(100% - 200px) / 6">
-                              <col style="width:calc(100% - 200px) / 6">
-                              <col style="width:calc(100% - 200px) / 6">
-                            </colgroup>
-                            <thead>
-                              <tr>
-                                <th>메뉴명</th>
-                                <th>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="" checked>
-                                    <label class="custom-control-label" for=""><span class="ml-8px">내 정보 열람</span></label>
-                                  </div>
-                                </th>
-                                <th>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="">
-                                    <label class="custom-control-label" for=""><span class="ml-8px">같은 역할<br />정보만 열람</span></label>
-                                  </div>
-                                </th>
-                                <th>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="">
-                                    <label class="custom-control-label" for=""><span class="ml-8px">전체 열람</span></label>
-                                  </div>
-                                </th>
-                                <th>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="">
-                                    <label class="custom-control-label" for=""><span class="ml-8px">추가/수정</span></label>
-                                  </div>
-                                </th>
-                                <th>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="">
-                                    <label class="custom-control-label" for=""><span class="ml-8px">삭제</span></label>
-                                  </div>
-                                </th>
-                                <th>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="">
-                                    <label class="custom-control-label" for=""><span class="ml-8px">다운로드</span></label>
-                                  </div>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                  상담관리 > 콜 목록
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="" checked>
-                                    <label class="custom-control-label" for=""></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="" checked>
-                                    <label class="custom-control-label" for=""></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="" checked>
-                                    <label class="custom-control-label" for=""></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="" checked>
-                                    <label class="custom-control-label" for=""></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="" checked>
-                                    <label class="custom-control-label" for=""></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="" checked>
-                                    <label class="custom-control-label" for=""></label>
-                                  </div>
-                                </td>                                
-                              </tr>                          
-                              <tr>
-                                <td>
-                                  상담관리 > 공지사항 관리
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1" checked>
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                              </tr>                          
-                              <tr>
-                                <td>
-                                  상담관리 > 코칭 메시지 관리
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1" checked>
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                              </tr>                          
-                              <tr>
-                                <td>
-                                  시스템관리 > 시스템 설정
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1" checked>
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                              </tr>                          
-                              <tr>
-                                <td>
-                                  시스템관리 > 장애로그
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1" checked>
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  시스템관리 > 활동이력
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1" checked>
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                              </tr>                          
-                              <tr>
-                                <td>
-                                  시스템관리 > 계정관리
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1" checked>
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                              </tr>                          
-                              <tr>
-                                <td>
-                                  시스템관리 > 역할관리
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1" checked>
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="list_check1">
-                                    <label class="custom-control-label" for="list_check1"></label>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-
-                      </div>
-                      <div class="cont-foot">
-                        <div class="area-btn">
-                          <button type="button" class="btn-outline xl w-80px">취소</button>
-                          <button type="button" class="btn-primary xl w-80px" disabled>저장</button>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <!-- //관리도구 메뉴 권한 -->
-
-                  <div id="tab3" class="tab-pane" role="tabpanel" tabindex="0">
-                    <article class="cont-area" >
-                      <div class="cont-head">
-                        <p class="tit">상담/관리 권한</p>
-                        <span class="mt-4px">현재 역할명: <strong>시스템관리자</strong></span>
-                      </div>
-                      <div class="cont-body">
-                        <section class="cont-sec">
-                          <div class="role-list-area">
-                            <div class="role-list-item">
-                              <p class="role-tit">로그인 유형</p>
-                              <div class="role-txt">
-                                관리도구 전용
-                              </div>
-                            </div>
-                            <div class="role-list-item">
-                              <p class="role-tit">상담원 권한</p>
-                              <div class="role-txt">
-                                어드바이저 상담사, 채팅상담솔루션 상담사, 어드바이저 관리자
-                              </div>
-                            </div>
-                            <div class="role-list-item">
-                              <p class="role-tit">로그인 방식</p>
-                              <div>
-                                관리도구로 바로 로그인
-                              </div>
-                            </div>
-                          </div>
-                          
-                          <div class="checked-area">
-                            <p class="h4 mt-12px mb-16px">어드바이저 관리자 권한 설정</p>
-                            <div class="memberList-view-area">
-                              <div class="memberList-view mr-16px">
-                                <div class="memberList-view-head">
-                                  <p class="h5">상담원 역할목록</p>
-                                  <button type="button" class="button button-outline button-sm" data-toggle="modal" data-target="#modal-counselor-edit">
-                                    <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
-                                      <use xlink:href="#ico-edit"></use>
-                                    </svg>
-                                    <span class="label">편집</span>
-                                  </button>
-                                </div>
-                                <ul class="memberList-view-list">
-                                  <li class="nodata">추가된 상담원 역할목록이 없습니다.</li>
-                                  <!-- <li>일반 상담원</li>
-                                  <li>다이퀘스트 상담원</li>
-                                  <li>서울 상담 1센터</li>
-                                  <li>서울 상담 2센터</li>
-                                  <li>서울 상담 3센터</li> -->
-                                </ul>
-                              </div>
-                              <div class="memberList-view">
-                                <div class="memberList-view-head">
-                                  <p class="h5">상담사 목록</p>
-                                  <button type="button" class="button button-outline button-sm" data-toggle="modal" data-target="#modal-counselor-edit">
-                                    <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
-                                      <use xlink:href="#ico-edit"></use>
-                                    </svg>
-                                    <span class="label">편집</span>
-                                  </button>
-                                </div>
-                                <ul class="memberList-view-list">
-                                  <!-- <li class="nodata">추가된 상담원이 없습니다.</li> -->
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                  <li>홍길동(L235671 서울 상담 1센터)</li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-
-                        </section>
-                      </div>
-                      <div class="cont-foot">
-                        <div class="area-btn">
-                          <button type="button" class="button button-outline button-lg w-80px">취소</button>
-                          <button type="button" class="button button-primary button-lg w-80px">저장</button>
-                        </div>
-                      </div>                
-                    </article>
-                  </div>
-                  <!-- //상담/관리 권한 -->
-
-                  <div id="tab4" class="tab-pane" role="tabpanel" tabindex="0">
-                    기획 후 업데이트
-                  </div>
-
-                  <div id="tab5" class="tab-pane" role="tabpanel" tabindex="0">
-                    <article class="cont-area" >
-                      <div class="cont-head">
-                        <p class="tit">역할별 지식관리</p>
-                        <span class="mt-4px">현재 역할명: <strong>시스템관리자</strong></span>
-                      </div>
-                      <div class="cont-body">
-
-                        <section class="cont-sec">
-                          <div class="form-block">
-                            <label for="">역할명</label>
-                            <select value="" class="lg w-240px">
-                              <option>시스템관리자</option>
-                              <option>시스템관리자</option>
-                              <option>시스템관리자</option>
-                            </select>                            
-                          </div>
-                        </section>
-
-                        <section class="cont-sec">
-                          <p class="h4 tit w-200px">역할별 지식관리</p>
-                          <div>
-                            <div class="mb-32px">
-                              <p class="h5 fw-medium">전역 의도 분석 정보<span class="typo-caption-lg-regular col-required mb-12px ml-8px">전역 정보는 시스템 설정에서 설정 가능합니다.</span> </p>
-                              <div class="d-flex">
-                                <div class="form-block mr-20px">
-                                  <label for="">인포채터 저장소 아이디</label>
-                                  <input type="text" placeholder="" value="TA" class="w-240px" readonly>
-                                </div>
-                                <div class="form-block mr-20px">
-                                  <label for="">인포채터 에이전트 이름</label>
-                                  <input type="text" placeholder="" value="TA-AGENT-1" class="w-240px" readonly>
-                                </div>
-                                <div class="form-block">
-                                  <label for="">디사 카테고리</label>
-                                  <input type="text" placeholder="" value="TA-AGENT-1" class="w-240px" readonly>
-                                </div>
-                              </div>
-                            </div>
-                            <div>
-                              <p class="h5 fw-medium">역할별 의도 분석 정보<span class="typo-caption-lg-regular mb-12px ml-8px">전역보다 우선순위 높음</span> </p>
-                              
-                              <div class="form-block mb-16px">
-                                <label for="" class="mb-4px">사용여부</label>
-                                <div class="d-flex">
-                                  <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input" id="tab5sampleRadio1" name="tab5sampleRadio1" checked>
-                                    <label class="custom-control-label" for="tab5sampleRadio1"><span>사용</span></label>
-                                  </div>
-                                  <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input" id="tab5sampleRadio2" name="tab5sampleRadio1">
-                                    <label class="custom-control-label" for="tab5sampleRadio2"><span>사용안함</span></label>
-                                  </div>
-                                </div>
-
-                              </div>
-                              <div class="d-flex">
-                                <div class="form-block mr-20px">
-                                  <label for="">인포채터 저장소 아이디</label>
-                                  <input type="text" placeholder="" value="" class="w-240px">
-                                </div>
-                                <div class="form-block mr-20px">
-                                  <label for="">인포채터 에이전트 이름</label>
-                                  <input type="text" placeholder="" value="" class="w-240px">
-                                </div>
-                                <div class="form-block">
-                                  <label for="">디사 카테고리</label>
-                                  <input type="text" placeholder="" value="" class="w-240px">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </section>
-                      </div>
-                      <div class="cont-foot">
-                        <div class="area-btn">
-                          <button type="button" class="btn-outline xl w-80px">취소</button>
-                          <button type="button" class="btn-primary xl w-80px">저장</button>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <!-- //역할별 지식관리 -->
-
-                  <div id="tab5" class="tab-pane" role="tabpanel" tabindex="0">
-                    기획 후 업데이트
-                  </div>
-
-                  <div id="tab6" class="tab-pane" role="tabpanel" tabindex="0">
-                    기획 후 업데이트
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    @@include('./modal//pop_roleSetting.html')
     <!-- //모달 : 관리 -->
     
 
@@ -967,7 +267,7 @@
           <div class="modal-header">
             <p class="modal-tit">역할 추가</p>            
             <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
-              <svg class="ico ico-lg" role="presentation" aria-hidden="true" focusable="false">
+              <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
                 <use xlink:href="#ico-close"></use>
               </svg>
             </button>
@@ -984,7 +284,7 @@
                   </div>
                 </section>
                 <section class="cont-sec">
-                  <p class="subTit-md mb-12px">로그인 유형</p>
+                  <p class="subtit-md mb-12px">로그인 유형</p>
                   <ul class="form-block">
                     <li class="form-block-item">
                       <div class="custom-control custom-radio">
@@ -1001,7 +301,7 @@
                   </ul>
                 </section>
                 <section class="cont-sec">
-                  <p class="subTit-md mb-12px">상담원 권한</p>
+                  <p class="subtit-md mb-12px">상담원 권한</p>
                   <ul class="form-block">
                     <li class="form-block-item">
                       <div class="custom-control custom-checkbox">
@@ -1024,7 +324,7 @@
                   </ul>
                 </section>
                 <section class="cont-sec">
-                  <p class="subTit-md mb-12px">로그인 방식</p>
+                  <p class="subtit-md mb-12px">로그인 방식</p>
                   <ul class="form-block">
                     <li class="form-block-item">
                       <div class="custom-control custom-radio">
@@ -1050,8 +350,8 @@
             </article>
           </div>  
           <div class="modal-footer">
-            <button type="button" class="button button-outline button-lg w-60px" data-dismiss="modal">취소</button>
-            <button type="button" class="button button-primary button-lg w-60px" data-dismiss="modal">확인</button>
+            <button type="button" class="button button-outline button-lg w-80px" data-dismiss="modal">취소</button>
+            <button type="button" class="button button-primary button-lg w-80px" data-dismiss="modal">확인</button>
           </div>
         </div>
       </div>
@@ -1318,7 +618,7 @@
         <div class="modal-content"> 
   
           <div class="modal-header">
-            <p class="tit">상담사 목록 편집</p>            
+            <p class="modal-tit">상담사 목록 편집</p>            
             <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
               <span class="material-icons-round xl">close</span>
             </button>
@@ -1329,7 +629,7 @@
             <div class="d-flex align-items-center">
               <div class="w-50">
                 <div class="d-flex align-items-center mb-8px">
-                  <p class="h4">등록된 상담사 목록</p>
+                  <p class="subtit-md">등록된 상담사 목록</p>
                   <!-- <button type="button" class="btn-primary ml-auto">
                     <span class="material-icons-round">add</span>
                     추가
@@ -1342,8 +642,8 @@
                       <label class="custom-control-label" for="sampleCheck1"><span>전체선택</span></label>
                     </div>
                     <div class="d-flex">
-                      <input class="w-160px" type="text" placeholder="아이디(상담사명)" value="">
-                      <button type="button" class="btn-outline ml-6px">검색</button>
+                      <input class="w-160px sm" type="text" placeholder="아이디(상담사명)" value="">
+                      <button type="button" class="button button-outline button-sm ml-6px">검색</button>
                     </div>
                   </div>
                   <div class="memberList-area">
@@ -1459,7 +759,7 @@
                       <li>
                         <div class="custom-control custom-checkbox">
                           <input type="checkbox" class="custom-control-input" id="sampleCheck1">
-                          <label class="custom-control-label" for="sampleCheck1"><span>홍길동 (L235671 서울 상담 1센터)</span></label>
+                          <label class="custom-controlbtn-outline ml-6px-label" for="sampleCheck1"><span>홍길동 (L235671 서울 상담 1센터)</span></label>
                         </div>
                       </li>
                     </ul>
@@ -1469,15 +769,17 @@
 
               <div class="arrow-icon-area mx-12px">
                 <!-- 상담사 목록에서 1개 이상 체크해야 활성화 -->
-                <button class="btn-outline ico-only lg" disabled>
-                  <span class="material-icons-round col-lightgray">arrow_forward_ios</span>
+                <button class="button button-outline button-lg ico-only">
+                  <svg class="ico ico-lg" role="presentation" aria-hidden="true" focusable="false">
+                    <use xlink:href="#ico-arr_right"></use>
+                  </svg>
                 </button>
               </div>
 
               <div class="w-50">
                 <div class="d-flex align-items-center mb-8px">
-                  <p class="h4">상담사 목록</p>
-                  <button type="button" class="button-fill ml-auto">전체 삭제</button>
+                  <p class="subtit-md">상담사 목록</p>
+                  <button type="button" class="text-link ml-auto">전체 삭제</button>
                 </div>
                 <div class="memberList-wrap add">
                   <div class="memberList-area">
@@ -1531,8 +833,8 @@
 
           </div>  
           <div class="modal-footer">            
-            <button type="button" class="button button-outline button-lg" data-dismiss="modal">취소</button>
-            <button type="button" class="button button-primary button-lg" data-dismiss="modal">저장</button>
+            <button type="button" class="button button-outline button-lg w-80px" data-dismiss="modal">취소</button>
+            <button type="button" class="button button-primary button-lg w-80px" data-dismiss="modal">저장</button>
           </div>
         </div>
       </div>

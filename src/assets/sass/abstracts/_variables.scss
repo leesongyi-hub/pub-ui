@@ -111,28 +111,28 @@
   --base-color-gray-800:#1F242E;
   --base-color-gray-900:#14181F;
 
-  --text-color-100: var(--base-color-gray-900);
-  --text-color-200: var(--base-color-gray-800);
-  --text-color-300: var(--base-color-gray-700);
-  --text-color-400: var(--base-color-gray-600);
-  --text-color-500: var(--base-color-gray-500);
-  --text-color-600: var(--base-color-gray-400);
-  --text-color-700: var(--base-color-gray-300);
-  --text-color-800: var(--base-color-gray-200);
-  --text-color-900: var(--base-color-gray-100);
-  --text-color-1000: var(--base-color-gray-90);
-  --text-color-1100: var(--base-color-gray-80);
+  --font-color-100: var(--base-color-gray-900);
+  --font-color-200: var(--base-color-gray-800);
+  --font-color-300: var(--base-color-gray-700);
+  --font-color-400: var(--base-color-gray-600);
+  --font-color-500: var(--base-color-gray-500);
+  --font-color-600: var(--base-color-gray-400);
+  --font-color-700: var(--base-color-gray-300);
+  --font-color-800: var(--base-color-gray-200);
+  --font-color-900: var(--base-color-gray-100);
+  --font-color-1000: var(--base-color-gray-90);
+  --font-color-1100: var(--base-color-gray-80);
 
-  --text-color-dark: var(--text-color-100);
-  --text-color-default: var(--text-color-300);
-  --text-color-light: var(--text-color-600);
-  --text-color-lighter: var(--text-color-800);
+  --font-color-dark: var(--font-color-100);
+  --font-color-default: var(--font-color-300);
+  --font-color-light: var(--font-color-600);
+  --font-color-lighter: var(--font-color-800);
 
-  --text-color-primary: var(--base-color-primary-600);
-  --text-color-required: var(--base-color-red-600);
-  --text-color-error: var(--base-color-red-600);
-  --text-color-warning: var(--base-color-yellow-600);
-  --text-color-success: var(--base-color-green-600);
+  --font-color-primary: var(--base-color-primary-600);
+  --font-color-required: var(--base-color-red-600);
+  --font-color-error: var(--base-color-red-600);
+  --font-color-warning: var(--base-color-yellow-600);
+  --font-color-success: var(--base-color-green-600);
 
   --icon-color-100: var(--base-color-gray-900);
   --icon-color-200: var(--base-color-gray-800);
@@ -211,11 +211,11 @@
 
   --form-border-color:  var(--base-color-gray-60);
   --form-hover-border-color:  var(--base-color-gray-90);
-  --form-placeholder-text-color: var(--text-color-1000);
+  --form-placeholder-text-color: var(--font-color-1000);
   --form-readonly-bg-color: var(--base-color-gray-20);
   --form-disabled-bg-color: var(--base-color-gray-30);
   --form-disabled-border-color: var(--base-color-gray-20);
-  --form-disabled-text-color: var(--text-color-1000);
+  --form-disabled-text-color: var(--font-color-1000);
 
   --form-size-xxl: 52px;
   --form-size-xl: 40px;
@@ -263,28 +263,28 @@
 
   --btn-outline-bg-color: var(--base-color-white);
   --btn-outline-border-color: var(--form-border-color);
-  --btn-outline-text-color: var(--text-color-300); 
+  --btn-outline-text-color: var(--font-color-300); 
   --btn-outline-hover-bg-color: var(--bg-color-default);
 
   --btn-fill-bg-color: var(--base-color-gray-30);
   --btn-fill-border-color: var(--base-color-gray-30);
-  --btn-fill-text-color: var(--text-color-300);    
+  --btn-fill-text-color: var(--font-color-300);    
   --btn-fill-hover-color: var(--base-color-gray-20); 
 
   --btn-fillTonal-bg-color: var(--base-color-primary-30);
   --btn-fillTonal-border-color: var(--base-color-primary-30);
-  --btn-fillTonal-text-color: var(--text-color-primary);    
+  --btn-fillTonal-text-color: var(--font-color-primary);    
   --btn-fillTonal-hover-bg-color: var(--base-color-primary-20); 
 
   --btn-outlineTonal-bg-color: var(--base-color-white);
   --btn-outlineTonal-border-color: var(--border-color-primary);
-  --btn-outlineTonal-text-color: var(--text-color-primary);    
+  --btn-outlineTonal-text-color: var(--font-color-primary);    
   --btn-outlineTonal-hover-bg-color: var(--bg-color-tonal-default);
 
   --btn-disabled-bg-color: var(--base-color-gray-30);
   --btn-disabled-border-color: var(--base-color-gray-20);
-  --btn-disabled-text-color: var(--text-color-1100);
-  --btn-disabled-icon-color: var(--text-color-1100);
+  --btn-disabled-text-color: var(--font-color-1100);
+  --btn-disabled-icon-color: var(--font-color-1100);
 
   //secondary button
   --btn-secondary-bg-color: var(--btn-fillTonal-bg-color);
@@ -403,11 +403,11 @@
   --base-color-primary-800: var(--base-color-yellow-800);
   --base-color-primary-900: var(--base-color-yellow-900);
 
-  --btn-primary-text-color: var(--text-color-default);
+  --btn-primary-text-color: var(--font-color-default);
 
   --btn-fillTonal-bg-color: var(--base-color-primary-30);
   --btn-fillTonal-border-color: var(--base-color-primary-30);
-  --btn-fillTonal-text-color: var(--text-color-primary-900);
+  --btn-fillTonal-text-color: var(--font-color-primary-900);
   --btn-fillTonal-bg-color: var(--base-color-primary-30);
   --btn-fillTonal-hover-color: var(--base-color-primary-20); 
 
@@ -419,8 +419,8 @@
 
   --btn-disabled-bg-color: var(--base-color-gray-30);
   --btn-disabled-border-color: var(--base-color-gray-20);
-  --btn-disabled-text-color: var(--text-color-1100);
-  --btn-disabled-icon-color: var(--text-color-1100);
+  --btn-disabled-text-color: var(--font-color-1100);
+  --btn-disabled-icon-color: var(--font-color-1100);
 
   --btn-secondary-bg-color: #60584C;
   --btn-secondary-border-color: #60584C;

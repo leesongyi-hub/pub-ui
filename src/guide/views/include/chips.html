@@ -1,3 +1,203 @@
+<style>
+  .chip-area{margin-bottom:16px;}
+  .checkChip-area input{position:absolute;top:0px;left:0px;width:0px;height:0px;opacity: 0;}
+  .checkChip-area .chip{cursor: pointer;}
+  .checkChip-area input:checked + .chip{
+    color:var(--btn-primary-text-color);background-color:var(--btn-primary-bg-color);border:1px solid var(--btn-primary-border-color);
+  }
+  .btn-del .ico{color:var(--icon-color-lighter);}
+  .btn-del:hover .ico{color:var(--icon-color-default);}
+</style>
+
+  <div class="chip-area checkChip-area">
+    <label for="chip1">
+      <input type="checkbox" id="chip1" checked="">
+      <span class="chip chip-outline chip-lg">전체</span>
+    </label>
+    <label for="chip2">
+      <input type="checkbox" id="chip2">
+      <span class="chip chip-outline chip-lg">서버/백엔드 개발자</span>
+    </label>
+    <label for="chip3">
+      <input type="checkbox" id="chip3">
+      <span class="chip chip-outline chip-lg">프론트엔드 개발자</span>
+    </label>
+    <label for="chip4">
+      <input type="checkbox" id="chip4">
+      <span class="chip chip-outline chip-lg">웹 풀스택 개발자</span>
+    </label>
+  </div>
+
+  <div class="chip-area">
+    <div class="chip chip-outline">
+      <span class="label">텍스트타입</span>
+      <button type="button" class="btn-del right">
+        <svg class="ico ico-sm" role="presentation" aria-hidden="true" focusable="false">
+          <use xlink:href="#ico-close"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="chip chip-outline">
+      <span class="label">텍스트타입</span>
+      <button type="button" class="btn-del right">
+        <svg class="ico ico-sm" role="presentation" aria-hidden="true" focusable="false">
+          <use xlink:href="#ico-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="chip-area">
+    <button type="button" class="chip chip-outline">
+      <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
+        <use xlink:href="#ico-notice"></use>
+      </svg>
+      <span class="label">버튼형</span>
+    </button>
+    <button type="button" class="chip chip-outline">
+      <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
+        <use xlink:href="#ico-notice"></use>
+      </svg>
+      <span class="label">버튼형</span>
+      <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
+        <use xlink:href="#ico-arr_bot"></use>
+      </svg>
+    </button>
+    <button type="button" class="chip chip-outline">
+      <span class="left"> 😍 </span>
+      <span class="label">버튼형</span>
+      <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
+        <use xlink:href="#ico-arr_bot"></use>
+      </svg>
+    </button>
+    <button type="button" class="chip chip-outline">
+      <span class="label">버튼형</span>
+      <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
+        <use xlink:href="#ico-arr_bot"></use>
+      </svg>
+    </button>
+  </div>
+
+  <div class="chip-area">
+    <div class="chip chip-outline">
+      <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
+        <use xlink:href="#ico-notice"></use>
+      </svg>
+      <span class="label">텍스트타입</span>
+    </div>
+    <div class="chip chip-outline">
+      <span class="label">텍스트타입</span>
+      <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
+        <use xlink:href="#ico-notice"></use>
+      </svg>
+    </div>
+    <div class="chip chip-outline">
+      <span class="label">텍스트타입</span>
+    </div>
+    <div class="chip chip-outline">
+      <span class="left"> 😍 </span>
+      <span class="label">텍스트타입</span>
+      <span class="right"> 😍 </span>
+    </div>
+  </div>
+
+  <div class="chip-area checkChip-area">
+    <label for="chip1">
+      <input type="checkbox" id="chip1" checked="">
+      <span class="chip chip-fill chip-lg">전체</span>
+    </label>
+    <label for="chip2">
+      <input type="checkbox" id="chip2">
+      <span class="chip chip-fill chip-lg">서버/백엔드 개발자</span>
+    </label>
+    <label for="chip3">
+      <input type="checkbox" id="chip3">
+      <span class="chip chip-fill chip-lg">프론트엔드 개발자</span>
+    </label>
+    <label for="chip4">
+      <input type="checkbox" id="chip4">
+      <span class="chip chip-fill chip-lg">웹 풀스택 개발자</span>
+    </label>
+  </div>
+
+  <div class="chip-area">
+    <div class="chip chip-fill">
+      <span class="label">텍스트타입</span>
+      <button type="button" class="btn-del right">
+        <svg class="ico ico-sm" role="presentation" aria-hidden="true" focusable="false">
+          <use xlink:href="#ico-close"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="chip chip-fill">
+      <span class="label">텍스트타입</span>
+      <button type="button" class="btn-del right">
+        <svg class="ico ico-sm" role="presentation" aria-hidden="true" focusable="false">
+          <use xlink:href="#ico-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="chip-area">
+    <button type="button" class="chip chip-fill">
+      <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
+        <use xlink:href="#ico-notice"></use>
+      </svg>
+      <span class="label">버튼형</span>
+    </button>
+    <button type="button" class="chip chip-fill">
+      <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
+        <use xlink:href="#ico-notice"></use>
+      </svg>
+      <span class="label">버튼형</span>
+      <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
+        <use xlink:href="#ico-arr_bot"></use>
+      </svg>
+    </button>
+    <button type="button" class="chip chip-fill">
+      <span class="left"> 😍 </span>
+      <span class="label">버튼형</span>
+      <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
+        <use xlink:href="#ico-arr_bot"></use>
+      </svg>
+    </button>
+    <button type="button" class="chip chip-fill">
+      <span class="label">버튼형</span>
+      <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
+        <use xlink:href="#ico-arr_bot"></use>
+      </svg>
+    </button>
+  </div>
+
+  <div class="chip-area">
+    <div class="chip chip-fill">
+      <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
+        <use xlink:href="#ico-notice"></use>
+      </svg>
+      <span class="label">텍스트타입</span>
+    </div>
+    <div class="chip chip-fill">
+      <span class="label">텍스트타입</span>
+      <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
+        <use xlink:href="#ico-notice"></use>
+      </svg>
+    </div>
+    <div class="chip chip-fill">
+      <span class="label">텍스트타입</span>
+    </div>
+    <div class="chip chip-fill">
+      <span class="left"> 😍 </span>
+      <span class="label">텍스트타입</span>
+      <span class="right"> 😍 </span>
+    </div>
+  </div>
+
+
+
+  
+
+
 <div class="gd-content-wrap" id="n_chips">
   <h2>Chips</h2>
   <div class="gd-content">
@@ -5,30 +205,199 @@
       <h3>Chips - inline</h3>
       <!-- 🧡💛 UI -->
       <div class="gd-example">
-        <div class="chip-area">
-          <div class="chip">
-            <span class="txt">텍스트</span>
-            <button type="button" class="mask-18px">
-              <span class="material-icons-round xs col-lightgray">close</span>
 
+
+
+
+        <div class="chip-area">
+          <div class="chip chip-outline chip-sm">
+            <span class="label">텍스트</span>
+            <button type="button" class="right">
+              <svg class="ico ico-sm" role="presentation" aria-hidden="true" focusable="false">
+                <use xlink:href="#ico-close"></use>
+              </svg>
             </button>
           </div>
-          <div class="chip">
-            <span class="txt">텍스트</span>
-            <button type="button" class="mask-18px">
-              <span class="material-icons-round xs col-lightgray">close</span>
+          <div class="chip chip-outline chip-sm">
+            <span class="label">텍스트형</span>
+          </div>
+          <button type="button" class="chip chip-outline chip-sm">
+            <span class="label">버튼형</span>
+          </button>
+          <button type="button" class="chip chip-outline chip-sm">
+            <span class="left">
+              😍
+            </span>
+            <span class="label">버튼형</span>
+          </button>
+          <button type="button" class="chip chip-outline chip-sm">
+            <span class="left">
+              😍
+            </span>
+            <span class="label">버튼형</span>
+            <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
+              <use xlink:href="#ico-arr_bot"></use>
+            </svg>
+          </button>
+          <div class="chip chip-outline chip-sm">
+            <span class="left">
+              😍
+            </span>
+            <span class="label">버튼형</span>
+            <button type="button" class="right">
+              <svg class="ico ico-sm" role="presentation" aria-hidden="true" focusable="false">
+                <use xlink:href="#ico-close"></use>
+              </svg>
             </button>
           </div>
-          <div class="chip">
-            <span class="txt">텍스트</span>
-            <button type="button" class="mask-18px">
-              <span class="material-icons-round xs col-lightgray">close</span>
+          <button type="button" class="chip chip-outline chip-sm">
+            <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
+              <use xlink:href="#ico-notice"></use>
+            </svg>
+            <span class="label">버튼형</span>
+
+          </button>
+        </div>
+
+        <div class="chip-area">
+          <div class="chip chip-outline">
+            <span class="label">텍스트</span>
+            <button type="button" class="right">
+              <svg class="ico ico-sm" role="presentation" aria-hidden="true" focusable="false">
+                <use xlink:href="#ico-close"></use>
+              </svg>
             </button>
           </div>
-          <div class="chip">
-            <span class="txt">텍스트</span>
-            <button type="button" class="mask-18px">
-              <span class="material-icons-round xs col-lightgray">close</span>
+          <div class="chip chip-outline">
+            <span class="label">텍스트형</span>
+          </div>
+          <button type="button" class="chip chip-outline">
+            <span class="label">버튼형</span>
+          </button>
+          <button type="button" class="chip chip-outline">
+            <span class="left">
+              😍
+            </span>
+            <span class="label">버튼형</span>
+          </button>
+          <button type="button" class="chip chip-outline">
+            <span class="left">
+              😍
+            </span>
+            <span class="label">버튼형</span>
+            <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
+              <use xlink:href="#ico-arr_bot"></use>
+            </svg>
+          </button>
+          <div class="chip chip-outline">
+            <span class="left">
+              😍
+            </span>
+            <span class="label">버튼형</span>
+            <button type="button" class="right">
+              <svg class="ico ico-sm" role="presentation" aria-hidden="true" focusable="false">
+                <use xlink:href="#ico-close"></use>
+              </svg>
+            </button>
+          </div>
+          <button type="button" class="chip chip-outline">
+            <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
+              <use xlink:href="#ico-notice"></use>
+            </svg>
+            <span class="label">버튼형</span>
+
+          </button>
+        </div>
+
+        <div class="chip-area">
+          <div class="chip chip-outline chip-lg">
+            <span class="label">텍스트</span>
+            <button type="button" class="right">
+              <svg class="ico ico-sm" role="presentation" aria-hidden="true" focusable="false">
+                <use xlink:href="#ico-close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="chip chip-outline  chip-lg">
+            <span class="label">텍스트형</span>
+          </div>
+          <button type="button" class="chip chip-outline  chip-lg">
+            <span class="label">버튼형</span>
+          </button>
+          <button type="button" class="chip chip-outline  chip-lg">
+            <span class="left">
+              😍
+            </span>
+            <span class="label">버튼형</span>
+          </button>
+          <button type="button" class="chip chip-outline  chip-lg">
+            <span class="left">
+              😍
+            </span>
+            <span class="label">버튼형</span>
+            <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
+              <use xlink:href="#ico-arr_bot"></use>
+            </svg>
+          </button>
+          <div class="chip chip-outline  chip-lg">
+            <span class="left">
+              😍
+            </span>
+            <span class="label">버튼형</span>
+            <button type="button" class="right">
+              <svg class="ico ico-sm" role="presentation" aria-hidden="true" focusable="false">
+                <use xlink:href="#ico-close"></use>
+              </svg>
+            </button>
+          </div>
+          <button type="button" class="chip chip-outline chip-lg">
+            <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
+              <use xlink:href="#ico-notice"></use>
+            </svg>
+            <span class="label">버튼형</span>
+
+          </button>
+        </div>
+
+        <div class="chip-area">
+          <div class="chip chip-fill">
+            <span class="label">텍스트</span>
+            <button type="button" class="right">
+              <svg class="ico ico-sm" role="presentation" aria-hidden="true" focusable="false">
+                <use xlink:href="#ico-close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="chip chip-fill">
+            <span class="label">텍스트형</span>
+          </div>
+          <button type="button" class="chip chip-fill">
+            <span class="label">버튼형</span>
+          </button>
+          <button type="button" class="chip chip-fill">
+            <span class="left">
+              😍
+            </span>
+            <span class="label">버튼형</span>
+          </button>
+          <button type="button" class="chip chip-fill">
+            <span class="left">
+              😍
+            </span>
+            <span class="label">버튼형</span>
+            <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
+              <use xlink:href="#ico-arr_bot"></use>
+            </svg>
+          </button>
+          <div class="chip chip-fill">
+            <span class="left">
+              😍
+            </span>
+            <span class="label">버튼형</span>
+            <button type="button" class="right">
+              <svg class="ico ico-sm" role="presentation" aria-hidden="true" focusable="false">
+                <use xlink:href="#ico-close"></use>
+              </svg>
             </button>
           </div>
         </div>

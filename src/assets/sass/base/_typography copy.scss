@@ -73,6 +73,9 @@ $line-height-caption-sm: round($font-size-caption-sm * 1.4);
   --font-weight-regular: 400;
 }
 
+/* 
+  [Utility class]
+*/
 $size-map: (
   lg,
   md,
@@ -89,9 +92,25 @@ $usage-map: (
 $weight-map: (
   bold,
   semibold,
-  medium,
+  // medium,
   regular,
 );
+
+[class*='typo-display']{
+  color:var(--font-color-default);
+}
+
+[class*='typo-heading']{
+  color:var(--font-color-default);
+}
+
+[class*='typo-body']{
+  color:var(--font-color-default);
+}
+
+[class*='typo-caption']{
+  color:var(--font-color-lighter);
+}
 
 @each $usage-key in $usage-map {
   @each $size-key in $size-map {
@@ -105,13 +124,33 @@ $weight-map: (
   }
 }
 
-// @each $usage-key in $usage-map {
-//   @each $size-key in $size-map {
-//     .fs-#{$usage-key}-#{$size-key} {
-//       font-size: var(--font-size-#{$usage-key}-#{$size-key});        
-//     }
-//   }
-// }
+@each $usage-key in $usage-map {
+  @each $size-key in $size-map {    
+    .fs-#{$usage-key}-#{$size-key} {
+      font-size: var(--font-size-#{$usage-key}-#{$size-key});        
+    }
+  }
+}
+
+.fw-bold{font-weight:var(--font-weight-bold) !important;}
+.fw-semibold{font-weight:var(--font-weight-semibold) !important;}
+// .fw-medium{font-weight:var(--font-weight-medium) !important;}
+.fw-regular{font-weight:var(--font-weight-regular) !important;}
+
+.fc-100{color:var(--font-color-100);}
+.fc-200{color:var(--font-color-200);}
+.fc-300{color:var(--font-color-300);}
+.fc-400{color:var(--font-color-400);}
+.fc-500{color:var(--font-color-500);}
+.fc-600{color:var(--font-color-600);}
+.fc-700{color:var(--font-color-700);}
+.fc-800{color:var(--font-color-800);}
+.fc-900{color:var(--font-color-900);}
+
+.fc-dark{color:var(--font-color-dark);}
+.fc-default{ color:var(--font-color-default);}
+.fc-light{ color:var(--font-color-light);}
+.fc-lighter{ color:var(--font-color-lighter);}
 
 @mixin typo-display-lg-bold {
   font-size: var(--font-size-display-lg);
@@ -353,6 +392,7 @@ $weight-map: (
   line-height: var(--line-height-caption-lg);
 }
 
+
 @mixin typo-caption-md-bold {
   font-size: var(--font-size-caption-md);
   font-weight: var(--font-weight-bold);
@@ -376,6 +416,7 @@ $weight-map: (
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-caption-md);
 }
+
 
 @mixin typo-caption-sm-bold {
   font-size: var(--font-size-caption-sm);
@@ -401,35 +442,23 @@ $weight-map: (
   line-height: var(--line-height-caption-sm);
 }
 
-/* Utility Class */
-.typo-100{color:var(--font-color-100);}
-.typo-200{color:var(--font-color-200);}
-.typo-300{color:var(--font-color-300);}
-.typo-400{color:var(--font-color-400);}
-.typo-500{color:var(--font-color-500);}
-.typo-600{color:var(--font-color-600);}
-.typo-700{color:var(--font-color-700);}
-.typo-800{color:var(--font-color-800);}
-.typo-900{color:var(--font-color-900);}
+.h1{@include typo-display-sm-bold;margin:0;}
+h2,
+.h2{@include typo-heading-lg-semibold;margin:0;}
+h3,
+.h3{@include typo-heading-md-semibold;margin:0;}
+h4,
+.h4{@include typo-heading-sm-semibold;margin:0;}
+h5,
+.h5{@include typo-body-lg-medium;margin:0;}
 
-.typo-dark{color:var(--font-color-dark);}
-.typo-default{ color:var(--font-color-default);}
-.typo-light{ color:var(--font-color-light);}
-.typo-lighter{ color:var(--font-color-lighter);}
-
-.typo-bold{font-weight:var(--font-weight-bold) !important;}
-.typo-semibold{font-weight:var(--font-weight-semibold) !important;}
-.typo-regular{font-weight:var(--font-weight-regular) !important;}
-
-/* Semantic Class */
-.modal-tit{@include typo-heading-lg-semibold;}
+.modal-tit{@include typo-heading-lg-bold;}
 
 .tit-lg{@include typo-display-sm-semibold;}
 .tit-md{@include typo-heading-lg-semibold;}
 
 .subtit-lg{@include typo-heading-md-semibold;}
 .subtit-md{@include typo-heading-sm-semibold;}
-.subtit-sm{@include typo-body-lg-medium;}
 
 .body-lg{@include typo-body-lg-regular;}
 .body-md{@include typo-body-md-regular;}
@@ -437,18 +466,4 @@ $weight-map: (
 .caption-lg{@include typo-caption-lg-regular;}
 .caption-md{@include typo-caption-md-regular;}
 
-/* Semantic mixin */
-@mixin modal-tit{@include typo-heading-lg-semibold;}
 
-@mixin tit-lg{@include typo-display-sm-semibold;}
-@mixin tit-md{@include typo-heading-lg-semibold;}
-
-@mixin subtit-lg{@include typo-heading-md-semibold;}
-@mixin subtit-md{@include typo-heading-sm-semibold;}
-@mixin subtit-sm{@include typo-body-lg-medium;}
-
-@mixin body-lg{@include typo-body-lg-regular;}
-@mixin body-md{@include typo-body-md-regular;}
-
-@mixin caption-lg{@include typo-caption-lg-regular;}
-@mixin caption-md{@include typo-caption-md-regular;}
