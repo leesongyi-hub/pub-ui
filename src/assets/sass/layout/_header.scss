@@ -1,5 +1,5 @@
-.header{position:fixed;top:0;left:0;width:100%;display:flex;min-height:52px;width:100%;height:var(--header-height);padding-right:16px;background-color:var(--base-color-primary-800);border-bottom:1px solid var(--border-color-light);z-index:130;}
-.header .lnbToggle-btn{display:flex;align-items: center;justify-content: center;color:rgba(255,255,255,.9);background-color:var(--base-color-primary-900);width:55px;height:100%;margin-right:16px;transition: .3s;}
+.header{position:fixed;top:0;left:0;width:100%;display:flex;min-height:52px;width:100%;height:var(--header-height);padding-right:16px;background-color:var(--base-color-primary-700);border-bottom:1px solid var(--border-color-light);z-index:130;}
+.header .lnbToggle-btn{display:flex;align-items: center;justify-content: center;color:rgba(255,255,255,.9);width:55px;height:100%;transition: .3s;}
 .header .logo-area{display:flex;align-items:center;height:100%;}
 .header .logo-area h1{display: flex;}
 .header .logo-area .sub-tit{display:flex;align-items:center;color:var(--base-color-white);font-weight:500;font-size:18px;}

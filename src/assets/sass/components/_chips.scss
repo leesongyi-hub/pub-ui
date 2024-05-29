@@ -51,5 +51,8 @@
 .chip-md .label + .ico{margin-left:4px;}
 .chip-sm .ico{width:16px;min-width:16px;height:16px;}
 .chip-sm .label + .ico{margin-left:4px;}
-.chip-xs .ico{width:16px;min-width:16px;height:16px;}
+.chip-xs .ico{width:16px;min-width:16px;height:16px;stroke-width:1px;}
 .chip-xs .label + .ico{margin-left:4px;}
+
+.chip-outline .btn-del{opacity: .7;}
+.chip-outline .btn-del:hover{opacity: 1;}

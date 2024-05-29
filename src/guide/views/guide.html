@@ -29,7 +29,17 @@
 <body>
 	<div class="wrap guide-page gd-wrap">
     <header>
-      <h1>Pub System Guide</h1>
+      
+      <h1>
+        <button type="button" class="button button-ghost button-md ico-only btn-navToggle">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.6667 5.83331L6.49999 9.99998M6.49999 9.99998L10.6667 14.1666M6.49999 9.99998L17.5 9.99996M2.5 16.8333L2.5 3.16663" stroke="black" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <span>
+          Pub System Guide
+        </span>
+      </h1>
       <div class="button-theme-area">
         <button type="button" aria-label="테마선택" class="button button-fill button-lg ico-only">
           <svg class="ico" role="presentation" aria-hidden="true" focusable="false">
@@ -63,10 +73,10 @@
       </div>
     </header>
     <div class="container">
-      <navi class="left_area">
+      <nav class="left_area">
         @@include('./include/navi.html')
     
-      </navi>	
+      </nav>	
       <main class="content">
         <!-- @@include('./include/info.html') -->
         @@include('./include/chips.html')
@@ -79,12 +89,13 @@
         @@include('./include/checkbox.html')
         @@include('./include/colList.html')
         @@include('./include/switch.html')
-        
+        @@include('./include/datepicker.html')
+
         <!-- @@include('./include/select.html')
         @@include('./include/inputNumber.html')
         @@include('./include/checkbox.html')
         @@include('./include/radio.html')
-        @@include('./include/datepicker.html')
+        
         @@include('./include/textarea.html')
         @@include('./include/tabs.html')
         @@include('./include/pagination.html')

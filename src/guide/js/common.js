@@ -151,9 +151,10 @@ UI.showSection = {
   init: function(){
 
     $('navi li:first a').addClass('on');
-    $('.content .gd-content-wrap:first').show();
+    //$('.content .gd-content-wrap:first').show();
+    $('#n_buttons').show();
 
-    $('navi a').on('click', function(e){
+    $('nav a').on('click', function(e){
       var targetId = $(this).attr('href'); // 클릭된 링크의 href 값을 가져옴
       $('.gd-content-wrap').hide();
       
@@ -171,7 +172,33 @@ UI.bsTooltip = {
   }
 }
 
+UI.scrollToAnchorWithOffset = {
+  init: function(){
+    var headerOffset = 60; // Offset for fixed header
+    var links = document.querySelectorAll('.index-nav a[href^="#"]');
+
+    links.forEach(function(link) {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        var targetId = link.getAttribute('href');
+        var targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          var elementPosition = targetElement.getBoundingClientRect().top;
+          var offsetPosition = elementPosition + window.scrollY - headerOffset;
+            
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  }
+}
+
 $(function () {
+  UI.scrollToAnchorWithOffset.init();
   UI.syntaxHighlighter.init();
   UI.activeNavi.init();
   UI.clipboard.init();
@@ -179,4 +206,5 @@ $(function () {
   UI.showSection.init();
   UI.includeSVG.init();
   UI.bsTooltip.init();
+
 });

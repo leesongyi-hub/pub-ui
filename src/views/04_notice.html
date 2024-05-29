@@ -33,7 +33,6 @@
       @@include('./include/lnb.html')
 
       <main class="main-cont">
-        <lottie-player src="../assets/images/lottie.json" background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop autoplay></lottie-player>
         <!-- <div class="main-header">
           
           <div class="breadcrumbs">
@@ -67,38 +66,15 @@
           </div>
         </div> -->
         <div class="main-body">
-          <h2 class="page-tit">계정 관리</h2>
+          <h2 class="page-tit">공지사항 관리</h2>
           <div class="util-bar">
-
-            <div class="mr-16px">
-              <label class="w-160px">
-                <span class="w-100 mb-4px">역할</span>
-                <select class="w-100">
-                  <option>전체</option>
-                  <option>역할1</option>
-                  <option>역할2</option>
-                </select>
-              </label>
-            </div>
-            <div class="mr-16px">
-              <label class="w-160px">
-                <span class="w-100 mb-4px">계정유형</span>
-                <select class="w-100">
-                  <option>전체</option>
-                  <option>계정유형1</option>
-                  <option>계정유형2</option>
-                </select>
-              </label>
-            </div>
-            <div class="mr-16px">
-              <label class="w-160px">
-                <span class="w-100 mb-4px">관리자 여부</span>
-                <select class="w-100">
-                  <option>전체</option>
-                  <option>Y</option>
-                  <option>N</option>
-                </select>
-              </label>
+            <div class="">
+              <span class="w-100 mb-4px">조회기간</span>
+              <div class="d-flex align-items-center mr-16px" id="app">              
+                <datepicker class="datepicker w-120px" v-model="fromDate" value="state.date" format="yyyy-MM-dd" placeholder="시작일 선택"></datepicker>
+                <span>&nbsp;~&nbsp;</span>
+                <datepicker class="datepicker w-120px" v-model="toDate" value="state.date" format="yyyy-MM-dd" placeholder="종료일 선택"></datepicker>
+              </div>
             </div>
             <div class="d-flex align-items-end">
               <label class="w-160px">
@@ -119,7 +95,7 @@
               <div class="d-flex align-item-center">
                 <button type="button" class="button button-primary button-md" data-toggle="modal" data-target="#modal_addAccount">
                   <svg class="ico" role="presentation" aria-hidden="true" focusable="false"><use xlink:href="#ico-plus"></use></svg>
-                  계정 추가
+                  공지사항 등록
                 </button>
                 <button type="button" class="button button-outline disabled ml-8px">
                   선택 삭제
@@ -159,56 +135,117 @@
 
               <div class="table-area">
 
-                <table class="table-wrap">
-                  <caption class="blind">사용자계정(ID), 이름, 내선번호, 사번, 계정유형, 관리자등록여부, 부서, 부서코드, 역할 정보에 대한 정보 제공 및 수정 및 삭제 기능 제공</caption>
-                  <colgroup>
-                    <col style="width:50px">
-                    <col style="width:80px">
-                    <col style="width:120px">
-                    <col style="width:120px">
-                    <col style="width:120px">
-                    <col style="width:100px">
-                    <col style="width:120px">
-                    <col style="width:calc(100% - 80%)">
-                    <col style="width:60px">
-                  </colgroup>
+                <table class="table-wrap" style="min-width:100%;">
+                  <caption class="blind">제목, 등록일, 작성자 정보 제공</caption>
                   <thead>
-                    <tr class="text-center">
-                      <th scope="col">
+                    <tr>
+                      <th scope="col" class="text-center" style="width:50px;">
                         <div class="custom-control custom-checkbox justify-content-center sm">
                           <input type="checkbox" class="custom-control-input" id="list_check1">
                           <label class="custom-control-label" for="list_check1"></label>
                         </div>
                       </th>
-                      <th scope="col">이름</th>
-                      <th scope="col">사용자계정(ID)</th>
-                      <th scope="col">역할정보</th>
-                      <th scope="col">계정유형</th>
-                      <th scope="col">관리자 등록여부</th>
-                      <th scope="col">부서</th>
-                      <th scope="col">부서 코드</th>
-                      <th scope="col">편집</th>
+                      <th scope="col">제목</th>
+                      <th scope="col" class="text-center" style="width:140px;">작성자</th>
+                      <th scope="col" class="text-center" style="width:180px;">등록일</th>
+                      <th scope="col" class="text-center" style="width:100px;">편집</th>
                     </tr>
                   </thead>
-                  <tbody class="text-center">
+                  <tbody class="">
                     <tr>
-                      <td>
+                      <td class="text-center">
                         <div class="custom-control custom-checkbox justify-content-center sm">
                           <input type="checkbox" class="custom-control-input" id="list_check1">
                           <label class="custom-control-label" for="list_check1"></label>
                         </div>
                       </td>
-                      <td>홍길동</td>
                       <td>
-                        <button type="button" class="text-link" data-toggle="modal" data-target="#modal-viewAccount">Verstappen</button>
+                        <button type="button" class="text-link">
+                          금주의 추천 상품 : DQ종신보험
+                        </button>
+                      </td>
+                      <td class="text-center">김관리자</td>
+                      <td class="text-center">2024.04.16 12:16:33</td>
+                      <td class="text-center">
+                        <div class="d-flex justify-content-center">
+                          <button
+                            type="button"
+                            class="button button-ghost button-xs ico-only"
+                            aria-label="수정"
+                            data-toggle="modal" data-target="#modal-editAccount"
+                            data-tooltip="tooltip" data-placement="top" data-boundary="window" data-original-title="수정"
+                          >
+                            <svg class="ico ico-lightgray ico-bold" role="presentation" aria-hidden="true" focusable="false">
+                              <use xlink:href="#ico-edit"></use>
+                            </svg>
+                          </button>
+                          <button
+                            type="button"
+                            class="button button-ghost button-xs ico-only"
+                            aria-label="삭제"
+                            data-tooltip="tooltip" data-placement="top" data-boundary="window" data-original-title="삭제"
+                          >
+                            <svg class="ico ico-lightgray ico-bold" role="presentation" aria-hidden="true" focusable="false">
+                              <use xlink:href="#ico-deleted"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <div class="custom-control custom-checkbox justify-content-center sm">
+                          <input type="checkbox" class="custom-control-input" id="list_check1">
+                          <label class="custom-control-label" for="list_check1"></label>
+                        </div>
                       </td>
                       <td>
-                        채팅상담솔루션 상담사
+                        <button type="button" class="text-link">
+                          금주의 추천 상품 : DQ종신보험
+                        </button>
                       </td>
-                      <td>전화상담사</td>
-                      <td><strong class="col-red">N</strong></td>
-                      <td>솔루션1팀</td>
-                      <td>단기채권팀 > G430 > T431</td>
+                      <td class="text-center">김관리자</td>
+                      <td class="text-center">2024.04.16 12:16:33</td>
+                      <td class="text-center">
+                        <div class="d-flex justify-content-center">
+                          <button
+                            type="button"
+                            class="button button-ghost button-xs ico-only"
+                            aria-label="수정"
+                            data-toggle="modal" data-target="#modal-editAccount"
+                            data-tooltip="tooltip" data-placement="top" data-boundary="window" data-original-title="수정"
+                          >
+                            <svg class="ico ico-lightgray ico-bold" role="presentation" aria-hidden="true" focusable="false">
+                              <use xlink:href="#ico-edit"></use>
+                            </svg>
+                          </button>
+                          <button
+                            type="button"
+                            class="button button-ghost button-xs ico-only"
+                            aria-label="삭제"
+                            data-tooltip="tooltip" data-placement="top" data-boundary="window" data-original-title="삭제"
+                          >
+                            <svg class="ico ico-lightgray ico-bold" role="presentation" aria-hidden="true" focusable="false">
+                              <use xlink:href="#ico-deleted"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <div class="custom-control custom-checkbox justify-content-center sm">
+                          <input type="checkbox" class="custom-control-input" id="list_check1">
+                          <label class="custom-control-label" for="list_check1"></label>
+                        </div>
+                      </td>
+                      <td>
+                        <button type="button" class="text-link text-truncate w-100 text-left">
+                          금주의 추천 상품 : DQ종신보험 금주의 추천 상품 : DQ종신보험 금주의 추천 상품 : DQ종신보험 금주의 추천 상품 : DQ종신보험 
+                        </button>
+                      </td>
+                      <td class="text-center">김관리자</td>
+                      <td class="text-center">2024.04.16 12:16:33</td>
                       <td class="text-center">
                         <div class="d-flex justify-content-center">
                           <button
@@ -246,93 +283,7 @@
     </div>
 
     
-    @@include('./modal//pop_addAccount.html')<!-- 모달 : 계정추가 -->
-    @@include('./modal/pop_editAccount.html')<!-- 모달 : 계정수정 -->
-    @@include('./modal/pop_fileImport.html')<!-- 모달 : 가져오기 -->
-    @@include('./modal/pop_detailAccount.html')<!-- 모달 : 계정상세보기 -->
-
-    <!-- 모달 : 비밀번호 초기화-->
-    <div class="modal modal-resetPw fade" id="modal-resetPw" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
-      <div class="modal-dialog w500">
-        <div class="modal-content"> 
-  
-          <div class="modal-header">
-            <p class="tit">비밀번호 초기화</p>            
-            <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
-              <span class="material-icons-round xl">close</span>
-            </button>
-          </div>
-  
-          <div class="modal-body">
-            <p>
-              비밀번호가 초기화되었습니다.<br />
-              비밀번호 초기화 규칙은 초기화된 날짜 및 아이디의 조합입니다.
-            </p>
-            <div class="example-area">
-              YYYY아이디명MMDD (DD는 해당 숫자의 특수기호)
-            </div>
-            <p>
-              Ex, 2024년 1월 12일 초기화 시,<br />
-              2024abcde01!@ (12일 경우 해당 숫자의 특수기호인 !@) 입니다.
-            </p>
-          </div>  
-          <div class="modal-footer">
-            <button type="button" class="button-outline xl" data-dismiss="modal">취소</button>
-            <button type="button" class="button-primary xl" data-dismiss="modal">확인</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- //모달 : 비밀번호 초기화-->
-    
-    <!-- 모달 : 비밀번호 수정-->
-    <div class="modal modal-editPw fade" id="modal-editPw" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
-      <div class="modal-dialog w500">
-        <div class="modal-content"> 
-  
-          <div class="modal-header">
-            <p class="tit">비밀번호 수정</p>            
-            <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
-              <span class="material-icons-round xl">close</span>
-            </button>
-          </div>
-  
-          <div class="modal-body">
-            <div class="form-block mb-16px">
-              <label class="input-label">
-                현재 비밀번호
-                <!-- <span class="col-required">*</span> -->
-              </label>
-              <input type="password" placeholder="비밀번호 입력" value="" class="lg">
-              <!-- <p class="validate-txt">중복된 아이디입니다.</p> -->
-            </div>
-
-            <div class="form-block mb-16px">
-              <label class="input-label">
-                새로운 비밀번호
-                <!-- <span class="col-required">*</span> -->
-              </label>
-              <input type="password" placeholder="비밀번호 입력" value="" class="lg">
-              <!-- <p class="validate-txt">중복된 아이디입니다.</p> -->
-            </div>
-
-            <div class="form-block mb-16px">
-              <label class="input-label">
-                새로운 비밀번호 확인
-                <!-- <span class="col-required">*</span> -->
-              </label>
-              <input type="password" placeholder="비밀번호 입력" value="" class="lg">
-              <!-- <p class="validate-txt">중복된 아이디입니다.</p> -->
-            </div>
-          </div>  
-          <div class="modal-footer">
-            <button type="button" class="button-outline xl" data-dismiss="modal">취소</button>
-            <button type="button" class="button-primary xl" data-dismiss="modal">저장</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- //모달 : 비밀번호 수정-->
+    @@include('./modal//pop_addNotice.html')<!-- 모달 : 공지사항 추가 -->
 
   </div>
   <div id="ico_svg" data-include="./svg.html" style="display:none"></div>
@@ -343,13 +294,32 @@
   <script>
     const editor = new toastui.Editor({
         el: document.querySelector('#content'), // 에디터를 적용할 요소 (컨테이너)
-        height: '500px',                        // 에디터 영역의 높이 값 (OOOpx || auto)
-        initialEditType: 'markdown',            // 최초로 보여줄 에디터 타입 (markdown || wysiwyg)
+        height: '400px',                        // 에디터 영역의 높이 값 (OOOpx || auto)
+        initialEditType: 'wysiwyg',            // 최초로 보여줄 에디터 타입 (markdown || wysiwyg)
         initialValue: '내용을 입력해 주세요.',     // 내용의 초기 값으로, 반드시 마크다운 문자열 형태여야 함
         previewStyle: 'vertical'                // 마크다운 프리뷰 스타일 (tab || vertical)
     });
 </script>
 
+<!-- datepicker 관련 코드 -->
+<script src="../../node_modules/vue/dist/vue.js"></script>
+<script src="../../node_modules/vuejs-datepicker/dist/vuejs-datepicker.js"></script>
+<script>
+  // Vue 인스턴스 생성
+  new Vue({
+      el: '#app',
+      data: {
+        // 선택된 날짜를 저장할 변수
+        fromDate: null,
+        toDate: null
+      },
+      components: {
+        // Datepicker 컴포넌트를 등록
+        datepicker: vuejsDatepicker
+      }
+  });
+</script>
+<!-- //datepicker 관련 코드 -->
 
 
 </body>

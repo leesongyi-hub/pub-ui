@@ -10,6 +10,9 @@
     "vinyl-sourcemaps-apply": "^0.2.1"
   },
   "dependencies": {
+    "@seed-design/design-token": "^1.0.3",
+    "@seed-design/icon": "^0.6.1",
+    "@seed-design/stylesheet": "^1.0.4",
     "gulp": "^4.0.2",
     "gulp-file-include": "^2.3.0",
     "material-icons": "^1.13.12",

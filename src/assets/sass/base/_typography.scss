@@ -423,8 +423,9 @@ $weight-map: (
 
 /* Semantic Class */
 .modal-tit{@include typo-heading-lg-semibold;}
+.page-tit{@include typo-display-sm-bold;}
 
-.tit-lg{@include typo-display-sm-semibold;}
+.tit-lg{@include typo-display-sm-bold;}
 .tit-md{@include typo-heading-lg-semibold;}
 
 .subtit-lg{@include typo-heading-md-semibold;}
@@ -439,8 +440,9 @@ $weight-map: (
 
 /* Semantic mixin */
 @mixin modal-tit{@include typo-heading-lg-semibold;}
+@mixin modal-tit{@include typo-display-sm-bold;}
 
-@mixin tit-lg{@include typo-display-sm-semibold;}
+@mixin tit-lg{@include typo-display-sm-bold;}
 @mixin tit-md{@include typo-heading-lg-semibold;}
 
 @mixin subtit-lg{@include typo-heading-md-semibold;}

@@ -1,0 +1,59 @@
+<div class="modal modal-account fade" id="modal_addAccount" tabindex="-1" data-backdrop="static" data-keyboard="false" aria-modal="true">
+  <div class="modal-dialog w800">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="tit">공지사항 등록</p>
+        <button type="button" class="close-btn mask-32px" data-dismiss="modal" aria-label="닫기">
+          <svg class="ico ico-lg" role="presentation" aria-hidden="true" focusable="false">
+            <use xlink:href="#ico-close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table-wrap" style="min-width:100%;">
+          <tbody>
+            <tr>
+              <th style="width:100px;" class="text-center">
+                <lable for="noticeTit">제목</lable>
+              </th>
+              <td>
+                <input id="noticeTit" type="text" placeholder="제목을 입력해주세요.">
+              </td>
+            </tr>
+            <tr>
+              <th style="width:100px;" class="text-center">
+                <lable for="noticeTit">노출 대상</lable>
+              </th>
+              <td>
+                <div class="d-flex">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="radio11" name="tabSample1Radio2" checked="">
+                    <label class="custom-control-label" for="radio11"><span>전체</span></label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="radio11" name="tabSample1Radio2" checked="">
+                    <label class="custom-control-label" for="radio11"><span>상담사 대상</span></label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="radio11" name="tabSample1Radio2" checked="">
+                    <label class="custom-control-label" for="radio11"><span>관리자 대상</span></label>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th style="width:100px;" class="text-center">내용</th>
+              <td>
+                <div id="content"></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="button button-outline button-lg xl w-60px" data-dismiss="modal">취소</button>
+        <button type="button" class="button button-primary button-lg xl w-60px" data-dismiss="modal">등록</button>
+      </div>
+    </div>
+  </div>
+</div>

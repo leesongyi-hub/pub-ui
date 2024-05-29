@@ -122,7 +122,7 @@ button[type="submit"]:not(:disabled):not(.disabled):focus-visible{outline:3px so
 .button-md .label + .ico{margin-left:4px;margin-right:0}
 .button-sm .ico{width:16px;min-width:16px;height:16px;margin-right:4px;}
 .button-sm .label + .ico{margin-left:4px;margin-right:0}
-.button-xs .ico{width:16px;min-width:16px;height:16px;margin-right:4px;}
+.button-xs .ico{width:15px;min-width:15px;height:15px;margin-right:4px;}
 .button-xs .label + .ico{margin-left:4px;margin-right:0}
 
 .button-primary [class*="ico"]{color:var(--btn-primary-text-color);}

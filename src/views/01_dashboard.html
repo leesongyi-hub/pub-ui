@@ -2,10 +2,10 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="all">
-  <title>대시보드</title>
+  <title>시스템관리 > 시스템설정</title>
   <link rel=icon href="../assets/images/favicon.ico"> 
 
   <link rel="stylesheet" href="../assets/lib/bootstrap-4.3.1/css/bootstrap.min.css">
@@ -16,186 +16,117 @@
     https://github.com/marella/material-icons?tab=readme-ov-file#readme
   -->
   <link rel="stylesheet" href="../../node_modules/material-icons/iconfont/material-icons.css">
+  <link rel="stylesheet" href="https://uicdn.toast.com/chart/latest/toastui-chart.min.css" />
 
   <script src="../assets/lib/jquery-3.3.1/jquery-3.3.1.min.js"></script>
   <script src="../assets/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
   <script src="../assets/lib/bootstrap-4.3.1/js/popper.min.js"></script>
   <script src="../assets/lib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
 </head>
 
 <body>
+  
   <div id="wrap" class="wrap account-page">
-    <header class="header">
-      <!--공통영역 layout.html에서 확인-->
-      
-    </header>
+    @@include('./include/header.html')
     <div class="content">
-      <div class="left-panel">
-        <!--공통영역 layout.html에서 확인-->
-      </div>
+      @@include('./include/lnb.html')
+
       <main class="main-cont">
-        <div class="main-header">
-          <div class="breadcrumbs">
-            <ul>
-              <!-- <li><h2>대시보드</h2></li>
-              <li class="arrow">
-                <span class="material-icons-round col-lightgray">keyboard_arrow_right</span>
-              </li> -->
-              <li class="current">
-                <h2>대시보드</h2>
-                <!-- <div class="btn-guide-area ml-6px">
-                  <button type="button" class="btn-guide">?</button>
-                  <div class="guide-tooltip">
-                    <div class="inner">
-                      <p>
-                        내용입력 영역<br>
-                        줄바꿈하고 싶으면 <br>
-                        br태그로 줄바꿈해서 입력해주세요.
-                      </p>
-                    </div>
-                  </div>
-                </div> -->
-              </li>
-            </ul>
-          </div>
-        </div>
         <div class="main-body">
-          <article class="article w-1000px">
-            <h3 class="tit">금일 AP 사용현황</h3>
-            <span class="col-caption mb-16px">* 최근 1시간 기준으로 데이터가 출력되며, 1분간격으로 차트가 갱신됩니다.</span>
+          <h2 class="page-tit">대시보드</h2>
 
-            <ul class="">
-              <li class="graph-area mb-24px">
-                <div class="d-flex align-items-center">
-                  <h4>금일 STT 처리 건 수</h4>
-                </div>
-                <div class="graph mt-20px"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
-                  <div class="comp-loader">
-                    <div class="loader">
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                    </div>
+          <section  style="width:100%;background-color:#fff;padding:24px;border-radius: 8px;border:1px solid #eee;">
+            <div class="d-flex">
+              <div>
+                <p class="subtit-sm typo-bold">총 인입량</p>
+                <div class="subtit-lg">12,456건</div>
+                <div class="d-flex">
+                  <div class="d-flex">
+                    <span>비율</span>
+                    <span>-2.2%</span>
                   </div>
-                  <!--차트영역. 샘플 그래프는 개발 시 삭제해주세요.-->
-                  <canvas id="line-chart2" height="483" style="height: 483px; display: block; width: 966px;" width="966"></canvas>
-                  <!--차트영역. 샘플 그래프는 개발 시 삭제해주세요.-->
-
+                  <div class="d-flex">
+                    <span>빈도</span>
+                    <span><span class="col-red">↑</span>221건</span>
+                  </div>
                 </div>
-              </li>
-              <li class="graph-area">
-                <div class="d-flex align-items-center">
-                  <h4>금일 STT 분석 건 수</h4>
+              </div>
+              <div>
+                <p class="subtit-sm typo-bold">총 인입량</p>
+                <div class="subtit-lg">12,456건</div>
+                <div class="d-flex">
+                  <div class="d-flex">
+                    <span>비율</span>
+                    <span>-2.2%</span>
+                  </div>
+                  <div class="d-flex">
+                    <span>빈도</span>
+                    <span><span class="col-red">↑</span>221건</span>
+                  </div>
                 </div>
-                <div class="graph mt-20px"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+              </div>
+            </div>
+          </section>
 
-                  <!--차트영역. 샘플 그래프는 개발 시 삭제해주세요.-->
-                  <canvas id="line-chart" height="483" style="height: 483px; display: block; width: 966px;" width="966"></canvas>
-                  <!--차트영역. 샘플 그래프는 개발 시 삭제해주세요.-->
-
-                </div>
-              </li>
-            </ul>
-          </article>
-
+          <div style="width:50%;height:300px;">
+            <div id="chart" style="width:100%;height:100%;"></div>
+          </div>
         </div>
       </main>
     </div>
-  </div>
 
+  </div>
+  <div id="ico_svg" data-include="./svg.html" style="display:none"></div>
   <script src="../assets/js/common.js"></script>
   <script src="../assets/lib/ie11CustomProperties.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script><!--샘플차트확인용-->
 
-  <script>
-    //윈도우새창
-    function openWindowPop(url, name){
-      var options = 'width=1200, height=850, status=no, menubar=no, toolbar=no';
-      window.open(url, name, options);
-    }
+    <!-- Toast UI Chart JS -->
+    <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
+    <script>
+      
 
-    //샘플차트1
-    new Chart(document.getElementById("line-chart"), {
-      type: 'line',
-      data: {
-        labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
-        datasets: [{ 
-            data: [86,114,106,106,107,111,133,221,783,2478],
-            label: "Africa",
-            borderColor: "#3e95cd",
-            fill: false
-          }, { 
-            data: [282,350,411,502,635,809,947,1402,3700,5267],
-            label: "Asia",
-            borderColor: "#8e5ea2",
-            fill: false
-          }, { 
-            data: [168,170,178,190,203,276,408,547,675,734],
-            label: "Europe",
-            borderColor: "#3cba9f",
-            fill: false
-          }, { 
-            data: [40,20,10,16,24,38,74,167,508,784],
-            label: "Latin America",
-            borderColor: "#e8c3b9",
-            fill: false
-          }, { 
-            data: [6,3,2,2,7,26,82,172,312,433],
-            label: "North America",
-            borderColor: "#c45850",
-            fill: false
-          }
-        ]
-      },
-      options: {
-        title: {
-          display: true,
-          text: 'World population per region (in millions)'
-        }
-      }
-    });
+      const el = document.getElementById('chart');
+      const data = {
+        categories: [
+          'Jan',
+          'Feb',
+          'Mar',
+          'Apr',
+          'May',
+          'Jun',
+          'Jul',
+          'Aug',
+          'Sep',
+          'Oct',
+          'Nov',
+          'Dec',
+        ],
+        series: [
+          {
+            name: 'Seoul',
+            data: [20, 40, 25, 50, 15, 45, 33, 34, 20, 30, 22, 13],
+          },
+          {
+            name: 'Sydney',
+            data: [5, 30, 21, 18, 59, 50, 28, 33, 7, 20, 10, 30],
+          },
+          {
+            name: 'Moscow',
+            data: [30, 5, 18, 21, 33, 41, 29, 15, 30, 10, 33, 5],
+          },
+        ],
+      };
+      const options = {
+        chart: { title: 'Average Temperature' },
+        xAxis: { pointOnColumn: false, title: { text: 'Month' } },
+        yAxis: { title: 'Temperature (Celsius)' },
+        series: { spline: true },
+      };
 
-    //샘플차트2
-    new Chart(document.getElementById("line-chart2"), {
-      type: 'line',
-      data: {
-        labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
-        datasets: [{ 
-            data: [86,114,106,106,107,111,133,221,783,2478],
-            label: "Africa",
-            borderColor: "#3e95cd",
-            fill: false
-          }, { 
-            data: [282,350,411,502,635,809,947,1402,3700,5267],
-            label: "Asia",
-            borderColor: "#8e5ea2",
-            fill: false
-          }, { 
-            data: [168,170,178,190,203,276,408,547,675,734],
-            label: "Europe",
-            borderColor: "#3cba9f",
-            fill: false
-          }, { 
-            data: [40,20,10,16,24,38,74,167,508,784],
-            label: "Latin America",
-            borderColor: "#e8c3b9",
-            fill: false
-          }, { 
-            data: [6,3,2,2,7,26,82,172,312,433],
-            label: "North America",
-            borderColor: "#c45850",
-            fill: false
-          }
-        ]
-      },
-      options: {
-        title: {
-          display: true,
-          text: 'World population per region (in millions)'
-        }
-      }
-    });
-  </script>
+      const chart = toastui.Chart.areaChart({ el, data, options });
+    </script>
+
 </body>
 </html>
