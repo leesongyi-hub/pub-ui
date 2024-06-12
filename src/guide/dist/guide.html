@@ -23,7 +23,7 @@
     <link type="text/css" rel="stylesheet" href="../lib/syntaxhighlighter_3.0.83/styles/shThemeDefault.css" />
   </head>
   <body>
-    <div class="wrap guide-page gd-wrap">
+    <div class="wrap guide-page is-expand">
       <header>
         <h1>
           <button type="button" class="button button-ghost button-md ico-only btn-navToggle">
@@ -71,15 +71,15 @@
           <ul class="navi">
             <!-- <li><a href="#n_info" class="menuitem"><span>Info</span></a></li> -->
             <li>
-              <span>Foundation</span>
+              <strong>🥟 Foundation</strong>
               <ul>
-                <li><a href="#n_variables" class="menuitem"><span>Css Variables</span></a></li>
+                <li><a href="#n_variables" class="menuitem"><span>Tokens</span></a></li>
                 <li><a href="#n_typography" class="menuitem"><span>Typography</span></a></li>
                 <li><a href="#n_icon" class="menuitem"><span>Icon</span></a></li>
               </ul>
             </li>
             <li>
-              <span>Component</span>
+              <strong>🌮 Component</strong>
               <ul>
                 <li><a href="#n_buttons" class="menuitem"><span>Buttons</span></a></li>
                 <li><a href="#n_chips" class="menuitem"><span>Chips</span></a></li>
@@ -89,6 +89,7 @@
                 <li><a href="#n_inputcheckbox" class="menuitem"><span>Input-Checkbox</span></a></li>
                 <li><a href="#n_inputradio" class="menuitem"><span>Input-Radio Button</span></a></li>
                 <li><a href="#n_inputdatepicker" class="menuitem"><span>Input-Datepicker </span></a></li>
+                <li><a href="#n_switch" class="menuitem"><span>Switch</span></a></li>
                 <!-- <li><a href="#n_textarea" class="menuitem"><span>Textarea</span></a></li> -->
                 <!-- <li><a href="#n_tab" class="menuitem"><span>Tab</span></a></li> -->
                 <!-- <li><a href="#n_pagination" class="menuitem"><span>pagination</span></a></li> -->
@@ -97,8 +98,12 @@
                 <!-- <li><a href="#n_table" class="menuitem"><span>table</span></a></li> -->
                 <!-- <li><a href="#n_tooltip" class="menuitem"><span>tooltip</span></a></li> -->
                 <!-- <li><a href="#n_modal" class="menuitem"><span>modal</span></a></li> -->
+              </ul>
+            </li>
+            <li>
+              <strong>🍱 Pattern</strong>
+              <ul>
                 <li><a href="#n_colList" class="menuitem"><span>Col list</span></a></li>
-                <li><a href="#n_switch" class="menuitem"><span>Switch</span></a></li>
               </ul>
             </li>
           </ul>
@@ -106,11 +111,92 @@
         </nav>
         <main class="content">
           <div class="gd-content-wrap" id="n_chips">
-            <h2 class="gd-tit">Chips</h2>
-            <article>
-              <section>
-                <!-- <h3 class="gd-subTit">Code</h3> -->
-                <div class="section-list">
+            <aside class="index-nav">
+              <p class="tit">On this page</p>
+              <ul>
+                <li>
+                  <a href="#ex">Example</a>
+                  <ul>
+                    <li><a href="#ex-default">Default</a></li>
+                    <li><a href="#ex-disabled">Disabled</a></li>
+                    <li><a href="#ex-readonly">Readonly</a></li>
+                    <li><a href="#ex-success">Success</a></li>
+                    <li><a href="#ex-error">Error</a></li>
+                    <li><a href="#ex-fileinput">File input</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#util">Utility Class</a>
+                  <ul>
+                    <li><a href="#util-size">Size</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </aside>
+            <div class="gd-content">
+              <h2>Chips</h2>
+              <article>
+                <h3 id="ex">Example</h3>
+                <section class="section-list">
+                  <h4 class="gd-subtit-sm">Default</h4>
+                  <div class="preview-area">
+                    <div class="chip-area">
+                      <div class="chip chip-outline">
+                        <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
+                          <use xlink:href="#ico-plus"></use>
+                        </svg>
+                        <span class="label">left icon</span>
+                      </div>
+                      <div class="chip chip-outline">
+                        <span class="label">right icon</span>
+                        <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
+                          <use xlink:href="#ico-plus"></use>
+                        </svg>
+                      </div>
+                      <div class="chip chip-outline">
+                        <span class="label">텍스트</span>
+                      </div>
+                      <div class="chip chip-outline">
+                        <span class="left"> 😍 </span>
+                        <span class="label">emoji</span>
+                        <span class="right"> 😍 </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="code-area">
+                    <div class="code-head">
+                      <span class="tit">HTML</span>
+                    </div>
+                    <code class="code-body">
+            <pre class="brush: html;">
+              <div class="chip-area">
+                <div class="chip chip-outline">
+                  <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
+                    <use xlink:href="#ico-notice"></use>
+                  </svg>
+                  <span class="label">텍스트타입</span>
+                </div>
+                <div class="chip chip-outline">
+                  <span class="label">텍스트타입</span>
+                  <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
+                    <use xlink:href="#ico-notice"></use>
+                  </svg>
+                </div>
+                <div class="chip chip-outline">
+                  <span class="label">텍스트타입</span>
+                </div>
+                <div class="chip chip-outline">
+                  <span class="left"> 😍 </span>
+                  <span class="label">텍스트타입</span>
+                  <span class="right"> 😍 </span>
+                </div>
+              </div>
+            </pre>
+            <button class="btn-clipboard-copy btn btn-sm" data-tooltip="tooltip" data-placement="top" data-original-title="코드복사" aria-label="코드복사"></button>
+          </code>
+                  </div>
+                </section>
+                <section class="section-list">
                   <h4 class="gd-subtit-sm">Deleted</h4>
                   <div class="preview-area">
                     <div class="chip-area">
@@ -140,49 +226,42 @@
                       </div>
                     </div>
                   </div>
-                  <div class="code-head">
-                    <span class="tit">HTML</span>
-                  </div>
-                  <code class="code-area">
-          <pre class="brush: html;">
-            <div class="chip-area">
-              <div class="chip chip-outline">
-                <span class="label">텍스트</span>
-                <button type="button" class="btn-del right">
-                  <svg class="ico ico-sm" role="presentation" aria-hidden="true" focusable="false">
-                    <use xlink:href="#ico-close"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="chip chip-outline">
-                <span class="label">텍스트</span>
-                <button type="button" class="btn-del right">
-                  <svg class="ico ico-sm" role="presentation" aria-hidden="true" focusable="false">
-                    <use xlink:href="#ico-close"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="chip chip-outline">
-                <span class="label">텍스트</span>
-                <button type="button" class="btn-del right">
-                  <svg class="ico ico-sm" role="presentation" aria-hidden="true" focusable="false">
-                    <use xlink:href="#ico-close"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </pre>
-          <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </code>
+                  <div class="code-area">
+                    <div class="code-head"><span class="tit">HTML</span></div>
+                    <code class="code-body">
+            <pre class="brush: html;">
+              <div class="chip-area">
+                <div class="chip chip-outline">
+                  <span class="label">텍스트</span>
+                  <button type="button" class="btn-del right">
+                    <svg class="ico ico-sm" role="presentation" aria-hidden="true" focusable="false">
+                      <use xlink:href="#ico-close"></use>
+                    </svg>
+                  </button>
                 </div>
-              </section>
-              <section>
-                <!-- <h3 class="gd-subTit">Code</h3> -->
-                <div class="section-list">
+                <div class="chip chip-outline">
+                  <span class="label">텍스트</span>
+                  <button type="button" class="btn-del right">
+                    <svg class="ico ico-sm" role="presentation" aria-hidden="true" focusable="false">
+                      <use xlink:href="#ico-close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="chip chip-outline">
+                  <span class="label">텍스트</span>
+                  <button type="button" class="btn-del right">
+                    <svg class="ico ico-sm" role="presentation" aria-hidden="true" focusable="false">
+                      <use xlink:href="#ico-close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </pre>
+            <button class="btn-clipboard-copy btn btn-sm" data-tooltip="tooltip" data-placement="top" data-original-title="코드복사" aria-label="코드복사"></button>
+          </code>
+                  </div>
+                </section>
+                <section class="section-list">
                   <h4 class="gd-subtit-sm">Filter</h4>
                   <div class="preview-area">
                     <div class="chip-area">
@@ -203,117 +282,48 @@
                       </button>
                     </div>
                   </div>
-                  <div class="code-head">
-                    <span class="tit">HTML</span>
-                  </div>
-                  <code class="code-area">
-          <pre class="brush: html;">
-            <div class="chip-area">
-              <button type="button" class="chip chip-outline">
-                <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
-                  <use xlink:href="#ico-notice"></use>
-                </svg>
-                <span class="label">버튼형</span>
-              </button>
-              <button type="button" class="chip chip-outline">
-                <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
-                  <use xlink:href="#ico-notice"></use>
-                </svg>
-                <span class="label">버튼형</span>
-                <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
-                  <use xlink:href="#ico-arr_bot"></use>
-                </svg>
-              </button>
-              <button type="button" class="chip chip-outline">
-                <span class="left"> 😍 </span>
-                <span class="label">버튼형</span>
-                <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
-                  <use xlink:href="#ico-arr_bot"></use>
-                </svg>
-              </button>
-              <button type="button" class="chip chip-outline">
-                <span class="label">버튼형</span>
-                <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
-                  <use xlink:href="#ico-arr_bot"></use>
-                </svg>
-              </button>
-            </div>
-          </pre>
-          <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </code>
-                </div>
-              </section>
-              <section>
-                <!-- <h3 class="gd-subTit">Code</h3> -->
-                <div class="section-list">
-                  <h4 class="gd-subtit-sm">Default</h4>
-                  <div class="preview-area">
-                    <div class="chip-area">
-                      <div class="chip chip-outline">
-                        <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
-                          <use xlink:href="#ico-plus"></use>
-                        </svg>
-                        <span class="label">left icon</span>
-                      </div>
-                      <div class="chip chip-outline">
-                        <span class="label">right icon</span>
-                        <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
-                          <use xlink:href="#ico-plus"></use>
-                        </svg>
-                      </div>
-                      <div class="chip chip-outline">
-                        <span class="label">텍스트</span>
-                      </div>
-                      <div class="chip chip-outline">
-                        <span class="left"> 😍 </span>
-                        <span class="label">emoji</span>
-                        <span class="right"> 😍 </span>
-                      </div>
+                  <div class="code-area">
+                    <div class="code-head">
+                      <span class="tit">HTML</span>
                     </div>
+                    <code class="code-body">
+            <pre class="brush: html;">
+              <div class="chip-area">
+                <button type="button" class="chip chip-outline">
+                  <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
+                    <use xlink:href="#ico-notice"></use>
+                  </svg>
+                  <span class="label">버튼형</span>
+                </button>
+                <button type="button" class="chip chip-outline">
+                  <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
+                    <use xlink:href="#ico-notice"></use>
+                  </svg>
+                  <span class="label">버튼형</span>
+                  <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
+                    <use xlink:href="#ico-arr_bot"></use>
+                  </svg>
+                </button>
+                <button type="button" class="chip chip-outline">
+                  <span class="left"> 😍 </span>
+                  <span class="label">버튼형</span>
+                  <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
+                    <use xlink:href="#ico-arr_bot"></use>
+                  </svg>
+                </button>
+                <button type="button" class="chip chip-outline">
+                  <span class="label">버튼형</span>
+                  <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
+                    <use xlink:href="#ico-arr_bot"></use>
+                  </svg>
+                </button>
+              </div>
+            </pre>
+            <button class="btn-clipboard-copy btn btn-sm" data-tooltip="tooltip" data-placement="top" data-original-title="코드복사" aria-label="코드복사"></button>
+          </code>
                   </div>
-                  <div class="code-head">
-                    <span class="tit">HTML</span>
-                  </div>
-                  <code class="code-area">
-          <pre class="brush: html;">
-            <div class="chip-area">
-              <div class="chip chip-outline">
-                <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
-                  <use xlink:href="#ico-notice"></use>
-                </svg>
-                <span class="label">텍스트타입</span>
-              </div>
-              <div class="chip chip-outline">
-                <span class="label">텍스트타입</span>
-                <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
-                  <use xlink:href="#ico-notice"></use>
-                </svg>
-              </div>
-              <div class="chip chip-outline">
-                <span class="label">텍스트타입</span>
-              </div>
-              <div class="chip chip-outline">
-                <span class="left"> 😍 </span>
-                <span class="label">텍스트타입</span>
-                <span class="right"> 😍 </span>
-              </div>
-            </div>
-          </pre>
-          <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </code>
-                </div>
-              </section>
-              <section>
-                <!-- <h3 class="gd-subTit">Code</h3> -->
-                <div class="section-list">
+                </section>
+                <section class="section-list">
                   <h4 class="gd-subtit-sm">Default 버튼형</h4>
                   <div class="preview-area">
                     <div class="chip-area">
@@ -339,45 +349,40 @@
                       </button>
                     </div>
                   </div>
-                  <div class="code-head">
-                    <span class="tit">HTML</span>
-                  </div>
-                  <code class="code-area">
-          <pre class="brush: html;">
-            <div class="chip-area">
-              <div class="chip chip-outline">
-                <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
-                  <use xlink:href="#ico-notice"></use>
-                </svg>
-                <span class="label">텍스트타입</span>
-              </div>
-              <div class="chip chip-outline">
-                <span class="label">텍스트타입</span>
-                <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
-                  <use xlink:href="#ico-notice"></use>
-                </svg>
-              </div>
-              <div class="chip chip-outline">
-                <span class="label">텍스트타입</span>
-              </div>
-              <div class="chip chip-outline">
-                <span class="left"> 😍 </span>
-                <span class="label">텍스트타입</span>
-                <span class="right"> 😍 </span>
-              </div>
-            </div>
-          </pre>
-          <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </code>
+                  <div class="code-area">
+                    <div class="code-head">
+                      <span class="tit">HTML</span>
+                    </div>
+                    <code class="code-body">
+            <pre class="brush: html;">
+              <div class="chip-area">
+                <div class="chip chip-outline">
+                  <svg class="ico left" role="presentation" aria-hidden="true" focusable="false">
+                    <use xlink:href="#ico-notice"></use>
+                  </svg>
+                  <span class="label">텍스트타입</span>
                 </div>
-              </section>
-              <section>
-                <!-- <h3 class="gd-subTit">Code</h3> -->
-                <div class="section-list">
+                <div class="chip chip-outline">
+                  <span class="label">텍스트타입</span>
+                  <svg class="ico right" role="presentation" aria-hidden="true" focusable="false">
+                    <use xlink:href="#ico-notice"></use>
+                  </svg>
+                </div>
+                <div class="chip chip-outline">
+                  <span class="label">텍스트타입</span>
+                </div>
+                <div class="chip chip-outline">
+                  <span class="left"> 😍 </span>
+                  <span class="label">텍스트타입</span>
+                  <span class="right"> 😍 </span>
+                </div>
+              </div>
+            </pre>
+            <button class="btn-clipboard-copy btn btn-sm" data-tooltip="tooltip" data-placement="top" data-original-title="코드복사" aria-label="코드복사"></button>
+          </code>
+                  </div>
+                </section>
+                <section class="section-list">
                   <h4 class="gd-subtit-sm">Checkbox</h4>
                   <div class="preview-area">
                     <div class="chip-area checkChip-area">
@@ -399,41 +404,39 @@
                       </label>
                     </div>
                   </div>
-                  <div class="code-head">
-                    <span class="tit">HTML</span>
+                  <div class="code-area">
+                    <div class="code-head">
+                      <span class="tit">HTML</span>
+                    </div>
+                    <code class="code-body">
+            <pre class="brush: html;">
+              <div class="chip-area checkChip-area">
+                <label for="chip1">
+                  <input type="checkbox" id="chip1" checked="">
+                  <span class="chip chip-outline chip-lg">전체</span>
+                </label>
+                <label for="chip2">
+                  <input type="checkbox" id="chip2">
+                  <span class="chip chip-outline chip-lg">서버/백엔드 개발자</span>
+                </label>
+                <label for="chip3">
+                  <input type="checkbox" id="chip3">
+                  <span class="chip chip-outline chip-lg">프론트엔드 개발자</span>
+                </label>
+                <label for="chip4">
+                  <input type="checkbox" id="chip4">
+                  <span class="chip chip-outline chip-lg">웹 풀스택 개발자</span>
+                </label>
+              </div>
+            </pre>
+            <button class="btn-clipboard-copy btn btn-sm" data-tooltip="tooltip" data-placement="top" data-original-title="코드복사" aria-label="코드복사"></button>
+          </code>
                   </div>
-                  <code class="code-area">
-          <pre class="brush: html;">
-            <div class="chip-area checkChip-area">
-              <label for="chip1">
-                <input type="checkbox" id="chip1" checked="">
-                <span class="chip chip-outline chip-lg">전체</span>
-              </label>
-              <label for="chip2">
-                <input type="checkbox" id="chip2">
-                <span class="chip chip-outline chip-lg">서버/백엔드 개발자</span>
-              </label>
-              <label for="chip3">
-                <input type="checkbox" id="chip3">
-                <span class="chip chip-outline chip-lg">프론트엔드 개발자</span>
-              </label>
-              <label for="chip4">
-                <input type="checkbox" id="chip4">
-                <span class="chip chip-outline chip-lg">웹 풀스택 개발자</span>
-              </label>
-            </div>
-          </pre>
-          <button class="btn-clipboard-copy btn btn-sm" data-toggle="tooltip" data-placement="top" title="" data-original-title="코드복사">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.66634 5.83333V12.5C6.66634 12.942 6.84194 13.366 7.1545 13.6785C7.46706 13.9911 7.89098 14.1667 8.33301 14.1667H13.333M6.66634 5.83333V4.16667C6.66634 3.72464 6.84194 3.30072 7.1545 2.98816C7.46706 2.67559 7.89098 2.5 8.33301 2.5H12.1547C12.3757 2.50005 12.5876 2.58788 12.7438 2.74417L16.4222 6.4225C16.5785 6.57874 16.6663 6.79067 16.6663 7.01167V12.5C16.6663 12.942 16.4907 13.366 16.1782 13.6785C15.8656 13.9911 15.4417 14.1667 14.9997 14.1667H13.333M6.66634 5.83333H4.99967C4.55765 5.83333 4.13372 6.00893 3.82116 6.32149C3.5086 6.63405 3.33301 7.05797 3.33301 7.5V15.8333C3.33301 16.2754 3.5086 16.6993 3.82116 17.0118C4.13372 17.3244 4.55765 17.5 4.99967 17.5H11.6663C12.1084 17.5 12.5323 17.3244 12.8449 17.0118C13.1574 16.6993 13.333 16.2754 13.333 15.8333V14.1667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </code>
-                </div>
-              </section>
-              <section>
-                <h3 class="gd-subTit">Utility Class &amp; Variables</h3>
-                <div class="section-list">
+                </section>
+              </article>
+              <article>
+                <h3 id="ex">Utility Class</h3>
+                <section class="section-list">
                   <h4 class="gd-subtit-sm">Style</h4>
                   <div class="gdTable-wrap">
                     <table class="gdTable">
@@ -517,8 +520,8 @@
                       </tbody>
                     </table>
                   </div>
-                </div>
-                <div class="section-list">
+                </section>
+                <section class="section-list">
                   <h4 class="gd-subtit-sm">Size</h4>
                   <div class="info-area mb-20px">
                     <ul>
@@ -706,9 +709,9 @@
                       </tbody>
                     </table>
                   </div>
-                </div>
-              </section>
-            </article>
+                </section>
+              </article>
+            </div>
           </div>
           <style>
             /* .chip-area{margin-bottom:16px;} */
@@ -745,14 +748,22 @@
             }
           </style>
           <div class="gd-content-wrap" id="n_variables">
-            <h2 class="gd-tit">CSS Variables</h2>
-            <div class="gd-infoArea">
-              <a class="button-textLink" href="https://www.figma.com/file/8Aum3Py2NiZ2BDQJDtBJcG/Icon-Library-(Community)?type=design&node-id=1%3A1055&mode=design&t=bI7KG2e0DHffSslC-1" target="_blank">Figma</a>에서 flatten처리 후 <a class="button-textLink" href="https://jakearchibald.github.io/svgomg/" target="_blank">SVGOMG</a> 사이트에서 svg파일을 최적화하여 추가합니다.
-            </div>
-            <article>
-              <section>
-                <div class="section-list">
-                  <h4 class="gd-subtit-sm">border color</h4>
+            <aside class="index-nav">
+              <p class="tit">On this page</p>
+              <ul>
+                <li><a href="#borderColor">border color</a></li>
+                <li><a href="#backgroundColor">background color</a></li>
+                <li><a href="#fontColor">font color</a></li>
+                <li><a href="#iconColor">icon color</a></li>
+                <li><a href="#boxShadow">box shadow</a></li>
+                <li><a href="#borderRadius">border radius</a></li>
+              </ul>
+            </aside>
+            <div class="gd-content">
+              <h2 class="gd-tit">Tokens</h2>
+              <article>
+                <section class="section-list">
+                  <h4 id="borderColor">border color</h4>
                   <div class="gdTable-wrap">
                     <table class="gdTable">
                       <colgroup>
@@ -835,9 +846,9 @@
                       </tbody>
                     </table>
                   </div>
-                </div>
-                <div class="section-list">
-                  <h4 class="gd-subtit-sm">background color</h4>
+                </section>
+                <section class="section-list">
+                  <h4 id="backgroundColor">background color</h4>
                   <div class="gdTable-wrap">
                     <table class="gdTable">
                       <colgroup>
@@ -1016,9 +1027,9 @@
                       </tbody>
                     </table>
                   </div>
-                </div>
-                <div class="section-list">
-                  <h4 class="gd-subtit-sm">font color</h4>
+                </section>
+                <section class="section-list">
+                  <h4 id="fontColor">font color</h4>
                   <div class="gdTable-wrap">
                     <table class="gdTable">
                       <colgroup>
@@ -1181,9 +1192,9 @@
                       </tbody>
                     </table>
                   </div>
-                </div>
-                <div class="section-list">
-                  <h4 class="gd-subtit-sm">icon color</h4>
+                </section>
+                <section class="section-list">
+                  <h4 id="iconColor">icon color</h4>
                   <div class="gdTable-wrap">
                     <div class="gdTable-wrap">
                       <table class="gdTable">
@@ -1365,9 +1376,9 @@
                       </table>
                     </div>
                   </div>
-                </div>
-                <div class="section-list">
-                  <h4 class="gd-subtit-sm">box shadow</h4>
+                </section>
+                <section class="section-list">
+                  <h4 id="boxShadow">box shadow</h4>
                   <div class="gdTable-wrap">
                     <table class="gdTable">
                       <colgroup>
@@ -1434,14 +1445,13 @@
                       </tbody>
                     </table>
                   </div>
-                </div>
-                <div class="section-list">
-                  <h4 class="gd-subtit-sm">border radius</h4>
+                </section>
+                <section class="section-list">
+                  <h4 id="borderRadius">border radius</h4>
                   <div class="gdTable-wrap">
                     <table class="gdTable">
                       <colgroup>
                         <col style="width:200px;">
-                        <col style="width:250px;">
                         <col style="width:250px;">
                         <col>
                       </colgroup>
@@ -1449,7 +1459,6 @@
                         <tr>
                           <th>Example</th>
                           <th>Variables</th>
-                          <th>Value</th>
                           <th>Description</th>
                         </tr>
                       </thead>
@@ -1468,7 +1477,6 @@
                               </button>
                             </span>
                           </td>
-                          <td>4px</td>
                           <td></td>
                         </tr>
                         <tr>
@@ -1485,7 +1493,6 @@
                               </button>
                             </span>
                           </td>
-                          <td>6px</td>
                           <td></td>
                         </tr>
                         <tr>
@@ -1502,7 +1509,6 @@
                               </button>
                             </span>
                           </td>
-                          <td>8px</td>
                           <td>드롭다운 등 form요소보다 큰 요소에 사용</td>
                         </tr>
                         <tr>
@@ -1519,7 +1525,6 @@
                               </button>
                             </span>
                           </td>
-                          <td>30px</td>
                           <td>chip에 사용</td>
                         </tr>
                         <tr>
@@ -1536,7 +1541,6 @@
                               </button>
                             </span>
                           </td>
-                          <td>50%</td>
                           <td>원형 badge에 사용</td>
                         </tr>
                         <tr>
@@ -1553,15 +1557,14 @@
                               </button>
                             </span>
                           </td>
-                          <td>6px</td>
                           <td>form요소(input, button, select, textarea..)에 사용</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
-                </div>
-              </section>
-            </article>
+                </section>
+              </article>
+            </div>
           </div>
           <div class="gd-content-wrap" id="n_typography">
             <aside class="index-nav">

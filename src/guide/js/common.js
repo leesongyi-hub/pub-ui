@@ -121,21 +121,43 @@ UI.clipboard = {
     });
   }
 }
-
-UI.themeChange = {
+UI.themeLayerShow = {
   init: function(){
-    function setTheme(themeName) {
-      var root = document.documentElement;
-    
-      // 선택된 테마에 대한 데이터 속성 설정
-      root.setAttribute('data-theme', themeName);
+    $('.button-theme-area button').on('click', function(){
+      $('.theme-area').show();
+    });
+
+    $(document).on('click', function(event) {
+      var $target = $(event.target);
+      if (!$target.closest('.theme-area').length && !$target.closest('.button-theme-area button').length) {
+        $('.theme-area').hide();
+      }
+    });
+  }
+}
+UI.themeChange = (function() {
+  function setTheme(themeName) {
+    var root = document.documentElement;
+    root.setAttribute('data-theme', themeName);
+    localStorage.setItem('theme', themeName); // Save the selected theme to local storage
+  }
+
+  function init() {
+    // Load the initial theme from local storage
+    var savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setTheme(savedTheme);
+      // Check the appropriate radio button
+      var themeRadio = document.querySelector('input[name="theme"][value="' + savedTheme + '"]');
+      if (themeRadio) {
+        themeRadio.checked = true;
+      }
     }
-    
-    // 라디오 버튼에 대한 이벤트 처리
+
+    // Add event listeners to radio buttons
     var themeRadios = document.querySelectorAll('input[name="theme"]');
     if (themeRadios.length > 0) {
-      var radiosArray = Array.prototype.slice.call(themeRadios);
-      radiosArray.forEach(function(radio) {
+      themeRadios.forEach(function(radio) {
         radio.addEventListener('change', function() {
           if (this.checked) {
             var selectedTheme = this.value;
@@ -145,7 +167,12 @@ UI.themeChange = {
       });
     }
   }
-}
+
+  return {
+    init: init
+  };
+})();
+
 
 UI.showSection = {
   init: function(){
@@ -197,6 +224,30 @@ UI.scrollToAnchorWithOffset = {
   }
 }
 
+UI.lnbExpandedToggle = (function() {
+  function init() {
+    // Load the initial state from local storage
+    var isExpand = localStorage.getItem('isExpand') === 'true';
+    if (isExpand) {
+      $('.wrap').addClass('is-expand');
+    } else {
+      $('.wrap').removeClass('is-expand');
+    }
+
+    $('.btn-navToggle').on('click', function() {
+      $('.wrap').toggleClass('is-expand');
+      // Save the current state to local storage
+      var currentState = $('.wrap').hasClass('is-expand');
+      localStorage.setItem('isExpand', currentState);
+    });
+  }
+
+  return {
+    init: init
+  };
+})();
+
+
 $(function () {
   UI.scrollToAnchorWithOffset.init();
   UI.syntaxHighlighter.init();
@@ -206,5 +257,6 @@ $(function () {
   UI.showSection.init();
   UI.includeSVG.init();
   UI.bsTooltip.init();
-
+  UI.lnbExpandedToggle.init();
+  UI.themeLayerShow.init();
 });
